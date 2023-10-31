@@ -1,103 +1,66 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"1.11388",
-   "Default View_TopLeft":"-189,154",
+   "Default View_ScaleFactor":"1.21693",
+   "Default View_TopLeft":"-302,-56",
    "ExpandedHierarchyInLayout":"",
    "PinnedBlocks":"",
    "PinnedPorts":"",
    "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -lvl 8 -x 2710 -y 60 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -lvl 8 -x 2710 -y 90 -defaultsOSRD
-preplace port SDIO_1_0 -pg 1 -lvl 8 -x 2710 -y 120 -defaultsOSRD
-preplace port fpga_gpio_o -pg 1 -lvl 8 -x 2710 -y 340 -defaultsOSRD
-preplace port sen_clk -pg 1 -lvl 0 -x 0 -y 20 -defaultsOSRD
-preplace port port-id_ftdi_clk_i -pg 1 -lvl 0 -x 0 -y 760 -defaultsOSRD
-preplace port port-id_ftdi_rxf_i_0 -pg 1 -lvl 0 -x 0 -y 990 -defaultsOSRD
-preplace port port-id_ftdi_txe_i_0 -pg 1 -lvl 0 -x 0 -y 960 -defaultsOSRD
-preplace port port-id_ftdi_wrn_o_0 -pg 1 -lvl 8 -x 2710 -y 1260 -defaultsOSRD
-preplace port port-id_ftdi_rdn_o_0 -pg 1 -lvl 8 -x 2710 -y 1290 -defaultsOSRD
-preplace port port-id_ftdi_oen_o_0 -pg 1 -lvl 8 -x 2710 -y 790 -defaultsOSRD
-preplace port port-id_sen_clk_in_o -pg 1 -lvl 8 -x 2710 -y 170 -defaultsOSRD
-preplace port port-id_dsp_spi_mosi -pg 1 -lvl 8 -x 2710 -y 230 -defaultsOSRD
-preplace port port-id_dsp_spi_sclk -pg 1 -lvl 8 -x 2710 -y 260 -defaultsOSRD
-preplace port port-id_ftdi_clk_out_div -pg 1 -lvl 8 -x 2710 -y 720 -defaultsOSRD
-preplace portBus ftdi_nrst_o_0 -pg 1 -lvl 8 -x 2710 -y 200 -defaultsOSRD
-preplace portBus ftdi_nsiwu_o_0 -pg 1 -lvl 8 -x 2710 -y 1450 -defaultsOSRD
-preplace portBus ftdi_nwakeup_o -pg 1 -lvl 8 -x 2710 -y 1550 -defaultsOSRD
-preplace portBus ftdi_gpio_o -pg 1 -lvl 8 -x 2710 -y 1350 -defaultsOSRD
-preplace portBus dsp_spi_ncs -pg 1 -lvl 8 -x 2710 -y 20 -defaultsOSRD
-preplace portBus ftdi_data_io_0 -pg 1 -lvl 8 -x 2710 -y 920 -defaultsOSRD
-preplace portBus ftdi_be_io_0 -pg 1 -lvl 8 -x 2710 -y 880 -defaultsOSRD
-preplace portBus sen_data_p -pg 1 -lvl 0 -x 0 -y 80 -defaultsOSRD
-preplace portBus sen_data_n -pg 1 -lvl 0 -x 0 -y 50 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 7 -x 2460 -y 130 -defaultsOSRD
-preplace inst proc_sys_reset_0 -pg 1 -lvl 3 -x 950 -y 390 -defaultsOSRD
-preplace inst axi_gpio_0 -pg 1 -lvl 7 -x 2460 -y 340 -defaultsOSRD
-preplace inst xlconstant_0 -pg 1 -lvl 7 -x 2460 -y 1350 -defaultsOSRD
-preplace inst xlconstant_1 -pg 1 -lvl 7 -x 2460 -y 1450 -defaultsOSRD
-preplace inst xlconstant_2 -pg 1 -lvl 7 -x 2460 -y 1550 -defaultsOSRD
-preplace inst clock_div_0 -pg 1 -lvl 7 -x 2460 -y 720 -defaultsOSRD
-preplace inst proc_sys_reset_1 -pg 1 -lvl 1 -x 200 -y 860 -defaultsOSRD
-preplace inst ft245sync_0 -pg 1 -lvl 2 -x 580 -y 890 -defaultsOSRD
-preplace inst ps7_0_axi_periph -pg 1 -lvl 4 -x 1310 -y 150 -defaultsOSRD
-preplace inst ila_0 -pg 1 -lvl 7 -x 2460 -y 1120 -defaultsOSRD
-preplace inst util_vector_logic_0 -pg 1 -lvl 1 -x 200 -y 1050 -defaultsOSRD
-preplace inst ftdi_io_buffer_0 -pg 1 -lvl 7 -x 2460 -y 890 -defaultsOSRD
-preplace inst axi_dma_0 -pg 1 -lvl 5 -x 1670 -y 300 -defaultsOSRD
-preplace inst axis_data_fifo_1 -pg 1 -lvl 4 -x 1310 -y 430 -defaultsOSRD
-preplace inst axis_data_fifo_2 -pg 1 -lvl 6 -x 2030 -y 570 -defaultsOSRD
-preplace inst proc_sys_reset_2 -pg 1 -lvl 3 -x 950 -y 570 -defaultsOSRD
-preplace inst ila_1 -pg 1 -lvl 7 -x 2460 -y 550 -defaultsOSRD
-preplace inst axi_mem_intercon -pg 1 -lvl 6 -x 2030 -y 310 -defaultsOSRD
-preplace netloc Net 1 7 1 NJ 920
-preplace netloc Net1 1 7 1 NJ 880
-preplace netloc clock_div_0_clk_out 1 7 1 NJ 720
-preplace netloc ft245sync_0_o_pin_oe_n 1 2 6 770 830 NJ 830 NJ 830 NJ 830 2240 790 NJ
-preplace netloc ft245sync_0_o_pin_rd_n 1 2 6 NJ 850 NJ 850 NJ 850 NJ 850 2190 1290 NJ
-preplace netloc ft245sync_0_o_pin_wr_n 1 2 6 740J 840 NJ 840 NJ 840 NJ 840 2220 1270 2690J
-preplace netloc ftdi_clk_i_1 1 0 7 20 760 370 710 NJ 710 NJ 710 NJ 710 NJ 710 NJ
-preplace netloc ftdi_io_buffer_0_be_io_in 1 6 2 2250 980 2670
-preplace netloc ftdi_io_buffer_0_dq_io_in 1 1 7 410 1180 NJ 1180 NJ 1180 NJ 1180 NJ 1180 2250 1260 2680
-preplace netloc ftdi_rxf_i_0_1 1 0 7 NJ 990 390 1080 NJ 1080 NJ 1080 NJ 1080 NJ 1080 NJ
-preplace netloc ftdi_txe_i_0_1 1 0 7 NJ 960 380 1060 NJ 1060 NJ 1060 NJ 1060 NJ 1060 NJ
-preplace netloc m_axis_aclk_0_1 1 2 6 780 280 1160 290 1480 160 1860 130 2250 260 2680
-preplace netloc proc_sys_reset_0_peripheral_aresetn 1 3 4 1120 310 1460J 170 1870 160 2210
-preplace netloc proc_sys_reset_1_peripheral_reset 1 1 1 370 860n
-preplace netloc processing_system7_0_FCLK_CLK1 1 7 1 NJ 170
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 8 30 550 NJ 550 770 290 1130J 300 1450J 120 NJ 120 2230J 250 2690
-preplace netloc util_vector_logic_0_Res 1 1 6 NJ 1050 780J 1040 NJ 1040 NJ 1040 NJ 1040 NJ
-preplace netloc xlconstant_0_dout 1 7 1 NJ 1350
-preplace netloc xlconstant_1_dout 1 7 1 NJ 1450
-preplace netloc xlconstant_2_dout 1 7 1 NJ 1550
-preplace netloc ft245sync_0_o_pin_data 1 2 5 N 870 NJ 870 NJ 870 NJ 870 2230
-preplace netloc ft245sync_0_o_rx_data 1 2 5 750J 700 1160 670 NJ 670 NJ 670 2200J
-preplace netloc axis_data_fifo_1_s_axis_tready 1 1 6 420 680 NJ 680 1140 540 1510J 460 NJ 460 2240J
-preplace netloc ft245sync_0_o_rx_valid 1 2 5 780J 820 1170 550 NJ 550 1840J 480 2190
-preplace netloc axis_data_fifo_2_m_axis_tdata 1 1 6 400 670 NJ 670 1120J 660 NJ 660 NJ 660 2190
-preplace netloc ft245sync_0_o_tx_ready 1 2 5 760J 810 NJ 810 NJ 810 NJ 810 2220
-preplace netloc axis_data_fifo_2_m_axis_tvalid 1 1 6 430 730 NJ 730 NJ 730 NJ 730 NJ 730 2180
-preplace netloc ft245sync_0_o_clk 1 2 5 730 690 1130 320 1500 180 1830 470 2230
-preplace netloc proc_sys_reset_2_peripheral_aresetn 1 3 3 1150 560 1500 420 1880
-preplace netloc ft245sync_0_o_dbg 1 2 5 NJ 990 NJ 990 NJ 990 NJ 990 2210
-preplace netloc axi_gpio_0_GPIO 1 7 1 NJ 340
-preplace netloc processing_system7_0_DDR 1 7 1 2690J 60n
-preplace netloc processing_system7_0_FIXED_IO 1 7 1 NJ 90
-preplace netloc processing_system7_0_M_AXI_GP0 1 3 5 1160 10 NJ 10 NJ 10 NJ 10 2680
-preplace netloc processing_system7_0_SDIO_1 1 7 1 2690J 110n
-preplace netloc ps7_0_axi_periph_M00_AXI 1 4 3 NJ 140 NJ 140 2220
-preplace netloc axis_data_fifo_1_M_AXIS 1 4 1 1490 270n
-preplace netloc axi_dma_0_M_AXIS_MM2S 1 5 1 1850 280n
-preplace netloc ps7_0_axi_periph_M01_AXI 1 4 1 1470 160n
-preplace netloc axi_dma_0_M_AXI_MM2S 1 5 1 1840 220n
-preplace netloc axi_mem_intercon_M00_AXI 1 6 1 2190 110n
-preplace netloc axi_dma_0_M_AXI_S2MM 1 5 1 1850 240n
-levelinfo -pg 1 0 200 580 950 1310 1670 2030 2460 2710
-pagesize -pg 1 -db -bbox -sgen -160 0 2890 1610
+preplace port DDR -pg 1 -lvl 4 -x 1140 -y 60 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 4 -x 1140 -y 90 -defaultsOSRD
+preplace port SDIO_1_0 -pg 1 -lvl 4 -x 1140 -y 120 -defaultsOSRD
+preplace port fpga_gpio_o -pg 1 -lvl 4 -x 1140 -y 350 -defaultsOSRD
+preplace port sen_clk -pg 1 -lvl 0 -x 0 -y 80 -defaultsOSRD
+preplace port port-id_ftdi_clk_i -pg 1 -lvl 0 -x 0 -y 670 -defaultsOSRD
+preplace port port-id_ftdi_rxf_i_0 -pg 1 -lvl 0 -x 0 -y 20 -defaultsOSRD
+preplace port port-id_ftdi_txe_i_0 -pg 1 -lvl 0 -x 0 -y 50 -defaultsOSRD
+preplace port port-id_ftdi_wrn_o_0 -pg 1 -lvl 4 -x 1140 -y 440 -defaultsOSRD
+preplace port port-id_ftdi_rdn_o_0 -pg 1 -lvl 4 -x 1140 -y 410 -defaultsOSRD
+preplace port port-id_ftdi_oen_o_0 -pg 1 -lvl 4 -x 1140 -y 380 -defaultsOSRD
+preplace port port-id_sen_clk_in_o -pg 1 -lvl 4 -x 1140 -y 170 -defaultsOSRD
+preplace port port-id_dsp_spi_mosi -pg 1 -lvl 4 -x 1140 -y 290 -defaultsOSRD
+preplace port port-id_dsp_spi_sclk -pg 1 -lvl 4 -x 1140 -y 320 -defaultsOSRD
+preplace port port-id_ftdi_clk_out_div -pg 1 -lvl 4 -x 1140 -y 680 -defaultsOSRD
+preplace portBus ftdi_nrst_o_0 -pg 1 -lvl 4 -x 1140 -y 200 -defaultsOSRD
+preplace portBus ftdi_nsiwu_o_0 -pg 1 -lvl 4 -x 1140 -y 570 -defaultsOSRD
+preplace portBus ftdi_nwakeup_o -pg 1 -lvl 4 -x 1140 -y 890 -defaultsOSRD
+preplace portBus ftdi_gpio_o -pg 1 -lvl 4 -x 1140 -y 470 -defaultsOSRD
+preplace portBus dsp_spi_ncs -pg 1 -lvl 4 -x 1140 -y 20 -defaultsOSRD
+preplace portBus ftdi_data_io_0 -pg 1 -lvl 4 -x 1140 -y 260 -defaultsOSRD
+preplace portBus ftdi_be_io_0 -pg 1 -lvl 4 -x 1140 -y 230 -defaultsOSRD
+preplace portBus sen_data_p -pg 1 -lvl 0 -x 0 -y 140 -defaultsOSRD
+preplace portBus sen_data_n -pg 1 -lvl 0 -x 0 -y 110 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 3 -x 890 -y 130 -defaultsOSRD
+preplace inst proc_sys_reset_0 -pg 1 -lvl 1 -x 200 -y 360 -defaultsOSRD
+preplace inst axi_gpio_0 -pg 1 -lvl 3 -x 890 -y 350 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 3 -x 890 -y 470 -defaultsOSRD
+preplace inst xlconstant_1 -pg 1 -lvl 3 -x 890 -y 570 -defaultsOSRD
+preplace inst xlconstant_2 -pg 1 -lvl 3 -x 890 -y 890 -defaultsOSRD
+preplace inst clock_div_0 -pg 1 -lvl 3 -x 890 -y 680 -defaultsOSRD
+preplace inst util_vector_logic_0 -pg 1 -lvl 3 -x 890 -y 790 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 2 -x 530 -y 120 -defaultsOSRD
+preplace netloc clock_div_0_clk_out 1 3 1 NJ 680
+preplace netloc ftdi_clk_i_1 1 0 3 NJ 670 NJ 670 670
+preplace netloc m_axis_aclk_0_1 1 0 4 20 240 370 240 680 270 1100
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 1 2 380 370 680
+preplace netloc processing_system7_0_FCLK_CLK1 1 3 1 NJ 170
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 4 30 260 NJ 260 NJ 260 1120
+preplace netloc xlconstant_0_dout 1 3 1 NJ 470
+preplace netloc xlconstant_1_dout 1 3 1 NJ 570
+preplace netloc xlconstant_2_dout 1 3 1 NJ 890
+preplace netloc axi_gpio_0_GPIO 1 3 1 NJ 350
+preplace netloc processing_system7_0_DDR 1 3 1 1110J 60n
+preplace netloc processing_system7_0_FIXED_IO 1 3 1 NJ 90
+preplace netloc processing_system7_0_SDIO_1 1 3 1 1110J 110n
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 3 390 250 NJ 250 1110
+preplace netloc ps7_0_axi_periph_M00_AXI 1 2 1 670 120n
+levelinfo -pg 1 0 200 530 890 1140
+pagesize -pg 1 -db -bbox -sgen -160 0 1320 950
 "
 }
 {
-   "da_axi4_cnt":"35",
+   "da_axi4_cnt":"36",
    "da_board_cnt":"8",
    "da_clkrst_cnt":"19",
    "da_ps7_cnt":"1"

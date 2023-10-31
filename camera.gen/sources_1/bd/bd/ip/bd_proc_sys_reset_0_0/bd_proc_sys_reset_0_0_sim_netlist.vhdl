@@ -2,11 +2,11 @@
 -- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
--- Date        : Mon Oct  2 17:20:19 2023
+-- Date        : Tue Oct 31 16:27:18 2023
 -- Host        : GEORGEWALLEBB81 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim -rename_top bd_proc_sys_reset_0_0 -prefix
---               bd_proc_sys_reset_0_0_ bd_proc_sys_reset_1_0_sim_netlist.vhdl
--- Design      : bd_proc_sys_reset_1_0
+-- Command     : write_vhdl -force -mode funcsim
+--               c:/Users/georgewaller/Desktop/CameraFPGA/camera.gen/sources_1/bd/bd/ip/bd_proc_sys_reset_0_0/bd_proc_sys_reset_0_0_sim_netlist.vhdl
+-- Design      : bd_proc_sys_reset_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
 -- Device      : xc7z014sclg484-1
@@ -26,6 +26,8 @@ entity bd_proc_sys_reset_0_0_cdc_sync is
     aux_reset_in : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of bd_proc_sys_reset_0_0_cdc_sync : entity is "cdc_sync";
 end bd_proc_sys_reset_0_0_cdc_sync;
 
 architecture STRUCTURE of bd_proc_sys_reset_0_0_cdc_sync is
@@ -246,6 +248,8 @@ entity bd_proc_sys_reset_0_0_upcnt_n is
     seq_cnt_en : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of bd_proc_sys_reset_0_0_upcnt_n : entity is "upcnt_n";
 end bd_proc_sys_reset_0_0_upcnt_n;
 
 architecture STRUCTURE of bd_proc_sys_reset_0_0_upcnt_n is
@@ -410,6 +414,8 @@ entity bd_proc_sys_reset_0_0_lpf is
     ext_reset_in : in STD_LOGIC;
     aux_reset_in : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of bd_proc_sys_reset_0_0_lpf : entity is "lpf";
 end bd_proc_sys_reset_0_0_lpf;
 
 architecture STRUCTURE of bd_proc_sys_reset_0_0_lpf is
@@ -598,6 +604,8 @@ entity bd_proc_sys_reset_0_0_sequence_psr is
     lpf_int : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of bd_proc_sys_reset_0_0_sequence_psr : entity is "sequence_psr";
 end bd_proc_sys_reset_0_0_sequence_psr;
 
 architecture STRUCTURE of bd_proc_sys_reset_0_0_sequence_psr is
@@ -936,6 +944,8 @@ entity bd_proc_sys_reset_0_0_proc_sys_reset is
   attribute C_NUM_PERP_ARESETN of bd_proc_sys_reset_0_0_proc_sys_reset : entity is 1;
   attribute C_NUM_PERP_RST : integer;
   attribute C_NUM_PERP_RST of bd_proc_sys_reset_0_0_proc_sys_reset : entity is 1;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of bd_proc_sys_reset_0_0_proc_sys_reset : entity is "proc_sys_reset";
 end bd_proc_sys_reset_0_0_proc_sys_reset;
 
 architecture STRUCTURE of bd_proc_sys_reset_0_0_proc_sys_reset is
@@ -1062,7 +1072,7 @@ entity bd_proc_sys_reset_0_0 is
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of bd_proc_sys_reset_0_0 : entity is true;
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of bd_proc_sys_reset_0_0 : entity is "bd_proc_sys_reset_1_0,proc_sys_reset,{}";
+  attribute CHECK_LICENSE_TYPE of bd_proc_sys_reset_0_0 : entity is "bd_proc_sys_reset_0_0,proc_sys_reset,{}";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of bd_proc_sys_reset_0_0 : entity is "yes";
   attribute x_core_info : string;
@@ -1099,7 +1109,7 @@ architecture STRUCTURE of bd_proc_sys_reset_0_0 is
   attribute x_interface_info of mb_reset : signal is "xilinx.com:signal:reset:1.0 mb_rst RST";
   attribute x_interface_parameter of mb_reset : signal is "XIL_INTERFACENAME mb_rst, POLARITY ACTIVE_HIGH, TYPE PROCESSOR, INSERT_VIP 0";
   attribute x_interface_info of slowest_sync_clk : signal is "xilinx.com:signal:clock:1.0 clock CLK";
-  attribute x_interface_parameter of slowest_sync_clk : signal is "XIL_INTERFACENAME clock, ASSOCIATED_RESET mb_reset:bus_struct_reset:interconnect_aresetn:peripheral_aresetn:peripheral_reset, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN bd_ft60x_axi_stream_0_0_rx_clk, INSERT_VIP 0";
+  attribute x_interface_parameter of slowest_sync_clk : signal is "XIL_INTERFACENAME clock, ASSOCIATED_RESET mb_reset:bus_struct_reset:interconnect_aresetn:peripheral_aresetn:peripheral_reset, FREQ_HZ 200000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN bd_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
   attribute x_interface_info of bus_struct_reset : signal is "xilinx.com:signal:reset:1.0 bus_struct_reset RST";
   attribute x_interface_parameter of bus_struct_reset : signal is "XIL_INTERFACENAME bus_struct_reset, POLARITY ACTIVE_HIGH, TYPE INTERCONNECT, INSERT_VIP 0";
   attribute x_interface_info of interconnect_aresetn : signal is "xilinx.com:signal:reset:1.0 interconnect_low_rst RST";
