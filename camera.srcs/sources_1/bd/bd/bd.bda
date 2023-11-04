@@ -175,20 +175,102 @@
         ],
         "vertices": {
             "V0": {
-                "VM": "bd",
+                "VM": "/evf_stream_0",
                 "VT": "BC"
             },
             "V1": {
+                "VM": "bd",
+                "VT": "BC"
+            },
+            "V2": {
                 "VH": "2",
                 "VM": "bd",
                 "VT": "VR"
             },
-            "V2": {
-                "VH": "2",
+            "V3": {
+                "VH": "5",
+                "VM": "evf_stream_inst_0",
+                "VT": "VR"
+            },
+            "V4": {
+                "VH": "10",
                 "VT": "PM",
                 "TU": "active"
             },
-            "V3": {
+            "V5": {
+                "VT": "CX",
+                "BA": "0x00000000",
+                "HA": "0x0FFFFFFF",
+                "BP": "C_BASEADDR",
+                "HP": "C_HIGHADDR",
+                "MX": "/evf_stream_0",
+                "MI": "m_axi_dma",
+                "SX": "/processing_system7_0",
+                "SI": "S_AXI_HP0",
+                "SS": "HP0_DDR_LOWOCM",
+                "SV": "xilinx.com:ip:processing_system7:5.5",
+                "TM": "both",
+                "TU": "memory"
+            },
+            "V6": {
+                "VT": "CX",
+                "BA": "0x40000000",
+                "HA": "0x7FFFFFFF",
+                "MA": "Data",
+                "MX": "/processing_system7_0",
+                "MI": "M_AXI_GP0",
+                "MV": "xilinx.com:ip:processing_system7:5.5",
+                "SX": "/evf_stream_0",
+                "SI": "S_AXI_LITE_0"
+            },
+            "V7": {
+                "VT": "CX",
+                "BA": "0x40000000",
+                "HA": "0x7FFFFFFF",
+                "MA": "Data",
+                "MX": "/processing_system7_0",
+                "MI": "M_AXI_GP0",
+                "MV": "xilinx.com:ip:processing_system7:5.5",
+                "SX": "/evf_stream_0",
+                "SI": "s_axi_mipi"
+            },
+            "V8": {
+                "VT": "AC",
+                "BA": "0x00000000",
+                "HA": "0x0FFFFFFF",
+                "BP": "C_BASEADDR",
+                "HP": "C_HIGHADDR",
+                "MA": "Data_MM2S",
+                "MX": "/evf_stream_0/axi_vdma_0",
+                "MI": "M_AXI_MM2S",
+                "MS": "SEG_processing_system7_0_HP0_DDR_LOWOCM",
+                "MV": "xilinx.com:ip:axi_vdma:6.3",
+                "SX": "/processing_system7_0",
+                "SI": "S_AXI_HP0",
+                "SS": "HP0_DDR_LOWOCM",
+                "SV": "xilinx.com:ip:processing_system7:5.5",
+                "TM": "both",
+                "TU": "memory"
+            },
+            "V9": {
+                "VT": "AC",
+                "BA": "0x40000000",
+                "HA": "0x40000FFF",
+                "BP": "C_BASEADDR",
+                "HP": "C_HIGHADDR",
+                "MA": "Data",
+                "MX": "/processing_system7_0",
+                "MI": "M_AXI_GP0",
+                "MS": "SEG_axi_vdma_0_Reg",
+                "MV": "xilinx.com:ip:processing_system7:5.5",
+                "SX": "/evf_stream_0/axi_vdma_0",
+                "SI": "S_AXI_LITE",
+                "SS": "Reg",
+                "SV": "xilinx.com:ip:axi_vdma:6.3",
+                "TM": "both",
+                "TU": "register"
+            },
+            "V10": {
                 "VT": "AC",
                 "BA": "0x41200000",
                 "HA": "0x4120FFFF",
@@ -205,21 +287,74 @@
                 "SV": "xilinx.com:ip:axi_gpio:2.0",
                 "TM": "both",
                 "TU": "register"
+            },
+            "V11": {
+                "VT": "AC",
+                "BA": "0x43C00000",
+                "HA": "0x43C0FFFF",
+                "BP": "C_BASEADDR",
+                "HP": "C_HIGHADDR",
+                "MA": "Data",
+                "MX": "/processing_system7_0",
+                "MI": "M_AXI_GP0",
+                "MS": "SEG_mipi_dsi_tx_subsystem_0_Reg",
+                "MV": "xilinx.com:ip:processing_system7:5.5",
+                "SX": "/evf_stream_0/mipi_dsi_tx_subsystem_0",
+                "SI": "s_axi",
+                "SS": "Reg",
+                "SV": "xilinx.com:ip:mipi_dsi_tx_subsystem:2.3",
+                "TM": "both",
+                "TU": "register"
             }
         },
         "edges": [
             {
                 "src": "V0",
-                "trg": "V1"
+                "trg": "V3"
+            },
+            {
+                "src": "V0",
+                "trg": "V5"
+            },
+            {
+                "src": "V0",
+                "trg": "V6"
+            },
+            {
+                "src": "V0",
+                "trg": "V7"
             },
             {
                 "src": "V1",
                 "trg": "V2"
             },
             {
+                "src": "V2",
+                "trg": "V4"
+            },
+            {
                 "src": "V3",
-                "trg": "V2",
-                "EH": "2"
+                "trg": "V4"
+            },
+            {
+                "src": "V8",
+                "trg": "V4",
+                "EH": "10"
+            },
+            {
+                "src": "V9",
+                "trg": "V4",
+                "EH": "10"
+            },
+            {
+                "src": "V10",
+                "trg": "V4",
+                "EH": "10"
+            },
+            {
+                "src": "V11",
+                "trg": "V4",
+                "EH": "10"
             }
         ]
     }

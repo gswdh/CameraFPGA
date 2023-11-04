@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date         : Tue Oct 31 16:30:15 2023
+| Date         : Wed Nov  1 17:01:47 2023
 | Host         : GEORGEWALLEBB81 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file bd_wrapper_utilization_synth.rpt -pb bd_wrapper_utilization_synth.pb
 | Design       : bd_wrapper
@@ -92,7 +92,7 @@ Warning! LUT value is adjusted to account for LUT combining.
 +-----------------------------+------+-------+------------+-----------+-------+
 |          Site Type          | Used | Fixed | Prohibited | Available | Util% |
 +-----------------------------+------+-------+------------+-----------+-------+
-| Bonded IOB                  |   68 |     0 |          0 |       200 | 34.00 |
+| Bonded IOB                  |   78 |     0 |          0 |       200 | 39.00 |
 | Bonded IPADs                |    0 |     0 |          0 |         2 |  0.00 |
 | Bonded IOPADs               |    0 |     0 |          0 |       130 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |          0 |         4 |  0.00 |
@@ -149,7 +149,7 @@ Warning! LUT value is adjusted to account for LUT combining.
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
 | IBUF     |   39 |                  IO |
-| OBUF     |   23 |                  IO |
+| OBUF     |   33 |                  IO |
 | OBUFT    |    6 |                  IO |
 +----------+------+---------------------+
 
@@ -157,16 +157,23 @@ Warning! LUT value is adjusted to account for LUT combining.
 8. Black Boxes
 --------------
 
-+---------------------------+------+
-|          Ref Name         | Used |
-+---------------------------+------+
-| bd_util_vector_logic_0_0  |    1 |
-| bd_processing_system7_0_0 |    1 |
-| bd_proc_sys_reset_0_0     |    1 |
-| bd_clock_div_0_0          |    1 |
-| bd_axi_gpio_0_0           |    1 |
-| bd_auto_pc_2              |    1 |
-+---------------------------+------+
++---------------------------------------------+------+
+|                   Ref Name                  | Used |
++---------------------------------------------+------+
+| evf_stream_inst_0_mipi_dsi_tx_subsystem_0_0 |    1 |
+| evf_stream_inst_0_axi_vdma_0_0              |    1 |
+| bd_xbar_2                                   |    1 |
+| bd_processing_system7_0_0                   |    1 |
+| bd_proc_sys_reset_0_0                       |    1 |
+| bd_clock_div_0_0                            |    1 |
+| bd_axi_gpio_0_0                             |    1 |
+| bd_auto_pc_8                                |    1 |
+| bd_auto_pc_7                                |    1 |
+| bd_auto_pc_6                                |    1 |
+| bd_auto_pc_5                                |    1 |
+| bd_auto_pc_4                                |    1 |
+| bd_auto_ds_0                                |    1 |
++---------------------------------------------+------+
 
 
 9. Instantiated Netlists

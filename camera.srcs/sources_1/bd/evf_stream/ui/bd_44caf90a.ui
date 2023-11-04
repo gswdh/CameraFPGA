@@ -1,0 +1,34 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"2.0",
+   "Default View_TopLeft":"-599,-188",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0 threadsafe
+#  -string -flagsOSRD
+preplace port mipi_phy_if_0 -pg 1 -lvl 3 -x 690 -y 270 -defaultsOSRD
+preplace port m_axi_dma -pg 1 -lvl 3 -x 690 -y 70 -defaultsOSRD
+preplace port s_axi_mipi -pg 1 -lvl 0 -x 0 -y 310 -defaultsOSRD
+preplace port S_AXI_LITE_0 -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD
+preplace port port-id_aresetn -pg 1 -lvl 0 -x 0 -y 140 -defaultsOSRD
+preplace port port-id_s_axis_aclk -pg 1 -lvl 0 -x 0 -y 90 -defaultsOSRD
+preplace portBus interrupt -pg 1 -lvl 3 -x 690 -y 140 -defaultsOSRD
+preplace inst mipi_dsi_tx_subsystem_0 -pg 1 -lvl 2 -x 530 -y 350 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 2 -x 530 -y 140 -defaultsOSRD
+preplace inst axi_vdma_0 -pg 1 -lvl 1 -x 200 -y 100 -defaultsOSRD
+preplace netloc axi_vdma_0_mm2s_introut 1 1 1 N 130
+preplace netloc mipi_dsi_tx_subsystem_0_interrupt 1 1 2 390 210 670
+preplace netloc s_axis_aclk_0_1 1 0 2 30 320 370
+preplace netloc s_axis_aresetn_0_1 1 0 2 20 370 NJ
+preplace netloc xlconcat_0_dout 1 2 1 NJ 140
+preplace netloc axi_vdma_0_M_AXIS_MM2S 1 1 1 380 90n
+preplace netloc axi_vdma_0_M_AXI_MM2S 1 1 2 NJ 70 NJ
+preplace netloc mipi_dsi_tx_subsystem_0_mipi_phy_if 1 2 1 NJ 270
+preplace netloc s_axi_0_1 1 0 2 NJ 310 NJ
+preplace netloc S_AXI_LITE_0_1 1 0 1 NJ 60
+levelinfo -pg 1 0 200 530 690
+pagesize -pg 1 -db -bbox -sgen -130 0 830 490
+"
+}
+{
+   "da_clkrst_cnt":"5"
+}

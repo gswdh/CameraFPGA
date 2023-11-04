@@ -2,10 +2,10 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-// Date        : Tue Oct 31 16:27:18 2023
+// Date        : Tue Oct 31 16:27:17 2023
 // Host        : GEORGEWALLEBB81 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               c:/Users/georgewaller/Desktop/CameraFPGA/camera.gen/sources_1/bd/bd/ip/bd_clock_div_0_0/bd_clock_div_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top bd_clock_div_0_0 -prefix
+//               bd_clock_div_0_0_ bd_clock_div_0_0_sim_netlist.v
 // Design      : bd_clock_div_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -34,7 +34,6 @@ module bd_clock_div_0_0
         .nrst(nrst));
 endmodule
 
-(* ORIG_REF_NAME = "clock_div" *) 
 module bd_clock_div_0_0_clock_div
    (clk_out,
     clk_in,
