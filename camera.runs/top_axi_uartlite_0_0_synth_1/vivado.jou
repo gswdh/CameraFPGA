@@ -3,12 +3,12 @@
 # SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Sun Mar 31 16:06:16 2024
-# Process ID: 325988
-# Current directory: /home/test/Projects/camera/camera.runs/top_axi_uartlite_0_0_synth_1
+# Start of session at: Mon Apr  1 08:18:58 2024
+# Process ID: 557885
+# Current directory: /home/test/Projects/CameraZynq/camera_program/src/submodules/CameraFPGA/camera.runs/top_axi_uartlite_0_0_synth_1
 # Command line: vivado -log top_axi_uartlite_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_axi_uartlite_0_0.tcl
-# Log file: /home/test/Projects/camera/camera.runs/top_axi_uartlite_0_0_synth_1/top_axi_uartlite_0_0.vds
-# Journal file: /home/test/Projects/camera/camera.runs/top_axi_uartlite_0_0_synth_1/vivado.jou
-# Running On: testserver, OS: Linux, CPU Frequency: 2431.758 MHz, CPU Physical cores: 4, Host memory: 16686 MB
+# Log file: /home/test/Projects/CameraZynq/camera_program/src/submodules/CameraFPGA/camera.runs/top_axi_uartlite_0_0_synth_1/top_axi_uartlite_0_0.vds
+# Journal file: /home/test/Projects/CameraZynq/camera_program/src/submodules/CameraFPGA/camera.runs/top_axi_uartlite_0_0_synth_1/vivado.jou
+# Running On: testserver, OS: Linux, CPU Frequency: 3394.773 MHz, CPU Physical cores: 4, Host memory: 16686 MB
 #-----------------------------------------------------------
 source top_axi_uartlite_0_0.tcl -notrace

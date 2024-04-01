@@ -20,12 +20,6 @@
 create_clock -name clk_fpga_0 -period "20" [get_pins "PS7_i/FCLKCLK[0]"]
 set_input_jitter clk_fpga_0 0.6
 #The clocks are asynchronous, user should constrain them appropriately.#
-create_clock -name clk_fpga_1 -period "40" [get_pins "PS7_i/FCLKCLK[1]"]
-set_input_jitter clk_fpga_1 1.2
-#The clocks are asynchronous, user should constrain them appropriately.#
-create_clock -name clk_fpga_2 -period "84" [get_pins "PS7_i/FCLKCLK[2]"]
-set_input_jitter clk_fpga_2 2.52
-#The clocks are asynchronous, user should constrain them appropriately.#
 
 
 ############################################################################

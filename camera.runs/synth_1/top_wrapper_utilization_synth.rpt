@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-| Date         : Sun Mar 31 16:08:00 2024
+| Date         : Mon Apr  1 08:37:25 2024
 | Host         : testserver running 64-bit Ubuntu 20.04.6 LTS
 | Command      : report_utilization -file top_wrapper_utilization_synth.rpt -pb top_wrapper_utilization_synth.pb
 | Design       : top_wrapper
@@ -92,7 +92,7 @@ Warning! LUT value is adjusted to account for LUT combining.
 +-----------------------------+------+-------+------------+-----------+-------+
 |          Site Type          | Used | Fixed | Prohibited | Available | Util% |
 +-----------------------------+------+-------+------------+-----------+-------+
-| Bonded IOB                  |    9 |     0 |          0 |       200 |  4.50 |
+| Bonded IOB                  |   39 |     0 |          0 |       200 | 19.50 |
 | Bonded IPADs                |    0 |     0 |          0 |         2 |  0.00 |
 | Bonded IOPADs               |    0 |     0 |          0 |       130 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |          0 |         4 |  0.00 |
@@ -148,8 +148,8 @@ Warning! LUT value is adjusted to account for LUT combining.
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| OBUF     |    8 |                  IO |
-| IBUF     |    1 |                  IO |
+| OBUF     |   29 |                  IO |
+| IBUF     |   10 |                  IO |
 +----------+------+---------------------+
 
 
@@ -162,7 +162,11 @@ Warning! LUT value is adjusted to account for LUT combining.
 | top_xbar_0                 |    1 |
 | top_rst_ps7_0_50M_0        |    1 |
 | top_processing_system7_0_0 |    1 |
+| top_clk_wiz_0_0            |    1 |
+| top_axi_uartlite_0_1       |    1 |
 | top_axi_uartlite_0_0       |    1 |
+| top_axi_quad_spi_0_1       |    1 |
+| top_axi_quad_spi_0_0       |    1 |
 | top_axi_gpio_0_0           |    1 |
 | top_auto_pc_0              |    1 |
 +----------------------------+------+

@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "/home/test/Projects/camera/camera.runs/impl_1/top_wrapper.tcl"
+  variable script "/home/test/Projects/CameraZynq/camera_program/src/submodules/CameraFPGA/camera.runs/impl_1/top_wrapper.tcl"
   variable category "vivado_impl"
 }
 
@@ -125,12 +125,12 @@ set rc [catch {
   set_param chipscope.maxJobs 1
   set_param runs.launchOptions { -jobs 4  }
   reset_param project.defaultXPMLibraries 
-  open_checkpoint /home/test/Projects/camera/camera.runs/impl_1/top_wrapper.dcp
-  set_property webtalk.parent_dir /home/test/Projects/camera/camera.cache/wt [current_project]
-  set_property parent.project_path /home/test/Projects/camera/camera.xpr [current_project]
-  set_property ip_output_repo /home/test/Projects/camera/camera.cache/ip [current_project]
+  open_checkpoint /home/test/Projects/CameraZynq/camera_program/src/submodules/CameraFPGA/camera.runs/impl_1/top_wrapper.dcp
+  set_property webtalk.parent_dir /home/test/Projects/CameraZynq/camera_program/src/submodules/CameraFPGA/camera.cache/wt [current_project]
+  set_property parent.project_path /home/test/Projects/CameraZynq/camera_program/src/submodules/CameraFPGA/camera.xpr [current_project]
+  set_property ip_output_repo /home/test/Projects/CameraZynq/camera_program/src/submodules/CameraFPGA/camera.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
+  set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 OPTRACE "init_design_reports" START { REPORT }
 OPTRACE "init_design_reports" END { }
 OPTRACE "init_design_write_hwdef" START { }
@@ -288,7 +288,7 @@ set rc [catch {
   create_msg_db write_bitstream.pb
 OPTRACE "read constraints: write_bitstream" START { }
 OPTRACE "read constraints: write_bitstream" END { }
-  set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
+  set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
   catch { write_mem_info -force -no_partial_mmi top_wrapper.mmi }
 OPTRACE "write_bitstream setup" END { }
 OPTRACE "write_bitstream" START { }

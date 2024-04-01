@@ -3,12 +3,12 @@
 # SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Sun Mar 31 16:29:23 2024
-# Process ID: 330171
-# Current directory: /home/test/Projects/camera/camera.runs/impl_1
+# Start of session at: Mon Apr  1 08:43:06 2024
+# Process ID: 562973
+# Current directory: /home/test/Projects/CameraZynq/camera_program/src/submodules/CameraFPGA/camera.runs/impl_1
 # Command line: vivado -log top_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source top_wrapper.tcl -notrace
-# Log file: /home/test/Projects/camera/camera.runs/impl_1/top_wrapper.vdi
-# Journal file: /home/test/Projects/camera/camera.runs/impl_1/vivado.jou
-# Running On: testserver, OS: Linux, CPU Frequency: 3401.281 MHz, CPU Physical cores: 4, Host memory: 16686 MB
+# Log file: /home/test/Projects/CameraZynq/camera_program/src/submodules/CameraFPGA/camera.runs/impl_1/top_wrapper.vdi
+# Journal file: /home/test/Projects/CameraZynq/camera_program/src/submodules/CameraFPGA/camera.runs/impl_1/vivado.jou
+# Running On: testserver, OS: Linux, CPU Frequency: 3364.778 MHz, CPU Physical cores: 4, Host memory: 16686 MB
 #-----------------------------------------------------------
 source top_wrapper.tcl -notrace

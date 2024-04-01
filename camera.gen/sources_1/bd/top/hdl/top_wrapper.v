@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-//Date        : Sun Mar 31 16:06:06 2024
+//Date        : Mon Apr  1 08:18:26 2024
 //Host        : testserver running 64-bit Ubuntu 20.04.6 LTS
 //Command     : generate_target top_wrapper.bd
 //Design      : top_wrapper
@@ -11,7 +11,10 @@
 `timescale 1 ps / 1 ps
 
 module top_wrapper
-   (DDR_addr,
+   (BADC_SPI_MISO,
+    BADC_SPI_NCS,
+    BADC_SPI_SCLK,
+    DDR_addr,
     DDR_ba,
     DDR_cas_n,
     DDR_ck_n,
@@ -26,6 +29,11 @@ module top_wrapper
     DDR_ras_n,
     DDR_reset_n,
     DDR_we_n,
+    DISP_SPI_MOSI,
+    DISP_SPI_NCS,
+    DISP_SPI_SCLK,
+    ESP_PSS_UART_rxd,
+    ESP_PSS_UART_txd,
     ETH_CLK25M,
     ETH_NRST,
     FIXED_IO_ddr_vrn,
@@ -34,11 +42,15 @@ module top_wrapper
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
-    FPGA_LED_tri_o,
+    FPGA_GPIO_IN_tri_i,
+    FPGA_GPIO_OUT_tri_o,
     PSS_PMC_UART_rxd,
     PSS_PMC_UART_txd,
     USB_NRST,
     USB_REFCLK);
+  input BADC_SPI_MISO;
+  output [0:0]BADC_SPI_NCS;
+  output BADC_SPI_SCLK;
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -54,6 +66,11 @@ module top_wrapper
   inout DDR_ras_n;
   inout DDR_reset_n;
   inout DDR_we_n;
+  output DISP_SPI_MOSI;
+  output [0:0]DISP_SPI_NCS;
+  output DISP_SPI_SCLK;
+  input ESP_PSS_UART_rxd;
+  output ESP_PSS_UART_txd;
   output ETH_CLK25M;
   output [0:0]ETH_NRST;
   inout FIXED_IO_ddr_vrn;
@@ -62,12 +79,16 @@ module top_wrapper
   inout FIXED_IO_ps_clk;
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
-  output [2:0]FPGA_LED_tri_o;
+  input [6:0]FPGA_GPIO_IN_tri_i;
+  output [17:0]FPGA_GPIO_OUT_tri_o;
   input PSS_PMC_UART_rxd;
   output PSS_PMC_UART_txd;
   output [0:0]USB_NRST;
   output USB_REFCLK;
 
+  wire BADC_SPI_MISO;
+  wire [0:0]BADC_SPI_NCS;
+  wire BADC_SPI_SCLK;
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
   wire DDR_cas_n;
@@ -83,6 +104,11 @@ module top_wrapper
   wire DDR_ras_n;
   wire DDR_reset_n;
   wire DDR_we_n;
+  wire DISP_SPI_MOSI;
+  wire [0:0]DISP_SPI_NCS;
+  wire DISP_SPI_SCLK;
+  wire ESP_PSS_UART_rxd;
+  wire ESP_PSS_UART_txd;
   wire ETH_CLK25M;
   wire [0:0]ETH_NRST;
   wire FIXED_IO_ddr_vrn;
@@ -91,14 +117,18 @@ module top_wrapper
   wire FIXED_IO_ps_clk;
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
-  wire [2:0]FPGA_LED_tri_o;
+  wire [6:0]FPGA_GPIO_IN_tri_i;
+  wire [17:0]FPGA_GPIO_OUT_tri_o;
   wire PSS_PMC_UART_rxd;
   wire PSS_PMC_UART_txd;
   wire [0:0]USB_NRST;
   wire USB_REFCLK;
 
   top top_i
-       (.DDR_addr(DDR_addr),
+       (.BADC_SPI_MISO(BADC_SPI_MISO),
+        .BADC_SPI_NCS(BADC_SPI_NCS),
+        .BADC_SPI_SCLK(BADC_SPI_SCLK),
+        .DDR_addr(DDR_addr),
         .DDR_ba(DDR_ba),
         .DDR_cas_n(DDR_cas_n),
         .DDR_ck_n(DDR_ck_n),
@@ -113,6 +143,11 @@ module top_wrapper
         .DDR_ras_n(DDR_ras_n),
         .DDR_reset_n(DDR_reset_n),
         .DDR_we_n(DDR_we_n),
+        .DISP_SPI_MOSI(DISP_SPI_MOSI),
+        .DISP_SPI_NCS(DISP_SPI_NCS),
+        .DISP_SPI_SCLK(DISP_SPI_SCLK),
+        .ESP_PSS_UART_rxd(ESP_PSS_UART_rxd),
+        .ESP_PSS_UART_txd(ESP_PSS_UART_txd),
         .ETH_CLK25M(ETH_CLK25M),
         .ETH_NRST(ETH_NRST),
         .FIXED_IO_ddr_vrn(FIXED_IO_ddr_vrn),
@@ -121,7 +156,8 @@ module top_wrapper
         .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
-        .FPGA_LED_tri_o(FPGA_LED_tri_o),
+        .FPGA_GPIO_IN_tri_i(FPGA_GPIO_IN_tri_i),
+        .FPGA_GPIO_OUT_tri_o(FPGA_GPIO_OUT_tri_o),
         .PSS_PMC_UART_rxd(PSS_PMC_UART_rxd),
         .PSS_PMC_UART_txd(PSS_PMC_UART_txd),
         .USB_NRST(USB_NRST),

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg484-2" LaunchTime="1711898959">
+<GenRun Id="impl_1" LaunchPart="xc7z020clg484-2" LaunchTime="1711957382">
   <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
   <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-RQS" Name="top_wrapper_postroute_physopted.rqs"/>
@@ -146,8 +146,10 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="top_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_axi_uartlite_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="top_axi_uartlite_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_auto_pc_0"/>
   <BlockFileSet Type="BlockSrcs" Name="top_axi_gpio_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="top_rst_ps7_0_50M_0"/>
   <BlockFileSet Type="BlockSrcs" Name="top_processing_system7_0_0"/>
