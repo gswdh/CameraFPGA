@@ -1,0 +1,3 @@
+top_processing_system7_0_0.v,verilog,xil_defaultlib,../../../bd/top/ip/top_processing_system7_0_0/sim/top_processing_system7_0_0.v,incdir="../../../../camera.gen/sources_1/bd/top/ipshared/ec67/hdl"incdir="../../../../camera.gen/sources_1/bd/top/ipshared/6b2b/hdl"incdir="../../../../camera.gen/sources_1/bd/top/ipshared/ec67/hdl"incdir="../../../../camera.gen/sources_1/bd/top/ipshared/6b2b/hdl"
+top.v,verilog,xil_defaultlib,../../../bd/top/sim/top.v,incdir="../../../../camera.gen/sources_1/bd/top/ipshared/ec67/hdl"incdir="../../../../camera.gen/sources_1/bd/top/ipshared/6b2b/hdl"incdir="../../../../camera.gen/sources_1/bd/top/ipshared/ec67/hdl"incdir="../../../../camera.gen/sources_1/bd/top/ipshared/6b2b/hdl"
+glbl.v,Verilog,xil_defaultlib,glbl.v

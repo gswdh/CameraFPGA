@@ -1,0 +1,21 @@
+set_property IOSTANDARD LVCMOS33 [get_ports ETH_CLK25M]
+set_property PACKAGE_PIN D21 [get_ports ETH_CLK25M]
+set_property PACKAGE_PIN G22 [get_ports {ETH_NRST[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {ETH_NRST[0]}]
+
+set_property IOSTANDARD LVCMOS33 [get_ports USB_REFCLK]
+set_property PACKAGE_PIN A22 [get_ports USB_REFCLK]
+set_property IOSTANDARD LVCMOS33 [get_ports {USB_NRST[0]}]
+set_property PACKAGE_PIN F22 [get_ports {USB_NRST[0]}]
+
+set_property IOSTANDARD LVCMOS33 [get_ports {FPGA_LED_tri_o[2]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {FPGA_LED_tri_o[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {FPGA_LED_tri_o[0]}]
+set_property PACKAGE_PIN A16 [get_ports {FPGA_LED_tri_o[2]}]
+set_property PACKAGE_PIN C15 [get_ports {FPGA_LED_tri_o[0]}]
+set_property PACKAGE_PIN B15 [get_ports {FPGA_LED_tri_o[1]}]
+
+set_property PACKAGE_PIN AB11 [get_ports PSS_PMC_UART_rxd]
+set_property PACKAGE_PIN AB10 [get_ports PSS_PMC_UART_txd]
+set_property IOSTANDARD LVCMOS18 [get_ports PSS_PMC_UART_rxd]
+set_property IOSTANDARD LVCMOS18 [get_ports PSS_PMC_UART_txd]
