@@ -42,4 +42,4 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_axi_uar
 # IP: bd/top/ip/top_auto_pc_0/top_auto_pc_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_auto_pc_0 || ORIG_REF_NAME==top_auto_pc_0} -quiet] -quiet
 
-# XDC: /home/test/Projects/CameraZynq/camera_program/src/submodules/CameraFPGA/camera.gen/sources_1/bd/top/top_ooc.xdc
+# XDC: /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/top_ooc.xdc

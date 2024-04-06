@@ -53,19 +53,19 @@
 //  Output     Output      Phase    Duty Cycle   Pk-to-Pk     Phase
 //   Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)
 //----------------------------------------------------------------------------
-// _eth_clk__25.00000______0.000______50.0______247.377____161.614
-// _usb_clk__12.00000______0.000______50.0______286.482____161.614
-// badc_spi_clk__10.00000______0.000______50.0______296.755____161.614
-// disp_spi_clk__10.00000______0.000______50.0______296.755____161.614
+// _eth_clk__50.00000______0.000______50.0______410.065____105.461
+// _usb_clk__12.00000______0.000______50.0______622.595____105.461
+// badc_spi_clk__10.00000______0.000______50.0______648.166____105.461
+// disp_spi_clk__10.00000______0.000______50.0______648.166____105.461
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
 //----------------------------------------------------------------------------
-// __primary__________50.000____________0.010
+// __primary_________100.000______________0.1
 
 `timescale 1ps/1ps
 
-(* CORE_GENERATION_INFO = "top_clk_wiz_0_0,clk_wiz_v6_0_13_0_0,{component_name=top_clk_wiz_0_0,use_phase_alignment=true,use_min_o_jitter=false,use_max_i_jitter=false,use_dyn_phase_shift=false,use_inclk_switchover=false,use_dyn_reconfig=false,enable_axi=0,feedback_source=FDBK_AUTO,PRIMITIVE=PLL,num_out_clk=4,clkin1_period=20.000,clkin2_period=10.000,use_power_down=false,use_reset=true,use_locked=false,use_inclk_stopped=false,feedback_type=SINGLE,CLOCK_MGR_TYPE=NA,manual_override=false}" *)
+(* CORE_GENERATION_INFO = "top_clk_wiz_0_0,clk_wiz_v6_0_13_0_0,{component_name=top_clk_wiz_0_0,use_phase_alignment=true,use_min_o_jitter=false,use_max_i_jitter=false,use_dyn_phase_shift=false,use_inclk_switchover=false,use_dyn_reconfig=false,enable_axi=0,feedback_source=FDBK_AUTO,PRIMITIVE=MMCM,num_out_clk=4,clkin1_period=10.000,clkin2_period=10.000,use_power_down=false,use_reset=true,use_locked=false,use_inclk_stopped=false,feedback_type=SINGLE,CLOCK_MGR_TYPE=NA,manual_override=false}" *)
 
 module top_clk_wiz_0_0 
  (

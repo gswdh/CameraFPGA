@@ -2,10 +2,10 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-// Date        : Mon Apr  1 08:20:02 2024
+// Date        : Sat Apr  6 08:31:30 2024
 // Host        : testserver running 64-bit Ubuntu 20.04.6 LTS
 // Command     : write_verilog -force -mode synth_stub
-//               /home/test/Projects/CameraZynq/camera_program/src/submodules/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_processing_system7_0_0/top_processing_system7_0_0_stub.v
+//               /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_processing_system7_0_0/top_processing_system7_0_0_stub.v
 // Design      : top_processing_system7_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg484-2

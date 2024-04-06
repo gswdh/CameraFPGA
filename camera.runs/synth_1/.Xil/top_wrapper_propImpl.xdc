@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:/home/test/Projects/CameraZynq/camera_program/src/submodules/CameraFPGA/camera.srcs/constrs_1/new/pins.xdc rfile:../../../camera.srcs/constrs_1/new/pins.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/constrs_1/new/pins.xdc rfile:../../../camera.srcs/constrs_1/new/pins.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:2 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN D21 [get_ports ETH_CLK25M]
 set_property src_info {type:XDC file:1 line:3 export:INPUT save:INPUT read:READ} [current_design]

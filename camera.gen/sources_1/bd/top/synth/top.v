@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-//Date        : Mon Apr  1 08:18:26 2024
+//Date        : Sat Apr  6 08:30:08 2024
 //Host        : testserver running 64-bit Ubuntu 20.04.6 LTS
 //Command     : generate_target top.bd
 //Design      : top
@@ -1035,9 +1035,9 @@ module top
   output DISP_SPI_MOSI;
   output [0:0]DISP_SPI_NCS;
   output DISP_SPI_SCLK;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 ESP_PSS_UART " *) input ESP_PSS_UART_rxd;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 ESP_PSS_UART " *) output ESP_PSS_UART_txd;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.ETH_CLK25M CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.ETH_CLK25M, CLK_DOMAIN /clk_wiz_0_clk_out1, FREQ_HZ 25000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) output ETH_CLK25M;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 ESP_PSS_UART RxD" *) input ESP_PSS_UART_rxd;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 ESP_PSS_UART TxD" *) output ESP_PSS_UART_txd;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.ETH_CLK25M CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.ETH_CLK25M, CLK_DOMAIN /clk_wiz_0_clk_out1, FREQ_HZ 50000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) output ETH_CLK25M;
   output [0:0]ETH_NRST;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO DDR_VRN" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME FIXED_IO, CAN_DEBUG false" *) inout FIXED_IO_ddr_vrn;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO DDR_VRP" *) inout FIXED_IO_ddr_vrp;
@@ -1045,8 +1045,8 @@ module top
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_CLK" *) inout FIXED_IO_ps_clk;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB" *) inout FIXED_IO_ps_porb;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB" *) inout FIXED_IO_ps_srstb;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 FPGA_GPIO_IN " *) input [6:0]FPGA_GPIO_IN_tri_i;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 FPGA_GPIO_OUT " *) output [17:0]FPGA_GPIO_OUT_tri_o;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 FPGA_GPIO_IN TRI_I" *) input [6:0]FPGA_GPIO_IN_tri_i;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 FPGA_GPIO_OUT TRI_O" *) output [17:0]FPGA_GPIO_OUT_tri_o;
   (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 PSS_PMC_UART RxD" *) input PSS_PMC_UART_rxd;
   (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 PSS_PMC_UART TxD" *) output PSS_PMC_UART_txd;
   output [0:0]USB_NRST;
