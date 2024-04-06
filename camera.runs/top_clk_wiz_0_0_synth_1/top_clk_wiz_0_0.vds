@@ -3,16 +3,16 @@
 # SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Sat Apr  6 08:30:43 2024
-# Process ID: 31601
+# Start of session at: Sat Apr  6 21:12:59 2024
+# Process ID: 424751
 # Current directory: /home/test/Projects/CameraZynq/CameraFPGA/camera.runs/top_clk_wiz_0_0_synth_1
 # Command line: vivado -log top_clk_wiz_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_clk_wiz_0_0.tcl
 # Log file: /home/test/Projects/CameraZynq/CameraFPGA/camera.runs/top_clk_wiz_0_0_synth_1/top_clk_wiz_0_0.vds
 # Journal file: /home/test/Projects/CameraZynq/CameraFPGA/camera.runs/top_clk_wiz_0_0_synth_1/vivado.jou
-# Running On: testserver, OS: Linux, CPU Frequency: 3538.158 MHz, CPU Physical cores: 4, Host memory: 16686 MB
+# Running On: testserver, OS: Linux, CPU Frequency: 3507.284 MHz, CPU Physical cores: 4, Host memory: 16686 MB
 #-----------------------------------------------------------
 source top_clk_wiz_0_0.tcl -notrace
-create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1318.211 ; gain = 0.023 ; free physical = 6544 ; free virtual = 12236
+create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1275.668 ; gain = 25.836 ; free physical = 498 ; free virtual = 12967
 INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_clk_wiz_0_0
 Command: synth_design -top top_clk_wiz_0_0 -part xc7z020clg484-2 -incremental_mode off -mode out_of_context
 Starting synth_design
@@ -21,9 +21,9 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg484-2
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 31673
+INFO: [Synth 8-7075] Helper process launched with PID 424908
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2032.520 ; gain = 403.711 ; free physical = 4535 ; free virtual = 10226
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2048.664 ; gain = 402.711 ; free physical = 177 ; free virtual = 10845
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'top_clk_wiz_0_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_clk_wiz_0_0/top_clk_wiz_0_0.v:68]
 INFO: [Synth 8-6157] synthesizing module 'top_clk_wiz_0_0_clk_wiz' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_clk_wiz_0_0/top_clk_wiz_0_0_clk_wiz.v:68]
@@ -43,11 +43,11 @@ INFO: [Synth 8-6157] synthesizing module 'MMCME2_ADV' [/home/test/Xilinx/Vivado/
 	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: double 
 	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: double 
 	Parameter CLKOUT1_USE_FINE_PS bound to: FALSE - type: string 
-	Parameter CLKOUT2_DIVIDE bound to: 90 - type: integer 
+	Parameter CLKOUT2_DIVIDE bound to: 45 - type: integer 
 	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: double 
 	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: double 
 	Parameter CLKOUT2_USE_FINE_PS bound to: FALSE - type: string 
-	Parameter CLKOUT3_DIVIDE bound to: 90 - type: integer 
+	Parameter CLKOUT3_DIVIDE bound to: 45 - type: integer 
 	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: double 
 	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: double 
 	Parameter CLKOUT3_USE_FINE_PS bound to: FALSE - type: string 
@@ -59,18 +59,18 @@ INFO: [Synth 8-6155] done synthesizing module 'MMCME2_ADV' (0#1) [/home/test/Xil
 INFO: [Synth 8-6155] done synthesizing module 'top_clk_wiz_0_0_clk_wiz' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_clk_wiz_0_0/top_clk_wiz_0_0_clk_wiz.v:68]
 INFO: [Synth 8-6155] done synthesizing module 'top_clk_wiz_0_0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_clk_wiz_0_0/top_clk_wiz_0_0.v:68]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2112.457 ; gain = 483.648 ; free physical = 4331 ; free virtual = 10024
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2128.633 ; gain = 482.680 ; free physical = 164 ; free virtual = 10747
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2127.301 ; gain = 498.492 ; free physical = 4323 ; free virtual = 10016
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2143.477 ; gain = 497.523 ; free physical = 178 ; free virtual = 10761
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2127.301 ; gain = 498.492 ; free physical = 4323 ; free virtual = 10015
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2143.477 ; gain = 497.523 ; free physical = 178 ; free virtual = 10761
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2133.238 ; gain = 0.000 ; free physical = 4317 ; free virtual = 10009
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2149.414 ; gain = 0.000 ; free physical = 172 ; free virtual = 10755
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -87,32 +87,32 @@ Parsing XDC File [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/top_clk_
 Finished Parsing XDC File [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/top_clk_wiz_0_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2168.223 ; gain = 0.000 ; free physical = 4290 ; free virtual = 9983
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2184.398 ; gain = 0.000 ; free physical = 163 ; free virtual = 10665
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Timing 38-2] Deriving generated clocks
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2168.258 ; gain = 0.000 ; free physical = 4290 ; free virtual = 9983
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2184.434 ; gain = 0.000 ; free physical = 161 ; free virtual = 10663
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2168.258 ; gain = 539.449 ; free physical = 4277 ; free virtual = 9971
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2184.434 ; gain = 538.480 ; free physical = 161 ; free virtual = 10522
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2168.258 ; gain = 539.449 ; free physical = 4277 ; free virtual = 9971
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2184.434 ; gain = 538.480 ; free physical = 160 ; free virtual = 10521
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /home/test/Projects/CameraZynq/CameraFPGA/camera.runs/top_clk_wiz_0_0_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2168.258 ; gain = 539.449 ; free physical = 4277 ; free virtual = 9970
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2184.434 ; gain = 538.480 ; free physical = 158 ; free virtual = 10519
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2168.258 ; gain = 539.449 ; free physical = 4276 ; free virtual = 9970
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2184.434 ; gain = 538.480 ; free physical = 155 ; free virtual = 10516
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -135,25 +135,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 2168.258 ; gain = 539.449 ; free physical = 4267 ; free virtual = 9965
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2184.434 ; gain = 538.480 ; free physical = 157 ; free virtual = 10520
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 2168.258 ; gain = 539.449 ; free physical = 4257 ; free virtual = 9953
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2184.434 ; gain = 538.480 ; free physical = 165 ; free virtual = 10509
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 2168.258 ; gain = 539.449 ; free physical = 4257 ; free virtual = 9953
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2184.434 ; gain = 538.480 ; free physical = 164 ; free virtual = 10508
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 2168.258 ; gain = 539.449 ; free physical = 4257 ; free virtual = 9953
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2184.434 ; gain = 538.480 ; free physical = 161 ; free virtual = 10505
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -171,37 +171,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 2168.258 ; gain = 539.449 ; free physical = 4146 ; free virtual = 9841
+Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 2184.434 ; gain = 538.480 ; free physical = 177 ; free virtual = 10480
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 2168.258 ; gain = 539.449 ; free physical = 4146 ; free virtual = 9841
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 2184.434 ; gain = 538.480 ; free physical = 175 ; free virtual = 10478
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 2168.258 ; gain = 539.449 ; free physical = 4146 ; free virtual = 9841
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 2184.434 ; gain = 538.480 ; free physical = 172 ; free virtual = 10475
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 2168.258 ; gain = 539.449 ; free physical = 4146 ; free virtual = 9841
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 2184.434 ; gain = 538.480 ; free physical = 171 ; free virtual = 10474
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 2168.258 ; gain = 539.449 ; free physical = 4146 ; free virtual = 9841
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 2184.434 ; gain = 538.480 ; free physical = 171 ; free virtual = 10474
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 2168.258 ; gain = 539.449 ; free physical = 4146 ; free virtual = 9841
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 2184.434 ; gain = 538.480 ; free physical = 171 ; free virtual = 10474
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -222,18 +222,18 @@ Report Cell Usage:
 |3     |MMCME2_ADV |     1|
 +------+-----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 2168.258 ; gain = 539.449 ; free physical = 4146 ; free virtual = 9841
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 2184.434 ; gain = 538.480 ; free physical = 171 ; free virtual = 10474
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2168.258 ; gain = 498.492 ; free physical = 4144 ; free virtual = 9839
-Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 2168.258 ; gain = 539.449 ; free physical = 4144 ; free virtual = 9839
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2184.434 ; gain = 497.523 ; free physical = 171 ; free virtual = 10474
+Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 2184.434 ; gain = 538.480 ; free physical = 171 ; free virtual = 10474
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2168.258 ; gain = 0.000 ; free physical = 4144 ; free virtual = 9839
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2184.434 ; gain = 0.000 ; free physical = 171 ; free virtual = 10474
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2168.258 ; gain = 0.000 ; free physical = 4429 ; free virtual = 10124
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2184.434 ; gain = 0.000 ; free physical = 474 ; free virtual = 10778
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
@@ -241,11 +241,11 @@ Synth Design complete | Checksum: 38d5948a
 INFO: [Common 17-83] Releasing license: Synthesis
 27 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:32 . Memory (MB): peak = 2168.258 ; gain = 850.047 ; free physical = 4429 ; free virtual = 10124
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1711.411; main = 1385.633; forked = 341.995
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3156.465; main = 2168.227; forked = 988.238
+synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:33 . Memory (MB): peak = 2184.434 ; gain = 887.984 ; free physical = 474 ; free virtual = 10778
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1759.519; main = 1422.457; forked = 359.366
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3199.785; main = 2184.402; forked = 1015.383
 INFO: [Common 17-1381] The checkpoint '/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/top_clk_wiz_0_0_synth_1/top_clk_wiz_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP top_clk_wiz_0_0, cache-ID = 5d52dc75c64ce015
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP top_clk_wiz_0_0, cache-ID = ba1e1ef01addf4c1
 INFO: [Common 17-1381] The checkpoint '/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/top_clk_wiz_0_0_synth_1/top_clk_wiz_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_clk_wiz_0_0_utilization_synth.rpt -pb top_clk_wiz_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Apr  6 08:31:28 2024...
+INFO: [Common 17-206] Exiting Vivado at Sat Apr  6 21:13:48 2024...

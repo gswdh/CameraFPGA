@@ -2,7 +2,7 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-// Date        : Sat Apr  6 08:31:28 2024
+// Date        : Sat Apr  6 21:13:48 2024
 // Host        : testserver running 64-bit Ubuntu 20.04.6 LTS
 // Command     : write_verilog -force -mode funcsim
 //               /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_clk_wiz_0_0/top_clk_wiz_0_0_sim_netlist.v
@@ -127,11 +127,11 @@ module top_clk_wiz_0_0_clk_wiz
     .CLKOUT1_DUTY_CYCLE(0.500000),
     .CLKOUT1_PHASE(0.000000),
     .CLKOUT1_USE_FINE_PS("FALSE"),
-    .CLKOUT2_DIVIDE(90),
+    .CLKOUT2_DIVIDE(45),
     .CLKOUT2_DUTY_CYCLE(0.500000),
     .CLKOUT2_PHASE(0.000000),
     .CLKOUT2_USE_FINE_PS("FALSE"),
-    .CLKOUT3_DIVIDE(90),
+    .CLKOUT3_DIVIDE(45),
     .CLKOUT3_DUTY_CYCLE(0.500000),
     .CLKOUT3_PHASE(0.000000),
     .CLKOUT3_USE_FINE_PS("FALSE"),

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-| Date         : Sat Apr  6 08:33:47 2024
+| Date         : Sat Apr  6 21:16:32 2024
 | Host         : testserver running 64-bit Ubuntu 20.04.6 LTS
 | Command      : report_methodology -file top_wrapper_methodology_drc_routed.rpt -pb top_wrapper_methodology_drc_routed.pb -rpx top_wrapper_methodology_drc_routed.rpx
 | Design       : top_wrapper
@@ -23,15 +23,21 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 31
-+-----------+----------+-------------------------------+------------+
-| Rule      | Severity | Description                   | Violations |
-+-----------+----------+-------------------------------+------------+
-| TIMING-18 | Warning  | Missing input or output delay | 31         |
-+-----------+----------+-------------------------------+------------+
+             Violations found: 32
++-----------+----------+----------------------------------+------------+
+| Rule      | Severity | Description                      | Violations |
++-----------+----------+----------------------------------+------------+
+| TIMING-10 | Warning  | Missing property on synchronizer | 1          |
+| TIMING-18 | Warning  | Missing input or output delay    | 31         |
++-----------+----------+----------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
+TIMING-10#1 Warning
+Missing property on synchronizer  
+One or more logic synchronizer has been detected between 2 clock domains but the synchronizer does not have the property ASYNC_REG defined on one or both registers. It is recommended to run report_cdc for a complete and detailed CDC coverage
+Related violations: <none>
+
 TIMING-18#1 Warning
 Missing input or output delay  
 An input delay is missing on ESP_PSS_UART_rxd relative to the rising and/or falling clock edge(s) of clk_fpga_0.

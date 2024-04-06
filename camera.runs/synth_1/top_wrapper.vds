@@ -3,16 +3,16 @@
 # SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Sat Apr  6 08:31:33 2024
-# Process ID: 31973
+# Start of session at: Sat Apr  6 21:14:23 2024
+# Process ID: 425923
 # Current directory: /home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1
 # Command line: vivado -log top_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_wrapper.tcl
 # Log file: /home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/top_wrapper.vds
 # Journal file: /home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/vivado.jou
-# Running On: testserver, OS: Linux, CPU Frequency: 1689.080 MHz, CPU Physical cores: 4, Host memory: 16686 MB
+# Running On: testserver, OS: Linux, CPU Frequency: 3456.872 MHz, CPU Physical cores: 4, Host memory: 16686 MB
 #-----------------------------------------------------------
 source top_wrapper.tcl -notrace
-create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1318.531 ; gain = 0.023 ; free physical = 6917 ; free virtual = 12610
+create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1317.145 ; gain = 0.023 ; free physical = 2897 ; free virtual = 13214
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/test/Xilinx/Vivado/2023.2/data/ip'.
@@ -28,16 +28,16 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 32041
+INFO: [Synth 8-7075] Helper process launched with PID 426408
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2051.809 ; gain = 404.711 ; free physical = 5961 ; free virtual = 11654
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2054.391 ; gain = 406.711 ; free physical = 1880 ; free virtual = 12207
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'top_wrapper' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/hdl/top_wrapper.v:13]
 INFO: [Synth 8-6157] synthesizing module 'top' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:978]
-INFO: [Synth 8-6157] synthesizing module 'top_axi_gpio_0_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-31973-testserver/realtime/top_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_axi_gpio_0_0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-31973-testserver/realtime/top_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'top_axi_quad_spi_0_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-31973-testserver/realtime/top_axi_quad_spi_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_axi_quad_spi_0_0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-31973-testserver/realtime/top_axi_quad_spi_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_axi_gpio_0_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-425923-testserver/realtime/top_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_axi_gpio_0_0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-425923-testserver/realtime/top_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_axi_quad_spi_0_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-425923-testserver/realtime/top_axi_quad_spi_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_axi_quad_spi_0_0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-425923-testserver/realtime/top_axi_quad_spi_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'io0_o' of module 'top_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1258]
 WARNING: [Synth 8-7071] port 'io0_t' of module 'top_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1258]
 WARNING: [Synth 8-7071] port 'io1_o' of module 'top_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1258]
@@ -46,8 +46,8 @@ WARNING: [Synth 8-7071] port 'sck_t' of module 'top_axi_quad_spi_0_0' is unconne
 WARNING: [Synth 8-7071] port 'ss_t' of module 'top_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1258]
 WARNING: [Synth 8-7071] port 'ip2intc_irpt' of module 'top_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1258]
 WARNING: [Synth 8-7023] instance 'axi_quad_spi_0' of module 'top_axi_quad_spi_0_0' has 33 connections declared, but only 26 given [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1258]
-INFO: [Synth 8-6157] synthesizing module 'top_axi_quad_spi_0_1' [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-31973-testserver/realtime/top_axi_quad_spi_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_axi_quad_spi_0_1' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-31973-testserver/realtime/top_axi_quad_spi_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_axi_quad_spi_0_1' [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-425923-testserver/realtime/top_axi_quad_spi_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_axi_quad_spi_0_1' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-425923-testserver/realtime/top_axi_quad_spi_0_1_stub.v:6]
 WARNING: [Synth 8-7071] port 'io0_t' of module 'top_axi_quad_spi_0_1' is unconnected for instance 'axi_quad_spi_1' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1285]
 WARNING: [Synth 8-7071] port 'io1_o' of module 'top_axi_quad_spi_0_1' is unconnected for instance 'axi_quad_spi_1' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1285]
 WARNING: [Synth 8-7071] port 'io1_t' of module 'top_axi_quad_spi_0_1' is unconnected for instance 'axi_quad_spi_1' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1285]
@@ -55,18 +55,18 @@ WARNING: [Synth 8-7071] port 'sck_t' of module 'top_axi_quad_spi_0_1' is unconne
 WARNING: [Synth 8-7071] port 'ss_t' of module 'top_axi_quad_spi_0_1' is unconnected for instance 'axi_quad_spi_1' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1285]
 WARNING: [Synth 8-7071] port 'ip2intc_irpt' of module 'top_axi_quad_spi_0_1' is unconnected for instance 'axi_quad_spi_1' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1285]
 WARNING: [Synth 8-7023] instance 'axi_quad_spi_1' of module 'top_axi_quad_spi_0_1' has 33 connections declared, but only 27 given [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1285]
-INFO: [Synth 8-6157] synthesizing module 'top_axi_uartlite_0_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-31973-testserver/realtime/top_axi_uartlite_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_axi_uartlite_0_0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-31973-testserver/realtime/top_axi_uartlite_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_axi_uartlite_0_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-425923-testserver/realtime/top_axi_uartlite_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_axi_uartlite_0_0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-425923-testserver/realtime/top_axi_uartlite_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'interrupt' of module 'top_axi_uartlite_0_0' is unconnected for instance 'axi_uartlite_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1313]
 WARNING: [Synth 8-7023] instance 'axi_uartlite_0' of module 'top_axi_uartlite_0_0' has 22 connections declared, but only 21 given [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1313]
-INFO: [Synth 8-6157] synthesizing module 'top_axi_uartlite_0_1' [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-31973-testserver/realtime/top_axi_uartlite_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_axi_uartlite_0_1' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-31973-testserver/realtime/top_axi_uartlite_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_axi_uartlite_0_1' [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-425923-testserver/realtime/top_axi_uartlite_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_axi_uartlite_0_1' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-425923-testserver/realtime/top_axi_uartlite_0_1_stub.v:6]
 WARNING: [Synth 8-7071] port 'interrupt' of module 'top_axi_uartlite_0_1' is unconnected for instance 'axi_uartlite_1' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1335]
 WARNING: [Synth 8-7023] instance 'axi_uartlite_1' of module 'top_axi_uartlite_0_1' has 22 connections declared, but only 21 given [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1335]
-INFO: [Synth 8-6157] synthesizing module 'top_clk_wiz_0_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-31973-testserver/realtime/top_clk_wiz_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_clk_wiz_0_0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-31973-testserver/realtime/top_clk_wiz_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'top_processing_system7_0_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-31973-testserver/realtime/top_processing_system7_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_processing_system7_0_0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-31973-testserver/realtime/top_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_clk_wiz_0_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-425923-testserver/realtime/top_clk_wiz_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_clk_wiz_0_0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-425923-testserver/realtime/top_clk_wiz_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_processing_system7_0_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-425923-testserver/realtime/top_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_processing_system7_0_0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-425923-testserver/realtime/top_processing_system7_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'TTC0_WAVE0_OUT' of module 'top_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1364]
 WARNING: [Synth 8-7071] port 'TTC0_WAVE1_OUT' of module 'top_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1364]
 WARNING: [Synth 8-7071] port 'TTC0_WAVE2_OUT' of module 'top_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1364]
@@ -85,17 +85,17 @@ INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_PBIRH0' (0#1) [/
 INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_ALJ83W' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:541]
 INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_ALJ83W' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:541]
 INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_M354KG' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:673]
-INFO: [Synth 8-6157] synthesizing module 'top_auto_pc_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-31973-testserver/realtime/top_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_auto_pc_0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-31973-testserver/realtime/top_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_auto_pc_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-425923-testserver/realtime/top_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_auto_pc_0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-425923-testserver/realtime/top_auto_pc_0_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_M354KG' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:673]
-INFO: [Synth 8-6157] synthesizing module 'top_xbar_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-31973-testserver/realtime/top_xbar_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_xbar_0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-31973-testserver/realtime/top_xbar_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_xbar_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-425923-testserver/realtime/top_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_xbar_0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-425923-testserver/realtime/top_xbar_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'top_xbar_0' is unconnected for instance 'xbar' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:2465]
 WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'top_xbar_0' is unconnected for instance 'xbar' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:2465]
 WARNING: [Synth 8-7023] instance 'xbar' of module 'top_xbar_0' has 40 connections declared, but only 38 given [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:2465]
 INFO: [Synth 8-6155] done synthesizing module 'top_ps7_0_axi_periph_0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1577]
-INFO: [Synth 8-6157] synthesizing module 'top_rst_ps7_0_50M_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-31973-testserver/realtime/top_rst_ps7_0_50M_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_rst_ps7_0_50M_0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-31973-testserver/realtime/top_rst_ps7_0_50M_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_rst_ps7_0_50M_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-425923-testserver/realtime/top_rst_ps7_0_50M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_rst_ps7_0_50M_0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-425923-testserver/realtime/top_rst_ps7_0_50M_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'mb_reset' of module 'top_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1566]
 WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'top_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1566]
 WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'top_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1566]
@@ -142,18 +142,18 @@ WARNING: [Synth 8-7129] Port M04_ARESETN in module top_ps7_0_axi_periph_0 is eit
 WARNING: [Synth 8-7129] Port S00_ACLK in module top_ps7_0_axi_periph_0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S00_ARESETN in module top_ps7_0_axi_periph_0 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2134.746 ; gain = 487.648 ; free physical = 5864 ; free virtual = 11557
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2135.359 ; gain = 487.680 ; free physical = 1767 ; free virtual = 12095
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2149.590 ; gain = 502.492 ; free physical = 5862 ; free virtual = 11555
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2150.203 ; gain = 502.523 ; free physical = 1765 ; free virtual = 12093
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2149.590 ; gain = 502.492 ; free physical = 5862 ; free virtual = 11555
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2150.203 ; gain = 502.523 ; free physical = 1765 ; free virtual = 12093
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2149.590 ; gain = 0.000 ; free physical = 5862 ; free virtual = 11555
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2150.203 ; gain = 0.000 ; free physical = 1765 ; free virtual = 12093
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -170,12 +170,12 @@ Parsing XDC File [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1
 Finished Parsing XDC File [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_rst_ps7_0_50M_0/top_rst_ps7_0_50M_0/top_rst_ps7_0_50M_0_in_context.xdc] for cell 'top_i/rst_ps7_0_50M'
 Parsing XDC File [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_axi_uartlite_0_0/top_axi_uartlite_0_0/top_axi_uartlite_0_0_in_context.xdc] for cell 'top_i/axi_uartlite_0'
 Finished Parsing XDC File [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_axi_uartlite_0_0/top_axi_uartlite_0_0/top_axi_uartlite_0_0_in_context.xdc] for cell 'top_i/axi_uartlite_0'
-Parsing XDC File [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_axi_quad_spi_0_0/top_axi_quad_spi_0_0/top_axi_quad_spi_0_1_in_context.xdc] for cell 'top_i/axi_quad_spi_0'
-Finished Parsing XDC File [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_axi_quad_spi_0_0/top_axi_quad_spi_0_0/top_axi_quad_spi_0_1_in_context.xdc] for cell 'top_i/axi_quad_spi_0'
+Parsing XDC File [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_axi_quad_spi_0_0/top_axi_quad_spi_0_0/top_axi_quad_spi_0_0_in_context.xdc] for cell 'top_i/axi_quad_spi_0'
+Finished Parsing XDC File [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_axi_quad_spi_0_0/top_axi_quad_spi_0_0/top_axi_quad_spi_0_0_in_context.xdc] for cell 'top_i/axi_quad_spi_0'
 Parsing XDC File [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_clk_wiz_0_0/top_clk_wiz_0_0/top_clk_wiz_0_0_in_context.xdc] for cell 'top_i/clk_wiz_0'
 Finished Parsing XDC File [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_clk_wiz_0_0/top_clk_wiz_0_0/top_clk_wiz_0_0_in_context.xdc] for cell 'top_i/clk_wiz_0'
-Parsing XDC File [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_axi_quad_spi_0_1/top_axi_quad_spi_0_1/top_axi_quad_spi_0_1_in_context.xdc] for cell 'top_i/axi_quad_spi_1'
-Finished Parsing XDC File [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_axi_quad_spi_0_1/top_axi_quad_spi_0_1/top_axi_quad_spi_0_1_in_context.xdc] for cell 'top_i/axi_quad_spi_1'
+Parsing XDC File [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_axi_quad_spi_0_1/top_axi_quad_spi_0_1/top_axi_quad_spi_0_0_in_context.xdc] for cell 'top_i/axi_quad_spi_1'
+Finished Parsing XDC File [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_axi_quad_spi_0_1/top_axi_quad_spi_0_1/top_axi_quad_spi_0_0_in_context.xdc] for cell 'top_i/axi_quad_spi_1'
 Parsing XDC File [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_axi_uartlite_0_1/top_axi_uartlite_0_1/top_axi_uartlite_0_0_in_context.xdc] for cell 'top_i/axi_uartlite_1'
 Finished Parsing XDC File [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_axi_uartlite_0_1/top_axi_uartlite_0_1/top_axi_uartlite_0_0_in_context.xdc] for cell 'top_i/axi_uartlite_1'
 Parsing XDC File [/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/constrs_1/new/pins.xdc]
@@ -186,22 +186,22 @@ Parsing XDC File [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/
 Finished Parsing XDC File [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2190.512 ; gain = 0.000 ; free physical = 5785 ; free virtual = 11479
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2191.125 ; gain = 0.000 ; free physical = 1745 ; free virtual = 12073
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2190.547 ; gain = 0.000 ; free physical = 5784 ; free virtual = 11478
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2191.160 ; gain = 0.000 ; free physical = 1744 ; free virtual = 12072
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2190.547 ; gain = 543.449 ; free physical = 5832 ; free virtual = 11525
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2191.160 ; gain = 543.480 ; free physical = 1773 ; free virtual = 12102
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2190.547 ; gain = 543.449 ; free physical = 5829 ; free virtual = 11522
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2191.160 ; gain = 543.480 ; free physical = 1773 ; free virtual = 12102
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -480,10 +480,10 @@ Applied set_property KEEP_HIERARCHY = SOFT for top_i/axi_quad_spi_1. (constraint
 Applied set_property KEEP_HIERARCHY = SOFT for top_i/xlconstant_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for top_i/axi_uartlite_1. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2190.547 ; gain = 543.449 ; free physical = 5782 ; free virtual = 11475
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2191.160 ; gain = 543.480 ; free physical = 1773 ; free virtual = 12102
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2190.547 ; gain = 543.449 ; free physical = 5774 ; free virtual = 11469
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2191.160 ; gain = 543.480 ; free physical = 1772 ; free virtual = 12102
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -518,25 +518,25 @@ WARNING: [Synth 8-7129] Port M04_ARESETN in module top_ps7_0_axi_periph_0 is eit
 WARNING: [Synth 8-7129] Port S00_ACLK in module top_ps7_0_axi_periph_0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S00_ARESETN in module top_ps7_0_axi_periph_0 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2190.547 ; gain = 543.449 ; free physical = 5771 ; free virtual = 11471
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 2191.160 ; gain = 543.480 ; free physical = 1751 ; free virtual = 12085
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 2190.547 ; gain = 543.449 ; free physical = 5828 ; free virtual = 11526
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2191.160 ; gain = 543.480 ; free physical = 1758 ; free virtual = 12092
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 2190.547 ; gain = 543.449 ; free physical = 5828 ; free virtual = 11526
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2191.160 ; gain = 543.480 ; free physical = 1758 ; free virtual = 12092
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2190.547 ; gain = 543.449 ; free physical = 5828 ; free virtual = 11526
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2191.160 ; gain = 543.480 ; free physical = 1758 ; free virtual = 12092
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -554,37 +554,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 2190.547 ; gain = 543.449 ; free physical = 5825 ; free virtual = 11523
+Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 2191.160 ; gain = 543.480 ; free physical = 1708 ; free virtual = 12042
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 2190.547 ; gain = 543.449 ; free physical = 5825 ; free virtual = 11523
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 2191.160 ; gain = 543.480 ; free physical = 1708 ; free virtual = 12042
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 2190.547 ; gain = 543.449 ; free physical = 5825 ; free virtual = 11523
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 2191.160 ; gain = 543.480 ; free physical = 1708 ; free virtual = 12042
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 2190.547 ; gain = 543.449 ; free physical = 5825 ; free virtual = 11523
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 2191.160 ; gain = 543.480 ; free physical = 1708 ; free virtual = 12042
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 2190.547 ; gain = 543.449 ; free physical = 5825 ; free virtual = 11523
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 2191.160 ; gain = 543.480 ; free physical = 1708 ; free virtual = 12042
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 2190.547 ; gain = 543.449 ; free physical = 5825 ; free virtual = 11523
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 2191.160 ; gain = 543.480 ; free physical = 1708 ; free virtual = 12042
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -622,16 +622,16 @@ Report Cell Usage:
 |12    |OBUF                     |    29|
 +------+-------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 2190.547 ; gain = 543.449 ; free physical = 5825 ; free virtual = 11523
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 2191.160 ; gain = 543.480 ; free physical = 1708 ; free virtual = 12042
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 13 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2190.547 ; gain = 502.492 ; free physical = 5824 ; free virtual = 11522
-Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 2190.547 ; gain = 543.449 ; free physical = 5824 ; free virtual = 11522
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 2191.160 ; gain = 502.523 ; free physical = 1708 ; free virtual = 12042
+Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 2191.160 ; gain = 543.480 ; free physical = 1708 ; free virtual = 12042
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2190.547 ; gain = 0.000 ; free physical = 6109 ; free virtual = 11806
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2191.160 ; gain = 0.000 ; free physical = 1994 ; free virtual = 12329
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2190.547 ; gain = 0.000 ; free physical = 6051 ; free virtual = 11750
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2191.160 ; gain = 0.000 ; free physical = 2017 ; free virtual = 12352
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
@@ -639,10 +639,10 @@ Synth Design complete | Checksum: f08b0b79
 INFO: [Common 17-83] Releasing license: Synthesis
 64 Infos, 80 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:32 . Memory (MB): peak = 2190.547 ; gain = 872.016 ; free physical = 6050 ; free virtual = 11749
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1843.832; main = 1510.639; forked = 382.966
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3178.754; main = 2190.516; forked = 988.238
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2190.547 ; gain = 0.000 ; free physical = 6050 ; free virtual = 11749
+synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:32 . Memory (MB): peak = 2191.160 ; gain = 874.016 ; free physical = 2044 ; free virtual = 12378
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1977.957; main = 1674.688; forked = 423.243
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3179.371; main = 2191.129; forked = 988.242
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2191.160 ; gain = 0.000 ; free physical = 2042 ; free virtual = 12377
 INFO: [Common 17-1381] The checkpoint '/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/top_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_wrapper_utilization_synth.rpt -pb top_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Apr  6 08:32:18 2024...
+INFO: [Common 17-206] Exiting Vivado at Sat Apr  6 21:15:09 2024...

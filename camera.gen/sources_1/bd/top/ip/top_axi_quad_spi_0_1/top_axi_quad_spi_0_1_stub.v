@@ -2,11 +2,11 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-// Date        : Mon Apr  1 08:14:12 2024
+// Date        : Sat Apr  6 21:13:59 2024
 // Host        : testserver running 64-bit Ubuntu 20.04.6 LTS
 // Command     : write_verilog -force -mode synth_stub -rename_top top_axi_quad_spi_0_1 -prefix
-//               top_axi_quad_spi_0_1_ top_axi_quad_spi_0_1_stub.v
-// Design      : top_axi_quad_spi_0_1
+//               top_axi_quad_spi_0_1_ top_axi_quad_spi_0_0_stub.v
+// Design      : top_axi_quad_spi_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg484-2
 // --------------------------------------------------------------------------------

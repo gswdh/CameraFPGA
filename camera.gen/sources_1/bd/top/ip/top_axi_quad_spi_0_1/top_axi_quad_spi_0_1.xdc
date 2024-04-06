@@ -75,10 +75,6 @@ create_waiver -scope -internal -quiet -user "axi_quad_spi" -internal -type CDC -
 set_false_path -to [get_pins -of [get_cells -hier -filter {NAME =~*cdc_to*}] -filter {REF_PIN_NAME =~D}] 
 #set_false_path -to [get_pins -hierarchical -filter {NAME =~*RESET_SYNC_AXI_SPI_CLK_INST/RESET_SYNC_AX2S_1/D}]
 set_false_path -to [get_pins -of [get_cells -hier -filter {NAME =~*RESET_SYNC_AXI_SPI_CLK_INST/RESET_SYNC_AX2S_1}] -filter {REF_PIN_NAME =~D}]
-#set_false_path -to [get_pins -hierarchical -filter {NAME =~*QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.SPISEL_PULSE_S2AX_1_CDC/D}]
-set_false_path -to [get_pins -of [get_cells -hier -filter {NAME =~*QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.SPISEL_PULSE_S2AX_1_CDC}] -filter {REF_PIN_NAME ==D}] 
-#set_false_path -to [get_pins -of [get_cells -hier -filter {NAME =~*QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.*SPISEL_PULSE_S2AX_1_CDC}] -filter {REF_PIN_NAME ==D}] 
-#set_false_path -to [get_pins -of [get_cells -hier -filter {NAME =~*QSPI_CORE_INTERFACE_I/RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg*}] -filter {REF_PIN_NAME ==D}] 
 
 ## IOB constraints ######
 set_property IOB true [get_cells -hierarchical -filter {NAME =~*IO*_I_REG}]
