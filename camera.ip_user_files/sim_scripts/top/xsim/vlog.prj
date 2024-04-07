@@ -1,0 +1,13 @@
+verilog xil_defaultlib --include "/home/test/Xilinx/Vivado/2023.2/data/xilinx_vip/include" --include "../../../../camera.gen/sources_1/bd/top/ipshared/ec67/hdl" --include "../../../../camera.gen/sources_1/bd/top/ipshared/6b2b/hdl" --include "../../../../camera.gen/sources_1/bd/top/ipshared/c2c6" \
+"../../../bd/top/ip/top_processing_system7_0_0/sim/top_processing_system7_0_0.v" \
+"../../../bd/top/ip/top_xbar_0/sim/top_xbar_0.v" \
+"../../../bd/top/ip/top_clk_wiz_0_0/top_clk_wiz_0_0_clk_wiz.v" \
+"../../../bd/top/ip/top_clk_wiz_0_0/top_clk_wiz_0_0.v" \
+"../../../bd/top/ip/top_xlconstant_0_0/sim/top_xlconstant_0_0.v" \
+"../../../bd/top/ip/top_auto_pc_0/sim/top_auto_pc_0.v" \
+"../../../bd/top/sim/top.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

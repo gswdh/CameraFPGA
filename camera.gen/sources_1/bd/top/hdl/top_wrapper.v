@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-//Date        : Sat Apr  6 21:12:48 2024
+//Date        : Sun Apr  7 21:13:19 2024
 //Host        : testserver running 64-bit Ubuntu 20.04.6 LTS
 //Command     : generate_target top_wrapper.bd
 //Design      : top_wrapper
@@ -46,6 +46,8 @@ module top_wrapper
     FPGA_GPIO_OUT_tri_o,
     PSS_PMC_UART_rxd,
     PSS_PMC_UART_txd,
+    SDIO_1_0_cdn,
+    SDIO_1_0_wp,
     USB_NRST,
     USB_REFCLK);
   input BADC_SPI_MISO;
@@ -83,6 +85,8 @@ module top_wrapper
   output [17:0]FPGA_GPIO_OUT_tri_o;
   input PSS_PMC_UART_rxd;
   output PSS_PMC_UART_txd;
+  input SDIO_1_0_cdn;
+  input SDIO_1_0_wp;
   output [0:0]USB_NRST;
   output USB_REFCLK;
 
@@ -121,6 +125,8 @@ module top_wrapper
   wire [17:0]FPGA_GPIO_OUT_tri_o;
   wire PSS_PMC_UART_rxd;
   wire PSS_PMC_UART_txd;
+  wire SDIO_1_0_cdn;
+  wire SDIO_1_0_wp;
   wire [0:0]USB_NRST;
   wire USB_REFCLK;
 
@@ -160,6 +166,8 @@ module top_wrapper
         .FPGA_GPIO_OUT_tri_o(FPGA_GPIO_OUT_tri_o),
         .PSS_PMC_UART_rxd(PSS_PMC_UART_rxd),
         .PSS_PMC_UART_txd(PSS_PMC_UART_txd),
+        .SDIO_1_0_cdn(SDIO_1_0_cdn),
+        .SDIO_1_0_wp(SDIO_1_0_wp),
         .USB_NRST(USB_NRST),
         .USB_REFCLK(USB_REFCLK));
 endmodule

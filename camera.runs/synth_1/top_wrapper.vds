@@ -3,16 +3,16 @@
 # SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Sat Apr  6 21:14:23 2024
-# Process ID: 425923
+# Start of session at: Sun Apr  7 21:13:26 2024
+# Process ID: 142697
 # Current directory: /home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1
 # Command line: vivado -log top_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_wrapper.tcl
 # Log file: /home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/top_wrapper.vds
 # Journal file: /home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/vivado.jou
-# Running On: testserver, OS: Linux, CPU Frequency: 3456.872 MHz, CPU Physical cores: 4, Host memory: 16686 MB
+# Running On: testserver, OS: Linux, CPU Frequency: 2822.777 MHz, CPU Physical cores: 4, Host memory: 16686 MB
 #-----------------------------------------------------------
 source top_wrapper.tcl -notrace
-create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1317.145 ; gain = 0.023 ; free physical = 2897 ; free virtual = 13214
+create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1317.535 ; gain = 0.023 ; free physical = 4938 ; free virtual = 10729
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/test/Xilinx/Vivado/2023.2/data/ip'.
@@ -28,52 +28,46 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 426408
+INFO: [Synth 8-7075] Helper process launched with PID 142828
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2054.391 ; gain = 406.711 ; free physical = 1880 ; free virtual = 12207
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2052.781 ; gain = 405.680 ; free physical = 4011 ; free virtual = 9802
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'top_wrapper' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/hdl/top_wrapper.v:13]
-INFO: [Synth 8-6157] synthesizing module 'top' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:978]
-INFO: [Synth 8-6157] synthesizing module 'top_axi_gpio_0_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-425923-testserver/realtime/top_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_axi_gpio_0_0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-425923-testserver/realtime/top_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'top_axi_quad_spi_0_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-425923-testserver/realtime/top_axi_quad_spi_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_axi_quad_spi_0_0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-425923-testserver/realtime/top_axi_quad_spi_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'io0_o' of module 'top_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1258]
-WARNING: [Synth 8-7071] port 'io0_t' of module 'top_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1258]
-WARNING: [Synth 8-7071] port 'io1_o' of module 'top_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1258]
-WARNING: [Synth 8-7071] port 'io1_t' of module 'top_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1258]
-WARNING: [Synth 8-7071] port 'sck_t' of module 'top_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1258]
-WARNING: [Synth 8-7071] port 'ss_t' of module 'top_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1258]
-WARNING: [Synth 8-7071] port 'ip2intc_irpt' of module 'top_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1258]
-WARNING: [Synth 8-7023] instance 'axi_quad_spi_0' of module 'top_axi_quad_spi_0_0' has 33 connections declared, but only 26 given [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1258]
-INFO: [Synth 8-6157] synthesizing module 'top_axi_quad_spi_0_1' [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-425923-testserver/realtime/top_axi_quad_spi_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_axi_quad_spi_0_1' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-425923-testserver/realtime/top_axi_quad_spi_0_1_stub.v:6]
-WARNING: [Synth 8-7071] port 'io0_t' of module 'top_axi_quad_spi_0_1' is unconnected for instance 'axi_quad_spi_1' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1285]
-WARNING: [Synth 8-7071] port 'io1_o' of module 'top_axi_quad_spi_0_1' is unconnected for instance 'axi_quad_spi_1' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1285]
-WARNING: [Synth 8-7071] port 'io1_t' of module 'top_axi_quad_spi_0_1' is unconnected for instance 'axi_quad_spi_1' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1285]
-WARNING: [Synth 8-7071] port 'sck_t' of module 'top_axi_quad_spi_0_1' is unconnected for instance 'axi_quad_spi_1' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1285]
-WARNING: [Synth 8-7071] port 'ss_t' of module 'top_axi_quad_spi_0_1' is unconnected for instance 'axi_quad_spi_1' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1285]
-WARNING: [Synth 8-7071] port 'ip2intc_irpt' of module 'top_axi_quad_spi_0_1' is unconnected for instance 'axi_quad_spi_1' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1285]
-WARNING: [Synth 8-7023] instance 'axi_quad_spi_1' of module 'top_axi_quad_spi_0_1' has 33 connections declared, but only 27 given [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1285]
-INFO: [Synth 8-6157] synthesizing module 'top_axi_uartlite_0_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-425923-testserver/realtime/top_axi_uartlite_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_axi_uartlite_0_0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-425923-testserver/realtime/top_axi_uartlite_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'interrupt' of module 'top_axi_uartlite_0_0' is unconnected for instance 'axi_uartlite_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1313]
-WARNING: [Synth 8-7023] instance 'axi_uartlite_0' of module 'top_axi_uartlite_0_0' has 22 connections declared, but only 21 given [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1313]
-INFO: [Synth 8-6157] synthesizing module 'top_axi_uartlite_0_1' [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-425923-testserver/realtime/top_axi_uartlite_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_axi_uartlite_0_1' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-425923-testserver/realtime/top_axi_uartlite_0_1_stub.v:6]
-WARNING: [Synth 8-7071] port 'interrupt' of module 'top_axi_uartlite_0_1' is unconnected for instance 'axi_uartlite_1' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1335]
-WARNING: [Synth 8-7023] instance 'axi_uartlite_1' of module 'top_axi_uartlite_0_1' has 22 connections declared, but only 21 given [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1335]
-INFO: [Synth 8-6157] synthesizing module 'top_clk_wiz_0_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-425923-testserver/realtime/top_clk_wiz_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_clk_wiz_0_0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-425923-testserver/realtime/top_clk_wiz_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'top_processing_system7_0_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-425923-testserver/realtime/top_processing_system7_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_processing_system7_0_0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-425923-testserver/realtime/top_processing_system7_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'TTC0_WAVE0_OUT' of module 'top_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1364]
-WARNING: [Synth 8-7071] port 'TTC0_WAVE1_OUT' of module 'top_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1364]
-WARNING: [Synth 8-7071] port 'TTC0_WAVE2_OUT' of module 'top_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1364]
-WARNING: [Synth 8-7071] port 'USB1_PORT_INDCTL' of module 'top_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1364]
-WARNING: [Synth 8-7071] port 'USB1_VBUS_PWRSELECT' of module 'top_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1364]
-WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'top_processing_system7_0_0' has 68 connections declared, but only 63 given [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1364]
-INFO: [Synth 8-6157] synthesizing module 'top_ps7_0_axi_periph_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1577]
+INFO: [Synth 8-6157] synthesizing module 'top' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1110]
+INFO: [Synth 8-6157] synthesizing module 'top_axi_gpio_0_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-142697-testserver/realtime/top_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_axi_gpio_0_0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-142697-testserver/realtime/top_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_axi_quad_spi_0_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-142697-testserver/realtime/top_axi_quad_spi_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_axi_quad_spi_0_0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-142697-testserver/realtime/top_axi_quad_spi_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'io0_o' of module 'top_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1403]
+WARNING: [Synth 8-7071] port 'io0_t' of module 'top_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1403]
+WARNING: [Synth 8-7071] port 'io1_o' of module 'top_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1403]
+WARNING: [Synth 8-7071] port 'io1_t' of module 'top_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1403]
+WARNING: [Synth 8-7071] port 'sck_t' of module 'top_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1403]
+WARNING: [Synth 8-7071] port 'ss_t' of module 'top_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1403]
+WARNING: [Synth 8-7023] instance 'axi_quad_spi_0' of module 'top_axi_quad_spi_0_0' has 33 connections declared, but only 27 given [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1403]
+INFO: [Synth 8-6157] synthesizing module 'top_axi_quad_spi_0_1' [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-142697-testserver/realtime/top_axi_quad_spi_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_axi_quad_spi_0_1' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-142697-testserver/realtime/top_axi_quad_spi_0_1_stub.v:6]
+WARNING: [Synth 8-7071] port 'io0_t' of module 'top_axi_quad_spi_0_1' is unconnected for instance 'axi_quad_spi_1' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1431]
+WARNING: [Synth 8-7071] port 'io1_o' of module 'top_axi_quad_spi_0_1' is unconnected for instance 'axi_quad_spi_1' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1431]
+WARNING: [Synth 8-7071] port 'io1_t' of module 'top_axi_quad_spi_0_1' is unconnected for instance 'axi_quad_spi_1' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1431]
+WARNING: [Synth 8-7071] port 'sck_t' of module 'top_axi_quad_spi_0_1' is unconnected for instance 'axi_quad_spi_1' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1431]
+WARNING: [Synth 8-7071] port 'ss_t' of module 'top_axi_quad_spi_0_1' is unconnected for instance 'axi_quad_spi_1' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1431]
+WARNING: [Synth 8-7023] instance 'axi_quad_spi_1' of module 'top_axi_quad_spi_0_1' has 33 connections declared, but only 28 given [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1431]
+INFO: [Synth 8-6157] synthesizing module 'top_axi_uartlite_0_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-142697-testserver/realtime/top_axi_uartlite_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_axi_uartlite_0_0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-142697-testserver/realtime/top_axi_uartlite_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_axi_uartlite_0_1' [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-142697-testserver/realtime/top_axi_uartlite_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_axi_uartlite_0_1' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-142697-testserver/realtime/top_axi_uartlite_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_clk_wiz_0_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-142697-testserver/realtime/top_clk_wiz_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_clk_wiz_0_0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-142697-testserver/realtime/top_clk_wiz_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_processing_system7_0_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-142697-testserver/realtime/top_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_processing_system7_0_0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-142697-testserver/realtime/top_processing_system7_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'TTC0_WAVE0_OUT' of module 'top_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1513]
+WARNING: [Synth 8-7071] port 'TTC0_WAVE1_OUT' of module 'top_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1513]
+WARNING: [Synth 8-7071] port 'TTC0_WAVE2_OUT' of module 'top_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1513]
+WARNING: [Synth 8-7071] port 'USB1_PORT_INDCTL' of module 'top_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1513]
+WARNING: [Synth 8-7071] port 'USB1_VBUS_PWRSELECT' of module 'top_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1513]
+WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'top_processing_system7_0_0' has 71 connections declared, but only 66 given [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1513]
+INFO: [Synth 8-6157] synthesizing module 'top_ps7_0_axi_periph_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1746]
 INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_1RYU2JE' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_1RYU2JE' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:13]
 INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_GEI6LB' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:145]
@@ -84,76 +78,159 @@ INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_PBIRH0' [/home/test/P
 INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_PBIRH0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:409]
 INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_ALJ83W' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:541]
 INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_ALJ83W' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:541]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_M354KG' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:673]
-INFO: [Synth 8-6157] synthesizing module 'top_auto_pc_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-425923-testserver/realtime/top_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_auto_pc_0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-425923-testserver/realtime/top_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_M354KG' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:673]
-INFO: [Synth 8-6157] synthesizing module 'top_xbar_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-425923-testserver/realtime/top_xbar_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_xbar_0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-425923-testserver/realtime/top_xbar_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'top_xbar_0' is unconnected for instance 'xbar' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:2465]
-WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'top_xbar_0' is unconnected for instance 'xbar' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:2465]
-WARNING: [Synth 8-7023] instance 'xbar' of module 'top_xbar_0' has 40 connections declared, but only 38 given [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:2465]
-INFO: [Synth 8-6155] done synthesizing module 'top_ps7_0_axi_periph_0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1577]
-INFO: [Synth 8-6157] synthesizing module 'top_rst_ps7_0_50M_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-425923-testserver/realtime/top_rst_ps7_0_50M_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_rst_ps7_0_50M_0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-425923-testserver/realtime/top_rst_ps7_0_50M_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'mb_reset' of module 'top_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1566]
-WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'top_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1566]
-WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'top_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1566]
-WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'top_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1566]
-WARNING: [Synth 8-7023] instance 'rst_ps7_0_50M' of module 'top_rst_ps7_0_50M_0' has 10 connections declared, but only 6 given [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1566]
+INFO: [Synth 8-6157] synthesizing module 'm05_couplers_imp_1XTL9OP' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:673]
+INFO: [Synth 8-6155] done synthesizing module 'm05_couplers_imp_1XTL9OP' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:673]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_M354KG' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:805]
+INFO: [Synth 8-6157] synthesizing module 'top_auto_pc_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-142697-testserver/realtime/top_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_auto_pc_0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-142697-testserver/realtime/top_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_M354KG' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:805]
+INFO: [Synth 8-6157] synthesizing module 'top_xbar_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-142697-testserver/realtime/top_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_xbar_0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-142697-testserver/realtime/top_xbar_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'top_xbar_0' is unconnected for instance 'xbar' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:2762]
+WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'top_xbar_0' is unconnected for instance 'xbar' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:2762]
+WARNING: [Synth 8-7023] instance 'xbar' of module 'top_xbar_0' has 40 connections declared, but only 38 given [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:2762]
+INFO: [Synth 8-6155] done synthesizing module 'top_ps7_0_axi_periph_0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1746]
+WARNING: [Synth 8-7071] port 'M05_AXI_araddr' of module 'top_ps7_0_axi_periph_0' is unconnected for instance 'ps7_0_axi_periph' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1580]
+WARNING: [Synth 8-7071] port 'M05_AXI_arvalid' of module 'top_ps7_0_axi_periph_0' is unconnected for instance 'ps7_0_axi_periph' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1580]
+WARNING: [Synth 8-7071] port 'M05_AXI_awaddr' of module 'top_ps7_0_axi_periph_0' is unconnected for instance 'ps7_0_axi_periph' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1580]
+WARNING: [Synth 8-7071] port 'M05_AXI_awvalid' of module 'top_ps7_0_axi_periph_0' is unconnected for instance 'ps7_0_axi_periph' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1580]
+WARNING: [Synth 8-7071] port 'M05_AXI_bready' of module 'top_ps7_0_axi_periph_0' is unconnected for instance 'ps7_0_axi_periph' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1580]
+WARNING: [Synth 8-7071] port 'M05_AXI_rready' of module 'top_ps7_0_axi_periph_0' is unconnected for instance 'ps7_0_axi_periph' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1580]
+WARNING: [Synth 8-7071] port 'M05_AXI_wdata' of module 'top_ps7_0_axi_periph_0' is unconnected for instance 'ps7_0_axi_periph' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1580]
+WARNING: [Synth 8-7071] port 'M05_AXI_wstrb' of module 'top_ps7_0_axi_periph_0' is unconnected for instance 'ps7_0_axi_periph' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1580]
+WARNING: [Synth 8-7071] port 'M05_AXI_wvalid' of module 'top_ps7_0_axi_periph_0' is unconnected for instance 'ps7_0_axi_periph' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1580]
+WARNING: [Synth 8-7023] instance 'ps7_0_axi_periph' of module 'top_ps7_0_axi_periph_0' has 156 connections declared, but only 147 given [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1580]
+INFO: [Synth 8-6157] synthesizing module 'top_rst_ps7_0_50M_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-142697-testserver/realtime/top_rst_ps7_0_50M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_rst_ps7_0_50M_0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/.Xil/Vivado-142697-testserver/realtime/top_rst_ps7_0_50M_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'top_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1728]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'top_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1728]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'top_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1728]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'top_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1728]
+WARNING: [Synth 8-7023] instance 'rst_ps7_0_50M' of module 'top_rst_ps7_0_50M_0' has 10 connections declared, but only 6 given [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1728]
+INFO: [Synth 8-6157] synthesizing module 'top_xlconcat_0_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_xlconcat_0_0/synth/top_xlconcat_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_5_xlconcat' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ipshared/147b/hdl/xlconcat_v2_1_vl_rfs.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_5_xlconcat' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ipshared/147b/hdl/xlconcat_v2_1_vl_rfs.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'top_xlconcat_0_0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_xlconcat_0_0/synth/top_xlconcat_0_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'top_xlconstant_0_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_xlconstant_0_0/synth/top_xlconstant_0_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_8_xlconstant' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ipshared/d390/hdl/xlconstant_v1_1_vl_rfs.v:68]
 INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_8_xlconstant' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ipshared/d390/hdl/xlconstant_v1_1_vl_rfs.v:68]
 INFO: [Synth 8-6155] done synthesizing module 'top_xlconstant_0_0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_xlconstant_0_0/synth/top_xlconstant_0_0.v:53]
-INFO: [Synth 8-6155] done synthesizing module 'top' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:978]
+INFO: [Synth 8-6155] done synthesizing module 'top' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1110]
 INFO: [Synth 8-6155] done synthesizing module 'top_wrapper' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/hdl/top_wrapper.v:13]
-WARNING: [Synth 8-7129] Port M_ACLK in module s00_couplers_imp_M354KG is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ARESETN in module s00_couplers_imp_M354KG is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ACLK in module m04_couplers_imp_ALJ83W is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ARESETN in module m04_couplers_imp_ALJ83W is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ACLK in module m04_couplers_imp_ALJ83W is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ARESETN in module m04_couplers_imp_ALJ83W is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ACLK in module m03_couplers_imp_PBIRH0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ARESETN in module m03_couplers_imp_PBIRH0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ACLK in module m03_couplers_imp_PBIRH0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ARESETN in module m03_couplers_imp_PBIRH0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ACLK in module m02_couplers_imp_11EWEFL is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ARESETN in module m02_couplers_imp_11EWEFL is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ACLK in module m02_couplers_imp_11EWEFL is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ARESETN in module m02_couplers_imp_11EWEFL is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ACLK in module m01_couplers_imp_GEI6LB is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ARESETN in module m01_couplers_imp_GEI6LB is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ACLK in module m01_couplers_imp_GEI6LB is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ARESETN in module m01_couplers_imp_GEI6LB is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ACLK in module m00_couplers_imp_1RYU2JE is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ARESETN in module m00_couplers_imp_1RYU2JE is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ACLK in module m00_couplers_imp_1RYU2JE is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ARESETN in module m00_couplers_imp_1RYU2JE is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M00_ACLK in module top_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M00_ARESETN in module top_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_ACLK in module top_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_ARESETN in module top_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M02_ACLK in module top_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M02_ARESETN in module top_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M03_ACLK in module top_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M03_ARESETN in module top_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M04_ACLK in module top_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M04_ARESETN in module top_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S00_ACLK in module top_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S00_ARESETN in module top_ps7_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In5[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In6[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In7[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In8[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In9[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In10[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In11[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In12[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In13[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In14[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In15[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In16[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In17[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In18[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In19[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In20[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In21[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In22[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In23[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In24[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In25[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In26[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In27[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In28[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In29[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In30[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In31[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In32[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In33[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In34[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In35[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In36[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In37[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In38[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In39[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In40[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In41[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In42[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In43[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In44[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In45[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In46[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In47[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In48[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In49[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In50[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In51[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In52[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In53[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In54[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In55[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In56[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In57[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In58[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In59[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In60[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In61[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In62[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In63[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In64[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In65[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In66[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In67[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In68[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In69[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In70[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In71[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In72[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In73[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In74[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In75[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In76[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In77[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In78[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In79[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In80[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In81[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In82[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In83[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In84[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In85[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In86[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In87[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In88[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In89[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In90[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In91[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In92[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In93[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In94[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In95[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In96[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In97[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In98[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In99[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In100[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In101[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In102[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In103[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In104[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2135.359 ; gain = 487.680 ; free physical = 1767 ; free virtual = 12095
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2137.719 ; gain = 490.617 ; free physical = 3841 ; free virtual = 9634
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2150.203 ; gain = 502.523 ; free physical = 1765 ; free virtual = 12093
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2152.562 ; gain = 505.461 ; free physical = 3840 ; free virtual = 9632
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2150.203 ; gain = 502.523 ; free physical = 1765 ; free virtual = 12093
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2152.562 ; gain = 505.461 ; free physical = 3840 ; free virtual = 9632
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2150.203 ; gain = 0.000 ; free physical = 1765 ; free virtual = 12093
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2152.562 ; gain = 0.000 ; free physical = 3838 ; free virtual = 9631
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -186,22 +263,22 @@ Parsing XDC File [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/
 Finished Parsing XDC File [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2191.125 ; gain = 0.000 ; free physical = 1745 ; free virtual = 12073
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2193.484 ; gain = 0.000 ; free physical = 3828 ; free virtual = 9620
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2191.160 ; gain = 0.000 ; free physical = 1744 ; free virtual = 12072
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2193.520 ; gain = 0.000 ; free physical = 3828 ; free virtual = 9620
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2191.160 ; gain = 543.480 ; free physical = 1773 ; free virtual = 12102
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2193.520 ; gain = 546.418 ; free physical = 3856 ; free virtual = 9648
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2191.160 ; gain = 543.480 ; free physical = 1773 ; free virtual = 12102
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2193.520 ; gain = 546.418 ; free physical = 3852 ; free virtual = 9644
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -479,11 +556,12 @@ Applied set_property KEEP_HIERARCHY = SOFT for top_i/clk_wiz_0. (constraint file
 Applied set_property KEEP_HIERARCHY = SOFT for top_i/axi_quad_spi_1. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for top_i/xlconstant_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for top_i/axi_uartlite_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for top_i/xlconcat_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2191.160 ; gain = 543.480 ; free physical = 1773 ; free virtual = 12102
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2193.520 ; gain = 546.418 ; free physical = 3824 ; free virtual = 9616
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2191.160 ; gain = 543.480 ; free physical = 1772 ; free virtual = 12102
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2193.520 ; gain = 546.418 ; free physical = 3818 ; free virtual = 9611
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -505,38 +583,26 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-WARNING: [Synth 8-7129] Port M00_ACLK in module top_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M00_ARESETN in module top_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_ACLK in module top_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_ARESETN in module top_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M02_ACLK in module top_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M02_ARESETN in module top_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M03_ACLK in module top_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M03_ARESETN in module top_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M04_ACLK in module top_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M04_ARESETN in module top_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S00_ACLK in module top_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S00_ARESETN in module top_ps7_0_axi_periph_0 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 2191.160 ; gain = 543.480 ; free physical = 1751 ; free virtual = 12085
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2193.520 ; gain = 546.418 ; free physical = 3813 ; free virtual = 9611
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2191.160 ; gain = 543.480 ; free physical = 1758 ; free virtual = 12092
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 2193.520 ; gain = 546.418 ; free physical = 3880 ; free virtual = 9678
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2191.160 ; gain = 543.480 ; free physical = 1758 ; free virtual = 12092
+Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 2193.520 ; gain = 546.418 ; free physical = 3880 ; free virtual = 9678
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2191.160 ; gain = 543.480 ; free physical = 1758 ; free virtual = 12092
+Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 2193.520 ; gain = 546.418 ; free physical = 3880 ; free virtual = 9678
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -554,37 +620,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 2191.160 ; gain = 543.480 ; free physical = 1708 ; free virtual = 12042
+Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 2193.520 ; gain = 546.418 ; free physical = 3806 ; free virtual = 9604
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 2191.160 ; gain = 543.480 ; free physical = 1708 ; free virtual = 12042
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 2193.520 ; gain = 546.418 ; free physical = 3806 ; free virtual = 9604
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 2191.160 ; gain = 543.480 ; free physical = 1708 ; free virtual = 12042
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 2193.520 ; gain = 546.418 ; free physical = 3806 ; free virtual = 9604
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 2191.160 ; gain = 543.480 ; free physical = 1708 ; free virtual = 12042
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 2193.520 ; gain = 546.418 ; free physical = 3806 ; free virtual = 9604
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 2191.160 ; gain = 543.480 ; free physical = 1708 ; free virtual = 12042
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 2193.520 ; gain = 546.418 ; free physical = 3806 ; free virtual = 9604
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 2191.160 ; gain = 543.480 ; free physical = 1708 ; free virtual = 12042
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 2193.520 ; gain = 546.418 ; free physical = 3806 ; free virtual = 9604
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -618,31 +684,31 @@ Report Cell Usage:
 |8     |top_processing_system7_0 |     1|
 |9     |top_rst_ps7_0_50M        |     1|
 |10    |top_xbar                 |     1|
-|11    |IBUF                     |    10|
+|11    |IBUF                     |    12|
 |12    |OBUF                     |    29|
 +------+-------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 2191.160 ; gain = 543.480 ; free physical = 1708 ; free virtual = 12042
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 2193.520 ; gain = 546.418 ; free physical = 3806 ; free virtual = 9604
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 13 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 2191.160 ; gain = 502.523 ; free physical = 1708 ; free virtual = 12042
-Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 2191.160 ; gain = 543.480 ; free physical = 1708 ; free virtual = 12042
+Synthesis finished with 0 errors, 0 critical warnings and 144 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 2193.520 ; gain = 505.461 ; free physical = 3806 ; free virtual = 9604
+Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 2193.520 ; gain = 546.418 ; free physical = 3806 ; free virtual = 9604
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2191.160 ; gain = 0.000 ; free physical = 1994 ; free virtual = 12329
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2193.520 ; gain = 0.000 ; free physical = 4090 ; free virtual = 9888
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2191.160 ; gain = 0.000 ; free physical = 2017 ; free virtual = 12352
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2193.520 ; gain = 0.000 ; free physical = 4092 ; free virtual = 9889
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: f08b0b79
+Synth Design complete | Checksum: bad215af
 INFO: [Common 17-83] Releasing license: Synthesis
-64 Infos, 80 Warnings, 0 Critical Warnings and 0 Errors encountered.
+71 Infos, 138 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:32 . Memory (MB): peak = 2191.160 ; gain = 874.016 ; free physical = 2044 ; free virtual = 12378
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1977.957; main = 1674.688; forked = 423.243
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3179.371; main = 2191.129; forked = 988.242
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2191.160 ; gain = 0.000 ; free physical = 2042 ; free virtual = 12377
+synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:33 . Memory (MB): peak = 2193.520 ; gain = 875.984 ; free physical = 4092 ; free virtual = 9889
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1837.480; main = 1503.732; forked = 383.717
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3181.727; main = 2193.488; forked = 988.238
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2193.520 ; gain = 0.000 ; free physical = 4092 ; free virtual = 9889
 INFO: [Common 17-1381] The checkpoint '/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/top_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_wrapper_utilization_synth.rpt -pb top_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Apr  6 21:15:09 2024...
+INFO: [Common 17-206] Exiting Vivado at Sun Apr  7 21:14:13 2024...

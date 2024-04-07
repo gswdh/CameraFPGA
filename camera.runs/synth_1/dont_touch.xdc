@@ -39,6 +39,9 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_xlconst
 # IP: bd/top/ip/top_axi_uartlite_0_1/top_axi_uartlite_0_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_axi_uartlite_0_1 || ORIG_REF_NAME==top_axi_uartlite_0_1} -quiet] -quiet
 
+# IP: bd/top/ip/top_xlconcat_0_0/top_xlconcat_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_xlconcat_0_0 || ORIG_REF_NAME==top_xlconcat_0_0} -quiet] -quiet
+
 # IP: bd/top/ip/top_auto_pc_0/top_auto_pc_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_auto_pc_0 || ORIG_REF_NAME==top_auto_pc_0} -quiet] -quiet
 

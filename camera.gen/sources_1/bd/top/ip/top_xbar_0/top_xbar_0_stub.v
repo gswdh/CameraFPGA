@@ -2,10 +2,10 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-// Date        : Sat Apr  6 07:52:18 2024
+// Date        : Sun Apr  7 21:08:46 2024
 // Host        : testserver running 64-bit Ubuntu 20.04.6 LTS
-// Command     : write_verilog -force -mode synth_stub -rename_top top_xbar_0 -prefix
-//               top_xbar_0_ top_xbar_0_stub.v
+// Command     : write_verilog -force -mode synth_stub
+//               /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_xbar_0/top_xbar_0_stub.v
 // Design      : top_xbar_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg484-2
@@ -22,7 +22,7 @@ module top_xbar_0(aclk, aresetn, s_axi_awaddr, s_axi_awprot,
   m_axi_awprot, m_axi_awvalid, m_axi_awready, m_axi_wdata, m_axi_wstrb, m_axi_wvalid, 
   m_axi_wready, m_axi_bresp, m_axi_bvalid, m_axi_bready, m_axi_araddr, m_axi_arprot, 
   m_axi_arvalid, m_axi_arready, m_axi_rdata, m_axi_rresp, m_axi_rvalid, m_axi_rready)
-/* synthesis syn_black_box black_box_pad_pin="aresetn,s_axi_awaddr[31:0],s_axi_awprot[2:0],s_axi_awvalid[0:0],s_axi_awready[0:0],s_axi_wdata[31:0],s_axi_wstrb[3:0],s_axi_wvalid[0:0],s_axi_wready[0:0],s_axi_bresp[1:0],s_axi_bvalid[0:0],s_axi_bready[0:0],s_axi_araddr[31:0],s_axi_arprot[2:0],s_axi_arvalid[0:0],s_axi_arready[0:0],s_axi_rdata[31:0],s_axi_rresp[1:0],s_axi_rvalid[0:0],s_axi_rready[0:0],m_axi_awaddr[159:0],m_axi_awprot[14:0],m_axi_awvalid[4:0],m_axi_awready[4:0],m_axi_wdata[159:0],m_axi_wstrb[19:0],m_axi_wvalid[4:0],m_axi_wready[4:0],m_axi_bresp[9:0],m_axi_bvalid[4:0],m_axi_bready[4:0],m_axi_araddr[159:0],m_axi_arprot[14:0],m_axi_arvalid[4:0],m_axi_arready[4:0],m_axi_rdata[159:0],m_axi_rresp[9:0],m_axi_rvalid[4:0],m_axi_rready[4:0]" */
+/* synthesis syn_black_box black_box_pad_pin="aresetn,s_axi_awaddr[31:0],s_axi_awprot[2:0],s_axi_awvalid[0:0],s_axi_awready[0:0],s_axi_wdata[31:0],s_axi_wstrb[3:0],s_axi_wvalid[0:0],s_axi_wready[0:0],s_axi_bresp[1:0],s_axi_bvalid[0:0],s_axi_bready[0:0],s_axi_araddr[31:0],s_axi_arprot[2:0],s_axi_arvalid[0:0],s_axi_arready[0:0],s_axi_rdata[31:0],s_axi_rresp[1:0],s_axi_rvalid[0:0],s_axi_rready[0:0],m_axi_awaddr[191:0],m_axi_awprot[17:0],m_axi_awvalid[5:0],m_axi_awready[5:0],m_axi_wdata[191:0],m_axi_wstrb[23:0],m_axi_wvalid[5:0],m_axi_wready[5:0],m_axi_bresp[11:0],m_axi_bvalid[5:0],m_axi_bready[5:0],m_axi_araddr[191:0],m_axi_arprot[17:0],m_axi_arvalid[5:0],m_axi_arready[5:0],m_axi_rdata[191:0],m_axi_rresp[11:0],m_axi_rvalid[5:0],m_axi_rready[5:0]" */
 /* synthesis syn_force_seq_prim="aclk" */;
   input aclk /* synthesis syn_isclock = 1 */;
   input aresetn;
@@ -45,23 +45,23 @@ module top_xbar_0(aclk, aresetn, s_axi_awaddr, s_axi_awprot,
   output [1:0]s_axi_rresp;
   output [0:0]s_axi_rvalid;
   input [0:0]s_axi_rready;
-  output [159:0]m_axi_awaddr;
-  output [14:0]m_axi_awprot;
-  output [4:0]m_axi_awvalid;
-  input [4:0]m_axi_awready;
-  output [159:0]m_axi_wdata;
-  output [19:0]m_axi_wstrb;
-  output [4:0]m_axi_wvalid;
-  input [4:0]m_axi_wready;
-  input [9:0]m_axi_bresp;
-  input [4:0]m_axi_bvalid;
-  output [4:0]m_axi_bready;
-  output [159:0]m_axi_araddr;
-  output [14:0]m_axi_arprot;
-  output [4:0]m_axi_arvalid;
-  input [4:0]m_axi_arready;
-  input [159:0]m_axi_rdata;
-  input [9:0]m_axi_rresp;
-  input [4:0]m_axi_rvalid;
-  output [4:0]m_axi_rready;
+  output [191:0]m_axi_awaddr;
+  output [17:0]m_axi_awprot;
+  output [5:0]m_axi_awvalid;
+  input [5:0]m_axi_awready;
+  output [191:0]m_axi_wdata;
+  output [23:0]m_axi_wstrb;
+  output [5:0]m_axi_wvalid;
+  input [5:0]m_axi_wready;
+  input [11:0]m_axi_bresp;
+  input [5:0]m_axi_bvalid;
+  output [5:0]m_axi_bready;
+  output [191:0]m_axi_araddr;
+  output [17:0]m_axi_arprot;
+  output [5:0]m_axi_arvalid;
+  input [5:0]m_axi_arready;
+  input [191:0]m_axi_rdata;
+  input [11:0]m_axi_rresp;
+  input [5:0]m_axi_rvalid;
+  output [5:0]m_axi_rready;
 endmodule

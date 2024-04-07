@@ -79,3 +79,8 @@ set_property IOSTANDARD LVCMOS33 [get_ports ESP_PSS_UART_txd]
 set_property PACKAGE_PIN B22 [get_ports ESP_PSS_UART_txd]
 set_property PACKAGE_PIN C22 [get_ports ESP_PSS_UART_rxd]
 
+
+set_property IOSTANDARD LVCMOS18 [get_ports SDIO_1_0_cdn]
+set_property IOSTANDARD LVCMOS18 [get_ports SDIO_1_0_wp]
+set_property PACKAGE_PIN Y10 [get_ports SDIO_1_0_cdn]
+set_property PACKAGE_PIN AA9 [get_ports SDIO_1_0_wp]
