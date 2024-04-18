@@ -2,7 +2,7 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-// Date        : Sun Apr  7 20:52:40 2024
+// Date        : Thu Apr 18 20:04:59 2024
 // Host        : testserver running 64-bit Ubuntu 20.04.6 LTS
 // Command     : write_verilog -force -mode funcsim
 //               /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_clk_wiz_0_0/top_clk_wiz_0_0_sim_netlist.v
@@ -19,12 +19,14 @@ module top_clk_wiz_0_0
     usb_clk,
     badc_spi_clk,
     disp_spi_clk,
+    sensor_clk,
     resetn,
     clk_in1);
   output eth_clk;
   output usb_clk;
   output badc_spi_clk;
   output disp_spi_clk;
+  output sensor_clk;
   input resetn;
   input clk_in1;
 
@@ -33,6 +35,7 @@ module top_clk_wiz_0_0
   wire disp_spi_clk;
   wire eth_clk;
   wire resetn;
+  wire sensor_clk;
   wire usb_clk;
 
   top_clk_wiz_0_0_clk_wiz inst
@@ -41,6 +44,7 @@ module top_clk_wiz_0_0
         .disp_spi_clk(disp_spi_clk),
         .eth_clk(eth_clk),
         .resetn(resetn),
+        .sensor_clk(sensor_clk),
         .usb_clk(usb_clk));
 endmodule
 
@@ -49,12 +53,14 @@ module top_clk_wiz_0_0_clk_wiz
     usb_clk,
     badc_spi_clk,
     disp_spi_clk,
+    sensor_clk,
     resetn,
     clk_in1);
   output eth_clk;
   output usb_clk;
   output badc_spi_clk;
   output disp_spi_clk;
+  output sensor_clk;
   input resetn;
   input clk_in1;
 
@@ -70,9 +76,10 @@ module top_clk_wiz_0_0_clk_wiz
   wire eth_clk_top_clk_wiz_0_0;
   wire reset_high;
   wire resetn;
+  wire sensor_clk;
+  wire sensor_clk_top_clk_wiz_0_0;
   wire usb_clk;
   wire usb_clk_top_clk_wiz_0_0;
-  wire NLW_plle2_adv_inst_CLKOUT4_UNCONNECTED;
   wire NLW_plle2_adv_inst_CLKOUT5_UNCONNECTED;
   wire NLW_plle2_adv_inst_DRDY_UNCONNECTED;
   wire NLW_plle2_adv_inst_LOCKED_UNCONNECTED;
@@ -103,6 +110,10 @@ module top_clk_wiz_0_0_clk_wiz
        (.I(disp_spi_clk_top_clk_wiz_0_0),
         .O(disp_spi_clk));
   (* BOX_TYPE = "PRIMITIVE" *) 
+  BUFG clkout5_buf
+       (.I(sensor_clk_top_clk_wiz_0_0),
+        .O(sensor_clk));
+  (* BOX_TYPE = "PRIMITIVE" *) 
   PLLE2_ADV #(
     .BANDWIDTH("OPTIMIZED"),
     .CLKFBOUT_MULT(9),
@@ -118,10 +129,10 @@ module top_clk_wiz_0_0_clk_wiz
     .CLKOUT2_DIVIDE(90),
     .CLKOUT2_DUTY_CYCLE(0.500000),
     .CLKOUT2_PHASE(0.000000),
-    .CLKOUT3_DIVIDE(45),
+    .CLKOUT3_DIVIDE(90),
     .CLKOUT3_DUTY_CYCLE(0.500000),
     .CLKOUT3_PHASE(0.000000),
-    .CLKOUT4_DIVIDE(1),
+    .CLKOUT4_DIVIDE(18),
     .CLKOUT4_DUTY_CYCLE(0.500000),
     .CLKOUT4_PHASE(0.000000),
     .CLKOUT5_DIVIDE(1),
@@ -145,7 +156,7 @@ module top_clk_wiz_0_0_clk_wiz
         .CLKOUT1(usb_clk_top_clk_wiz_0_0),
         .CLKOUT2(badc_spi_clk_top_clk_wiz_0_0),
         .CLKOUT3(disp_spi_clk_top_clk_wiz_0_0),
-        .CLKOUT4(NLW_plle2_adv_inst_CLKOUT4_UNCONNECTED),
+        .CLKOUT4(sensor_clk_top_clk_wiz_0_0),
         .CLKOUT5(NLW_plle2_adv_inst_CLKOUT5_UNCONNECTED),
         .DADDR({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .DCLK(1'b0),

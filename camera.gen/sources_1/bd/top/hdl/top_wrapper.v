@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-//Date        : Sun Apr  7 21:13:19 2024
+//Date        : Thu Apr 18 20:04:06 2024
 //Host        : testserver running 64-bit Ubuntu 20.04.6 LTS
 //Command     : generate_target top_wrapper.bd
 //Design      : top_wrapper
@@ -48,6 +48,7 @@ module top_wrapper
     PSS_PMC_UART_txd,
     SDIO_1_0_cdn,
     SDIO_1_0_wp,
+    SENSOR_CLK,
     USB_NRST,
     USB_REFCLK);
   input BADC_SPI_MISO;
@@ -81,12 +82,13 @@ module top_wrapper
   inout FIXED_IO_ps_clk;
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
-  input [6:0]FPGA_GPIO_IN_tri_i;
-  output [17:0]FPGA_GPIO_OUT_tri_o;
+  input [7:0]FPGA_GPIO_IN_tri_i;
+  output [22:0]FPGA_GPIO_OUT_tri_o;
   input PSS_PMC_UART_rxd;
   output PSS_PMC_UART_txd;
   input SDIO_1_0_cdn;
   input SDIO_1_0_wp;
+  output SENSOR_CLK;
   output [0:0]USB_NRST;
   output USB_REFCLK;
 
@@ -121,12 +123,13 @@ module top_wrapper
   wire FIXED_IO_ps_clk;
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
-  wire [6:0]FPGA_GPIO_IN_tri_i;
-  wire [17:0]FPGA_GPIO_OUT_tri_o;
+  wire [7:0]FPGA_GPIO_IN_tri_i;
+  wire [22:0]FPGA_GPIO_OUT_tri_o;
   wire PSS_PMC_UART_rxd;
   wire PSS_PMC_UART_txd;
   wire SDIO_1_0_cdn;
   wire SDIO_1_0_wp;
+  wire SENSOR_CLK;
   wire [0:0]USB_NRST;
   wire USB_REFCLK;
 
@@ -168,6 +171,7 @@ module top_wrapper
         .PSS_PMC_UART_txd(PSS_PMC_UART_txd),
         .SDIO_1_0_cdn(SDIO_1_0_cdn),
         .SDIO_1_0_wp(SDIO_1_0_wp),
+        .SENSOR_CLK(SENSOR_CLK),
         .USB_NRST(USB_NRST),
         .USB_REFCLK(USB_REFCLK));
 endmodule

@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x53EA223136F13FBF",
+      "boundary_crc": "0x6AE0D55D26AE5291",
       "device": "xc7z020clg484-2",
       "gen_directory": "../../../../camera.gen/sources_1/bd/top",
       "name": "top",
@@ -211,7 +211,7 @@
           "TRI_O": {
             "physical_name": "FPGA_GPIO_OUT_tri_o",
             "direction": "O",
-            "left": "17",
+            "left": "22",
             "right": "0"
           }
         }
@@ -239,7 +239,7 @@
           "TRI_I": {
             "physical_name": "FPGA_GPIO_IN_tri_i",
             "direction": "I",
-            "left": "6",
+            "left": "7",
             "right": "0"
           }
         }
@@ -371,6 +371,32 @@
         "direction": "O",
         "left": "0",
         "right": "0"
+      },
+      "SENSOR_CLK": {
+        "type": "clk",
+        "direction": "O",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "/clk_wiz_0_clk_out1",
+            "value_src": "ip_prop"
+          },
+          "FREQ_HZ": {
+            "value": "50000000",
+            "value_src": "ip_prop"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "ip_prop"
+          }
+        }
       }
     },
     "components": {
@@ -1239,10 +1265,10 @@
             "value": "1"
           },
           "C_GPIO2_WIDTH": {
-            "value": "7"
+            "value": "8"
           },
           "C_GPIO_WIDTH": {
-            "value": "18"
+            "value": "23"
           },
           "C_IS_DUAL": {
             "value": "1"
@@ -2126,19 +2152,31 @@
             "value": "BUFG"
           },
           "CLKOUT4_JITTER": {
-            "value": "551.393"
+            "value": "648.166"
           },
           "CLKOUT4_PHASE_ERROR": {
             "value": "105.461"
           },
           "CLKOUT4_REQUESTED_OUT_FREQ": {
-            "value": "20"
+            "value": "10"
           },
           "CLKOUT4_USED": {
             "value": "true"
           },
           "CLKOUT5_DRIVES": {
             "value": "BUFG"
+          },
+          "CLKOUT5_JITTER": {
+            "value": "410.065"
+          },
+          "CLKOUT5_PHASE_ERROR": {
+            "value": "105.461"
+          },
+          "CLKOUT5_REQUESTED_OUT_FREQ": {
+            "value": "50"
+          },
+          "CLKOUT5_USED": {
+            "value": "true"
           },
           "CLKOUT6_DRIVES": {
             "value": "BUFG"
@@ -2157,6 +2195,9 @@
           },
           "CLK_OUT4_PORT": {
             "value": "disp_spi_clk"
+          },
+          "CLK_OUT5_PORT": {
+            "value": "sensor_clk"
           },
           "FEEDBACK_SOURCE": {
             "value": "FDBK_AUTO"
@@ -2186,7 +2227,10 @@
             "value": "90"
           },
           "MMCM_CLKOUT3_DIVIDE": {
-            "value": "45"
+            "value": "90"
+          },
+          "MMCM_CLKOUT4_DIVIDE": {
+            "value": "18"
           },
           "MMCM_COMPENSATION": {
             "value": "ZHOLD"
@@ -2201,7 +2245,7 @@
             "value": "100.000"
           },
           "NUM_OUT_CLKS": {
-            "value": "4"
+            "value": "5"
           },
           "PRIMITIVE": {
             "value": "PLL"
@@ -2432,6 +2476,12 @@
         "ports": [
           "clk_wiz_0/eth_clk",
           "ETH_CLK25M"
+        ]
+      },
+      "clk_wiz_0_sensor_clk": {
+        "ports": [
+          "clk_wiz_0/sensor_clk",
+          "SENSOR_CLK"
         ]
       },
       "clk_wiz_0_usb_clk": {

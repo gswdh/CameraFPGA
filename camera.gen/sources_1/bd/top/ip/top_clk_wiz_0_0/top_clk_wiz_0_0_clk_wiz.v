@@ -56,7 +56,8 @@
 // _eth_clk__50.00000______0.000______50.0______410.065____105.461
 // _usb_clk__12.00000______0.000______50.0______622.595____105.461
 // badc_spi_clk__10.00000______0.000______50.0______648.166____105.461
-// disp_spi_clk__20.00000______0.000______50.0______551.393____105.461
+// disp_spi_clk__10.00000______0.000______50.0______648.166____105.461
+// sensor_clk__50.00000______0.000______50.0______410.065____105.461
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
@@ -73,6 +74,7 @@ module top_clk_wiz_0_0_clk_wiz
   output        usb_clk,
   output        badc_spi_clk,
   output        disp_spi_clk,
+  output        sensor_clk,
   // Status and control signals
   input         resetn,
   input         clk_in1
@@ -99,7 +101,7 @@ wire clk_in2_top_clk_wiz_0_0;
   wire        usb_clk_top_clk_wiz_0_0;
   wire        badc_spi_clk_top_clk_wiz_0_0;
   wire        disp_spi_clk_top_clk_wiz_0_0;
-  wire        clk_out5_top_clk_wiz_0_0;
+  wire        sensor_clk_top_clk_wiz_0_0;
   wire        clk_out6_top_clk_wiz_0_0;
   wire        clk_out7_top_clk_wiz_0_0;
 
@@ -110,7 +112,6 @@ wire clk_in2_top_clk_wiz_0_0;
   wire        clkfbout_top_clk_wiz_0_0;
   wire        clkfbout_buf_top_clk_wiz_0_0;
   wire        clkfboutb_unused;
-   wire clkout4_unused;
   wire        clkout5_unused;
   wire        clkout6_unused;
   wire        clkfbstopped_unused;
@@ -133,9 +134,12 @@ wire clk_in2_top_clk_wiz_0_0;
     .CLKOUT2_DIVIDE       (90),
     .CLKOUT2_PHASE        (0.000),
     .CLKOUT2_DUTY_CYCLE   (0.500),
-    .CLKOUT3_DIVIDE       (45),
+    .CLKOUT3_DIVIDE       (90),
     .CLKOUT3_PHASE        (0.000),
     .CLKOUT3_DUTY_CYCLE   (0.500),
+    .CLKOUT4_DIVIDE       (18),
+    .CLKOUT4_PHASE        (0.000),
+    .CLKOUT4_DUTY_CYCLE   (0.500),
     .CLKIN1_PERIOD        (10.000))
   plle2_adv_inst
     // Output clocks
@@ -145,7 +149,7 @@ wire clk_in2_top_clk_wiz_0_0;
     .CLKOUT1             (usb_clk_top_clk_wiz_0_0),
     .CLKOUT2             (badc_spi_clk_top_clk_wiz_0_0),
     .CLKOUT3             (disp_spi_clk_top_clk_wiz_0_0),
-    .CLKOUT4             (clkout4_unused),
+    .CLKOUT4             (sensor_clk_top_clk_wiz_0_0),
     .CLKOUT5             (clkout5_unused),
      // Input clock control
     .CLKFBIN             (clkfbout_buf_top_clk_wiz_0_0),
@@ -197,6 +201,10 @@ wire clk_in2_top_clk_wiz_0_0;
   BUFG clkout4_buf
    (.O   (disp_spi_clk),
     .I   (disp_spi_clk_top_clk_wiz_0_0));
+
+  BUFG clkout5_buf
+   (.O   (sensor_clk),
+    .I   (sensor_clk_top_clk_wiz_0_0));
 
 
 

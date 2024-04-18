@@ -115,7 +115,6 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
-set_msg_config -id {HDL-1065} -limit 10000
 
 OPTRACE "impl_1" START { ROLLUP_1 }
 OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }
@@ -125,13 +124,39 @@ set rc [catch {
   create_msg_db init_design.pb
   set_param chipscope.maxJobs 1
   set_param runs.launchOptions { -jobs 4  }
-  reset_param project.defaultXPMLibraries 
-  open_checkpoint /home/test/Projects/CameraZynq/CameraFPGA/camera.runs/impl_1/top_wrapper.dcp
+OPTRACE "create in-memory project" START { }
+  create_project -in_memory -part xc7z020clg484-2
+  set_property design_mode GateLvl [current_fileset]
+  set_param project.singleFileAddWarning.threshold 0
+OPTRACE "create in-memory project" END { }
+OPTRACE "set parameters" START { }
   set_property webtalk.parent_dir /home/test/Projects/CameraZynq/CameraFPGA/camera.cache/wt [current_project]
   set_property parent.project_path /home/test/Projects/CameraZynq/CameraFPGA/camera.xpr [current_project]
+  set_property ip_repo_paths /home/test/Projects/CameraZynq/ip_repo/spi_dma_1_0 [current_project]
+  update_ip_catalog
   set_property ip_output_repo /home/test/Projects/CameraZynq/CameraFPGA/camera.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
+OPTRACE "set parameters" END { }
+OPTRACE "add files" START { }
+  add_files -quiet /home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/top_wrapper.dcp
+  set_msg_config -source 4 -id {BD 41-1661} -limit 0
+  set_param project.isImplRun true
+  add_files /home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/sources_1/bd/top/top.bd
+  set_param project.isImplRun false
+OPTRACE "read constraints: implementation" START { }
+  read_xdc /home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/constrs_1/new/pins.xdc
+OPTRACE "read constraints: implementation" END { }
+OPTRACE "read constraints: implementation_pre" START { }
+OPTRACE "read constraints: implementation_pre" END { }
+OPTRACE "add files" END { }
+OPTRACE "link_design" START { }
+  set_param project.isImplRun true
+  link_design -top top_wrapper -part xc7z020clg484-2 
+OPTRACE "link_design" END { }
+  set_param project.isImplRun false
+OPTRACE "gray box cells" START { }
+OPTRACE "gray box cells" END { }
 OPTRACE "init_design_reports" START { REPORT }
 OPTRACE "init_design_reports" END { }
 OPTRACE "init_design_write_hwdef" START { }
