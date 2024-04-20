@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-//Date        : Thu Apr 18 20:04:06 2024
+//Date        : Sat Apr 20 21:18:59 2024
 //Host        : testserver running 64-bit Ubuntu 20.04.6 LTS
 //Command     : generate_target top_wrapper.bd
 //Design      : top_wrapper
@@ -50,7 +50,11 @@ module top_wrapper
     SDIO_1_0_wp,
     SENSOR_CLK,
     USB_NRST,
-    USB_REFCLK);
+    USB_REFCLK,
+    data_in_from_pins_n_0_0,
+    data_in_from_pins_p_0_0,
+    diff_clk_in_0_0_clk_n,
+    diff_clk_in_0_0_clk_p);
   input BADC_SPI_MISO;
   output [0:0]BADC_SPI_NCS;
   output BADC_SPI_SCLK;
@@ -82,8 +86,8 @@ module top_wrapper
   inout FIXED_IO_ps_clk;
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
-  input [7:0]FPGA_GPIO_IN_tri_i;
-  output [22:0]FPGA_GPIO_OUT_tri_o;
+  input [9:0]FPGA_GPIO_IN_tri_i;
+  output [24:0]FPGA_GPIO_OUT_tri_o;
   input PSS_PMC_UART_rxd;
   output PSS_PMC_UART_txd;
   input SDIO_1_0_cdn;
@@ -91,6 +95,10 @@ module top_wrapper
   output SENSOR_CLK;
   output [0:0]USB_NRST;
   output USB_REFCLK;
+  input [15:0]data_in_from_pins_n_0_0;
+  input [15:0]data_in_from_pins_p_0_0;
+  input diff_clk_in_0_0_clk_n;
+  input diff_clk_in_0_0_clk_p;
 
   wire BADC_SPI_MISO;
   wire [0:0]BADC_SPI_NCS;
@@ -123,8 +131,8 @@ module top_wrapper
   wire FIXED_IO_ps_clk;
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
-  wire [7:0]FPGA_GPIO_IN_tri_i;
-  wire [22:0]FPGA_GPIO_OUT_tri_o;
+  wire [9:0]FPGA_GPIO_IN_tri_i;
+  wire [24:0]FPGA_GPIO_OUT_tri_o;
   wire PSS_PMC_UART_rxd;
   wire PSS_PMC_UART_txd;
   wire SDIO_1_0_cdn;
@@ -132,6 +140,10 @@ module top_wrapper
   wire SENSOR_CLK;
   wire [0:0]USB_NRST;
   wire USB_REFCLK;
+  wire [15:0]data_in_from_pins_n_0_0;
+  wire [15:0]data_in_from_pins_p_0_0;
+  wire diff_clk_in_0_0_clk_n;
+  wire diff_clk_in_0_0_clk_p;
 
   top top_i
        (.BADC_SPI_MISO(BADC_SPI_MISO),
@@ -173,5 +185,9 @@ module top_wrapper
         .SDIO_1_0_wp(SDIO_1_0_wp),
         .SENSOR_CLK(SENSOR_CLK),
         .USB_NRST(USB_NRST),
-        .USB_REFCLK(USB_REFCLK));
+        .USB_REFCLK(USB_REFCLK),
+        .data_in_from_pins_n_0_0(data_in_from_pins_n_0_0),
+        .data_in_from_pins_p_0_0(data_in_from_pins_p_0_0),
+        .diff_clk_in_0_0_clk_n(diff_clk_in_0_0_clk_n),
+        .diff_clk_in_0_0_clk_p(diff_clk_in_0_0_clk_p));
 endmodule

@@ -70,7 +70,10 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param tcl.collectionResultDisplayLimit 0
 set_param chipscope.maxJobs 1
+set_param xicom.use_bs_reader 1
+set_msg_config -id {HDL-1065} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg484-2
 
@@ -89,16 +92,21 @@ set_property ip_output_repo /home/test/Projects/CameraZynq/CameraFPGA/camera.cac
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_verilog -library xil_defaultlib /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/hdl/top_wrapper.v
+read_verilog -library xil_defaultlib {
+  /home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/bit_aligner.v
+  /home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/paralleliser.v
+  /home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/word_detector.v
+  /home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v
+  /home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/sources_1/new/bit_slip_width_adapter.v
+  /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/hdl/top_wrapper.v
+}
 add_files /home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/sources_1/bd/top/top.bd
 set_property used_in_implementation false [get_files -all /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_processing_system7_0_0/top_processing_system7_0_0.xdc]
 set_property used_in_implementation false [get_files -all /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_axi_gpio_0_0/top_axi_gpio_0_0_board.xdc]
 set_property used_in_implementation false [get_files -all /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_axi_gpio_0_0/top_axi_gpio_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_axi_gpio_0_0/top_axi_gpio_0_0.xdc]
-set_property used_in_implementation false [get_files -all /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_xbar_0/top_xbar_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_rst_ps7_0_50M_0/top_rst_ps7_0_50M_0_board.xdc]
 set_property used_in_implementation false [get_files -all /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_rst_ps7_0_50M_0/top_rst_ps7_0_50M_0.xdc]
-set_property used_in_implementation false [get_files -all /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_rst_ps7_0_50M_0/top_rst_ps7_0_50M_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_axi_uartlite_0_0/top_axi_uartlite_0_0_board.xdc]
 set_property used_in_implementation false [get_files -all /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_axi_uartlite_0_0/top_axi_uartlite_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_axi_uartlite_0_0/top_axi_uartlite_0_0.xdc]
@@ -118,6 +126,20 @@ set_property used_in_implementation false [get_files -all /home/test/Projects/Ca
 set_property used_in_implementation false [get_files -all /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_axi_uartlite_0_1/top_axi_uartlite_0_1.xdc]
 set_property used_in_implementation false [get_files -all /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_auto_pc_0/top_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/top_ooc.xdc]
+
+add_files /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_bd_inst_0/sensor_bd_inst_0.bd
+set_property used_in_implementation false [get_files -all /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_bd_inst_0/ip/sensor_bd_inst_0_selectio_wiz_0_0/sensor_bd_inst_0_selectio_wiz_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_bd_inst_0/ip/sensor_bd_inst_0_selectio_wiz_0_0/sensor_bd_inst_0_selectio_wiz_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_bd_inst_0/ip/sensor_bd_inst_0_proc_sys_reset_0_0/sensor_bd_inst_0_proc_sys_reset_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_bd_inst_0/ip/sensor_bd_inst_0_proc_sys_reset_0_0/sensor_bd_inst_0_proc_sys_reset_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_bd_inst_0/ip/sensor_bd_inst_0_axi_gpio_0_0/sensor_bd_inst_0_axi_gpio_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_bd_inst_0/ip/sensor_bd_inst_0_axi_gpio_0_0/sensor_bd_inst_0_axi_gpio_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_bd_inst_0/ip/sensor_bd_inst_0_axi_gpio_0_0/sensor_bd_inst_0_axi_gpio_0_0.xdc]
+set_property used_in_synthesis false [get_files -all /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_bd_inst_0/ip/sensor_bd_inst_0_ila_0_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_bd_inst_0/ip/sensor_bd_inst_0_ila_0_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_bd_inst_0/ip/sensor_bd_inst_0_ila_0_0/ila_v6_2/constraints/ila.xdc]
+set_property used_in_implementation false [get_files -all /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_bd_inst_0/ip/sensor_bd_inst_0_ila_0_0/sensor_bd_inst_0_ila_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_bd_inst_0/sensor_bd_inst_0_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

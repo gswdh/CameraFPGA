@@ -1,0 +1,65 @@
+{
+  "schema": "xilinx.com:schema:json_instance:1.0",
+  "ip_inst": {
+    "xci_name": "sensor_bd_inst_0_gmax0505_streamer_0_0",
+    "cell_name": "sensor_bd_0/gmax0505_streamer_0",
+    "component_reference": "xilinx.com:module_ref:gmax0505_streamer:1.0",
+    "ip_revision": "1",
+    "gen_directory": ".",
+    "parameters": {
+      "component_parameters": {
+        "N_BITS_PER_WORD": [ { "value": "12", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "WORD_SOF": [ { "value": "0xFFF000000800", "resolve_type": "user", "format": "bitString", "usage": "all" } ],
+        "WORD_EOF": [ { "value": "0xFFF0000009D0", "resolve_type": "user", "format": "bitString", "usage": "all" } ],
+        "WORD_SOL": [ { "value": "0xFFF000000AB0", "resolve_type": "user", "format": "bitString", "usage": "all" } ],
+        "WORD_EOL": [ { "value": "0xFFF000000B60", "resolve_type": "user", "format": "bitString", "usage": "all" } ],
+        "Component_Name": [ { "value": "sensor_bd_inst_0_gmax0505_streamer_0_0", "resolve_type": "user", "usage": "all" } ]
+      },
+      "model_parameters": {
+        "N_BITS_PER_WORD": [ { "value": "12", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "WORD_SOF": [ { "value": "0xFFF000000800", "resolve_type": "generated", "format": "bitString", "usage": "all" } ],
+        "WORD_EOF": [ { "value": "0xFFF0000009D0", "resolve_type": "generated", "format": "bitString", "usage": "all" } ],
+        "WORD_SOL": [ { "value": "0xFFF000000AB0", "resolve_type": "generated", "format": "bitString", "usage": "all" } ],
+        "WORD_EOL": [ { "value": "0xFFF000000B60", "resolve_type": "generated", "format": "bitString", "usage": "all" } ]
+      },
+      "project_parameters": {
+        "ARCHITECTURE": [ { "value": "zynq" } ],
+        "BASE_BOARD_PART": [ { "value": "" } ],
+        "BOARD_CONNECTIONS": [ { "value": "" } ],
+        "DEVICE": [ { "value": "xc7z020" } ],
+        "PACKAGE": [ { "value": "clg484" } ],
+        "PREFHDL": [ { "value": "VERILOG" } ],
+        "SILICON_REVISION": [ { "value": "" } ],
+        "SIMULATOR_LANGUAGE": [ { "value": "MIXED" } ],
+        "SPEEDGRADE": [ { "value": "-2" } ],
+        "STATIC_POWER": [ { "value": "" } ],
+        "TEMPERATURE_GRADE": [ { "value": "" } ]
+      },
+      "runtime_parameters": {
+        "IPCONTEXT": [ { "value": "IP_Integrator" } ],
+        "IPREVISION": [ { "value": "1" } ],
+        "MANAGED": [ { "value": "TRUE" } ],
+        "OUTPUTDIR": [ { "value": "." } ],
+        "SELECTEDSIMMODEL": [ { "value": "" } ],
+        "SHAREDDIR": [ { "value": "../../ipshared" } ],
+        "SWVERSION": [ { "value": "2023.2" } ],
+        "SYNTHESISFLOW": [ { "value": "GLOBAL" } ]
+      }
+    },
+    "boundary": {
+      "ports": {
+        "clk_i": [ { "direction": "in" } ],
+        "n_reset_i": [ { "direction": "in" } ],
+        "data_i": [ { "direction": "in", "size_left": "95", "size_right": "0" } ],
+        "sync_word_i": [ { "direction": "in", "size_left": "11", "size_right": "0" } ],
+        "sync_en_i": [ { "direction": "in" } ],
+        "sync_done_o": [ { "direction": "out" } ],
+        "sync_bit_slip_o": [ { "direction": "out" } ],
+        "pix_clk_o": [ { "direction": "out" } ],
+        "pix_data_o": [ { "direction": "out", "size_left": "191", "size_right": "0" } ],
+        "pix_line_valid_o": [ { "direction": "out", "driver_value": "0x0" } ],
+        "pix_frame_valid_o": [ { "direction": "out", "driver_value": "0x0" } ]
+      }
+    }
+  }
+}

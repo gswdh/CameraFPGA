@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/test/Projects/CameraZynq/CameraFPGA/camera.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wdb" id="1">
+         <top_modules>
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="2,271"></ZoomStartTime>
+      <ZoomEndTime time="2,284"></ZoomEndTime>
+      <Cursor1Time time="2,127"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="493"></NameColumnWidth>
+      <ValueColumnWidth column_width="71"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="5" />
+   <wave_markers>
+   </wave_markers>
+   <wvobject type="logic" fp_name="top_i/sensor_bd_0/xlslice_1_Dout">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_i/sensor_bd_0/xlslice_1_Dout</obj_property>
+      <obj_property name="ObjectShortName">xlslice_1_Dout</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="top_i/sensor_bd_0/gmax0505_streamer_0_sync_bit_slip_o">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_i/sensor_bd_0/gmax0505_streamer_0_sync_bit_slip_o</obj_property>
+      <obj_property name="ObjectShortName">gmax0505_streamer_0_sync_bit_slip_o</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="top_i/sensor_bd_0/xlslice_0_Dout">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_i/sensor_bd_0/xlslice_0_Dout[11:0]</obj_property>
+      <obj_property name="ObjectShortName">xlslice_0_Dout[11:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="top_i/sensor_bd_0/xlslice_2_Dout">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_i/sensor_bd_0/xlslice_2_Dout[5:0]</obj_property>
+      <obj_property name="ObjectShortName">xlslice_2_Dout[5:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="top_i/sensor_bd_0/gmax0505_streamer_0_sync_done_o">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_i/sensor_bd_0/gmax0505_streamer_0_sync_done_o</obj_property>
+      <obj_property name="ObjectShortName">gmax0505_streamer_0_sync_done_o</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+</wave_config>

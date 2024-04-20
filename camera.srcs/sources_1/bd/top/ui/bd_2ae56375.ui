@@ -1,78 +1,89 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.58558",
-   "Default View_TopLeft":"-891,314",
+   "Default View_ScaleFactor":"0.451663",
+   "Default View_TopLeft":"-629,-190",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0 TLS
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -lvl 3 -x 1040 -y 220 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -lvl 3 -x 1040 -y 240 -defaultsOSRD
-preplace port FPGA_GPIO_OUT -pg 1 -lvl 3 -x 1040 -y 70 -defaultsOSRD
-preplace port PSS_PMC_UART -pg 1 -lvl 3 -x 1040 -y 540 -defaultsOSRD
-preplace port FPGA_GPIO_IN -pg 1 -lvl 3 -x 1040 -y 90 -defaultsOSRD
-preplace port ESP_PSS_UART -pg 1 -lvl 3 -x 1040 -y 710 -defaultsOSRD
-preplace port SDIO_1_0 -pg 1 -lvl 3 -x 1040 -y 260 -defaultsOSRD
-preplace port port-id_ETH_CLK25M -pg 1 -lvl 3 -x 1040 -y 810 -defaultsOSRD
-preplace port port-id_USB_REFCLK -pg 1 -lvl 3 -x 1040 -y 830 -defaultsOSRD
-preplace port port-id_BADC_SPI_SCLK -pg 1 -lvl 3 -x 1040 -y 970 -defaultsOSRD
-preplace port port-id_BADC_SPI_MISO -pg 1 -lvl 0 -x 0 -y 1060 -defaultsOSRD
-preplace port port-id_DISP_SPI_MOSI -pg 1 -lvl 3 -x 1040 -y 1300 -defaultsOSRD
-preplace port port-id_DISP_SPI_SCLK -pg 1 -lvl 3 -x 1040 -y 1360 -defaultsOSRD
-preplace port port-id_SENSOR_CLK -pg 1 -lvl 3 -x 1040 -y 1200 -defaultsOSRD
-preplace portBus USB_NRST -pg 1 -lvl 3 -x 1040 -y 1480 -defaultsOSRD
-preplace portBus ETH_NRST -pg 1 -lvl 3 -x 1040 -y 1460 -defaultsOSRD
-preplace portBus BADC_SPI_NCS -pg 1 -lvl 3 -x 1040 -y 1010 -defaultsOSRD
-preplace portBus DISP_SPI_NCS -pg 1 -lvl 3 -x 1040 -y 1400 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 2 -x 750 -y 310 -defaultsOSRD
-preplace inst axi_gpio_0 -pg 1 -lvl 2 -x 750 -y 80 -defaultsOSRD
-preplace inst ps7_0_axi_periph -pg 1 -lvl 1 -x 250 -y 400 -defaultsOSRD
-preplace inst rst_ps7_0_50M -pg 1 -lvl 1 -x 250 -y 950 -defaultsOSRD
-preplace inst axi_uartlite_0 -pg 1 -lvl 2 -x 750 -y 550 -defaultsOSRD
-preplace inst axi_quad_spi_0 -pg 1 -lvl 2 -x 750 -y 960 -defaultsOSRD
-preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 250 -y 1150 -defaultsOSRD
-preplace inst axi_quad_spi_1 -pg 1 -lvl 2 -x 750 -y 1340 -defaultsOSRD
-preplace inst xlconstant_0 -pg 1 -lvl 2 -x 750 -y 1130 -defaultsOSRD
-preplace inst axi_uartlite_1 -pg 1 -lvl 2 -x 750 -y 720 -defaultsOSRD
-preplace inst xlconcat_0 -pg 1 -lvl 1 -x 250 -y 740 -defaultsOSRD
-preplace netloc axi_quad_spi_0_ip2intc_irpt 1 0 3 70 840 470J 800 970
-preplace netloc axi_quad_spi_0_sck_o 1 2 1 NJ 970
-preplace netloc axi_quad_spi_0_ss_o 1 2 1 NJ 1010
-preplace netloc axi_quad_spi_1_io0_o 1 2 1 NJ 1300
-preplace netloc axi_quad_spi_1_ip2intc_irpt 1 0 3 60 850 500J 820 990
-preplace netloc axi_quad_spi_1_sck_o 1 2 1 NJ 1360
-preplace netloc axi_quad_spi_1_ss_o 1 2 1 NJ 1400
-preplace netloc axi_uartlite_0_interrupt 1 0 3 60 630 NJ 630 960
-preplace netloc axi_uartlite_1_interrupt 1 0 3 70 640 NJ 640 960
-preplace netloc clk_wiz_0_badc_spi_clk 1 1 1 540 950n
-preplace netloc clk_wiz_0_disp_spi_clk 1 1 1 430 1170n
-preplace netloc clk_wiz_0_eth_clk 1 1 2 520J 810 NJ
-preplace netloc clk_wiz_0_sensor_clk 1 1 2 440J 1200 NJ
-preplace netloc clk_wiz_0_usb_clk 1 1 2 450J 1190 1000J
-preplace netloc io1_i_0_1 1 0 3 20J 1050 530J 830 960
-preplace netloc proc_sys_reset_0_peripheral_aresetn 1 0 3 50 620 450J 470 960
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 30 170 480 460 1000
-preplace netloc rst_ps7_0_50M_peripheral_aresetn 1 0 3 40 180 490 1480 1000J
-preplace netloc xlconcat_0_dout 1 1 1 440 320n
-preplace netloc xlconstant_0_dout 1 2 1 980 910n
-preplace netloc axi_gpio_0_GPIO 1 2 1 NJ 70
-preplace netloc axi_gpio_0_GPIO2 1 2 1 NJ 90
-preplace netloc axi_uartlite_0_UART 1 2 1 NJ 540
-preplace netloc axi_uartlite_1_UART 1 2 1 NJ 710
-preplace netloc processing_system7_0_DDR 1 2 1 NJ 220
-preplace netloc processing_system7_0_FIXED_IO 1 2 1 NJ 240
-preplace netloc processing_system7_0_M_AXI_GP0 1 0 3 20 160 NJ 160 960
-preplace netloc processing_system7_0_SDIO_1 1 2 1 NJ 260
-preplace netloc ps7_0_axi_periph_M00_AXI 1 1 1 430 60n
-preplace netloc ps7_0_axi_periph_M01_AXI 1 1 1 530 370n
-preplace netloc ps7_0_axi_periph_M02_AXI 1 1 1 510 390n
-preplace netloc ps7_0_axi_periph_M03_AXI 1 1 1 460 410n
-preplace netloc ps7_0_axi_periph_M04_AXI 1 1 1 500 430n
-levelinfo -pg 1 0 250 750 1040
-pagesize -pg 1 -db -bbox -sgen -170 0 1230 1500
+preplace port DDR -pg 1 -lvl 4 -x 1410 -y 870 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 4 -x 1410 -y 890 -defaultsOSRD
+preplace port FPGA_GPIO_OUT -pg 1 -lvl 4 -x 1410 -y 430 -defaultsOSRD
+preplace port PSS_PMC_UART -pg 1 -lvl 4 -x 1410 -y 570 -defaultsOSRD
+preplace port FPGA_GPIO_IN -pg 1 -lvl 4 -x 1410 -y 450 -defaultsOSRD
+preplace port ESP_PSS_UART -pg 1 -lvl 4 -x 1410 -y 740 -defaultsOSRD
+preplace port SDIO_1_0 -pg 1 -lvl 4 -x 1410 -y 910 -defaultsOSRD
+preplace port diff_clk_in_0_0 -pg 1 -lvl 0 -x -10 -y 60 -defaultsOSRD
+preplace port port-id_ETH_CLK25M -pg 1 -lvl 4 -x 1410 -y 1790 -defaultsOSRD
+preplace port port-id_USB_REFCLK -pg 1 -lvl 4 -x 1410 -y 1810 -defaultsOSRD
+preplace port port-id_BADC_SPI_SCLK -pg 1 -lvl 4 -x 1410 -y 340 -defaultsOSRD
+preplace port port-id_BADC_SPI_MISO -pg 1 -lvl 0 -x -10 -y 370 -defaultsOSRD
+preplace port port-id_DISP_SPI_MOSI -pg 1 -lvl 4 -x 1410 -y 1110 -defaultsOSRD
+preplace port port-id_DISP_SPI_SCLK -pg 1 -lvl 4 -x 1410 -y 1130 -defaultsOSRD
+preplace port port-id_SENSOR_CLK -pg 1 -lvl 4 -x 1410 -y 1870 -defaultsOSRD
+preplace portBus USB_NRST -pg 1 -lvl 4 -x 1410 -y 1290 -defaultsOSRD
+preplace portBus ETH_NRST -pg 1 -lvl 4 -x 1410 -y 1270 -defaultsOSRD
+preplace portBus BADC_SPI_NCS -pg 1 -lvl 4 -x 1410 -y 360 -defaultsOSRD
+preplace portBus DISP_SPI_NCS -pg 1 -lvl 4 -x 1410 -y 1150 -defaultsOSRD
+preplace portBus data_in_from_pins_p_0_0 -pg 1 -lvl 0 -x -10 -y 100 -defaultsOSRD
+preplace portBus data_in_from_pins_n_0_0 -pg 1 -lvl 0 -x -10 -y 120 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 3 -x 1130 -y 960 -defaultsOSRD
+preplace inst axi_gpio_0 -pg 1 -lvl 3 -x 1130 -y 440 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 1 -x 190 -y 590 -defaultsOSRD
+preplace inst rst_ps7_0_50M -pg 1 -lvl 2 -x 630 -y 1620 -defaultsOSRD
+preplace inst axi_uartlite_0 -pg 1 -lvl 3 -x 1130 -y 580 -defaultsOSRD
+preplace inst axi_quad_spi_0 -pg 1 -lvl 2 -x 630 -y 330 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 2 -x 630 -y 1830 -defaultsOSRD
+preplace inst axi_quad_spi_1 -pg 1 -lvl 2 -x 630 -y 1010 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 2 -x 630 -y 1210 -defaultsOSRD
+preplace inst axi_uartlite_1 -pg 1 -lvl 3 -x 1130 -y 750 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 2 -x 630 -y 770 -defaultsOSRD
+preplace inst sensor_bd_0 -pg 1 -lvl 2 -x 630 -y 110 -defaultsOSRD
+preplace inst axi_mem_intercon -pg 1 -lvl 2 -x 630 -y 1400 -defaultsOSRD
+preplace netloc axi_quad_spi_0_ip2intc_irpt 1 1 2 430 480 810
+preplace netloc axi_quad_spi_0_sck_o 1 2 2 NJ 340 NJ
+preplace netloc axi_quad_spi_0_ss_o 1 2 2 840J 350 1390J
+preplace netloc axi_quad_spi_1_io0_o 1 2 2 860J 1110 NJ
+preplace netloc axi_quad_spi_1_ip2intc_irpt 1 1 2 450 870 810
+preplace netloc axi_quad_spi_1_sck_o 1 2 2 850J 1130 NJ
+preplace netloc axi_quad_spi_1_ss_o 1 2 2 840J 1150 NJ
+preplace netloc axi_uartlite_0_interrupt 1 1 3 440 660 NJ 660 1360
+preplace netloc axi_uartlite_1_interrupt 1 1 3 450 670 NJ 670 1360
+preplace netloc clk_wiz_0_badc_spi_clk 1 1 2 450 490 820
+preplace netloc clk_wiz_0_disp_spi_clk 1 1 2 450 1150 810
+preplace netloc clk_wiz_0_eth_clk 1 2 2 NJ 1790 NJ
+preplace netloc clk_wiz_0_sensor_clk 1 2 2 NJ 1870 NJ
+preplace netloc clk_wiz_0_usb_clk 1 2 2 NJ 1810 NJ
+preplace netloc data_in_from_pins_n_0_0_1 1 0 2 NJ 120 NJ
+preplace netloc data_in_from_pins_p_0_0_1 1 0 2 NJ 100 NJ
+preplace netloc io1_i_0_1 1 0 3 10J 360 340J 470 820
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 1 3 450 1270 NJ 1270 1360
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 4 30 350 400 500 900 1120 1370
+preplace netloc rst_ps7_0_50M_peripheral_aresetn 1 0 4 20 340 370 510 880 1280 1390J
+preplace netloc xlconcat_0_dout 1 2 1 870 770n
+preplace netloc xlconstant_0_dout 1 2 1 830 280n
+preplace netloc axi_gpio_0_GPIO 1 3 1 NJ 430
+preplace netloc axi_gpio_0_GPIO2 1 3 1 NJ 450
+preplace netloc axi_mem_intercon_M00_AXI 1 2 1 890 940n
+preplace netloc axi_uartlite_0_UART 1 3 1 NJ 570
+preplace netloc axi_uartlite_1_UART 1 3 1 NJ 740
+preplace netloc diff_clk_in_0_0_1 1 0 2 NJ 60 NJ
+preplace netloc processing_system7_0_DDR 1 3 1 NJ 870
+preplace netloc processing_system7_0_FIXED_IO 1 3 1 NJ 890
+preplace netloc processing_system7_0_M_AXI_GP0 1 0 4 40 370 430J 460 860J 360 1380
+preplace netloc processing_system7_0_SDIO_1 1 3 1 NJ 910
+preplace netloc ps7_0_axi_periph_M00_AXI 1 1 2 420 520 870J
+preplace netloc ps7_0_axi_periph_M01_AXI 1 1 2 N 560 NJ
+preplace netloc ps7_0_axi_periph_M02_AXI 1 1 1 410 300n
+preplace netloc ps7_0_axi_periph_M03_AXI 1 1 1 380 600n
+preplace netloc ps7_0_axi_periph_M04_AXI 1 1 2 340 650 890J
+preplace netloc ps7_0_axi_periph_M05_AXI 1 1 1 390 80n
+preplace netloc sensor_bd_0_M_AXI_S2MM_0 1 1 1 N 1340
+levelinfo -pg 1 -10 190 630 1130 1410
+pagesize -pg 1 -db -bbox -sgen -290 0 1600 1930
 "
 }
 {
-   "da_axi4_cnt":"6",
+   "da_axi4_cnt":"7",
    "da_board_cnt":"5",
    "da_clkrst_cnt":"1",
    "da_ps7_cnt":"1"

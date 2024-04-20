@@ -1,10 +1,11 @@
-# (c) Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-# (c) Copyright 2022-2024 Advanced Micro Devices, Inc. All rights reserved.
-# 
+
+################################################################################
+# (c) Copyright 2023 Advanced Micro Devices, Inc. All rights reserved
+#
 # This file contains confidential and proprietary information
 # of AMD and is protected under U.S. and international copyright
 # and other intellectual property laws.
-# 
+#
 # DISCLAIMER
 # This disclaimer is not a license and does not grant any
 # rights to the materials distributed herewith. Except as
@@ -26,7 +27,7 @@
 # by a third party) even if such damage or loss was
 # reasonably foreseeable or AMD had been advised of the
 # possibility of the same.
-# 
+#
 # CRITICAL APPLICATIONS
 # AMD products are not designed or intended to be fail-
 # safe, or for use in any application requiring fail-safe
@@ -43,15 +44,19 @@
 # 
 # THIS COPYRIGHT NOTICE AND DISCLAIMER MUST BE RETAINED AS
 # PART OF THIS FILE AT ALL TIMES.
-# 
-# DO NOT MODIFY THIS FILE.
-# #########################################################
-#
-# This XDC is used only in OOC mode for synthesis, implementation
-#
-# #########################################################
+
+################################################################################
+
+# This XDC is used only for OOC mode of synthesis, implementation
+# User should update the correct clock period before proceeding further
+# This constraints file contains default clock frequencies to be used during 
+# out-of-context flows such as OOC Synthesis and Hierarchical Designs. 
+# For best results the frequencies should be modified# to match the target 
+# frequencies. 
 
 
-create_clock -period 10 -name s_axi_aclk [get_ports s_axi_aclk]
+# create_clock -name s_axi_clk -period 10 [get_ports s_axi_aclk]
+create_clock -name s_axi_clk -period 10.000 [get_ports s_axi_aclk]
+## set_property HD.CLK_SRC BUFGCTRL_X0Y0 [get_ports s_axi_aclk]
 
-
+################################################################################

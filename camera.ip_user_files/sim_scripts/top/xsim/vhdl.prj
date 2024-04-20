@@ -1,11 +1,12 @@
 vhdl xil_defaultlib  \
+"../../../../camera.gen/sources_1/bd/top/bd/sensor_bd_inst_0/ip/sensor_bd_inst_0_proc_sys_reset_0_0/sim/sensor_bd_inst_0_proc_sys_reset_0_0.vhd" \
+"../../../../camera.gen/sources_1/bd/top/bd/sensor_bd_inst_0/ip/sensor_bd_inst_0_axi_gpio_0_0/sim/sensor_bd_inst_0_axi_gpio_0_0.vhd" \
 "../../../bd/top/ip/top_axi_gpio_0_0/sim/top_axi_gpio_0_0.vhd" \
 "../../../bd/top/ip/top_rst_ps7_0_50M_0/sim/top_rst_ps7_0_50M_0.vhd" \
 "../../../bd/top/ip/top_axi_uartlite_0_0/sim/top_axi_uartlite_0_0.vhd" \
 "../../../bd/top/ip/top_axi_quad_spi_0_0/sim/top_axi_quad_spi_0_0.vhd" \
 "../../../bd/top/ip/top_axi_quad_spi_0_1/sim/top_axi_quad_spi_0_1.vhd" \
 "../../../bd/top/ip/top_axi_uartlite_0_1/sim/top_axi_uartlite_0_1.vhd" \
-"../../../bd/top/ip/top_axi_iic_0_0/sim/top_axi_iic_0_0.vhd" \
 
 # Do not sort compile order
 nosort

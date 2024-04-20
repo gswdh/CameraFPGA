@@ -127,6 +127,51 @@ public:
   sc_core::sc_in< sc_dt::sc_bv<2> > M_AXI_GP0_BRESP;
   sc_core::sc_in< sc_dt::sc_bv<2> > M_AXI_GP0_RRESP;
   sc_core::sc_in< sc_dt::sc_bv<32> > M_AXI_GP0_RDATA;
+  sc_core::sc_out< bool > S_AXI_HP0_ARREADY;
+  sc_core::sc_out< bool > S_AXI_HP0_AWREADY;
+  sc_core::sc_out< bool > S_AXI_HP0_BVALID;
+  sc_core::sc_out< bool > S_AXI_HP0_RLAST;
+  sc_core::sc_out< bool > S_AXI_HP0_RVALID;
+  sc_core::sc_out< bool > S_AXI_HP0_WREADY;
+  sc_core::sc_out< sc_dt::sc_bv<2> > S_AXI_HP0_BRESP;
+  sc_core::sc_out< sc_dt::sc_bv<2> > S_AXI_HP0_RRESP;
+  sc_core::sc_out< sc_dt::sc_bv<6> > S_AXI_HP0_BID;
+  sc_core::sc_out< sc_dt::sc_bv<6> > S_AXI_HP0_RID;
+  sc_core::sc_out< sc_dt::sc_bv<64> > S_AXI_HP0_RDATA;
+  sc_core::sc_out< sc_dt::sc_bv<8> > S_AXI_HP0_RCOUNT;
+  sc_core::sc_out< sc_dt::sc_bv<8> > S_AXI_HP0_WCOUNT;
+  sc_core::sc_out< sc_dt::sc_bv<3> > S_AXI_HP0_RACOUNT;
+  sc_core::sc_out< sc_dt::sc_bv<6> > S_AXI_HP0_WACOUNT;
+  sc_core::sc_in< bool > S_AXI_HP0_ACLK;
+  sc_core::sc_in< bool > S_AXI_HP0_ARVALID;
+  sc_core::sc_in< bool > S_AXI_HP0_AWVALID;
+  sc_core::sc_in< bool > S_AXI_HP0_BREADY;
+  sc_core::sc_in< bool > S_AXI_HP0_RDISSUECAP1_EN;
+  sc_core::sc_in< bool > S_AXI_HP0_RREADY;
+  sc_core::sc_in< bool > S_AXI_HP0_WLAST;
+  sc_core::sc_in< bool > S_AXI_HP0_WRISSUECAP1_EN;
+  sc_core::sc_in< bool > S_AXI_HP0_WVALID;
+  sc_core::sc_in< sc_dt::sc_bv<2> > S_AXI_HP0_ARBURST;
+  sc_core::sc_in< sc_dt::sc_bv<2> > S_AXI_HP0_ARLOCK;
+  sc_core::sc_in< sc_dt::sc_bv<3> > S_AXI_HP0_ARSIZE;
+  sc_core::sc_in< sc_dt::sc_bv<2> > S_AXI_HP0_AWBURST;
+  sc_core::sc_in< sc_dt::sc_bv<2> > S_AXI_HP0_AWLOCK;
+  sc_core::sc_in< sc_dt::sc_bv<3> > S_AXI_HP0_AWSIZE;
+  sc_core::sc_in< sc_dt::sc_bv<3> > S_AXI_HP0_ARPROT;
+  sc_core::sc_in< sc_dt::sc_bv<3> > S_AXI_HP0_AWPROT;
+  sc_core::sc_in< sc_dt::sc_bv<32> > S_AXI_HP0_ARADDR;
+  sc_core::sc_in< sc_dt::sc_bv<32> > S_AXI_HP0_AWADDR;
+  sc_core::sc_in< sc_dt::sc_bv<4> > S_AXI_HP0_ARCACHE;
+  sc_core::sc_in< sc_dt::sc_bv<4> > S_AXI_HP0_ARLEN;
+  sc_core::sc_in< sc_dt::sc_bv<4> > S_AXI_HP0_ARQOS;
+  sc_core::sc_in< sc_dt::sc_bv<4> > S_AXI_HP0_AWCACHE;
+  sc_core::sc_in< sc_dt::sc_bv<4> > S_AXI_HP0_AWLEN;
+  sc_core::sc_in< sc_dt::sc_bv<4> > S_AXI_HP0_AWQOS;
+  sc_core::sc_in< sc_dt::sc_bv<6> > S_AXI_HP0_ARID;
+  sc_core::sc_in< sc_dt::sc_bv<6> > S_AXI_HP0_AWID;
+  sc_core::sc_in< sc_dt::sc_bv<6> > S_AXI_HP0_WID;
+  sc_core::sc_in< sc_dt::sc_bv<64> > S_AXI_HP0_WDATA;
+  sc_core::sc_in< sc_dt::sc_bv<8> > S_AXI_HP0_WSTRB;
   sc_core::sc_in< sc_dt::sc_bv<5> > IRQ_F2P;
   sc_core::sc_out< bool > FCLK_CLK0;
   sc_core::sc_out< bool > FCLK_RESET0_N;
@@ -171,6 +216,16 @@ private:
   xsc::common::vector2vector_converter<8,4>* mp_M_AXI_GP0_AWLEN_converter;
   sc_signal< sc_bv<8> > m_M_AXI_GP0_AWLEN_converter_signal;
   sc_signal< bool > m_M_AXI_GP0_transactor_rst_signal;
+  xtlm::xaximm_pin2xtlm_t<64,32,6,1,1,1,1,1>* mp_S_AXI_HP0_transactor;
+  xsc::common::vectorN2scalar_converter<2>* mp_S_AXI_HP0_ARLOCK_converter;
+  sc_signal< bool > m_S_AXI_HP0_ARLOCK_converter_signal;
+  xsc::common::vectorN2scalar_converter<2>* mp_S_AXI_HP0_AWLOCK_converter;
+  sc_signal< bool > m_S_AXI_HP0_AWLOCK_converter_signal;
+  xsc::common::vector2vector_converter<4,8>* mp_S_AXI_HP0_ARLEN_converter;
+  sc_signal< sc_bv<8> > m_S_AXI_HP0_ARLEN_converter_signal;
+  xsc::common::vector2vector_converter<4,8>* mp_S_AXI_HP0_AWLEN_converter;
+  sc_signal< sc_bv<8> > m_S_AXI_HP0_AWLEN_converter_signal;
+  sc_signal< bool > m_S_AXI_HP0_transactor_rst_signal;
 
 };
 #endif // XILINX_SIMULATOR
@@ -235,6 +290,51 @@ public:
   sc_core::sc_in< sc_dt::sc_bv<2> > M_AXI_GP0_BRESP;
   sc_core::sc_in< sc_dt::sc_bv<2> > M_AXI_GP0_RRESP;
   sc_core::sc_in< sc_dt::sc_bv<32> > M_AXI_GP0_RDATA;
+  sc_core::sc_out< bool > S_AXI_HP0_ARREADY;
+  sc_core::sc_out< bool > S_AXI_HP0_AWREADY;
+  sc_core::sc_out< bool > S_AXI_HP0_BVALID;
+  sc_core::sc_out< bool > S_AXI_HP0_RLAST;
+  sc_core::sc_out< bool > S_AXI_HP0_RVALID;
+  sc_core::sc_out< bool > S_AXI_HP0_WREADY;
+  sc_core::sc_out< sc_dt::sc_bv<2> > S_AXI_HP0_BRESP;
+  sc_core::sc_out< sc_dt::sc_bv<2> > S_AXI_HP0_RRESP;
+  sc_core::sc_out< sc_dt::sc_bv<6> > S_AXI_HP0_BID;
+  sc_core::sc_out< sc_dt::sc_bv<6> > S_AXI_HP0_RID;
+  sc_core::sc_out< sc_dt::sc_bv<64> > S_AXI_HP0_RDATA;
+  sc_core::sc_out< sc_dt::sc_bv<8> > S_AXI_HP0_RCOUNT;
+  sc_core::sc_out< sc_dt::sc_bv<8> > S_AXI_HP0_WCOUNT;
+  sc_core::sc_out< sc_dt::sc_bv<3> > S_AXI_HP0_RACOUNT;
+  sc_core::sc_out< sc_dt::sc_bv<6> > S_AXI_HP0_WACOUNT;
+  sc_core::sc_in< bool > S_AXI_HP0_ACLK;
+  sc_core::sc_in< bool > S_AXI_HP0_ARVALID;
+  sc_core::sc_in< bool > S_AXI_HP0_AWVALID;
+  sc_core::sc_in< bool > S_AXI_HP0_BREADY;
+  sc_core::sc_in< bool > S_AXI_HP0_RDISSUECAP1_EN;
+  sc_core::sc_in< bool > S_AXI_HP0_RREADY;
+  sc_core::sc_in< bool > S_AXI_HP0_WLAST;
+  sc_core::sc_in< bool > S_AXI_HP0_WRISSUECAP1_EN;
+  sc_core::sc_in< bool > S_AXI_HP0_WVALID;
+  sc_core::sc_in< sc_dt::sc_bv<2> > S_AXI_HP0_ARBURST;
+  sc_core::sc_in< sc_dt::sc_bv<2> > S_AXI_HP0_ARLOCK;
+  sc_core::sc_in< sc_dt::sc_bv<3> > S_AXI_HP0_ARSIZE;
+  sc_core::sc_in< sc_dt::sc_bv<2> > S_AXI_HP0_AWBURST;
+  sc_core::sc_in< sc_dt::sc_bv<2> > S_AXI_HP0_AWLOCK;
+  sc_core::sc_in< sc_dt::sc_bv<3> > S_AXI_HP0_AWSIZE;
+  sc_core::sc_in< sc_dt::sc_bv<3> > S_AXI_HP0_ARPROT;
+  sc_core::sc_in< sc_dt::sc_bv<3> > S_AXI_HP0_AWPROT;
+  sc_core::sc_in< sc_dt::sc_bv<32> > S_AXI_HP0_ARADDR;
+  sc_core::sc_in< sc_dt::sc_bv<32> > S_AXI_HP0_AWADDR;
+  sc_core::sc_in< sc_dt::sc_bv<4> > S_AXI_HP0_ARCACHE;
+  sc_core::sc_in< sc_dt::sc_bv<4> > S_AXI_HP0_ARLEN;
+  sc_core::sc_in< sc_dt::sc_bv<4> > S_AXI_HP0_ARQOS;
+  sc_core::sc_in< sc_dt::sc_bv<4> > S_AXI_HP0_AWCACHE;
+  sc_core::sc_in< sc_dt::sc_bv<4> > S_AXI_HP0_AWLEN;
+  sc_core::sc_in< sc_dt::sc_bv<4> > S_AXI_HP0_AWQOS;
+  sc_core::sc_in< sc_dt::sc_bv<6> > S_AXI_HP0_ARID;
+  sc_core::sc_in< sc_dt::sc_bv<6> > S_AXI_HP0_AWID;
+  sc_core::sc_in< sc_dt::sc_bv<6> > S_AXI_HP0_WID;
+  sc_core::sc_in< sc_dt::sc_bv<64> > S_AXI_HP0_WDATA;
+  sc_core::sc_in< sc_dt::sc_bv<8> > S_AXI_HP0_WSTRB;
   sc_core::sc_in< sc_dt::sc_bv<5> > IRQ_F2P;
   sc_core::sc_out< bool > FCLK_CLK0;
   sc_core::sc_out< bool > FCLK_RESET0_N;
@@ -279,6 +379,16 @@ private:
   xsc::common::vector2vector_converter<8,4>* mp_M_AXI_GP0_AWLEN_converter;
   sc_signal< sc_bv<8> > m_M_AXI_GP0_AWLEN_converter_signal;
   sc_signal< bool > m_M_AXI_GP0_transactor_rst_signal;
+  xtlm::xaximm_pin2xtlm_t<64,32,6,1,1,1,1,1>* mp_S_AXI_HP0_transactor;
+  xsc::common::vectorN2scalar_converter<2>* mp_S_AXI_HP0_ARLOCK_converter;
+  sc_signal< bool > m_S_AXI_HP0_ARLOCK_converter_signal;
+  xsc::common::vectorN2scalar_converter<2>* mp_S_AXI_HP0_AWLOCK_converter;
+  sc_signal< bool > m_S_AXI_HP0_AWLOCK_converter_signal;
+  xsc::common::vector2vector_converter<4,8>* mp_S_AXI_HP0_ARLEN_converter;
+  sc_signal< sc_bv<8> > m_S_AXI_HP0_ARLEN_converter_signal;
+  xsc::common::vector2vector_converter<4,8>* mp_S_AXI_HP0_AWLEN_converter;
+  sc_signal< sc_bv<8> > m_S_AXI_HP0_AWLEN_converter_signal;
+  sc_signal< bool > m_S_AXI_HP0_transactor_rst_signal;
 
 };
 #endif // XM_SYSTEMC
@@ -343,6 +453,51 @@ public:
   sc_core::sc_in< sc_dt::sc_bv<2> > M_AXI_GP0_BRESP;
   sc_core::sc_in< sc_dt::sc_bv<2> > M_AXI_GP0_RRESP;
   sc_core::sc_in< sc_dt::sc_bv<32> > M_AXI_GP0_RDATA;
+  sc_core::sc_out< bool > S_AXI_HP0_ARREADY;
+  sc_core::sc_out< bool > S_AXI_HP0_AWREADY;
+  sc_core::sc_out< bool > S_AXI_HP0_BVALID;
+  sc_core::sc_out< bool > S_AXI_HP0_RLAST;
+  sc_core::sc_out< bool > S_AXI_HP0_RVALID;
+  sc_core::sc_out< bool > S_AXI_HP0_WREADY;
+  sc_core::sc_out< sc_dt::sc_bv<2> > S_AXI_HP0_BRESP;
+  sc_core::sc_out< sc_dt::sc_bv<2> > S_AXI_HP0_RRESP;
+  sc_core::sc_out< sc_dt::sc_bv<6> > S_AXI_HP0_BID;
+  sc_core::sc_out< sc_dt::sc_bv<6> > S_AXI_HP0_RID;
+  sc_core::sc_out< sc_dt::sc_bv<64> > S_AXI_HP0_RDATA;
+  sc_core::sc_out< sc_dt::sc_bv<8> > S_AXI_HP0_RCOUNT;
+  sc_core::sc_out< sc_dt::sc_bv<8> > S_AXI_HP0_WCOUNT;
+  sc_core::sc_out< sc_dt::sc_bv<3> > S_AXI_HP0_RACOUNT;
+  sc_core::sc_out< sc_dt::sc_bv<6> > S_AXI_HP0_WACOUNT;
+  sc_core::sc_in< bool > S_AXI_HP0_ACLK;
+  sc_core::sc_in< bool > S_AXI_HP0_ARVALID;
+  sc_core::sc_in< bool > S_AXI_HP0_AWVALID;
+  sc_core::sc_in< bool > S_AXI_HP0_BREADY;
+  sc_core::sc_in< bool > S_AXI_HP0_RDISSUECAP1_EN;
+  sc_core::sc_in< bool > S_AXI_HP0_RREADY;
+  sc_core::sc_in< bool > S_AXI_HP0_WLAST;
+  sc_core::sc_in< bool > S_AXI_HP0_WRISSUECAP1_EN;
+  sc_core::sc_in< bool > S_AXI_HP0_WVALID;
+  sc_core::sc_in< sc_dt::sc_bv<2> > S_AXI_HP0_ARBURST;
+  sc_core::sc_in< sc_dt::sc_bv<2> > S_AXI_HP0_ARLOCK;
+  sc_core::sc_in< sc_dt::sc_bv<3> > S_AXI_HP0_ARSIZE;
+  sc_core::sc_in< sc_dt::sc_bv<2> > S_AXI_HP0_AWBURST;
+  sc_core::sc_in< sc_dt::sc_bv<2> > S_AXI_HP0_AWLOCK;
+  sc_core::sc_in< sc_dt::sc_bv<3> > S_AXI_HP0_AWSIZE;
+  sc_core::sc_in< sc_dt::sc_bv<3> > S_AXI_HP0_ARPROT;
+  sc_core::sc_in< sc_dt::sc_bv<3> > S_AXI_HP0_AWPROT;
+  sc_core::sc_in< sc_dt::sc_bv<32> > S_AXI_HP0_ARADDR;
+  sc_core::sc_in< sc_dt::sc_bv<32> > S_AXI_HP0_AWADDR;
+  sc_core::sc_in< sc_dt::sc_bv<4> > S_AXI_HP0_ARCACHE;
+  sc_core::sc_in< sc_dt::sc_bv<4> > S_AXI_HP0_ARLEN;
+  sc_core::sc_in< sc_dt::sc_bv<4> > S_AXI_HP0_ARQOS;
+  sc_core::sc_in< sc_dt::sc_bv<4> > S_AXI_HP0_AWCACHE;
+  sc_core::sc_in< sc_dt::sc_bv<4> > S_AXI_HP0_AWLEN;
+  sc_core::sc_in< sc_dt::sc_bv<4> > S_AXI_HP0_AWQOS;
+  sc_core::sc_in< sc_dt::sc_bv<6> > S_AXI_HP0_ARID;
+  sc_core::sc_in< sc_dt::sc_bv<6> > S_AXI_HP0_AWID;
+  sc_core::sc_in< sc_dt::sc_bv<6> > S_AXI_HP0_WID;
+  sc_core::sc_in< sc_dt::sc_bv<64> > S_AXI_HP0_WDATA;
+  sc_core::sc_in< sc_dt::sc_bv<8> > S_AXI_HP0_WSTRB;
   sc_core::sc_in< sc_dt::sc_bv<5> > IRQ_F2P;
   sc_core::sc_out< bool > FCLK_CLK0;
   sc_core::sc_out< bool > FCLK_RESET0_N;
@@ -387,6 +542,16 @@ private:
   xsc::common::vector2vector_converter<8,4>* mp_M_AXI_GP0_AWLEN_converter;
   sc_signal< sc_bv<8> > m_M_AXI_GP0_AWLEN_converter_signal;
   sc_signal< bool > m_M_AXI_GP0_transactor_rst_signal;
+  xtlm::xaximm_pin2xtlm_t<64,32,6,1,1,1,1,1>* mp_S_AXI_HP0_transactor;
+  xsc::common::vectorN2scalar_converter<2>* mp_S_AXI_HP0_ARLOCK_converter;
+  sc_signal< bool > m_S_AXI_HP0_ARLOCK_converter_signal;
+  xsc::common::vectorN2scalar_converter<2>* mp_S_AXI_HP0_AWLOCK_converter;
+  sc_signal< bool > m_S_AXI_HP0_AWLOCK_converter_signal;
+  xsc::common::vector2vector_converter<4,8>* mp_S_AXI_HP0_ARLEN_converter;
+  sc_signal< sc_bv<8> > m_S_AXI_HP0_ARLEN_converter_signal;
+  xsc::common::vector2vector_converter<4,8>* mp_S_AXI_HP0_AWLEN_converter;
+  sc_signal< sc_bv<8> > m_S_AXI_HP0_AWLEN_converter_signal;
+  sc_signal< bool > m_S_AXI_HP0_transactor_rst_signal;
 
 };
 #endif // RIVIERA
@@ -396,6 +561,8 @@ private:
 
 #ifdef VCSSYSTEMC
 #include "utils/xtlm_aximm_initiator_stub.h"
+
+#include "utils/xtlm_aximm_target_stub.h"
 
 class DllExport top_processing_system7_0_0 : public top_processing_system7_0_0_sc
 {
@@ -453,6 +620,51 @@ public:
   sc_core::sc_in< sc_dt::sc_bv<2> > M_AXI_GP0_BRESP;
   sc_core::sc_in< sc_dt::sc_bv<2> > M_AXI_GP0_RRESP;
   sc_core::sc_in< sc_dt::sc_bv<32> > M_AXI_GP0_RDATA;
+  sc_core::sc_out< bool > S_AXI_HP0_ARREADY;
+  sc_core::sc_out< bool > S_AXI_HP0_AWREADY;
+  sc_core::sc_out< bool > S_AXI_HP0_BVALID;
+  sc_core::sc_out< bool > S_AXI_HP0_RLAST;
+  sc_core::sc_out< bool > S_AXI_HP0_RVALID;
+  sc_core::sc_out< bool > S_AXI_HP0_WREADY;
+  sc_core::sc_out< sc_dt::sc_bv<2> > S_AXI_HP0_BRESP;
+  sc_core::sc_out< sc_dt::sc_bv<2> > S_AXI_HP0_RRESP;
+  sc_core::sc_out< sc_dt::sc_bv<6> > S_AXI_HP0_BID;
+  sc_core::sc_out< sc_dt::sc_bv<6> > S_AXI_HP0_RID;
+  sc_core::sc_out< sc_dt::sc_bv<64> > S_AXI_HP0_RDATA;
+  sc_core::sc_out< sc_dt::sc_bv<8> > S_AXI_HP0_RCOUNT;
+  sc_core::sc_out< sc_dt::sc_bv<8> > S_AXI_HP0_WCOUNT;
+  sc_core::sc_out< sc_dt::sc_bv<3> > S_AXI_HP0_RACOUNT;
+  sc_core::sc_out< sc_dt::sc_bv<6> > S_AXI_HP0_WACOUNT;
+  sc_core::sc_in< bool > S_AXI_HP0_ACLK;
+  sc_core::sc_in< bool > S_AXI_HP0_ARVALID;
+  sc_core::sc_in< bool > S_AXI_HP0_AWVALID;
+  sc_core::sc_in< bool > S_AXI_HP0_BREADY;
+  sc_core::sc_in< bool > S_AXI_HP0_RDISSUECAP1_EN;
+  sc_core::sc_in< bool > S_AXI_HP0_RREADY;
+  sc_core::sc_in< bool > S_AXI_HP0_WLAST;
+  sc_core::sc_in< bool > S_AXI_HP0_WRISSUECAP1_EN;
+  sc_core::sc_in< bool > S_AXI_HP0_WVALID;
+  sc_core::sc_in< sc_dt::sc_bv<2> > S_AXI_HP0_ARBURST;
+  sc_core::sc_in< sc_dt::sc_bv<2> > S_AXI_HP0_ARLOCK;
+  sc_core::sc_in< sc_dt::sc_bv<3> > S_AXI_HP0_ARSIZE;
+  sc_core::sc_in< sc_dt::sc_bv<2> > S_AXI_HP0_AWBURST;
+  sc_core::sc_in< sc_dt::sc_bv<2> > S_AXI_HP0_AWLOCK;
+  sc_core::sc_in< sc_dt::sc_bv<3> > S_AXI_HP0_AWSIZE;
+  sc_core::sc_in< sc_dt::sc_bv<3> > S_AXI_HP0_ARPROT;
+  sc_core::sc_in< sc_dt::sc_bv<3> > S_AXI_HP0_AWPROT;
+  sc_core::sc_in< sc_dt::sc_bv<32> > S_AXI_HP0_ARADDR;
+  sc_core::sc_in< sc_dt::sc_bv<32> > S_AXI_HP0_AWADDR;
+  sc_core::sc_in< sc_dt::sc_bv<4> > S_AXI_HP0_ARCACHE;
+  sc_core::sc_in< sc_dt::sc_bv<4> > S_AXI_HP0_ARLEN;
+  sc_core::sc_in< sc_dt::sc_bv<4> > S_AXI_HP0_ARQOS;
+  sc_core::sc_in< sc_dt::sc_bv<4> > S_AXI_HP0_AWCACHE;
+  sc_core::sc_in< sc_dt::sc_bv<4> > S_AXI_HP0_AWLEN;
+  sc_core::sc_in< sc_dt::sc_bv<4> > S_AXI_HP0_AWQOS;
+  sc_core::sc_in< sc_dt::sc_bv<6> > S_AXI_HP0_ARID;
+  sc_core::sc_in< sc_dt::sc_bv<6> > S_AXI_HP0_AWID;
+  sc_core::sc_in< sc_dt::sc_bv<6> > S_AXI_HP0_WID;
+  sc_core::sc_in< sc_dt::sc_bv<64> > S_AXI_HP0_WDATA;
+  sc_core::sc_in< sc_dt::sc_bv<8> > S_AXI_HP0_WSTRB;
   sc_core::sc_in< sc_dt::sc_bv<5> > IRQ_F2P;
   sc_core::sc_out< bool > FCLK_CLK0;
   sc_core::sc_out< bool > FCLK_RESET0_N;
@@ -497,10 +709,22 @@ private:
   xsc::common::vector2vector_converter<8,4>* mp_M_AXI_GP0_AWLEN_converter;
   sc_signal< sc_bv<8> > m_M_AXI_GP0_AWLEN_converter_signal;
   sc_signal< bool > m_M_AXI_GP0_transactor_rst_signal;
+  xtlm::xaximm_pin2xtlm_t<64,32,6,1,1,1,1,1>* mp_S_AXI_HP0_transactor;
+  xsc::common::vectorN2scalar_converter<2>* mp_S_AXI_HP0_ARLOCK_converter;
+  sc_signal< bool > m_S_AXI_HP0_ARLOCK_converter_signal;
+  xsc::common::vectorN2scalar_converter<2>* mp_S_AXI_HP0_AWLOCK_converter;
+  sc_signal< bool > m_S_AXI_HP0_AWLOCK_converter_signal;
+  xsc::common::vector2vector_converter<4,8>* mp_S_AXI_HP0_ARLEN_converter;
+  sc_signal< sc_bv<8> > m_S_AXI_HP0_ARLEN_converter_signal;
+  xsc::common::vector2vector_converter<4,8>* mp_S_AXI_HP0_AWLEN_converter;
+  sc_signal< sc_bv<8> > m_S_AXI_HP0_AWLEN_converter_signal;
+  sc_signal< bool > m_S_AXI_HP0_transactor_rst_signal;
 
   // Transactor stubs
   xtlm::xtlm_aximm_initiator_stub * M_AXI_GP0_transactor_initiator_rd_socket_stub;
   xtlm::xtlm_aximm_initiator_stub * M_AXI_GP0_transactor_initiator_wr_socket_stub;
+  xtlm::xtlm_aximm_target_stub * S_AXI_HP0_transactor_target_rd_socket_stub;
+  xtlm::xtlm_aximm_target_stub * S_AXI_HP0_transactor_target_wr_socket_stub;
 
   // Socket stubs
 
@@ -513,6 +737,8 @@ private:
 #ifdef MTI_SYSTEMC
 #include "utils/xtlm_aximm_initiator_stub.h"
 
+#include "utils/xtlm_aximm_target_stub.h"
+
 class DllExport top_processing_system7_0_0 : public top_processing_system7_0_0_sc
 {
 public:
@@ -569,6 +795,51 @@ public:
   sc_core::sc_in< sc_dt::sc_bv<2> > M_AXI_GP0_BRESP;
   sc_core::sc_in< sc_dt::sc_bv<2> > M_AXI_GP0_RRESP;
   sc_core::sc_in< sc_dt::sc_bv<32> > M_AXI_GP0_RDATA;
+  sc_core::sc_out< bool > S_AXI_HP0_ARREADY;
+  sc_core::sc_out< bool > S_AXI_HP0_AWREADY;
+  sc_core::sc_out< bool > S_AXI_HP0_BVALID;
+  sc_core::sc_out< bool > S_AXI_HP0_RLAST;
+  sc_core::sc_out< bool > S_AXI_HP0_RVALID;
+  sc_core::sc_out< bool > S_AXI_HP0_WREADY;
+  sc_core::sc_out< sc_dt::sc_bv<2> > S_AXI_HP0_BRESP;
+  sc_core::sc_out< sc_dt::sc_bv<2> > S_AXI_HP0_RRESP;
+  sc_core::sc_out< sc_dt::sc_bv<6> > S_AXI_HP0_BID;
+  sc_core::sc_out< sc_dt::sc_bv<6> > S_AXI_HP0_RID;
+  sc_core::sc_out< sc_dt::sc_bv<64> > S_AXI_HP0_RDATA;
+  sc_core::sc_out< sc_dt::sc_bv<8> > S_AXI_HP0_RCOUNT;
+  sc_core::sc_out< sc_dt::sc_bv<8> > S_AXI_HP0_WCOUNT;
+  sc_core::sc_out< sc_dt::sc_bv<3> > S_AXI_HP0_RACOUNT;
+  sc_core::sc_out< sc_dt::sc_bv<6> > S_AXI_HP0_WACOUNT;
+  sc_core::sc_in< bool > S_AXI_HP0_ACLK;
+  sc_core::sc_in< bool > S_AXI_HP0_ARVALID;
+  sc_core::sc_in< bool > S_AXI_HP0_AWVALID;
+  sc_core::sc_in< bool > S_AXI_HP0_BREADY;
+  sc_core::sc_in< bool > S_AXI_HP0_RDISSUECAP1_EN;
+  sc_core::sc_in< bool > S_AXI_HP0_RREADY;
+  sc_core::sc_in< bool > S_AXI_HP0_WLAST;
+  sc_core::sc_in< bool > S_AXI_HP0_WRISSUECAP1_EN;
+  sc_core::sc_in< bool > S_AXI_HP0_WVALID;
+  sc_core::sc_in< sc_dt::sc_bv<2> > S_AXI_HP0_ARBURST;
+  sc_core::sc_in< sc_dt::sc_bv<2> > S_AXI_HP0_ARLOCK;
+  sc_core::sc_in< sc_dt::sc_bv<3> > S_AXI_HP0_ARSIZE;
+  sc_core::sc_in< sc_dt::sc_bv<2> > S_AXI_HP0_AWBURST;
+  sc_core::sc_in< sc_dt::sc_bv<2> > S_AXI_HP0_AWLOCK;
+  sc_core::sc_in< sc_dt::sc_bv<3> > S_AXI_HP0_AWSIZE;
+  sc_core::sc_in< sc_dt::sc_bv<3> > S_AXI_HP0_ARPROT;
+  sc_core::sc_in< sc_dt::sc_bv<3> > S_AXI_HP0_AWPROT;
+  sc_core::sc_in< sc_dt::sc_bv<32> > S_AXI_HP0_ARADDR;
+  sc_core::sc_in< sc_dt::sc_bv<32> > S_AXI_HP0_AWADDR;
+  sc_core::sc_in< sc_dt::sc_bv<4> > S_AXI_HP0_ARCACHE;
+  sc_core::sc_in< sc_dt::sc_bv<4> > S_AXI_HP0_ARLEN;
+  sc_core::sc_in< sc_dt::sc_bv<4> > S_AXI_HP0_ARQOS;
+  sc_core::sc_in< sc_dt::sc_bv<4> > S_AXI_HP0_AWCACHE;
+  sc_core::sc_in< sc_dt::sc_bv<4> > S_AXI_HP0_AWLEN;
+  sc_core::sc_in< sc_dt::sc_bv<4> > S_AXI_HP0_AWQOS;
+  sc_core::sc_in< sc_dt::sc_bv<6> > S_AXI_HP0_ARID;
+  sc_core::sc_in< sc_dt::sc_bv<6> > S_AXI_HP0_AWID;
+  sc_core::sc_in< sc_dt::sc_bv<6> > S_AXI_HP0_WID;
+  sc_core::sc_in< sc_dt::sc_bv<64> > S_AXI_HP0_WDATA;
+  sc_core::sc_in< sc_dt::sc_bv<8> > S_AXI_HP0_WSTRB;
   sc_core::sc_in< sc_dt::sc_bv<5> > IRQ_F2P;
   sc_core::sc_out< bool > FCLK_CLK0;
   sc_core::sc_out< bool > FCLK_RESET0_N;
@@ -613,10 +884,22 @@ private:
   xsc::common::vector2vector_converter<8,4>* mp_M_AXI_GP0_AWLEN_converter;
   sc_signal< sc_bv<8> > m_M_AXI_GP0_AWLEN_converter_signal;
   sc_signal< bool > m_M_AXI_GP0_transactor_rst_signal;
+  xtlm::xaximm_pin2xtlm_t<64,32,6,1,1,1,1,1>* mp_S_AXI_HP0_transactor;
+  xsc::common::vectorN2scalar_converter<2>* mp_S_AXI_HP0_ARLOCK_converter;
+  sc_signal< bool > m_S_AXI_HP0_ARLOCK_converter_signal;
+  xsc::common::vectorN2scalar_converter<2>* mp_S_AXI_HP0_AWLOCK_converter;
+  sc_signal< bool > m_S_AXI_HP0_AWLOCK_converter_signal;
+  xsc::common::vector2vector_converter<4,8>* mp_S_AXI_HP0_ARLEN_converter;
+  sc_signal< sc_bv<8> > m_S_AXI_HP0_ARLEN_converter_signal;
+  xsc::common::vector2vector_converter<4,8>* mp_S_AXI_HP0_AWLEN_converter;
+  sc_signal< sc_bv<8> > m_S_AXI_HP0_AWLEN_converter_signal;
+  sc_signal< bool > m_S_AXI_HP0_transactor_rst_signal;
 
   // Transactor stubs
   xtlm::xtlm_aximm_initiator_stub * M_AXI_GP0_transactor_initiator_rd_socket_stub;
   xtlm::xtlm_aximm_initiator_stub * M_AXI_GP0_transactor_initiator_wr_socket_stub;
+  xtlm::xtlm_aximm_target_stub * S_AXI_HP0_transactor_target_rd_socket_stub;
+  xtlm::xtlm_aximm_target_stub * S_AXI_HP0_transactor_target_wr_socket_stub;
 
   // Socket stubs
 
