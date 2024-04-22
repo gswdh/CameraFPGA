@@ -102,7 +102,7 @@ wire clk_in2_top_clk_wiz_0_0;
   wire        badc_spi_clk_top_clk_wiz_0_0;
   wire        disp_spi_clk_top_clk_wiz_0_0;
   wire        sensor_clk_top_clk_wiz_0_0;
-  wire        clk_out6_top_clk_wiz_0_0;
+  wire        clk_200M_top_clk_wiz_0_0;
   wire        clk_out7_top_clk_wiz_0_0;
 
   wire [15:0] do_unused;

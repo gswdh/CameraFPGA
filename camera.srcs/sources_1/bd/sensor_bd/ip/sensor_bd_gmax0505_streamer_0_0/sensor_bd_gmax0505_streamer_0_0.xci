@@ -8,7 +8,7 @@
     "gen_directory": "../../../../../../camera.gen/sources_1/bd/sensor_bd/ip/sensor_bd_gmax0505_streamer_0_0",
     "parameters": {
       "component_parameters": {
-        "N_BITS_PER_WORD": [ { "value": "12", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "N_BITS_PER_WORD": [ { "value": "10", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "WORD_SOF": [ { "value": "0xFFF000000800", "resolve_type": "user", "format": "bitString", "usage": "all" } ],
         "WORD_EOF": [ { "value": "0xFFF0000009D0", "resolve_type": "user", "format": "bitString", "usage": "all" } ],
         "WORD_SOL": [ { "value": "0xFFF000000AB0", "resolve_type": "user", "format": "bitString", "usage": "all" } ],
@@ -16,7 +16,7 @@
         "Component_Name": [ { "value": "sensor_bd_gmax0505_streamer_0_0", "resolve_type": "user", "usage": "all" } ]
       },
       "model_parameters": {
-        "N_BITS_PER_WORD": [ { "value": "12", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "N_BITS_PER_WORD": [ { "value": "10", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "WORD_SOF": [ { "value": "0xFFF000000800", "resolve_type": "generated", "format": "bitString", "usage": "all" } ],
         "WORD_EOF": [ { "value": "0xFFF0000009D0", "resolve_type": "generated", "format": "bitString", "usage": "all" } ],
         "WORD_SOL": [ { "value": "0xFFF000000AB0", "resolve_type": "generated", "format": "bitString", "usage": "all" } ],
@@ -43,20 +43,20 @@
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "../../ipshared" } ],
         "SWVERSION": [ { "value": "2023.2" } ],
-        "SYNTHESISFLOW": [ { "value": "OOC_HIERARCHICAL" } ]
+        "SYNTHESISFLOW": [ { "value": "GLOBAL" } ]
       }
     },
     "boundary": {
       "ports": {
         "clk_i": [ { "direction": "in" } ],
         "n_reset_i": [ { "direction": "in" } ],
-        "data_i": [ { "direction": "in", "size_left": "95", "size_right": "0" } ],
-        "sync_word_i": [ { "direction": "in", "size_left": "11", "size_right": "0" } ],
+        "data_i": [ { "direction": "in", "size_left": "159", "size_right": "0" } ],
+        "sync_word_i": [ { "direction": "in", "size_left": "9", "size_right": "0" } ],
         "sync_en_i": [ { "direction": "in" } ],
         "sync_done_o": [ { "direction": "out" } ],
         "sync_bit_slip_o": [ { "direction": "out" } ],
         "pix_clk_o": [ { "direction": "out" } ],
-        "pix_data_o": [ { "direction": "out", "size_left": "191", "size_right": "0" } ],
+        "pix_data_o": [ { "direction": "out", "size_left": "159", "size_right": "0" } ],
         "pix_line_valid_o": [ { "direction": "out", "driver_value": "0x0" } ],
         "pix_frame_valid_o": [ { "direction": "out", "driver_value": "0x0" } ]
       }

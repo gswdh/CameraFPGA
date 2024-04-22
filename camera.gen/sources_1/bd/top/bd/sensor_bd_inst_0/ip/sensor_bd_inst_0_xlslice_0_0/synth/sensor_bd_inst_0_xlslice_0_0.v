@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "xlslice_v1_0_3_xlslice,Vivado 2023.2" *)
 (* CHECK_LICENSE_TYPE = "sensor_bd_inst_0_xlslice_0_0,xlslice_v1_0_3_xlslice,{}" *)
-(* CORE_GENERATION_INFO = "sensor_bd_inst_0_xlslice_0_0,xlslice_v1_0_3_xlslice,{x_ipProduct=Vivado 2023.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=xlslice,x_ipVersion=1.0,x_ipCoreRevision=3,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,DIN_WIDTH=13,DIN_FROM=11,DIN_TO=0}" *)
+(* CORE_GENERATION_INFO = "sensor_bd_inst_0_xlslice_0_0,xlslice_v1_0_3_xlslice,{x_ipProduct=Vivado 2023.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=xlslice,x_ipVersion=1.0,x_ipCoreRevision=3,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,DIN_WIDTH=13,DIN_FROM=9,DIN_TO=0}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module sensor_bd_inst_0_xlslice_0_0 (
   Din,
@@ -60,11 +60,11 @@ module sensor_bd_inst_0_xlslice_0_0 (
 );
 
 input wire [12 : 0] Din;
-output wire [11 : 0] Dout;
+output wire [9 : 0] Dout;
 
   xlslice_v1_0_3_xlslice #(
     .DIN_WIDTH(13),
-    .DIN_FROM(11),
+    .DIN_FROM(9),
     .DIN_TO(0)
   ) inst (
     .Din(Din),

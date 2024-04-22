@@ -70,18 +70,18 @@ module sensor_bd_inst_0_gmax0505_streamer_0_0 (
 
 input wire clk_i;
 input wire n_reset_i;
-input wire [95 : 0] data_i;
-input wire [11 : 0] sync_word_i;
+input wire [159 : 0] data_i;
+input wire [9 : 0] sync_word_i;
 input wire sync_en_i;
 output wire sync_done_o;
 output wire sync_bit_slip_o;
 output wire pix_clk_o;
-output wire [191 : 0] pix_data_o;
+output wire [159 : 0] pix_data_o;
 output wire pix_line_valid_o;
 output wire pix_frame_valid_o;
 
   gmax0505_streamer #(
-    .N_BITS_PER_WORD(12),
+    .N_BITS_PER_WORD(10),
     .WORD_SOF(48'HFFF000000800),
     .WORD_EOF(48'HFFF0000009D0),
     .WORD_SOL(48'HFFF000000AB0),

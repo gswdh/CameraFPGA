@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x1E85C547944B5827",
+      "boundary_crc": "0x24D1333E7F83D8A6",
       "design_src": "/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/sources_1/bd/sensor_bd/sensor_bd.bd",
       "device": "xc7z020clg484-2",
       "name": "sensor_bd_inst_0",
@@ -12,43 +12,18 @@
       "variant": "true"
     },
     "design_tree": {
-      "selectio_wiz_0": "",
       "gmax0505_streamer_0": "",
       "xlslice_0": "",
       "xlslice_1": "",
-      "bit_slip_width_adapt_0": "",
-      "proc_sys_reset_0": "",
       "axi_gpio_0": "",
       "ila_0": "",
-      "xlslice_2": "",
-      "xlslice_3": ""
+      "selectio_wiz_0": "",
+      "proc_sys_reset_0": "",
+      "bit_slip_width_adapt_0": "",
+      "preserver_0": "",
+      "xlslice_2": ""
     },
     "interface_ports": {
-      "diff_clk_in_0": {
-        "mode": "Slave",
-        "vlnv_bus_definition": "xilinx.com:interface:diff_clock:1.0",
-        "vlnv": "xilinx.com:interface:diff_clock_rtl:1.0",
-        "parameters": {
-          "CAN_DEBUG": {
-            "value": "false",
-            "value_src": "strong"
-          },
-          "FREQ_HZ": {
-            "value": "100000000",
-            "value_src": "default_prop"
-          }
-        },
-        "port_maps": {
-          "CLK_N": {
-            "physical_name": "diff_clk_in_0_clk_n",
-            "direction": "I"
-          },
-          "CLK_P": {
-            "physical_name": "diff_clk_in_0_clk_p",
-            "direction": "I"
-          }
-        }
-      },
       "S_AXI_0": {
         "mode": "Slave",
         "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
@@ -269,19 +244,34 @@
             "direction": "I"
           }
         }
+      },
+      "diff_clk_in_0": {
+        "mode": "Slave",
+        "vlnv_bus_definition": "xilinx.com:interface:diff_clock:1.0",
+        "vlnv": "xilinx.com:interface:diff_clock_rtl:1.0",
+        "parameters": {
+          "CAN_DEBUG": {
+            "value": "false",
+            "value_src": "strong"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default_prop"
+          }
+        },
+        "port_maps": {
+          "CLK_N": {
+            "physical_name": "diff_clk_in_0_clk_n",
+            "direction": "I"
+          },
+          "CLK_P": {
+            "physical_name": "diff_clk_in_0_clk_p",
+            "direction": "I"
+          }
+        }
       }
     },
     "ports": {
-      "data_in_from_pins_p_0": {
-        "direction": "I",
-        "left": "15",
-        "right": "0"
-      },
-      "data_in_from_pins_n_0": {
-        "direction": "I",
-        "left": "15",
-        "right": "0"
-      },
       "ACLK_0": {
         "type": "clk",
         "direction": "I",
@@ -329,51 +319,22 @@
             "value_src": "const_prop"
           }
         }
+      },
+      "data_in_from_pins_p_0": {
+        "direction": "I",
+        "left": "15",
+        "right": "0"
+      },
+      "data_in_from_pins_n_0": {
+        "direction": "I",
+        "left": "15",
+        "right": "0"
+      },
+      "en_0": {
+        "direction": "O"
       }
     },
     "components": {
-      "selectio_wiz_0": {
-        "vlnv": "xilinx.com:ip:selectio_wiz:5.1",
-        "ip_revision": "17",
-        "xci_name": "sensor_bd_inst_0_selectio_wiz_0_0",
-        "xci_path": "ip/sensor_bd_inst_0_selectio_wiz_0_0/sensor_bd_inst_0_selectio_wiz_0_0.xci",
-        "inst_hier_path": "selectio_wiz_0",
-        "parameters": {
-          "BUS_IO_STD": {
-            "value": "DIFF_HSTL_II_18"
-          },
-          "BUS_SIG_TYPE": {
-            "value": "DIFF"
-          },
-          "CLK_FWD_IO_STD": {
-            "value": "DIFF_HSTL_II_18"
-          },
-          "CLK_FWD_SIG_TYPE": {
-            "value": "DIFF"
-          },
-          "SELIO_ACTIVE_EDGE": {
-            "value": "DDR"
-          },
-          "SELIO_CLK_IO_STD": {
-            "value": "DIFF_HSTL_II_18"
-          },
-          "SELIO_CLK_SIG_TYPE": {
-            "value": "DIFF"
-          },
-          "SELIO_INTERFACE_TYPE": {
-            "value": "NETWORKING"
-          },
-          "SERIALIZATION_FACTOR": {
-            "value": "6"
-          },
-          "SYSTEM_DATA_WIDTH": {
-            "value": "16"
-          },
-          "USE_SERIALIZATION": {
-            "value": "true"
-          }
-        }
-      },
       "gmax0505_streamer_0": {
         "vlnv": "xilinx.com:module_ref:gmax0505_streamer:1.0",
         "ip_revision": "1",
@@ -390,7 +351,7 @@
             "direction": "I",
             "parameters": {
               "FREQ_HZ": {
-                "value": "33333333",
+                "value": "20000000",
                 "value_src": "ip_prop"
               },
               "PHASE": {
@@ -414,7 +375,7 @@
           },
           "data_i": {
             "direction": "I",
-            "left": "95",
+            "left": "159",
             "right": "0",
             "parameters": {
               "LAYERED_METADATA": {
@@ -425,7 +386,7 @@
           },
           "sync_word_i": {
             "direction": "I",
-            "left": "11",
+            "left": "9",
             "right": "0"
           },
           "sync_en_i": {
@@ -442,7 +403,7 @@
           },
           "pix_data_o": {
             "direction": "O",
-            "left": "191",
+            "left": "159",
             "right": "0"
           },
           "pix_line_valid_o": {
@@ -461,7 +422,7 @@
         "inst_hier_path": "xlslice_0",
         "parameters": {
           "DIN_FROM": {
-            "value": "11"
+            "value": "9"
           },
           "DIN_WIDTH": {
             "value": "13"
@@ -485,40 +446,6 @@
             "value": "13"
           }
         }
-      },
-      "bit_slip_width_adapt_0": {
-        "vlnv": "xilinx.com:module_ref:bit_slip_width_adapter:1.0",
-        "ip_revision": "1",
-        "xci_name": "sensor_bd_inst_0_bit_slip_width_adapt_0_0",
-        "xci_path": "ip/sensor_bd_inst_0_bit_slip_width_adapt_0_0/sensor_bd_inst_0_bit_slip_width_adapt_0_0.xci",
-        "inst_hier_path": "bit_slip_width_adapt_0",
-        "parameters": {
-          "WIDTH": {
-            "value": "16"
-          }
-        },
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "bit_slip_width_adapter",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "in_bit": {
-            "direction": "I"
-          },
-          "out_bus": {
-            "direction": "O",
-            "left": "15",
-            "right": "0"
-          }
-        }
-      },
-      "proc_sys_reset_0": {
-        "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
-        "ip_revision": "14",
-        "xci_name": "sensor_bd_inst_0_proc_sys_reset_0_0",
-        "xci_path": "ip/sensor_bd_inst_0_proc_sys_reset_0_0/sensor_bd_inst_0_proc_sys_reset_0_0.xci",
-        "inst_hier_path": "proc_sys_reset_0"
       },
       "axi_gpio_0": {
         "vlnv": "xilinx.com:ip:axi_gpio:2.0",
@@ -561,16 +488,136 @@
             "value": "Native"
           },
           "C_NUM_OF_PROBES": {
-            "value": "6"
+            "value": "4"
           },
           "C_PROBE2_WIDTH": {
-            "value": "12"
+            "value": "10"
           },
           "C_PROBE3_WIDTH": {
-            "value": "6"
+            "value": "10"
           },
           "C_PROBE5_WIDTH": {
-            "value": "12"
+            "value": "1"
+          },
+          "C_PROBE8_WIDTH": {
+            "value": "1"
+          }
+        }
+      },
+      "selectio_wiz_0": {
+        "vlnv": "xilinx.com:ip:selectio_wiz:5.1",
+        "ip_revision": "17",
+        "xci_name": "sensor_bd_inst_0_selectio_wiz_0_0",
+        "xci_path": "ip/sensor_bd_inst_0_selectio_wiz_0_0/sensor_bd_inst_0_selectio_wiz_0_0.xci",
+        "inst_hier_path": "selectio_wiz_0",
+        "parameters": {
+          "BUS_IO_STD": {
+            "value": "DIFF_HSTL_II_18"
+          },
+          "BUS_SIG_TYPE": {
+            "value": "DIFF"
+          },
+          "CLK_FWD_IO_STD": {
+            "value": "DIFF_HSTL_II_18"
+          },
+          "CLK_FWD_SIG_TYPE": {
+            "value": "DIFF"
+          },
+          "SELIO_ACTIVE_EDGE": {
+            "value": "DDR"
+          },
+          "SELIO_CLK_IO_STD": {
+            "value": "DIFF_HSTL_II_18"
+          },
+          "SELIO_CLK_SIG_TYPE": {
+            "value": "DIFF"
+          },
+          "SELIO_INTERFACE_TYPE": {
+            "value": "NETWORKING"
+          },
+          "SERIALIZATION_FACTOR": {
+            "value": "10"
+          },
+          "SYSTEM_DATA_WIDTH": {
+            "value": "16"
+          },
+          "USE_SERIALIZATION": {
+            "value": "true"
+          }
+        }
+      },
+      "proc_sys_reset_0": {
+        "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
+        "ip_revision": "14",
+        "xci_name": "sensor_bd_inst_0_proc_sys_reset_0_0",
+        "xci_path": "ip/sensor_bd_inst_0_proc_sys_reset_0_0/sensor_bd_inst_0_proc_sys_reset_0_0.xci",
+        "inst_hier_path": "proc_sys_reset_0"
+      },
+      "bit_slip_width_adapt_0": {
+        "vlnv": "xilinx.com:module_ref:bit_slip_width_adapter:1.0",
+        "ip_revision": "1",
+        "xci_name": "sensor_bd_inst_0_bit_slip_width_adapt_0_0",
+        "xci_path": "ip/sensor_bd_inst_0_bit_slip_width_adapt_0_0/sensor_bd_inst_0_bit_slip_width_adapt_0_0.xci",
+        "inst_hier_path": "bit_slip_width_adapt_0",
+        "parameters": {
+          "WIDTH": {
+            "value": "16"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "bit_slip_width_adapter",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "in_bit": {
+            "direction": "I"
+          },
+          "out_bus": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      },
+      "preserver_0": {
+        "vlnv": "xilinx.com:module_ref:preserver:1.0",
+        "ip_revision": "1",
+        "xci_name": "sensor_bd_inst_0_preserver_0_0",
+        "xci_path": "ip/sensor_bd_inst_0_preserver_0_0/sensor_bd_inst_0_preserver_0_0.xci",
+        "inst_hier_path": "preserver_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "preserver",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "pixels": {
+            "direction": "I",
+            "left": "159",
+            "right": "0"
+          },
+          "line_en": {
+            "direction": "I"
+          },
+          "frame_en": {
+            "direction": "I"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "nrst": {
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "const_prop"
+              }
+            }
+          },
+          "en": {
+            "direction": "O"
           }
         }
       },
@@ -582,28 +629,10 @@
         "inst_hier_path": "xlslice_2",
         "parameters": {
           "DIN_FROM": {
-            "value": "5"
-          },
-          "DIN_TO": {
-            "value": "0"
+            "value": "9"
           },
           "DIN_WIDTH": {
-            "value": "96"
-          }
-        }
-      },
-      "xlslice_3": {
-        "vlnv": "xilinx.com:ip:xlslice:1.0",
-        "ip_revision": "3",
-        "xci_name": "sensor_bd_inst_0_xlslice_3_0",
-        "xci_path": "ip/sensor_bd_inst_0_xlslice_3_0/sensor_bd_inst_0_xlslice_3_0.xci",
-        "inst_hier_path": "xlslice_3",
-        "parameters": {
-          "DIN_FROM": {
-            "value": "11"
-          },
-          "DIN_WIDTH": {
-            "value": "192"
+            "value": "160"
           }
         }
       }
@@ -626,16 +655,16 @@
       "ACLK_0_1": {
         "ports": [
           "ACLK_0",
-          "proc_sys_reset_0/slowest_sync_clk",
-          "axi_gpio_0/s_axi_aclk"
+          "axi_gpio_0/s_axi_aclk",
+          "proc_sys_reset_0/slowest_sync_clk"
         ]
       },
       "ARESETN_0_1": {
         "ports": [
           "ARESETN_0",
+          "axi_gpio_0/s_axi_aresetn",
           "gmax0505_streamer_0/n_reset_i",
-          "proc_sys_reset_0/ext_reset_in",
-          "axi_gpio_0/s_axi_aresetn"
+          "proc_sys_reset_0/ext_reset_in"
         ]
       },
       "axi_gpio_0_gpio_io_o": {
@@ -663,10 +692,28 @@
           "selectio_wiz_0/data_in_from_pins_p"
         ]
       },
+      "gmax0505_streamer_0_pix_clk_o": {
+        "ports": [
+          "gmax0505_streamer_0/pix_clk_o",
+          "preserver_0/clk"
+        ]
+      },
       "gmax0505_streamer_0_pix_data_o": {
         "ports": [
           "gmax0505_streamer_0/pix_data_o",
-          "xlslice_3/Din"
+          "preserver_0/pixels"
+        ]
+      },
+      "gmax0505_streamer_0_pix_frame_valid_o": {
+        "ports": [
+          "gmax0505_streamer_0/pix_frame_valid_o",
+          "preserver_0/frame_en"
+        ]
+      },
+      "gmax0505_streamer_0_pix_line_valid_o": {
+        "ports": [
+          "gmax0505_streamer_0/pix_line_valid_o",
+          "preserver_0/line_en"
         ]
       },
       "gmax0505_streamer_0_sync_bit_slip_o": {
@@ -679,8 +726,19 @@
       "gmax0505_streamer_0_sync_done_o": {
         "ports": [
           "gmax0505_streamer_0/sync_done_o",
-          "axi_gpio_0/gpio2_io_i",
-          "ila_0/probe4"
+          "axi_gpio_0/gpio2_io_i"
+        ]
+      },
+      "preserver_0_en": {
+        "ports": [
+          "preserver_0/en",
+          "en_0"
+        ]
+      },
+      "proc_sys_reset_0_peripheral_aresetn": {
+        "ports": [
+          "proc_sys_reset_0/peripheral_aresetn",
+          "preserver_0/nrst"
         ]
       },
       "proc_sys_reset_0_peripheral_reset": {
@@ -693,8 +751,8 @@
       "selectio_wiz_0_clk_div_out": {
         "ports": [
           "selectio_wiz_0/clk_div_out",
-          "gmax0505_streamer_0/clk_i",
-          "ila_0/clk"
+          "ila_0/clk",
+          "gmax0505_streamer_0/clk_i"
         ]
       },
       "selectio_wiz_0_data_in_to_device": {
@@ -707,27 +765,21 @@
       "xlslice_0_Dout": {
         "ports": [
           "xlslice_0/Dout",
-          "gmax0505_streamer_0/sync_word_i",
-          "ila_0/probe2"
+          "ila_0/probe2",
+          "gmax0505_streamer_0/sync_word_i"
         ]
       },
       "xlslice_1_Dout": {
         "ports": [
           "xlslice_1/Dout",
-          "gmax0505_streamer_0/sync_en_i",
-          "ila_0/probe0"
+          "ila_0/probe0",
+          "gmax0505_streamer_0/sync_en_i"
         ]
       },
       "xlslice_2_Dout": {
         "ports": [
           "xlslice_2/Dout",
           "ila_0/probe3"
-        ]
-      },
-      "xlslice_3_Dout": {
-        "ports": [
-          "xlslice_3/Dout",
-          "ila_0/probe5"
         ]
       }
     },

@@ -59,11 +59,11 @@ module sensor_bd_inst_0_xlslice_0_0 (
 );
 
 input wire [12 : 0] Din;
-output wire [11 : 0] Dout;
+output wire [9 : 0] Dout;
 
   xlslice_v1_0_3_xlslice #(
     .DIN_WIDTH(13),
-    .DIN_FROM(11),
+    .DIN_FROM(9),
     .DIN_TO(0)
   ) inst (
     .Din(Din),

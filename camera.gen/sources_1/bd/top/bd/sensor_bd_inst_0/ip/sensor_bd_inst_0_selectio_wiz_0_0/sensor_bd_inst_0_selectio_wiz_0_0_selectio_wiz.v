@@ -56,7 +56,7 @@ module sensor_bd_inst_0_selectio_wiz_0_0_selectio_wiz
    // width of the data for the system
  #(parameter SYS_W = 16,
    // width of the data for the device
-   parameter DEV_W = 96)
+   parameter DEV_W = 160)
  (
   // From the system into the device
   input  [SYS_W-1:0] data_in_from_pins_p,
@@ -98,7 +98,7 @@ module sensor_bd_inst_0_selectio_wiz_0_0_selectio_wiz
    // BUFR generates the slow clock
    BUFR
     #(.SIM_DEVICE("7SERIES"),
-    .BUFR_DIVIDE("3"))
+    .BUFR_DIVIDE("5"))
     clkout_buf_inst
     (.O (clk_div),
      .CE(1'b1),
@@ -141,7 +141,7 @@ module sensor_bd_inst_0_selectio_wiz_0_0_selectio_wiz
      ISERDESE2
        # (
          .DATA_RATE         ("DDR"),
-         .DATA_WIDTH        (6),
+         .DATA_WIDTH        (10),
          .INTERFACE_TYPE    ("NETWORKING"), 
          .DYN_CLKDIV_INV_EN ("FALSE"),
          .DYN_CLK_INV_EN    ("FALSE"),
@@ -158,8 +158,8 @@ module sensor_bd_inst_0_selectio_wiz_0_0_selectio_wiz
          .Q6                (iserdes_q[5][pin_count]),
          .Q7                (iserdes_q[6][pin_count]),
          .Q8                (iserdes_q[7][pin_count]),
-         .SHIFTOUT1         (),
-         .SHIFTOUT2         (),
+         .SHIFTOUT1         (icascade1[pin_count]),                 // Cascade connections to Slave ISERDES
+         .SHIFTOUT2         (icascade2[pin_count]),                 // Cascade connections to Slave ISERDES
          .BITSLIP           (bitslip[pin_count]),                             // 1-bit Invoke Bitslip. This can be used with any DATA_WIDTH, cascaded or not.
                                                                    // The amount of BITSLIP is fixed by the DATA_WIDTH selection.
          .CE1               (clock_enable),                        // 1-bit Clock enable input
@@ -181,6 +181,48 @@ module sensor_bd_inst_0_selectio_wiz_0_0_selectio_wiz
          .OCLKB             (1'b0),
          .O                 ());                                   // unregistered output of ISERDESE1
 
+     ISERDESE2
+       # (
+         .DATA_RATE         ("DDR"),
+         .DATA_WIDTH        (10),
+         .INTERFACE_TYPE    ("NETWORKING"),
+         .DYN_CLKDIV_INV_EN ("FALSE"),
+         .DYN_CLK_INV_EN    ("FALSE"),
+         .NUM_CE            (2),
+         .OFB_USED          ("FALSE"),
+         .IOBDELAY          ("NONE"),               // Use input at D to output the data on Q
+         .SERDES_MODE       ("SLAVE"))
+       iserdese2_slave (
+         .Q1                (),
+         .Q2                (),
+         .Q3                (iserdes_q[8][pin_count]),
+         .Q4                (iserdes_q[9][pin_count]),
+         .Q5                (iserdes_q[10][pin_count]),
+         .Q6                (iserdes_q[11][pin_count]),
+         .Q7                (iserdes_q[12][pin_count]),
+         .Q8                (iserdes_q[13][pin_count]),
+         .SHIFTOUT1         (),
+         .SHIFTOUT2         (),
+         .SHIFTIN1          (icascade1[pin_count]),  // Cascade connection with Master ISERDES
+         .SHIFTIN2          (icascade2[pin_count]),  // Cascade connection with Master ISERDES
+         .BITSLIP           (bitslip[pin_count]),               // 1-bit Invoke Bitslip. This can be used with any DATA_WIDTH, cascaded or not.
+                                                     // The amount of BITSLIP is fixed by the DATA_WIDTH selection .
+         .CE1               (clock_enable),          // 1-bit Clock enable input
+         .CE2               (clock_enable),          // 1-bit Clock enable input 
+         .CLK               (clk_in_int_buf),        // Fast source synchronous serdes clock
+         .CLKB              (clk_in_int_inv),        // Locally inverted fast clock
+         .CLKDIV            (clk_div),               // Slow clock from BUFR.
+         .CLKDIVP           (1'b0),
+         .D                 (1'b0),                  // Slave ISERDES. No need to connect D, DDLY
+         .DDLY              (1'b0),
+         .RST               (io_reset),              // 1-bit Asynchronous reset only.
+   // unused connections
+         .DYNCLKDIVSEL      (1'b0),
+         .DYNCLKSEL         (1'b0),
+         .OFB               (1'b0),
+         .OCLK              (1'b0),
+         .OCLKB             (1'b0),
+         .O                 ());                     // unregistered output of ISERDESE1
      // Concatenate the serdes outputs together. Keep the timesliced
      //   bits together, and placing the earliest bits on the right
      //   ie, if data comes in 0, 1, 2, 3, 4, 5, 6, 7, ...
