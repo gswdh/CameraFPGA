@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-//Date        : Mon Apr 22 18:57:42 2024
+//Date        : Tue Apr 23 19:46:23 2024
 //Host        : testserver running 64-bit Ubuntu 20.04.6 LTS
 //Command     : generate_target sensor_bd_inst_0_wrapper.bd
 //Design      : sensor_bd_inst_0_wrapper
@@ -30,11 +30,10 @@ module sensor_bd_inst_0_wrapper
     S_AXI_0_wready,
     S_AXI_0_wstrb,
     S_AXI_0_wvalid,
-    data_in_from_pins_n_0,
-    data_in_from_pins_p_0,
-    diff_clk_in_0_clk_n,
-    diff_clk_in_0_clk_p,
-    en_0);
+    sen_data_0_clk_n,
+    sen_data_0_clk_p,
+    sen_ddr_clk_clk_n,
+    sen_ddr_clk_clk_p);
   input ACLK_0;
   input ARESETN_0;
   input [31:0]S_AXI_0_araddr;
@@ -54,11 +53,10 @@ module sensor_bd_inst_0_wrapper
   output S_AXI_0_wready;
   input [3:0]S_AXI_0_wstrb;
   input S_AXI_0_wvalid;
-  input [15:0]data_in_from_pins_n_0;
-  input [15:0]data_in_from_pins_p_0;
-  input diff_clk_in_0_clk_n;
-  input diff_clk_in_0_clk_p;
-  output en_0;
+  input [0:0]sen_data_0_clk_n;
+  input [0:0]sen_data_0_clk_p;
+  input [0:0]sen_ddr_clk_clk_n;
+  input [0:0]sen_ddr_clk_clk_p;
 
   wire ACLK_0;
   wire ARESETN_0;
@@ -79,11 +77,10 @@ module sensor_bd_inst_0_wrapper
   wire S_AXI_0_wready;
   wire [3:0]S_AXI_0_wstrb;
   wire S_AXI_0_wvalid;
-  wire [15:0]data_in_from_pins_n_0;
-  wire [15:0]data_in_from_pins_p_0;
-  wire diff_clk_in_0_clk_n;
-  wire diff_clk_in_0_clk_p;
-  wire en_0;
+  wire [0:0]sen_data_0_clk_n;
+  wire [0:0]sen_data_0_clk_p;
+  wire [0:0]sen_ddr_clk_clk_n;
+  wire [0:0]sen_ddr_clk_clk_p;
 
   sensor_bd_inst_0 sensor_bd_inst_0_i
        (.ACLK_0(ACLK_0),
@@ -105,9 +102,8 @@ module sensor_bd_inst_0_wrapper
         .S_AXI_0_wready(S_AXI_0_wready),
         .S_AXI_0_wstrb(S_AXI_0_wstrb),
         .S_AXI_0_wvalid(S_AXI_0_wvalid),
-        .data_in_from_pins_n_0(data_in_from_pins_n_0),
-        .data_in_from_pins_p_0(data_in_from_pins_p_0),
-        .diff_clk_in_0_clk_n(diff_clk_in_0_clk_n),
-        .diff_clk_in_0_clk_p(diff_clk_in_0_clk_p),
-        .en_0(en_0));
+        .sen_data_0_clk_n(sen_data_0_clk_n),
+        .sen_data_0_clk_p(sen_data_0_clk_p),
+        .sen_ddr_clk_clk_n(sen_ddr_clk_clk_n),
+        .sen_ddr_clk_clk_p(sen_ddr_clk_clk_p));
 endmodule

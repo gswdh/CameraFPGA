@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-//Date        : Mon Apr 22 18:57:42 2024
+//Date        : Tue Apr 23 19:46:22 2024
 //Host        : testserver running 64-bit Ubuntu 20.04.6 LTS
 //Command     : generate_target sensor_bd_inst_0.bd
 //Design      : sensor_bd_inst_0
@@ -10,7 +10,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "sensor_bd_inst_0,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=sensor_bd_inst_0,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=10,numReposBlks=10,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=3,numPkgbdBlks=0,bdsource=/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/sources_1/bd/sensor_bd/sensor_bd.bd,synth_mode=None}" *) (* HW_HANDOFF = "sensor_bd_inst_0.hwdef" *) 
+(* CORE_GENERATION_INFO = "sensor_bd_inst_0,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=sensor_bd_inst_0,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=9,numReposBlks=9,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=2,numPkgbdBlks=0,bdsource=/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/sources_1/bd/sensor_bd/sensor_bd.bd,synth_mode=None}" *) (* HW_HANDOFF = "sensor_bd_inst_0.hwdef" *) 
 module sensor_bd_inst_0
    (ACLK_0,
     ARESETN_0,
@@ -31,11 +31,10 @@ module sensor_bd_inst_0
     S_AXI_0_wready,
     S_AXI_0_wstrb,
     S_AXI_0_wvalid,
-    data_in_from_pins_n_0,
-    data_in_from_pins_p_0,
-    diff_clk_in_0_clk_n,
-    diff_clk_in_0_clk_p,
-    en_0);
+    sen_data_0_clk_n,
+    sen_data_0_clk_p,
+    sen_ddr_clk_clk_n,
+    sen_ddr_clk_clk_p);
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.ACLK_0 CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.ACLK_0, ASSOCIATED_BUSIF S_AXI_0, ASSOCIATED_RESET ARESETN_0, CLK_DOMAIN top_processing_system7_0_0_FCLK_CLK0, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input ACLK_0;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.ARESETN_0 RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.ARESETN_0, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) input ARESETN_0;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_0 ARADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXI_0, ADDR_WIDTH 16, ARUSER_WIDTH 0, AWUSER_WIDTH 0, BUSER_WIDTH 0, CLK_DOMAIN top_processing_system7_0_0_FCLK_CLK0, DATA_WIDTH 32, FREQ_HZ 100000000, HAS_BRESP 1, HAS_BURST 0, HAS_CACHE 0, HAS_LOCK 0, HAS_PROT 1, HAS_QOS 0, HAS_REGION 0, HAS_RRESP 1, HAS_WSTRB 1, ID_WIDTH 0, INSERT_VIP 0, MAX_BURST_LENGTH 1, NUM_READ_OUTSTANDING 2, NUM_READ_THREADS 1, NUM_WRITE_OUTSTANDING 2, NUM_WRITE_THREADS 1, PHASE 0.0, PROTOCOL AXI4LITE, READ_WRITE_MODE READ_WRITE, RUSER_BITS_PER_BYTE 0, RUSER_WIDTH 0, SUPPORTS_NARROW_BURST 0, WUSER_BITS_PER_BYTE 0, WUSER_WIDTH 0" *) input [31:0]S_AXI_0_araddr;
@@ -55,14 +54,15 @@ module sensor_bd_inst_0
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_0 WREADY" *) output S_AXI_0_wready;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_0 WSTRB" *) input [3:0]S_AXI_0_wstrb;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_0 WVALID" *) input S_AXI_0_wvalid;
-  input [15:0]data_in_from_pins_n_0;
-  input [15:0]data_in_from_pins_p_0;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 diff_clk_in_0 CLK_N" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME diff_clk_in_0, CAN_DEBUG false, FREQ_HZ 100000000" *) input diff_clk_in_0_clk_n;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 diff_clk_in_0 CLK_P" *) input diff_clk_in_0_clk_p;
-  output en_0;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 sen_data_0 CLK_N" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME sen_data_0, CAN_DEBUG false, FREQ_HZ 100000000" *) input [0:0]sen_data_0_clk_n;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 sen_data_0 CLK_P" *) input [0:0]sen_data_0_clk_p;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 sen_ddr_clk CLK_N" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME sen_ddr_clk, CAN_DEBUG false, FREQ_HZ 100000000" *) input [0:0]sen_ddr_clk_clk_n;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 sen_ddr_clk CLK_P" *) input [0:0]sen_ddr_clk_clk_p;
 
   wire ACLK_0_1;
   wire ARESETN_0_1;
+  wire [0:0]CLK_IN_D_0_1_CLK_N;
+  wire [0:0]CLK_IN_D_0_1_CLK_P;
   wire [31:0]S_AXI_0_1_ARADDR;
   wire S_AXI_0_1_ARREADY;
   wire S_AXI_0_1_ARVALID;
@@ -80,29 +80,20 @@ module sensor_bd_inst_0
   wire S_AXI_0_1_WREADY;
   wire [3:0]S_AXI_0_1_WSTRB;
   wire S_AXI_0_1_WVALID;
-  wire [12:0]axi_gpio_0_gpio_io_o;
-  wire [15:0]bit_slip_width_adapt_0_out_bus;
-  wire [15:0]data_in_from_pins_n_0_1;
-  wire [15:0]data_in_from_pins_p_0_1;
-  wire diff_clk_in_0_1_CLK_N;
-  wire diff_clk_in_0_1_CLK_P;
-  wire gmax0505_streamer_0_pix_clk_o;
-  wire [159:0]gmax0505_streamer_0_pix_data_o;
-  wire gmax0505_streamer_0_pix_frame_valid_o;
-  wire gmax0505_streamer_0_pix_line_valid_o;
-  wire gmax0505_streamer_0_sync_bit_slip_o;
-  wire gmax0505_streamer_0_sync_done_o;
-  wire preserver_0_en;
+  wire [1:0]ddr_deserialiser_0_data;
+  wire decoder_0_par_clk_o;
+  wire [9:0]decoder_0_par_data_o;
+  wire [0:0]diff_clk_in_0_1_CLK_N;
+  wire [0:0]diff_clk_in_0_1_CLK_P;
   wire [0:0]proc_sys_reset_0_peripheral_aresetn;
-  wire [0:0]proc_sys_reset_0_peripheral_reset;
-  wire selectio_wiz_0_clk_div_out;
-  wire [159:0]selectio_wiz_0_data_in_to_device;
-  wire [9:0]xlslice_0_Dout;
-  wire [0:0]xlslice_1_Dout;
-  wire [9:0]xlslice_2_Dout;
+  wire [0:0]util_ds_buf_0_IBUF_OUT;
+  wire [0:0]util_ds_buf_1_IBUF_OUT;
+  wire [0:0]xlconstant_0_dout;
 
   assign ACLK_0_1 = ACLK_0;
   assign ARESETN_0_1 = ARESETN_0;
+  assign CLK_IN_D_0_1_CLK_N = sen_data_0_clk_n[0];
+  assign CLK_IN_D_0_1_CLK_P = sen_data_0_clk_p[0];
   assign S_AXI_0_1_ARADDR = S_AXI_0_araddr[31:0];
   assign S_AXI_0_1_ARVALID = S_AXI_0_arvalid;
   assign S_AXI_0_1_AWADDR = S_AXI_0_awaddr[31:0];
@@ -120,14 +111,10 @@ module sensor_bd_inst_0
   assign S_AXI_0_rresp[1:0] = S_AXI_0_1_RRESP;
   assign S_AXI_0_rvalid = S_AXI_0_1_RVALID;
   assign S_AXI_0_wready = S_AXI_0_1_WREADY;
-  assign data_in_from_pins_n_0_1 = data_in_from_pins_n_0[15:0];
-  assign data_in_from_pins_p_0_1 = data_in_from_pins_p_0[15:0];
-  assign diff_clk_in_0_1_CLK_N = diff_clk_in_0_clk_n;
-  assign diff_clk_in_0_1_CLK_P = diff_clk_in_0_clk_p;
-  assign en_0 = preserver_0_en;
+  assign diff_clk_in_0_1_CLK_N = sen_ddr_clk_clk_n[0];
+  assign diff_clk_in_0_1_CLK_P = sen_ddr_clk_clk_p[0];
   sensor_bd_inst_0_axi_gpio_0_0 axi_gpio_0
-       (.gpio2_io_i(gmax0505_streamer_0_sync_done_o),
-        .gpio_io_o(axi_gpio_0_gpio_io_o),
+       (.gpio2_io_i(xlconstant_0_dout),
         .s_axi_aclk(ACLK_0_1),
         .s_axi_araddr(S_AXI_0_1_ARADDR[8:0]),
         .s_axi_aresetn(ARESETN_0_1),
@@ -147,59 +134,38 @@ module sensor_bd_inst_0
         .s_axi_wready(S_AXI_0_1_WREADY),
         .s_axi_wstrb(S_AXI_0_1_WSTRB),
         .s_axi_wvalid(S_AXI_0_1_WVALID));
-  sensor_bd_inst_0_bit_slip_width_adapt_0_0 bit_slip_width_adapt_0
-       (.in_bit(gmax0505_streamer_0_sync_bit_slip_o),
-        .out_bus(bit_slip_width_adapt_0_out_bus));
-  sensor_bd_inst_0_gmax0505_streamer_0_0 gmax0505_streamer_0
-       (.clk_i(selectio_wiz_0_clk_div_out),
-        .data_i(selectio_wiz_0_data_in_to_device),
-        .n_reset_i(ARESETN_0_1),
-        .pix_clk_o(gmax0505_streamer_0_pix_clk_o),
-        .pix_data_o(gmax0505_streamer_0_pix_data_o),
-        .pix_frame_valid_o(gmax0505_streamer_0_pix_frame_valid_o),
-        .pix_line_valid_o(gmax0505_streamer_0_pix_line_valid_o),
-        .sync_bit_slip_o(gmax0505_streamer_0_sync_bit_slip_o),
-        .sync_done_o(gmax0505_streamer_0_sync_done_o),
-        .sync_en_i(xlslice_1_Dout),
-        .sync_word_i(xlslice_0_Dout));
+  sensor_bd_inst_0_ddr_deserialiser_0_0 ddr_deserialiser_0
+       (.data(ddr_deserialiser_0_data),
+        .ddr_clk(util_ds_buf_0_IBUF_OUT),
+        .ddr_data(util_ds_buf_1_IBUF_OUT));
+  sensor_bd_inst_0_decoder_0_0 decoder_0
+       (.bitslip_i(xlconstant_0_dout),
+        .nrst_i(proc_sys_reset_0_peripheral_aresetn),
+        .par_clk_o(decoder_0_par_clk_o),
+        .par_data_o(decoder_0_par_data_o),
+        .ser_clk_i(util_ds_buf_0_IBUF_OUT),
+        .ser_data_i(ddr_deserialiser_0_data));
   sensor_bd_inst_0_ila_0_0 ila_0
-       (.clk(selectio_wiz_0_clk_div_out),
-        .probe0(xlslice_1_Dout),
-        .probe1(gmax0505_streamer_0_sync_bit_slip_o),
-        .probe2(xlslice_0_Dout),
-        .probe3(xlslice_2_Dout));
-  sensor_bd_inst_0_preserver_0_0 preserver_0
-       (.clk(gmax0505_streamer_0_pix_clk_o),
-        .en(preserver_0_en),
-        .frame_en(gmax0505_streamer_0_pix_frame_valid_o),
-        .line_en(gmax0505_streamer_0_pix_line_valid_o),
-        .nrst(proc_sys_reset_0_peripheral_aresetn),
-        .pixels(gmax0505_streamer_0_pix_data_o));
+       (.clk(decoder_0_par_clk_o),
+        .probe0(decoder_0_par_data_o));
+  sensor_bd_inst_0_ila_1_0 ila_1
+       (.clk(util_ds_buf_0_IBUF_OUT),
+        .probe0(ddr_deserialiser_0_data));
   sensor_bd_inst_0_proc_sys_reset_0_0 proc_sys_reset_0
        (.aux_reset_in(1'b1),
         .dcm_locked(1'b1),
         .ext_reset_in(ARESETN_0_1),
         .mb_debug_sys_rst(1'b0),
         .peripheral_aresetn(proc_sys_reset_0_peripheral_aresetn),
-        .peripheral_reset(proc_sys_reset_0_peripheral_reset),
         .slowest_sync_clk(ACLK_0_1));
-  sensor_bd_inst_0_selectio_wiz_0_0 selectio_wiz_0
-       (.bitslip(bit_slip_width_adapt_0_out_bus),
-        .clk_div_out(selectio_wiz_0_clk_div_out),
-        .clk_in_n(diff_clk_in_0_1_CLK_N),
-        .clk_in_p(diff_clk_in_0_1_CLK_P),
-        .clk_reset(proc_sys_reset_0_peripheral_reset),
-        .data_in_from_pins_n(data_in_from_pins_n_0_1),
-        .data_in_from_pins_p(data_in_from_pins_p_0_1),
-        .data_in_to_device(selectio_wiz_0_data_in_to_device),
-        .io_reset(proc_sys_reset_0_peripheral_reset));
-  sensor_bd_inst_0_xlslice_0_0 xlslice_0
-       (.Din(axi_gpio_0_gpio_io_o),
-        .Dout(xlslice_0_Dout));
-  sensor_bd_inst_0_xlslice_1_0 xlslice_1
-       (.Din(axi_gpio_0_gpio_io_o),
-        .Dout(xlslice_1_Dout));
-  sensor_bd_inst_0_xlslice_2_0 xlslice_2
-       (.Din(selectio_wiz_0_data_in_to_device),
-        .Dout(xlslice_2_Dout));
+  sensor_bd_inst_0_util_ds_buf_0_0 util_ds_buf_0
+       (.IBUF_DS_N(diff_clk_in_0_1_CLK_N),
+        .IBUF_DS_P(diff_clk_in_0_1_CLK_P),
+        .IBUF_OUT(util_ds_buf_0_IBUF_OUT));
+  sensor_bd_inst_0_util_ds_buf_1_0 util_ds_buf_1
+       (.IBUF_DS_N(CLK_IN_D_0_1_CLK_N),
+        .IBUF_DS_P(CLK_IN_D_0_1_CLK_P),
+        .IBUF_OUT(util_ds_buf_1_IBUF_OUT));
+  sensor_bd_inst_0_xlconstant_0_0 xlconstant_0
+       (.dout(xlconstant_0_dout));
 endmodule

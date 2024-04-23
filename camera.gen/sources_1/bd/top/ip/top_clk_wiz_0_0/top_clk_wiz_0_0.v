@@ -53,11 +53,12 @@
 //  Output     Output      Phase    Duty Cycle   Pk-to-Pk     Phase
 //   Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)
 //----------------------------------------------------------------------------
-// _eth_clk__50.00000______0.000______50.0______410.065____105.461
-// _usb_clk__12.00000______0.000______50.0______622.595____105.461
-// badc_spi_clk__10.00000______0.000______50.0______648.166____105.461
-// disp_spi_clk__10.00000______0.000______50.0______648.166____105.461
-// sensor_clk__50.00000______0.000______50.0______410.065____105.461
+// _eth_clk__50.00000______0.000______50.0______288.246_____87.180
+// _usb_clk__12.00000______0.000______50.0______669.729_____87.180
+// badc_spi_clk__10.00000______0.000______50.0______695.891_____87.180
+// disp_spi_clk__10.00000______0.000______50.0______695.891_____87.180
+// sensor_clk__50.00000______0.000______50.0______288.246_____87.180
+// ddr_ref_clk__200.00000______0.000______50.0______214.814_____87.180
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
@@ -66,7 +67,7 @@
 
 `timescale 1ps/1ps
 
-(* CORE_GENERATION_INFO = "top_clk_wiz_0_0,clk_wiz_v6_0_13_0_0,{component_name=top_clk_wiz_0_0,use_phase_alignment=true,use_min_o_jitter=false,use_max_i_jitter=false,use_dyn_phase_shift=false,use_inclk_switchover=false,use_dyn_reconfig=false,enable_axi=0,feedback_source=FDBK_AUTO,PRIMITIVE=PLL,num_out_clk=5,clkin1_period=10.000,clkin2_period=10.000,use_power_down=false,use_reset=true,use_locked=false,use_inclk_stopped=false,feedback_type=SINGLE,CLOCK_MGR_TYPE=NA,manual_override=false}" *)
+(* CORE_GENERATION_INFO = "top_clk_wiz_0_0,clk_wiz_v6_0_13_0_0,{component_name=top_clk_wiz_0_0,use_phase_alignment=true,use_min_o_jitter=false,use_max_i_jitter=false,use_dyn_phase_shift=false,use_inclk_switchover=false,use_dyn_reconfig=false,enable_axi=0,feedback_source=FDBK_AUTO,PRIMITIVE=PLL,num_out_clk=6,clkin1_period=10.000,clkin2_period=10.000,use_power_down=false,use_reset=true,use_locked=false,use_inclk_stopped=false,feedback_type=SINGLE,CLOCK_MGR_TYPE=NA,manual_override=false}" *)
 
 module top_clk_wiz_0_0 
  (
@@ -76,6 +77,7 @@ module top_clk_wiz_0_0
   output        badc_spi_clk,
   output        disp_spi_clk,
   output        sensor_clk,
+  output        ddr_ref_clk,
   // Status and control signals
   input         resetn,
  // Clock in ports
@@ -90,6 +92,7 @@ module top_clk_wiz_0_0
   .badc_spi_clk(badc_spi_clk),
   .disp_spi_clk(disp_spi_clk),
   .sensor_clk(sensor_clk),
+  .ddr_ref_clk(ddr_ref_clk),
   // Status and control signals               
   .resetn(resetn), 
  // Clock in ports

@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "sensor_bd_inst_0_proc_sys_reset_0_0",
-    "cell_name": "sensor_bd_0/proc_sys_reset_0",
+    "cell_name": "proc_sys_reset_0",
     "component_reference": "xilinx.com:ip:proc_sys_reset:5.0",
     "ip_revision": "14",
     "gen_directory": ".",

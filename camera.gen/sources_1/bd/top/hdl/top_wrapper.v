@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-//Date        : Mon Apr 22 18:57:14 2024
+//Date        : Tue Apr 23 19:45:57 2024
 //Host        : testserver running 64-bit Ubuntu 20.04.6 LTS
 //Command     : generate_target top_wrapper.bd
 //Design      : top_wrapper
@@ -51,7 +51,8 @@ module top_wrapper
     SENSOR_CLK,
     USB_NRST,
     USB_REFCLK,
-    en_0_0,
+    sen_data_0_0_clk_n,
+    sen_data_0_0_clk_p,
     sen_data_n,
     sen_data_p,
     sen_ddr_clk_clk_n,
@@ -96,7 +97,8 @@ module top_wrapper
   output SENSOR_CLK;
   output [0:0]USB_NRST;
   output USB_REFCLK;
-  output en_0_0;
+  input [0:0]sen_data_0_0_clk_n;
+  input [0:0]sen_data_0_0_clk_p;
   input [15:0]sen_data_n;
   input [15:0]sen_data_p;
   input [0:0]sen_ddr_clk_clk_n;
@@ -142,7 +144,8 @@ module top_wrapper
   wire SENSOR_CLK;
   wire [0:0]USB_NRST;
   wire USB_REFCLK;
-  wire en_0_0;
+  wire [0:0]sen_data_0_0_clk_n;
+  wire [0:0]sen_data_0_0_clk_p;
   wire [15:0]sen_data_n;
   wire [15:0]sen_data_p;
   wire [0:0]sen_ddr_clk_clk_n;
@@ -189,7 +192,8 @@ module top_wrapper
         .SENSOR_CLK(SENSOR_CLK),
         .USB_NRST(USB_NRST),
         .USB_REFCLK(USB_REFCLK),
-        .en_0_0(en_0_0),
+        .sen_data_0_0_clk_n(sen_data_0_0_clk_n),
+        .sen_data_0_0_clk_p(sen_data_0_0_clk_p),
         .sen_data_n(sen_data_n),
         .sen_data_p(sen_data_p),
         .sen_ddr_clk_clk_n(sen_ddr_clk_clk_n),
