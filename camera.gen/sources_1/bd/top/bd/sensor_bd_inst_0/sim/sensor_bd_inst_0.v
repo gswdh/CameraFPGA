@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-//Date        : Thu Apr 25 17:23:12 2024
+//Date        : Thu Apr 25 18:59:50 2024
 //Host        : testserver running 64-bit Ubuntu 20.04.6 LTS
 //Command     : generate_target sensor_bd_inst_0.bd
 //Design      : sensor_bd_inst_0
@@ -10,7 +10,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* HW_HANDOFF = "sensor_bd_inst_0.hwdef" *) (* core_generation_info = "sensor_bd_inst_0,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=sensor_bd_inst_0,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=11,numReposBlks=11,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/sources_1/bd/sensor_bd/sensor_bd.bd,synth_mode=None}" *) 
+(* HW_HANDOFF = "sensor_bd_inst_0.hwdef" *) (* core_generation_info = "sensor_bd_inst_0,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=sensor_bd_inst_0,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=13,numReposBlks=13,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=4,numPkgbdBlks=0,bdsource=/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/sources_1/bd/sensor_bd/sensor_bd.bd,synth_mode=None}" *) 
 module sensor_bd_inst_0
    (ACLK_0,
     ARESETN_0,
@@ -86,20 +86,22 @@ module sensor_bd_inst_0
   wire S_AXI_0_1_WREADY;
   wire [3:0]S_AXI_0_1_WSTRB;
   wire S_AXI_0_1_WVALID;
+  wire [12:0]axi_gpio_0_gpio_io_o;
+  wire bit_aligner_0_bit_slip;
   wire [1:0]ddr_deserialiser_0_data;
+  wire decoder_0_par_clk_o;
+  wire [11:0]decoder_0_par_data_o;
   wire [0:0]diff_clk_in_0_1_CLK_N;
   wire [0:0]diff_clk_in_0_1_CLK_P;
-  wire [31:0]fifo_generator_0_dout;
+  wire [11:0]fifo_generator_0_dout;
   wire fifo_generator_0_empty;
   wire fifo_generator_0_full;
-  wire [4:0]fifo_generator_0_rd_data_count;
-  wire [4:0]fifo_generator_0_wr_data_count;
   wire [0:0]util_ds_buf_0_IBUF_OUT;
   wire [0:0]util_ds_buf_1_IBUF_OUT;
-  wire [31:0]xlconcat_0_dout;
-  wire [0:0]xlconstant_0_dout;
-  wire [1:0]xlconstant_1_dout;
-  wire [0:0]xlconstant_2_dout;
+  wire word_detector_0_detected_o;
+  wire [0:0]xlconstant_3_dout;
+  wire [11:0]xlslice_0_Dout;
+  wire [0:0]xlslice_1_Dout;
 
   assign ACLK_0_1 = ACLK_0;
   assign ARESETN_0_1 = ARESETN_0;
@@ -128,7 +130,8 @@ module sensor_bd_inst_0
   assign diff_clk_in_0_1_CLK_N = sen_ddr_clk_clk_n[0];
   assign diff_clk_in_0_1_CLK_P = sen_ddr_clk_clk_p[0];
   sensor_bd_inst_0_axi_gpio_0_0 axi_gpio_0
-       (.gpio2_io_i(xlconstant_0_dout),
+       (.gpio2_io_i(word_detector_0_detected_o),
+        .gpio_io_o(axi_gpio_0_gpio_io_o),
         .s_axi_aclk(ACLK_0_1),
         .s_axi_araddr(S_AXI_0_1_ARADDR[8:0]),
         .s_axi_aresetn(ARESETN_0_1),
@@ -148,32 +151,46 @@ module sensor_bd_inst_0
         .s_axi_wready(S_AXI_0_1_WREADY),
         .s_axi_wstrb(S_AXI_0_1_WSTRB),
         .s_axi_wvalid(S_AXI_0_1_WVALID));
+  sensor_bd_inst_0_bit_aligner_0_0 bit_aligner_0
+       (.aligned_i(word_detector_0_detected_o),
+        .bit_slip(bit_aligner_0_bit_slip),
+        .clk_i(decoder_0_par_clk_o),
+        .en_i(xlslice_1_Dout),
+        .n_reset_i(xlconstant_3_dout));
   sensor_bd_inst_0_ddr_deserialiser_0_0 ddr_deserialiser_0
        (.data(ddr_deserialiser_0_data),
         .ddr_clk(util_ds_buf_0_IBUF_OUT),
         .ddr_data(util_ds_buf_1_IBUF_OUT));
+  sensor_bd_inst_0_decoder_0_0 decoder_0
+       (.bitslip_i(bit_aligner_0_bit_slip),
+        .nrst_i(xlconstant_3_dout),
+        .par_clk_o(decoder_0_par_clk_o),
+        .par_data_o(decoder_0_par_data_o),
+        .ser_clk_i(util_ds_buf_0_IBUF_OUT),
+        .ser_data_i(ddr_deserialiser_0_data));
   sensor_bd_inst_0_fifo_generator_0_0 fifo_generator_0
-       (.din(xlconcat_0_dout),
+       (.din(decoder_0_par_data_o),
         .dout(fifo_generator_0_dout),
         .empty(fifo_generator_0_empty),
         .full(fifo_generator_0_full),
         .rd_clk(ACLK_0_1),
-        .rd_data_count(fifo_generator_0_rd_data_count),
-        .rd_en(xlconstant_2_dout),
-        .wr_clk(util_ds_buf_0_IBUF_OUT),
-        .wr_data_count(fifo_generator_0_wr_data_count),
-        .wr_en(xlconstant_2_dout));
+        .rd_en(xlconstant_3_dout),
+        .wr_clk(decoder_0_par_clk_o),
+        .wr_en(xlconstant_3_dout));
   sensor_bd_inst_0_ila_0_0 ila_0
        (.clk(ACLK_0_1),
         .probe0(fifo_generator_0_full),
         .probe1(fifo_generator_0_empty),
-        .probe2(fifo_generator_0_rd_data_count),
-        .probe3(fifo_generator_0_wr_data_count),
-        .probe4(fifo_generator_0_dout),
-        .probe5(util_ds_buf_1_IBUF_OUT),
-        .probe6(util_ds_buf_0_IBUF_OUT),
-        .probe7({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,ddr_deserialiser_0_data}),
-        .probe8(xlconcat_0_dout));
+        .probe10(decoder_0_par_data_o),
+        .probe11(xlslice_0_Dout),
+        .probe2(util_ds_buf_0_IBUF_OUT),
+        .probe3(util_ds_buf_1_IBUF_OUT),
+        .probe4(decoder_0_par_clk_o),
+        .probe5(decoder_0_par_data_o),
+        .probe6(fifo_generator_0_dout),
+        .probe7(word_detector_0_detected_o),
+        .probe8(xlslice_1_Dout),
+        .probe9(bit_aligner_0_bit_slip));
   sensor_bd_inst_0_proc_sys_reset_0_0 proc_sys_reset_0
        (.aux_reset_in(1'b1),
         .dcm_locked(1'b1),
@@ -188,28 +205,17 @@ module sensor_bd_inst_0
        (.IBUF_DS_N(CLK_IN_D_0_1_CLK_N),
         .IBUF_DS_P(CLK_IN_D_0_1_CLK_P),
         .IBUF_OUT(util_ds_buf_1_IBUF_OUT));
-  sensor_bd_inst_0_xlconcat_0_0 xlconcat_0
-       (.In0(ddr_deserialiser_0_data),
-        .In1(xlconstant_1_dout),
-        .In10(xlconstant_1_dout),
-        .In11(xlconstant_1_dout),
-        .In12(xlconstant_1_dout),
-        .In13(xlconstant_1_dout),
-        .In14(xlconstant_1_dout),
-        .In15(xlconstant_1_dout),
-        .In2(xlconstant_1_dout),
-        .In3(xlconstant_1_dout),
-        .In4(xlconstant_1_dout),
-        .In5(xlconstant_1_dout),
-        .In6(xlconstant_1_dout),
-        .In7(xlconstant_1_dout),
-        .In8(xlconstant_1_dout),
-        .In9(xlconstant_1_dout),
-        .dout(xlconcat_0_dout));
-  sensor_bd_inst_0_xlconstant_0_0 xlconstant_0
-       (.dout(xlconstant_0_dout));
-  sensor_bd_inst_0_xlconstant_1_0 xlconstant_1
-       (.dout(xlconstant_1_dout));
-  sensor_bd_inst_0_xlconstant_2_0 xlconstant_2
-       (.dout(xlconstant_2_dout));
+  sensor_bd_inst_0_word_detector_0_0 word_detector_0
+       (.clk_i(decoder_0_par_clk_o),
+        .data_i(decoder_0_par_data_o),
+        .detected_o(word_detector_0_detected_o),
+        .word_i(xlslice_0_Dout));
+  sensor_bd_inst_0_xlconstant_3_0 xlconstant_3
+       (.dout(xlconstant_3_dout));
+  sensor_bd_inst_0_xlslice_0_0 xlslice_0
+       (.Din(axi_gpio_0_gpio_io_o),
+        .Dout(xlslice_0_Dout));
+  sensor_bd_inst_0_xlslice_1_0 xlslice_1
+       (.Din(axi_gpio_0_gpio_io_o),
+        .Dout(xlslice_1_Dout));
 endmodule

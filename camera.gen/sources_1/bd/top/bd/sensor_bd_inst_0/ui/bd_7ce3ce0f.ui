@@ -1,48 +1,52 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.822266",
-   "Default View_TopLeft":"-444,13",
+   "Default View_ScaleFactor":"0.682334",
+   "Default View_TopLeft":"-752,3",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0 TLS
 #  -string -flagsOSRD
-preplace port S_AXI_0 -pg 1 -lvl 0 -x 0 -y 500 -defaultsOSRD
-preplace port sen_ddr_clk -pg 1 -lvl 0 -x 0 -y 980 -defaultsOSRD
-preplace port sen_data_0 -pg 1 -lvl 0 -x 0 -y 880 -defaultsOSRD
-preplace port port-id_ACLK_0 -pg 1 -lvl 0 -x 0 -y 520 -defaultsOSRD
-preplace port port-id_ARESETN_0 -pg 1 -lvl 0 -x 0 -y 540 -defaultsOSRD
-preplace portBus ddr_clk -pg 1 -lvl 5 -x 1310 -y 520 -defaultsOSRD
-preplace portBus ddr_clk_ser -pg 1 -lvl 5 -x 1310 -y 500 -defaultsOSRD
-preplace portBus ddr_data -pg 1 -lvl 5 -x 1310 -y 540 -defaultsOSRD
-preplace inst axi_gpio_0 -pg 1 -lvl 3 -x 820 -y 520 -defaultsOSRD
-preplace inst proc_sys_reset_0 -pg 1 -lvl 2 -x 370 -y 640 -defaultsOSRD
-preplace inst util_ds_buf_0 -pg 1 -lvl 3 -x 820 -y 980 -defaultsOSRD
-preplace inst util_ds_buf_1 -pg 1 -lvl 3 -x 820 -y 880 -defaultsOSRD
-preplace inst xlconstant_0 -pg 1 -lvl 3 -x 820 -y 640 -defaultsOSRD
-preplace inst fifo_generator_0 -pg 1 -lvl 3 -x 820 -y 200 -defaultsOSRD
-preplace inst xlconcat_0 -pg 1 -lvl 2 -x 370 -y 220 -defaultsOSRD
-preplace inst ddr_deserialiser_0 -pg 1 -lvl 3 -x 820 -y 770 -defaultsOSRD
-preplace inst xlconstant_1 -pg 1 -lvl 1 -x 100 -y 90 -defaultsOSRD
-preplace inst xlconstant_2 -pg 1 -lvl 2 -x 370 -y 780 -defaultsOSRD
-preplace inst ila_0 -pg 1 -lvl 4 -x 1190 -y 350 -defaultsOSRD
-preplace netloc ACLK_0_1 1 0 4 NJ 520 190 520 570 40 1070
-preplace netloc ARESETN_0_1 1 0 3 NJ 540 180 540 NJ
-preplace netloc xlconstant_0_dout 1 3 1 1020 540n
-preplace netloc xlconcat_0_dout 1 2 2 560 50 1040J
-preplace netloc util_ds_buf_0_IBUF_OUT 1 2 3 590 400 1050 520 NJ
-preplace netloc util_ds_buf_1_IBUF_OUT 1 2 3 620 700 1060 500 NJ
-preplace netloc ddr_deserialiser_0_data 1 1 4 190 430 NJ 430 1070 540 NJ
-preplace netloc xlconstant_1_dout 1 1 1 180 90n
-preplace netloc xlconstant_2_dout 1 2 1 580 170n
-preplace netloc fifo_generator_0_full 1 2 2 620 350 1020
-preplace netloc fifo_generator_0_empty 1 2 2 600 370 1050
-preplace netloc fifo_generator_0_rd_data_count 1 3 1 1060 190n
-preplace netloc fifo_generator_0_wr_data_count 1 3 1 1030 210n
-preplace netloc fifo_generator_0_dout 1 2 2 610 360 NJ
-preplace netloc CLK_IN_D_0_1 1 0 3 NJ 880 NJ 880 NJ
-preplace netloc S_AXI_0_1 1 0 3 NJ 500 NJ 500 NJ
-preplace netloc diff_clk_in_0_1 1 0 3 NJ 980 NJ 980 NJ
-levelinfo -pg 1 0 100 370 820 1190 1310
-pagesize -pg 1 -db -bbox -sgen -140 0 1480 1050
+preplace port S_AXI_0 -pg 1 -lvl 0 -x -10 -y 310 -defaultsOSRD
+preplace port sen_ddr_clk -pg 1 -lvl 0 -x -10 -y 1060 -defaultsOSRD
+preplace port sen_data_0 -pg 1 -lvl 0 -x -10 -y 1180 -defaultsOSRD
+preplace port port-id_ACLK_0 -pg 1 -lvl 0 -x -10 -y 330 -defaultsOSRD
+preplace port port-id_ARESETN_0 -pg 1 -lvl 0 -x -10 -y 350 -defaultsOSRD
+preplace portBus ddr_clk -pg 1 -lvl 4 -x 1160 -y 970 -defaultsOSRD
+preplace portBus ddr_clk_ser -pg 1 -lvl 4 -x 1160 -y 990 -defaultsOSRD
+preplace portBus ddr_data -pg 1 -lvl 4 -x 1160 -y 1010 -defaultsOSRD
+preplace inst axi_gpio_0 -pg 1 -lvl 1 -x 170 -y 330 -defaultsOSRD
+preplace inst proc_sys_reset_0 -pg 1 -lvl 2 -x 540 -y 440 -defaultsOSRD
+preplace inst util_ds_buf_0 -pg 1 -lvl 2 -x 540 -y 1060 -defaultsOSRD
+preplace inst util_ds_buf_1 -pg 1 -lvl 2 -x 540 -y 1180 -defaultsOSRD
+preplace inst ddr_deserialiser_0 -pg 1 -lvl 3 -x 980 -y 1070 -defaultsOSRD
+preplace inst ila_0 -pg 1 -lvl 3 -x 980 -y 460 -defaultsOSRD
+preplace inst decoder_0 -pg 1 -lvl 2 -x 540 -y 830 -defaultsOSRD
+preplace inst fifo_generator_0 -pg 1 -lvl 3 -x 980 -y 150 -defaultsOSRD
+preplace inst xlconstant_3 -pg 1 -lvl 1 -x 170 -y 820 -defaultsOSRD
+preplace inst bit_aligner_0 -pg 1 -lvl 3 -x 980 -y 870 -defaultsOSRD
+preplace inst word_detector_0 -pg 1 -lvl 3 -x 980 -y 700 -defaultsOSRD
+preplace inst xlslice_0 -pg 1 -lvl 2 -x 540 -y 580 -defaultsOSRD
+preplace inst xlslice_1 -pg 1 -lvl 2 -x 540 -y 680 -defaultsOSRD
+preplace netloc ACLK_0_1 1 0 3 20 420 320 330 800
+preplace netloc ARESETN_0_1 1 0 2 10 430 350J
+preplace netloc util_ds_buf_0_IBUF_OUT 1 1 3 360 930 760 970 NJ
+preplace netloc util_ds_buf_1_IBUF_OUT 1 2 2 770 990 NJ
+preplace netloc ddr_deserialiser_0_data 1 1 3 350 1000 NJ 1000 1130
+preplace netloc decoder_0_par_data_o 1 2 1 720 100n
+preplace netloc decoder_0_par_clk_o 1 2 1 790 220n
+preplace netloc fifo_generator_0_full 1 2 1 810 80n
+preplace netloc fifo_generator_0_empty 1 2 1 830 160n
+preplace netloc fifo_generator_0_dout 1 2 1 820 180n
+preplace netloc xlconstant_3_dout 1 1 2 320 920 740
+preplace netloc bit_aligner_0_bit_slip 1 1 3 350 740 810 780 1130
+preplace netloc word_detector_0_detected_o 1 1 3 330J 340 730 960 1140
+preplace netloc axi_gpio_0_gpio_io_o 1 1 1 340 320n
+preplace netloc xlslice_0_Dout 1 2 1 750 580n
+preplace netloc xlslice_1_Dout 1 2 1 780 520n
+preplace netloc CLK_IN_D_0_1 1 0 2 NJ 1180 NJ
+preplace netloc S_AXI_0_1 1 0 1 NJ 310
+preplace netloc diff_clk_in_0_1 1 0 2 NJ 1060 NJ
+levelinfo -pg 1 -10 170 540 980 1160
+pagesize -pg 1 -db -bbox -sgen -150 0 1330 1240
 "
 }
 0
