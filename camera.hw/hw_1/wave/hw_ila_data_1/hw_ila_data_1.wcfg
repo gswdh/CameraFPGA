@@ -9,19 +9,81 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0"></ZoomStartTime>
-      <ZoomEndTime time="15"></ZoomEndTime>
-      <Cursor1Time time="0"></Cursor1Time>
+      <ZoomStartTime time="1"></ZoomStartTime>
+      <ZoomEndTime time="28"></ZoomEndTime>
+      <Cursor1Time time="4"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="265"></NameColumnWidth>
-      <ValueColumnWidth column_width="105"></ValueColumnWidth>
+      <NameColumnWidth column_width="399"></NameColumnWidth>
+      <ValueColumnWidth column_width="139"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="1" />
-   <wvobject type="array" fp_name="top_i/sensor_bd_0/decoder_0_par_data_o">
+   <WVObjectSize size="9" />
+   <wave_markers>
+   </wave_markers>
+   <wvobject type="array" fp_name="top_i/sensor_bd_0/fifo_generator_0_dout">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">top_i/sensor_bd_0/decoder_0_par_data_o[9:0]</obj_property>
-      <obj_property name="ObjectShortName">decoder_0_par_data_o[9:0]</obj_property>
+      <obj_property name="ElementShortName">top_i/sensor_bd_0/fifo_generator_0_dout[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fifo_generator_0_dout[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="top_i/sensor_bd_0/fifo_generator_0_empty">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_i/sensor_bd_0/fifo_generator_0_empty</obj_property>
+      <obj_property name="ObjectShortName">fifo_generator_0_empty</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="top_i/sensor_bd_0/fifo_generator_0_full">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_i/sensor_bd_0/fifo_generator_0_full</obj_property>
+      <obj_property name="ObjectShortName">fifo_generator_0_full</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="top_i/sensor_bd_0/fifo_generator_0_rd_data_count">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_i/sensor_bd_0/fifo_generator_0_rd_data_count[4:0]</obj_property>
+      <obj_property name="ObjectShortName">fifo_generator_0_rd_data_count[4:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="top_i/sensor_bd_0/fifo_generator_0_wr_data_count">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_i/sensor_bd_0/fifo_generator_0_wr_data_count[4:0]</obj_property>
+      <obj_property name="ObjectShortName">fifo_generator_0_wr_data_count[4:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="top_i/sensor_bd_0/ddr_deserialiser_0_data">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_i/sensor_bd_0/ddr_deserialiser_0_data[1:0]</obj_property>
+      <obj_property name="ObjectShortName">ddr_deserialiser_0_data[1:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="top_i/sensor_bd_0/util_ds_buf_0_IBUF_OUT">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_i/sensor_bd_0/util_ds_buf_0_IBUF_OUT</obj_property>
+      <obj_property name="ObjectShortName">util_ds_buf_0_IBUF_OUT</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="top_i/sensor_bd_0/util_ds_buf_1_IBUF_OUT">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_i/sensor_bd_0/util_ds_buf_1_IBUF_OUT</obj_property>
+      <obj_property name="ObjectShortName">util_ds_buf_1_IBUF_OUT</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="top_i/sensor_bd_0/xlconcat_0_dout">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_i/sensor_bd_0/xlconcat_0_dout[31:0]</obj_property>
+      <obj_property name="ObjectShortName">xlconcat_0_dout[31:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>

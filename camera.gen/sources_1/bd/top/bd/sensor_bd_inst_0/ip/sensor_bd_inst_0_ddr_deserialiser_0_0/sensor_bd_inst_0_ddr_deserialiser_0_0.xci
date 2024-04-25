@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "sensor_bd_inst_0_ddr_deserialiser_0_0",
-    "cell_name": "ddr_deserialiser_0",
+    "cell_name": "sensor_bd_0/ddr_deserialiser_0",
     "component_reference": "xilinx.com:module_ref:ddr_deserialiser:1.0",
     "ip_revision": "1",
     "gen_directory": ".",

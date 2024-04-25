@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x3DF4E5A6ED43048F",
+      "boundary_crc": "0xD7250E3B2415ABF6",
       "device": "xc7z020clg484-2",
       "gen_directory": "../../../../camera.gen/sources_1/bd/top",
       "name": "top",
@@ -468,6 +468,49 @@
       "sen_data_n": {
         "direction": "I",
         "left": "15",
+        "right": "0"
+      },
+      "ddr_clk_0": {
+        "direction": "O",
+        "left": "0",
+        "right": "0",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "sensor_bd_util_ds_buf_0_0_IBUF_OUT",
+            "value_src": "default_prop"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "ip_prop"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default_prop"
+          }
+        }
+      },
+      "ddr_clk_ser_0": {
+        "direction": "O",
+        "left": "0",
+        "right": "0",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "sensor_bd_util_ds_buf_0_1_IBUF_OUT",
+            "value_src": "default_prop"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "ip_prop"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default_prop"
+          }
+        }
+      },
+      "ddr_data_0": {
+        "direction": "O",
+        "left": "1",
         "right": "0"
       }
     },
@@ -2934,6 +2977,49 @@
                 "value_src": "const_prop"
               }
             }
+          },
+          "ddr_clk": {
+            "direction": "O",
+            "left": "0",
+            "right": "0",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "sensor_bd_inst_0_util_ds_buf_0_0_IBUF_OUT",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "ddr_clk_ser": {
+            "direction": "O",
+            "left": "0",
+            "right": "0",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "sensor_bd_inst_0_util_ds_buf_1_0_IBUF_OUT",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "ddr_data": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
           }
         },
         "post_compiled_compname": "sensor_bd_inst_0",
@@ -2941,7 +3027,7 @@
         "variant_info": {
           "sensor_bd.bd": {
             "scoped_diagram": "sensor_bd_inst_0.bd",
-            "design_checksum": "0x971EA907",
+            "design_checksum": "0xA3DD8717",
             "ref_name": "sensor_bd",
             "ref_subinst_path": "topsensor_bd_1",
             "ref_type": "Block Design",
@@ -3211,6 +3297,24 @@
           "axi_mem_intercon/M00_ARESETN",
           "axi_mem_intercon/ARESETN",
           "sensor_bd_0/ARESETN_0"
+        ]
+      },
+      "sensor_bd_0_ddr_clk": {
+        "ports": [
+          "sensor_bd_0/ddr_clk",
+          "ddr_clk_0"
+        ]
+      },
+      "sensor_bd_0_ddr_clk_ser": {
+        "ports": [
+          "sensor_bd_0/ddr_clk_ser",
+          "ddr_clk_ser_0"
+        ]
+      },
+      "sensor_bd_0_ddr_data": {
+        "ports": [
+          "sensor_bd_0/ddr_data",
+          "ddr_data_0"
         ]
       },
       "xlconcat_0_dout": {

@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-//Date        : Tue Apr 23 19:46:23 2024
+//Date        : Thu Apr 25 17:23:12 2024
 //Host        : testserver running 64-bit Ubuntu 20.04.6 LTS
 //Command     : generate_target sensor_bd_inst_0_wrapper.bd
 //Design      : sensor_bd_inst_0_wrapper
@@ -30,6 +30,9 @@ module sensor_bd_inst_0_wrapper
     S_AXI_0_wready,
     S_AXI_0_wstrb,
     S_AXI_0_wvalid,
+    ddr_clk,
+    ddr_clk_ser,
+    ddr_data,
     sen_data_0_clk_n,
     sen_data_0_clk_p,
     sen_ddr_clk_clk_n,
@@ -53,6 +56,9 @@ module sensor_bd_inst_0_wrapper
   output S_AXI_0_wready;
   input [3:0]S_AXI_0_wstrb;
   input S_AXI_0_wvalid;
+  output [0:0]ddr_clk;
+  output [0:0]ddr_clk_ser;
+  output [1:0]ddr_data;
   input [0:0]sen_data_0_clk_n;
   input [0:0]sen_data_0_clk_p;
   input [0:0]sen_ddr_clk_clk_n;
@@ -77,6 +83,9 @@ module sensor_bd_inst_0_wrapper
   wire S_AXI_0_wready;
   wire [3:0]S_AXI_0_wstrb;
   wire S_AXI_0_wvalid;
+  wire [0:0]ddr_clk;
+  wire [0:0]ddr_clk_ser;
+  wire [1:0]ddr_data;
   wire [0:0]sen_data_0_clk_n;
   wire [0:0]sen_data_0_clk_p;
   wire [0:0]sen_ddr_clk_clk_n;
@@ -102,6 +111,9 @@ module sensor_bd_inst_0_wrapper
         .S_AXI_0_wready(S_AXI_0_wready),
         .S_AXI_0_wstrb(S_AXI_0_wstrb),
         .S_AXI_0_wvalid(S_AXI_0_wvalid),
+        .ddr_clk(ddr_clk),
+        .ddr_clk_ser(ddr_clk_ser),
+        .ddr_data(ddr_data),
         .sen_data_0_clk_n(sen_data_0_clk_n),
         .sen_data_0_clk_p(sen_data_0_clk_p),
         .sen_ddr_clk_clk_n(sen_ddr_clk_clk_n),
