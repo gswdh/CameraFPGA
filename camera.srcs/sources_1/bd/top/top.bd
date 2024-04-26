@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x3DF4E5A6ED43048F",
+      "boundary_crc": "0xBE048430BBF70BDA",
       "device": "xc7z020clg484-2",
       "gen_directory": "../../../../camera.gen/sources_1/bd/top",
       "name": "top",
@@ -330,6 +330,441 @@
           },
           "CLK_N": {
             "physical_name": "sen_data_0_0_clk_n",
+            "direction": "I",
+            "left": "0",
+            "right": "0"
+          }
+        }
+      },
+      "sen_data_1_0": {
+        "mode": "Slave",
+        "vlnv_bus_definition": "xilinx.com:interface:diff_clock:1.0",
+        "vlnv": "xilinx.com:interface:diff_clock_rtl:1.0",
+        "parameters": {
+          "CAN_DEBUG": {
+            "value": "false",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          }
+        },
+        "port_maps": {
+          "CLK_P": {
+            "physical_name": "sen_data_1_0_clk_p",
+            "direction": "I",
+            "left": "0",
+            "right": "0"
+          },
+          "CLK_N": {
+            "physical_name": "sen_data_1_0_clk_n",
+            "direction": "I",
+            "left": "0",
+            "right": "0"
+          }
+        }
+      },
+      "sen_data_2_0": {
+        "mode": "Slave",
+        "vlnv_bus_definition": "xilinx.com:interface:diff_clock:1.0",
+        "vlnv": "xilinx.com:interface:diff_clock_rtl:1.0",
+        "parameters": {
+          "CAN_DEBUG": {
+            "value": "false",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          }
+        },
+        "port_maps": {
+          "CLK_P": {
+            "physical_name": "sen_data_2_0_clk_p",
+            "direction": "I",
+            "left": "0",
+            "right": "0"
+          },
+          "CLK_N": {
+            "physical_name": "sen_data_2_0_clk_n",
+            "direction": "I",
+            "left": "0",
+            "right": "0"
+          }
+        }
+      },
+      "sen_data_3_0": {
+        "mode": "Slave",
+        "vlnv_bus_definition": "xilinx.com:interface:diff_clock:1.0",
+        "vlnv": "xilinx.com:interface:diff_clock_rtl:1.0",
+        "parameters": {
+          "CAN_DEBUG": {
+            "value": "false",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          }
+        },
+        "port_maps": {
+          "CLK_P": {
+            "physical_name": "sen_data_3_0_clk_p",
+            "direction": "I",
+            "left": "0",
+            "right": "0"
+          },
+          "CLK_N": {
+            "physical_name": "sen_data_3_0_clk_n",
+            "direction": "I",
+            "left": "0",
+            "right": "0"
+          }
+        }
+      },
+      "sen_data_4_0": {
+        "mode": "Slave",
+        "vlnv_bus_definition": "xilinx.com:interface:diff_clock:1.0",
+        "vlnv": "xilinx.com:interface:diff_clock_rtl:1.0",
+        "parameters": {
+          "CAN_DEBUG": {
+            "value": "false",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          }
+        },
+        "port_maps": {
+          "CLK_P": {
+            "physical_name": "sen_data_4_0_clk_p",
+            "direction": "I",
+            "left": "0",
+            "right": "0"
+          },
+          "CLK_N": {
+            "physical_name": "sen_data_4_0_clk_n",
+            "direction": "I",
+            "left": "0",
+            "right": "0"
+          }
+        }
+      },
+      "sen_data_5_0": {
+        "mode": "Slave",
+        "vlnv_bus_definition": "xilinx.com:interface:diff_clock:1.0",
+        "vlnv": "xilinx.com:interface:diff_clock_rtl:1.0",
+        "parameters": {
+          "CAN_DEBUG": {
+            "value": "false",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          }
+        },
+        "port_maps": {
+          "CLK_P": {
+            "physical_name": "sen_data_5_0_clk_p",
+            "direction": "I",
+            "left": "0",
+            "right": "0"
+          },
+          "CLK_N": {
+            "physical_name": "sen_data_5_0_clk_n",
+            "direction": "I",
+            "left": "0",
+            "right": "0"
+          }
+        }
+      },
+      "sen_data_6_0": {
+        "mode": "Slave",
+        "vlnv_bus_definition": "xilinx.com:interface:diff_clock:1.0",
+        "vlnv": "xilinx.com:interface:diff_clock_rtl:1.0",
+        "parameters": {
+          "CAN_DEBUG": {
+            "value": "false",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          }
+        },
+        "port_maps": {
+          "CLK_P": {
+            "physical_name": "sen_data_6_0_clk_p",
+            "direction": "I",
+            "left": "0",
+            "right": "0"
+          },
+          "CLK_N": {
+            "physical_name": "sen_data_6_0_clk_n",
+            "direction": "I",
+            "left": "0",
+            "right": "0"
+          }
+        }
+      },
+      "sen_data_7_0": {
+        "mode": "Slave",
+        "vlnv_bus_definition": "xilinx.com:interface:diff_clock:1.0",
+        "vlnv": "xilinx.com:interface:diff_clock_rtl:1.0",
+        "parameters": {
+          "CAN_DEBUG": {
+            "value": "false",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          }
+        },
+        "port_maps": {
+          "CLK_P": {
+            "physical_name": "sen_data_7_0_clk_p",
+            "direction": "I",
+            "left": "0",
+            "right": "0"
+          },
+          "CLK_N": {
+            "physical_name": "sen_data_7_0_clk_n",
+            "direction": "I",
+            "left": "0",
+            "right": "0"
+          }
+        }
+      },
+      "sen_data_8_0": {
+        "mode": "Slave",
+        "vlnv_bus_definition": "xilinx.com:interface:diff_clock:1.0",
+        "vlnv": "xilinx.com:interface:diff_clock_rtl:1.0",
+        "parameters": {
+          "CAN_DEBUG": {
+            "value": "false",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          }
+        },
+        "port_maps": {
+          "CLK_P": {
+            "physical_name": "sen_data_8_0_clk_p",
+            "direction": "I",
+            "left": "0",
+            "right": "0"
+          },
+          "CLK_N": {
+            "physical_name": "sen_data_8_0_clk_n",
+            "direction": "I",
+            "left": "0",
+            "right": "0"
+          }
+        }
+      },
+      "sen_data_9_0": {
+        "mode": "Slave",
+        "vlnv_bus_definition": "xilinx.com:interface:diff_clock:1.0",
+        "vlnv": "xilinx.com:interface:diff_clock_rtl:1.0",
+        "parameters": {
+          "CAN_DEBUG": {
+            "value": "false",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          }
+        },
+        "port_maps": {
+          "CLK_P": {
+            "physical_name": "sen_data_9_0_clk_p",
+            "direction": "I",
+            "left": "0",
+            "right": "0"
+          },
+          "CLK_N": {
+            "physical_name": "sen_data_9_0_clk_n",
+            "direction": "I",
+            "left": "0",
+            "right": "0"
+          }
+        }
+      },
+      "sen_data_10_0": {
+        "mode": "Slave",
+        "vlnv_bus_definition": "xilinx.com:interface:diff_clock:1.0",
+        "vlnv": "xilinx.com:interface:diff_clock_rtl:1.0",
+        "parameters": {
+          "CAN_DEBUG": {
+            "value": "false",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          }
+        },
+        "port_maps": {
+          "CLK_P": {
+            "physical_name": "sen_data_10_0_clk_p",
+            "direction": "I",
+            "left": "0",
+            "right": "0"
+          },
+          "CLK_N": {
+            "physical_name": "sen_data_10_0_clk_n",
+            "direction": "I",
+            "left": "0",
+            "right": "0"
+          }
+        }
+      },
+      "sen_data_11_0": {
+        "mode": "Slave",
+        "vlnv_bus_definition": "xilinx.com:interface:diff_clock:1.0",
+        "vlnv": "xilinx.com:interface:diff_clock_rtl:1.0",
+        "parameters": {
+          "CAN_DEBUG": {
+            "value": "false",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          }
+        },
+        "port_maps": {
+          "CLK_P": {
+            "physical_name": "sen_data_11_0_clk_p",
+            "direction": "I",
+            "left": "0",
+            "right": "0"
+          },
+          "CLK_N": {
+            "physical_name": "sen_data_11_0_clk_n",
+            "direction": "I",
+            "left": "0",
+            "right": "0"
+          }
+        }
+      },
+      "sen_data_12_0": {
+        "mode": "Slave",
+        "vlnv_bus_definition": "xilinx.com:interface:diff_clock:1.0",
+        "vlnv": "xilinx.com:interface:diff_clock_rtl:1.0",
+        "parameters": {
+          "CAN_DEBUG": {
+            "value": "false",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          }
+        },
+        "port_maps": {
+          "CLK_P": {
+            "physical_name": "sen_data_12_0_clk_p",
+            "direction": "I",
+            "left": "0",
+            "right": "0"
+          },
+          "CLK_N": {
+            "physical_name": "sen_data_12_0_clk_n",
+            "direction": "I",
+            "left": "0",
+            "right": "0"
+          }
+        }
+      },
+      "sen_data_13_0": {
+        "mode": "Slave",
+        "vlnv_bus_definition": "xilinx.com:interface:diff_clock:1.0",
+        "vlnv": "xilinx.com:interface:diff_clock_rtl:1.0",
+        "parameters": {
+          "CAN_DEBUG": {
+            "value": "false",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          }
+        },
+        "port_maps": {
+          "CLK_P": {
+            "physical_name": "sen_data_13_0_clk_p",
+            "direction": "I",
+            "left": "0",
+            "right": "0"
+          },
+          "CLK_N": {
+            "physical_name": "sen_data_13_0_clk_n",
+            "direction": "I",
+            "left": "0",
+            "right": "0"
+          }
+        }
+      },
+      "sen_data_14_0": {
+        "mode": "Slave",
+        "vlnv_bus_definition": "xilinx.com:interface:diff_clock:1.0",
+        "vlnv": "xilinx.com:interface:diff_clock_rtl:1.0",
+        "parameters": {
+          "CAN_DEBUG": {
+            "value": "false",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          }
+        },
+        "port_maps": {
+          "CLK_P": {
+            "physical_name": "sen_data_14_0_clk_p",
+            "direction": "I",
+            "left": "0",
+            "right": "0"
+          },
+          "CLK_N": {
+            "physical_name": "sen_data_14_0_clk_n",
+            "direction": "I",
+            "left": "0",
+            "right": "0"
+          }
+        }
+      },
+      "sen_data_15_0": {
+        "mode": "Slave",
+        "vlnv_bus_definition": "xilinx.com:interface:diff_clock:1.0",
+        "vlnv": "xilinx.com:interface:diff_clock_rtl:1.0",
+        "parameters": {
+          "CAN_DEBUG": {
+            "value": "false",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          }
+        },
+        "port_maps": {
+          "CLK_P": {
+            "physical_name": "sen_data_15_0_clk_p",
+            "direction": "I",
+            "left": "0",
+            "right": "0"
+          },
+          "CLK_N": {
+            "physical_name": "sen_data_15_0_clk_n",
             "direction": "I",
             "left": "0",
             "right": "0"
@@ -2884,6 +3319,441 @@
                 "right": "0"
               }
             }
+          },
+          "sen_data_1": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:diff_clock:1.0",
+            "vlnv": "xilinx.com:interface:diff_clock_rtl:1.0",
+            "parameters": {
+              "CAN_DEBUG": {
+                "value": "false",
+                "value_src": "strong"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "default_prop"
+              }
+            },
+            "port_maps": {
+              "CLK_P": {
+                "physical_name": "sen_data_1_clk_p",
+                "direction": "I",
+                "left": "0",
+                "right": "0"
+              },
+              "CLK_N": {
+                "physical_name": "sen_data_1_clk_n",
+                "direction": "I",
+                "left": "0",
+                "right": "0"
+              }
+            }
+          },
+          "sen_data_2": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:diff_clock:1.0",
+            "vlnv": "xilinx.com:interface:diff_clock_rtl:1.0",
+            "parameters": {
+              "CAN_DEBUG": {
+                "value": "false",
+                "value_src": "strong"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "default_prop"
+              }
+            },
+            "port_maps": {
+              "CLK_P": {
+                "physical_name": "sen_data_2_clk_p",
+                "direction": "I",
+                "left": "0",
+                "right": "0"
+              },
+              "CLK_N": {
+                "physical_name": "sen_data_2_clk_n",
+                "direction": "I",
+                "left": "0",
+                "right": "0"
+              }
+            }
+          },
+          "sen_data_3": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:diff_clock:1.0",
+            "vlnv": "xilinx.com:interface:diff_clock_rtl:1.0",
+            "parameters": {
+              "CAN_DEBUG": {
+                "value": "false",
+                "value_src": "strong"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "default_prop"
+              }
+            },
+            "port_maps": {
+              "CLK_P": {
+                "physical_name": "sen_data_3_clk_p",
+                "direction": "I",
+                "left": "0",
+                "right": "0"
+              },
+              "CLK_N": {
+                "physical_name": "sen_data_3_clk_n",
+                "direction": "I",
+                "left": "0",
+                "right": "0"
+              }
+            }
+          },
+          "sen_data_4": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:diff_clock:1.0",
+            "vlnv": "xilinx.com:interface:diff_clock_rtl:1.0",
+            "parameters": {
+              "CAN_DEBUG": {
+                "value": "false",
+                "value_src": "strong"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "default_prop"
+              }
+            },
+            "port_maps": {
+              "CLK_P": {
+                "physical_name": "sen_data_4_clk_p",
+                "direction": "I",
+                "left": "0",
+                "right": "0"
+              },
+              "CLK_N": {
+                "physical_name": "sen_data_4_clk_n",
+                "direction": "I",
+                "left": "0",
+                "right": "0"
+              }
+            }
+          },
+          "sen_data_5": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:diff_clock:1.0",
+            "vlnv": "xilinx.com:interface:diff_clock_rtl:1.0",
+            "parameters": {
+              "CAN_DEBUG": {
+                "value": "false",
+                "value_src": "strong"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "default_prop"
+              }
+            },
+            "port_maps": {
+              "CLK_P": {
+                "physical_name": "sen_data_5_clk_p",
+                "direction": "I",
+                "left": "0",
+                "right": "0"
+              },
+              "CLK_N": {
+                "physical_name": "sen_data_5_clk_n",
+                "direction": "I",
+                "left": "0",
+                "right": "0"
+              }
+            }
+          },
+          "sen_data_6": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:diff_clock:1.0",
+            "vlnv": "xilinx.com:interface:diff_clock_rtl:1.0",
+            "parameters": {
+              "CAN_DEBUG": {
+                "value": "false",
+                "value_src": "strong"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "default_prop"
+              }
+            },
+            "port_maps": {
+              "CLK_P": {
+                "physical_name": "sen_data_6_clk_p",
+                "direction": "I",
+                "left": "0",
+                "right": "0"
+              },
+              "CLK_N": {
+                "physical_name": "sen_data_6_clk_n",
+                "direction": "I",
+                "left": "0",
+                "right": "0"
+              }
+            }
+          },
+          "sen_data_7": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:diff_clock:1.0",
+            "vlnv": "xilinx.com:interface:diff_clock_rtl:1.0",
+            "parameters": {
+              "CAN_DEBUG": {
+                "value": "false",
+                "value_src": "strong"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "default_prop"
+              }
+            },
+            "port_maps": {
+              "CLK_P": {
+                "physical_name": "sen_data_7_clk_p",
+                "direction": "I",
+                "left": "0",
+                "right": "0"
+              },
+              "CLK_N": {
+                "physical_name": "sen_data_7_clk_n",
+                "direction": "I",
+                "left": "0",
+                "right": "0"
+              }
+            }
+          },
+          "sen_data_8": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:diff_clock:1.0",
+            "vlnv": "xilinx.com:interface:diff_clock_rtl:1.0",
+            "parameters": {
+              "CAN_DEBUG": {
+                "value": "false",
+                "value_src": "strong"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "default_prop"
+              }
+            },
+            "port_maps": {
+              "CLK_P": {
+                "physical_name": "sen_data_8_clk_p",
+                "direction": "I",
+                "left": "0",
+                "right": "0"
+              },
+              "CLK_N": {
+                "physical_name": "sen_data_8_clk_n",
+                "direction": "I",
+                "left": "0",
+                "right": "0"
+              }
+            }
+          },
+          "sen_data_9": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:diff_clock:1.0",
+            "vlnv": "xilinx.com:interface:diff_clock_rtl:1.0",
+            "parameters": {
+              "CAN_DEBUG": {
+                "value": "false",
+                "value_src": "strong"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "default_prop"
+              }
+            },
+            "port_maps": {
+              "CLK_P": {
+                "physical_name": "sen_data_9_clk_p",
+                "direction": "I",
+                "left": "0",
+                "right": "0"
+              },
+              "CLK_N": {
+                "physical_name": "sen_data_9_clk_n",
+                "direction": "I",
+                "left": "0",
+                "right": "0"
+              }
+            }
+          },
+          "sen_data_10": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:diff_clock:1.0",
+            "vlnv": "xilinx.com:interface:diff_clock_rtl:1.0",
+            "parameters": {
+              "CAN_DEBUG": {
+                "value": "false",
+                "value_src": "strong"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "default_prop"
+              }
+            },
+            "port_maps": {
+              "CLK_P": {
+                "physical_name": "sen_data_10_clk_p",
+                "direction": "I",
+                "left": "0",
+                "right": "0"
+              },
+              "CLK_N": {
+                "physical_name": "sen_data_10_clk_n",
+                "direction": "I",
+                "left": "0",
+                "right": "0"
+              }
+            }
+          },
+          "sen_data_11": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:diff_clock:1.0",
+            "vlnv": "xilinx.com:interface:diff_clock_rtl:1.0",
+            "parameters": {
+              "CAN_DEBUG": {
+                "value": "false",
+                "value_src": "strong"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "default_prop"
+              }
+            },
+            "port_maps": {
+              "CLK_P": {
+                "physical_name": "sen_data_11_clk_p",
+                "direction": "I",
+                "left": "0",
+                "right": "0"
+              },
+              "CLK_N": {
+                "physical_name": "sen_data_11_clk_n",
+                "direction": "I",
+                "left": "0",
+                "right": "0"
+              }
+            }
+          },
+          "sen_data_12": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:diff_clock:1.0",
+            "vlnv": "xilinx.com:interface:diff_clock_rtl:1.0",
+            "parameters": {
+              "CAN_DEBUG": {
+                "value": "false",
+                "value_src": "strong"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "default_prop"
+              }
+            },
+            "port_maps": {
+              "CLK_P": {
+                "physical_name": "sen_data_12_clk_p",
+                "direction": "I",
+                "left": "0",
+                "right": "0"
+              },
+              "CLK_N": {
+                "physical_name": "sen_data_12_clk_n",
+                "direction": "I",
+                "left": "0",
+                "right": "0"
+              }
+            }
+          },
+          "sen_data_13": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:diff_clock:1.0",
+            "vlnv": "xilinx.com:interface:diff_clock_rtl:1.0",
+            "parameters": {
+              "CAN_DEBUG": {
+                "value": "false",
+                "value_src": "strong"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "default_prop"
+              }
+            },
+            "port_maps": {
+              "CLK_P": {
+                "physical_name": "sen_data_13_clk_p",
+                "direction": "I",
+                "left": "0",
+                "right": "0"
+              },
+              "CLK_N": {
+                "physical_name": "sen_data_13_clk_n",
+                "direction": "I",
+                "left": "0",
+                "right": "0"
+              }
+            }
+          },
+          "sen_data_14": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:diff_clock:1.0",
+            "vlnv": "xilinx.com:interface:diff_clock_rtl:1.0",
+            "parameters": {
+              "CAN_DEBUG": {
+                "value": "false",
+                "value_src": "strong"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "default_prop"
+              }
+            },
+            "port_maps": {
+              "CLK_P": {
+                "physical_name": "sen_data_14_clk_p",
+                "direction": "I",
+                "left": "0",
+                "right": "0"
+              },
+              "CLK_N": {
+                "physical_name": "sen_data_14_clk_n",
+                "direction": "I",
+                "left": "0",
+                "right": "0"
+              }
+            }
+          },
+          "sen_data_15": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:diff_clock:1.0",
+            "vlnv": "xilinx.com:interface:diff_clock_rtl:1.0",
+            "parameters": {
+              "CAN_DEBUG": {
+                "value": "false",
+                "value_src": "strong"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "default_prop"
+              }
+            },
+            "port_maps": {
+              "CLK_P": {
+                "physical_name": "sen_data_15_clk_p",
+                "direction": "I",
+                "left": "0",
+                "right": "0"
+              },
+              "CLK_N": {
+                "physical_name": "sen_data_15_clk_n",
+                "direction": "I",
+                "left": "0",
+                "right": "0"
+              }
+            }
           }
         },
         "ports": {
@@ -2941,7 +3811,7 @@
         "variant_info": {
           "sensor.bd": {
             "scoped_diagram": "sensor_inst_0.bd",
-            "design_checksum": "0x9F892E3",
+            "design_checksum": "0x732050F8",
             "ref_name": "sensor",
             "ref_subinst_path": "top_sensor_0",
             "ref_type": "Block Design",
@@ -3046,6 +3916,96 @@
         "interface_ports": [
           "sen_data_0_0",
           "sensor_0/sen_data_0"
+        ]
+      },
+      "sen_data_10_0_1": {
+        "interface_ports": [
+          "sen_data_10_0",
+          "sensor_0/sen_data_10"
+        ]
+      },
+      "sen_data_11_0_1": {
+        "interface_ports": [
+          "sen_data_11_0",
+          "sensor_0/sen_data_11"
+        ]
+      },
+      "sen_data_12_0_1": {
+        "interface_ports": [
+          "sen_data_12_0",
+          "sensor_0/sen_data_12"
+        ]
+      },
+      "sen_data_13_0_1": {
+        "interface_ports": [
+          "sen_data_13_0",
+          "sensor_0/sen_data_13"
+        ]
+      },
+      "sen_data_14_0_1": {
+        "interface_ports": [
+          "sen_data_14_0",
+          "sensor_0/sen_data_14"
+        ]
+      },
+      "sen_data_15_0_1": {
+        "interface_ports": [
+          "sen_data_15_0",
+          "sensor_0/sen_data_15"
+        ]
+      },
+      "sen_data_1_0_1": {
+        "interface_ports": [
+          "sen_data_1_0",
+          "sensor_0/sen_data_1"
+        ]
+      },
+      "sen_data_2_0_1": {
+        "interface_ports": [
+          "sen_data_2_0",
+          "sensor_0/sen_data_2"
+        ]
+      },
+      "sen_data_3_0_1": {
+        "interface_ports": [
+          "sen_data_3_0",
+          "sensor_0/sen_data_3"
+        ]
+      },
+      "sen_data_4_0_1": {
+        "interface_ports": [
+          "sen_data_4_0",
+          "sensor_0/sen_data_4"
+        ]
+      },
+      "sen_data_5_0_1": {
+        "interface_ports": [
+          "sen_data_5_0",
+          "sensor_0/sen_data_5"
+        ]
+      },
+      "sen_data_6_0_1": {
+        "interface_ports": [
+          "sen_data_6_0",
+          "sensor_0/sen_data_6"
+        ]
+      },
+      "sen_data_7_0_1": {
+        "interface_ports": [
+          "sen_data_7_0",
+          "sensor_0/sen_data_7"
+        ]
+      },
+      "sen_data_8_0_1": {
+        "interface_ports": [
+          "sen_data_8_0",
+          "sensor_0/sen_data_8"
+        ]
+      },
+      "sen_data_9_0_1": {
+        "interface_ports": [
+          "sen_data_9_0",
+          "sensor_0/sen_data_9"
         ]
       },
       "sen_ddr_clk_1": {

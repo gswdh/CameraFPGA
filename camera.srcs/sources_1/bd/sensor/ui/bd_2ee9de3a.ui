@@ -1,37 +1,99 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"1.0",
-   "Default View_TopLeft":"-374,-74",
+   "Default View_ScaleFactor":"0.707256",
+   "Default View_TopLeft":"-646,933",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0 TLS
 #  -string -flagsOSRD
-preplace port S_AXI_0 -pg 1 -lvl 0 -x 0 -y 70 -defaultsOSRD
-preplace port sen_data_0 -pg 1 -lvl 0 -x 0 -y 300 -defaultsOSRD
-preplace port sen_ddr_clk -pg 1 -lvl 0 -x 0 -y 180 -defaultsOSRD
-preplace port port-id_ACLK_0 -pg 1 -lvl 0 -x 0 -y 90 -defaultsOSRD
-preplace port port-id_ARESETN_0 -pg 1 -lvl 0 -x 0 -y 110 -defaultsOSRD
-preplace inst axi_gpio_0 -pg 1 -lvl 1 -x 180 -y 90 -defaultsOSRD
-preplace inst ila_0 -pg 1 -lvl 4 -x 1110 -y 610 -defaultsOSRD
-preplace inst util_ds_buf_0 -pg 1 -lvl 2 -x 470 -y 180 -defaultsOSRD
-preplace inst util_ds_buf_1 -pg 1 -lvl 2 -x 470 -y 300 -defaultsOSRD
-preplace inst xlslice_0 -pg 1 -lvl 2 -x 470 -y 400 -defaultsOSRD
-preplace inst xlslice_1 -pg 1 -lvl 2 -x 470 -y 500 -defaultsOSRD
-preplace inst gmax0505_streamer_0 -pg 1 -lvl 3 -x 790 -y 300 -defaultsOSRD
-preplace netloc ACLK_0_1 1 0 4 30 190 340J 110 NJ 110 1010J
-preplace netloc ARESETN_0_1 1 0 3 20 240 NJ 240 600J
-preplace netloc axi_gpio_0_gpio_io_o 1 1 1 330 80n
-preplace netloc util_ds_buf_0_IBUF_OUT 1 2 1 610J 180n
-preplace netloc word_detector_0_detected_o 1 1 3 N 120 NJ 120 1000
-preplace netloc xlslice_0_Dout 1 2 2 600 590 970J
-preplace netloc xlslice_1_Dout 1 2 2 610 600 NJ
-preplace netloc util_ds_buf_1_IBUF_OUT 1 2 1 NJ 300
-preplace netloc gmax0505_streamer_0_pixel_clk_o 1 3 1 990 300n
-preplace netloc gmax0505_streamer_0_pixel_data_o 1 3 1 980 320n
-preplace netloc CLK_IN_D_0_1 1 0 2 NJ 300 NJ
-preplace netloc S_AXI_0_1 1 0 1 NJ 70
-preplace netloc diff_clk_in_0_1 1 0 2 NJ 180 NJ
-levelinfo -pg 1 0 180 470 790 1110 1210
-pagesize -pg 1 -db -bbox -sgen -140 0 1210 720
+preplace port S_AXI_0 -pg 1 -lvl 0 -x 0 -y 1290 -defaultsOSRD
+preplace port sen_data_0 -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD
+preplace port sen_ddr_clk -pg 1 -lvl 0 -x 0 -y 1800 -defaultsOSRD
+preplace port sen_data_1 -pg 1 -lvl 0 -x 0 -y 160 -defaultsOSRD
+preplace port sen_data_2 -pg 1 -lvl 0 -x 0 -y 260 -defaultsOSRD
+preplace port sen_data_3 -pg 1 -lvl 0 -x 0 -y 360 -defaultsOSRD
+preplace port sen_data_4 -pg 1 -lvl 0 -x 0 -y 460 -defaultsOSRD
+preplace port sen_data_5 -pg 1 -lvl 0 -x 0 -y 560 -defaultsOSRD
+preplace port sen_data_6 -pg 1 -lvl 0 -x 0 -y 660 -defaultsOSRD
+preplace port sen_data_7 -pg 1 -lvl 0 -x 0 -y 760 -defaultsOSRD
+preplace port sen_data_8 -pg 1 -lvl 0 -x 0 -y 860 -defaultsOSRD
+preplace port sen_data_9 -pg 1 -lvl 0 -x 0 -y 960 -defaultsOSRD
+preplace port sen_data_10 -pg 1 -lvl 0 -x 0 -y 1060 -defaultsOSRD
+preplace port sen_data_11 -pg 1 -lvl 0 -x 0 -y 1160 -defaultsOSRD
+preplace port sen_data_12 -pg 1 -lvl 0 -x 0 -y 1440 -defaultsOSRD
+preplace port sen_data_13 -pg 1 -lvl 0 -x 0 -y 1540 -defaultsOSRD
+preplace port sen_data_14 -pg 1 -lvl 0 -x 0 -y 1640 -defaultsOSRD
+preplace port sen_data_15 -pg 1 -lvl 0 -x 0 -y 1740 -defaultsOSRD
+preplace port port-id_ACLK_0 -pg 1 -lvl 0 -x 0 -y 1310 -defaultsOSRD
+preplace port port-id_ARESETN_0 -pg 1 -lvl 0 -x 0 -y 1330 -defaultsOSRD
+preplace inst axi_gpio_0 -pg 1 -lvl 1 -x 170 -y 1310 -defaultsOSRD
+preplace inst ila_0 -pg 1 -lvl 4 -x 1170 -y 1270 -defaultsOSRD
+preplace inst util_ds_buf_0 -pg 1 -lvl 2 -x 530 -y 1800 -defaultsOSRD
+preplace inst util_ds_buf_1 -pg 1 -lvl 1 -x 170 -y 60 -defaultsOSRD
+preplace inst xlslice_0 -pg 1 -lvl 2 -x 530 -y 1280 -defaultsOSRD
+preplace inst xlslice_1 -pg 1 -lvl 2 -x 530 -y 1380 -defaultsOSRD
+preplace inst gmax0505_streamer_0 -pg 1 -lvl 3 -x 870 -y 1840 -defaultsOSRD
+preplace inst util_ds_buf_2 -pg 1 -lvl 1 -x 170 -y 160 -defaultsOSRD
+preplace inst util_ds_buf_3 -pg 1 -lvl 1 -x 170 -y 260 -defaultsOSRD
+preplace inst util_ds_buf_4 -pg 1 -lvl 1 -x 170 -y 360 -defaultsOSRD
+preplace inst util_ds_buf_5 -pg 1 -lvl 1 -x 170 -y 460 -defaultsOSRD
+preplace inst util_ds_buf_6 -pg 1 -lvl 1 -x 170 -y 560 -defaultsOSRD
+preplace inst util_ds_buf_7 -pg 1 -lvl 1 -x 170 -y 660 -defaultsOSRD
+preplace inst util_ds_buf_8 -pg 1 -lvl 1 -x 170 -y 760 -defaultsOSRD
+preplace inst util_ds_buf_9 -pg 1 -lvl 1 -x 170 -y 860 -defaultsOSRD
+preplace inst util_ds_buf_10 -pg 1 -lvl 1 -x 170 -y 960 -defaultsOSRD
+preplace inst util_ds_buf_11 -pg 1 -lvl 1 -x 170 -y 1060 -defaultsOSRD
+preplace inst util_ds_buf_12 -pg 1 -lvl 1 -x 170 -y 1160 -defaultsOSRD
+preplace inst util_ds_buf_13 -pg 1 -lvl 1 -x 170 -y 1440 -defaultsOSRD
+preplace inst util_ds_buf_14 -pg 1 -lvl 1 -x 170 -y 1540 -defaultsOSRD
+preplace inst util_ds_buf_15 -pg 1 -lvl 1 -x 170 -y 1640 -defaultsOSRD
+preplace inst util_ds_buf_16 -pg 1 -lvl 1 -x 170 -y 1740 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 2 -x 530 -y 850 -defaultsOSRD
+preplace netloc ACLK_0_1 1 0 4 20 1220 NJ 1220 NJ 1220 NJ
+preplace netloc ARESETN_0_1 1 0 3 20 1860 NJ 1860 660J
+preplace netloc axi_gpio_0_gpio_io_o 1 1 1 400 1280n
+preplace netloc gmax0505_streamer_0_pixel_clk_o 1 3 1 1050 1240n
+preplace netloc gmax0505_streamer_0_pixel_data_o 1 3 1 1070 1300n
+preplace netloc util_ds_buf_0_IBUF_OUT 1 2 1 NJ 1800
+preplace netloc word_detector_0_detected_o 1 1 3 360J 1440 NJ 1440 1060
+preplace netloc xlslice_0_Dout 1 2 2 670 1320 NJ
+preplace netloc xlslice_1_Dout 1 2 2 680 1260 NJ
+preplace netloc util_ds_buf_1_IBUF_OUT 1 1 1 400J 60n
+preplace netloc util_ds_buf_2_IBUF_OUT 1 1 1 390J 160n
+preplace netloc util_ds_buf_3_IBUF_OUT 1 1 1 370J 260n
+preplace netloc util_ds_buf_4_IBUF_OUT 1 1 1 360J 360n
+preplace netloc util_ds_buf_5_IBUF_OUT 1 1 1 350J 460n
+preplace netloc util_ds_buf_6_IBUF_OUT 1 1 1 340J 560n
+preplace netloc util_ds_buf_7_IBUF_OUT 1 1 1 330J 660n
+preplace netloc util_ds_buf_8_IBUF_OUT 1 1 1 320J 760n
+preplace netloc util_ds_buf_9_IBUF_OUT 1 1 1 NJ 860
+preplace netloc util_ds_buf_10_IBUF_OUT 1 1 1 320J 880n
+preplace netloc util_ds_buf_11_IBUF_OUT 1 1 1 330J 900n
+preplace netloc util_ds_buf_12_IBUF_OUT 1 1 1 340J 920n
+preplace netloc util_ds_buf_13_IBUF_OUT 1 1 1 350J 940n
+preplace netloc util_ds_buf_14_IBUF_OUT 1 1 1 370J 960n
+preplace netloc util_ds_buf_15_IBUF_OUT 1 1 1 380J 980n
+preplace netloc util_ds_buf_16_IBUF_OUT 1 1 1 390J 1000n
+preplace netloc xlconcat_0_dout 1 2 1 690 850n
+preplace netloc CLK_IN_D_0_1 1 0 1 NJ 60
+preplace netloc S_AXI_0_1 1 0 1 NJ 1290
+preplace netloc diff_clk_in_0_1 1 0 2 NJ 1800 NJ
+preplace netloc CLK_IN_D_0_2 1 0 1 NJ 160
+preplace netloc CLK_IN_D_0_3 1 0 1 NJ 260
+preplace netloc CLK_IN_D_0_4 1 0 1 NJ 360
+preplace netloc CLK_IN_D_0_5 1 0 1 NJ 460
+preplace netloc CLK_IN_D_0_6 1 0 1 NJ 560
+preplace netloc CLK_IN_D_0_7 1 0 1 NJ 660
+preplace netloc CLK_IN_D_0_8 1 0 1 NJ 760
+preplace netloc CLK_IN_D_0_9 1 0 1 NJ 860
+preplace netloc CLK_IN_D_0_10 1 0 1 NJ 960
+preplace netloc CLK_IN_D_0_11 1 0 1 NJ 1060
+preplace netloc CLK_IN_D_0_12 1 0 1 NJ 1160
+preplace netloc CLK_IN_D_0_13 1 0 1 NJ 1440
+preplace netloc CLK_IN_D_0_14 1 0 1 NJ 1540
+preplace netloc CLK_IN_D_0_15 1 0 1 NJ 1640
+preplace netloc CLK_IN_D_0_16 1 0 1 NJ 1740
+levelinfo -pg 1 0 170 530 870 1170 1270
+pagesize -pg 1 -db -bbox -sgen -140 0 1270 1940
 "
 }
-
+0

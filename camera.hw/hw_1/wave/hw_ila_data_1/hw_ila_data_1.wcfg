@@ -15,7 +15,7 @@
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="399"></NameColumnWidth>
-      <ValueColumnWidth column_width="103"></ValueColumnWidth>
+      <ValueColumnWidth column_width="99"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="5" />
    <wave_markers>
@@ -29,8 +29,8 @@
    </wvobject>
    <wvobject type="array" fp_name="top_i/sensor_0/gmax0505_streamer_0_pixel_data_o">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">top_i/sensor_0/gmax0505_streamer_0_pixel_data_o[11:0]</obj_property>
-      <obj_property name="ObjectShortName">gmax0505_streamer_0_pixel_data_o[11:0]</obj_property>
+      <obj_property name="ElementShortName">top_i/sensor_0/gmax0505_streamer_0_pixel_data_o[191:0]</obj_property>
+      <obj_property name="ObjectShortName">gmax0505_streamer_0_pixel_data_o[191:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>

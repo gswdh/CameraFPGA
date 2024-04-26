@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "sensor_inst_0_gmax0505_streamer_0_0",
-    "cell_name": "gmax0505_streamer_0",
+    "cell_name": "sensor_0/gmax0505_streamer_0",
     "component_reference": "xilinx.com:module_ref:gmax0505_streamer:1.0",
     "ip_revision": "1",
     "gen_directory": ".",
@@ -44,12 +44,12 @@
       "ports": {
         "ddr_clk_i": [ { "direction": "in" } ],
         "nrst_i": [ { "direction": "in" } ],
-        "ddr_data_i": [ { "direction": "in" } ],
+        "ddr_data_i": [ { "direction": "in", "size_left": "15", "size_right": "0" } ],
         "sync_word_i": [ { "direction": "in", "size_left": "11", "size_right": "0" } ],
         "sync_en_i": [ { "direction": "in" } ],
         "sync_done_o": [ { "direction": "out" } ],
         "pixel_clk_o": [ { "direction": "out" } ],
-        "pixel_data_o": [ { "direction": "out", "size_left": "11", "size_right": "0" } ]
+        "pixel_data_o": [ { "direction": "out", "size_left": "191", "size_right": "0" } ]
       }
     }
   }

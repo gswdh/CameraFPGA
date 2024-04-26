@@ -67,12 +67,12 @@ module sensor_inst_0_gmax0505_streamer_0_0 (
 
 input wire ddr_clk_i;
 input wire nrst_i;
-input wire ddr_data_i;
+input wire [15 : 0] ddr_data_i;
 input wire [11 : 0] sync_word_i;
 input wire sync_en_i;
 output wire sync_done_o;
 output wire pixel_clk_o;
-output wire [11 : 0] pixel_data_o;
+output wire [191 : 0] pixel_data_o;
 
   gmax0505_streamer #(
     .N_CHANNELS(16),

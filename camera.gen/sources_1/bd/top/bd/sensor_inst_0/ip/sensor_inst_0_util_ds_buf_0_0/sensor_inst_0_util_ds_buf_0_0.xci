@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "sensor_inst_0_util_ds_buf_0_0",
-    "cell_name": "util_ds_buf_0",
+    "cell_name": "sensor_0/util_ds_buf_0",
     "component_reference": "xilinx.com:ip:util_ds_buf:2.2",
     "ip_revision": "31",
     "gen_directory": ".",
