@@ -10,20 +10,20 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0"></ZoomStartTime>
-      <ZoomEndTime time="1,025"></ZoomEndTime>
+      <ZoomEndTime time="27"></ZoomEndTime>
       <Cursor1Time time="0"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="399"></NameColumnWidth>
-      <ValueColumnWidth column_width="123"></ValueColumnWidth>
+      <ValueColumnWidth column_width="107"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="12" />
+   <WVObjectSize size="6" />
    <wave_markers>
    </wave_markers>
-   <wvobject type="logic" fp_name="top_i/sensor_bd_0/bit_aligner_0_bit_slip">
+   <wvobject type="logic" fp_name="top_i/sensor_bd_0/bit_aligner_0_bit_slip_o">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">top_i/sensor_bd_0/bit_aligner_0_bit_slip</obj_property>
-      <obj_property name="ObjectShortName">bit_aligner_0_bit_slip</obj_property>
+      <obj_property name="ElementShortName">top_i/sensor_bd_0/bit_aligner_0_bit_slip_o</obj_property>
+      <obj_property name="ObjectShortName">bit_aligner_0_bit_slip_o</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
@@ -39,50 +39,6 @@
       <obj_property name="ElementShortName">top_i/sensor_bd_0/decoder_0_par_data_o[11:0]</obj_property>
       <obj_property name="ObjectShortName">decoder_0_par_data_o[11:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="top_i/sensor_bd_0/decoder_0_par_data_o_1">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">top_i/sensor_bd_0/decoder_0_par_data_o_1[11:0]</obj_property>
-      <obj_property name="ObjectShortName">decoder_0_par_data_o_1[11:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="top_i/sensor_bd_0/fifo_generator_0_dout">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">top_i/sensor_bd_0/fifo_generator_0_dout[11:0]</obj_property>
-      <obj_property name="ObjectShortName">fifo_generator_0_dout[11:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="top_i/sensor_bd_0/fifo_generator_0_empty">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">top_i/sensor_bd_0/fifo_generator_0_empty</obj_property>
-      <obj_property name="ObjectShortName">fifo_generator_0_empty</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="top_i/sensor_bd_0/fifo_generator_0_full">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">top_i/sensor_bd_0/fifo_generator_0_full</obj_property>
-      <obj_property name="ObjectShortName">fifo_generator_0_full</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="top_i/sensor_bd_0/util_ds_buf_0_IBUF_OUT">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">top_i/sensor_bd_0/util_ds_buf_0_IBUF_OUT</obj_property>
-      <obj_property name="ObjectShortName">util_ds_buf_0_IBUF_OUT</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="top_i/sensor_bd_0/util_ds_buf_1_IBUF_OUT">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">top_i/sensor_bd_0/util_ds_buf_1_IBUF_OUT</obj_property>
-      <obj_property name="ObjectShortName">util_ds_buf_1_IBUF_OUT</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>

@@ -1,6 +1,5 @@
 vhdl xil_defaultlib  \
 "../../../../camera.gen/sources_1/bd/top/bd/sensor_bd_inst_0/ip/sensor_bd_inst_0_axi_gpio_0_0/sim/sensor_bd_inst_0_axi_gpio_0_0.vhd" \
-"../../../../camera.gen/sources_1/bd/top/bd/sensor_bd_inst_0/ip/sensor_bd_inst_0_proc_sys_reset_0_0/sim/sensor_bd_inst_0_proc_sys_reset_0_0.vhd" \
 "../../../../camera.gen/sources_1/bd/top/bd/sensor_bd_inst_0/ip/sensor_bd_inst_0_util_ds_buf_0_0/util_ds_buf.vhd" \
 "../../../../camera.gen/sources_1/bd/top/bd/sensor_bd_inst_0/ip/sensor_bd_inst_0_util_ds_buf_0_0/sim/sensor_bd_inst_0_util_ds_buf_0_0.vhd" \
 "../../../../camera.gen/sources_1/bd/top/bd/sensor_bd_inst_0/ip/sensor_bd_inst_0_util_ds_buf_1_0/sim/sensor_bd_inst_0_util_ds_buf_1_0.vhd" \

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-| Date                      : Thu Apr 25 19:04:18 2024
+| Date                      : Fri Apr 26 13:10:24 2024
 | Host                      : testserver running 64-bit Ubuntu 20.04.6 LTS
 | Command                   : report_io -file top_wrapper_io_placed.rpt
 | Design                    : top_wrapper
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|           222 |
+|           218 |
 +---------------+
 
 
@@ -55,7 +55,7 @@ Table of Contents
 | A18        |                         | High Range | IO_L10P_T1_AD11P_35     | User IO     |                   |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | A19        |                         | High Range | IO_L10N_T1_AD11N_35     | User IO     |                   |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | A20        |                         | High Range | VCCO_35                 | VCCO        |                   |      35 |            |      |                     |                      |    3.30 |            |           |          |      |                  |              |                   |              |
-| A21        | ddr_clk_ser_0[0]        | High Range | IO_L15P_T2_DQS_AD12P_35 | OUTPUT      | LVCMOS33          |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
+| A21        |                         | High Range | IO_L15P_T2_DQS_AD12P_35 | User IO     |                   |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | A22        | USB_REFCLK              | High Range | IO_L15N_T2_DQS_AD12N_35 | OUTPUT      | LVCMOS33          |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | AA1        | DDR_dq[26]              |            | PS_DDR_DQ26_502         | INOUT       | SSTL15_T_DCI      |         |            | FAST |           DCI SPLIT |            FP_VTT_50 |         | FIXED      | PULLUP    |          |      | SPLIT            |              |                   |              |
 | AA2        | DDR_dm[3]               |            | PS_DDR_DM3_502          | INOUT       | SSTL15_T_DCI      |         |            | FAST |           DCI SPLIT |            FP_VTT_50 |         | FIXED      | PULLUP    |          |      | SPLIT            |              |                   |              |
@@ -120,8 +120,8 @@ Table of Contents
 | B17        |                         | High Range | IO_L8N_T1_AD10N_35      | User IO     |                   |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | B18        |                         |            | GND                     | GND         |                   |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
 | B19        |                         | High Range | IO_L13P_T2_MRCC_35      | User IO     |                   |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
-| B20        | ddr_data_0[0]           | High Range | IO_L13N_T2_MRCC_35      | OUTPUT      | LVCMOS33          |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
-| B21        | ddr_clk_0[0]            | High Range | IO_L18P_T2_AD13P_35     | OUTPUT      | LVCMOS33          |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
+| B20        |                         | High Range | IO_L13N_T2_MRCC_35      | User IO     |                   |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
+| B21        |                         | High Range | IO_L18P_T2_AD13P_35     | User IO     |                   |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | B22        | ESP_PSS_UART_txd        | High Range | IO_L18N_T2_AD13N_35     | OUTPUT      | LVCMOS33          |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | C1         |                         |            | GND                     | GND         |                   |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
 | C2         | DDR_dqs_p[0]            |            | PS_DDR_DQS_P0_502       | INOUT       | DIFF_SSTL15_T_DCI |         |            | FAST |                     |            FP_VTT_50 |         | FIXED      |           |          |      | SPLIT            |              |                   |              |
@@ -142,7 +142,7 @@ Table of Contents
 | C17        |                         | High Range | IO_L11P_T1_SRCC_35      | User IO     |                   |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | C18        |                         | High Range | IO_L11N_T1_SRCC_35      | User IO     |                   |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | C19        |                         | High Range | IO_L12N_T1_MRCC_35      | User IO     |                   |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
-| C20        | ddr_data_0[1]           | High Range | IO_L14N_T2_AD4N_SRCC_35 | OUTPUT      | LVCMOS33          |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
+| C20        |                         | High Range | IO_L14N_T2_AD4N_SRCC_35 | User IO     |                   |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | C21        |                         |            | GND                     | GND         |                   |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
 | C22        | ESP_PSS_UART_rxd        | High Range | IO_L16N_T2_35           | INPUT       | LVCMOS33          |      35 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | D1         | DDR_dq[0]               |            | PS_DDR_DQ0_502          | INOUT       | SSTL15_T_DCI      |         |            | FAST |           DCI SPLIT |            FP_VTT_50 |         | FIXED      |           |          |      | SPLIT            |              |                   |              |

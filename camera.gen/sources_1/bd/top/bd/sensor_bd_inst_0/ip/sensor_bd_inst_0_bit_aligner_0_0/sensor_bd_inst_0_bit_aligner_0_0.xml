@@ -14,7 +14,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:00ac07e4</spirit:value>
+            <spirit:value>9:b24ec474</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -26,7 +26,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:8221f822</spirit:value>
+            <spirit:value>9:db78f0aa</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -37,7 +37,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:8221f822</spirit:value>
+            <spirit:value>9:db78f0aa</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -53,11 +53,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Apr 25 17:59:52 UTC 2024</spirit:value>
+            <spirit:value>Fri Apr 26 12:06:18 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:00ac07e4</spirit:value>
+            <spirit:value>9:b24ec474</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -73,11 +73,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Apr 25 17:59:52 UTC 2024</spirit:value>
+            <spirit:value>Fri Apr 26 12:06:18 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:8221f822</spirit:value>
+            <spirit:value>9:db78f0aa</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -136,7 +136,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>bit_slip</spirit:name>
+        <spirit:name>bit_slip_o</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:wireTypeDefs>

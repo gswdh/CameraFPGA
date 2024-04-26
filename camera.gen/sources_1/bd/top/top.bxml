@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="43">
   <CompositeFile CompositeFileTopName="top" CanBeSetAsTop="true" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1714067993"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1714067993"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1714067993"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1714067993"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1714133179"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1714133179"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1714133179"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1714133179"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="synth/top.v" Type="Verilog">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
@@ -66,10 +66,10 @@
       <ModuleReference TargetName="sensor_bd" Type="Block Design" SubInstancePath="topsensor_bd_1">
         <TopFile Name="../../../../camera.srcs/sources_1/bd/sensor_bd/sensor_bd.bd"/>
         <FileCollection>
-          <File Name="../../../../gmax0505_streamer/ddr_deserialiser.v"/>
-          <File Name="../../../../gmax0505_streamer/decoder.v"/>
-          <File Name="../../../../gmax0505_streamer/bit_aligner.v"/>
           <File Name="../../../../gmax0505_streamer/word_detector.v"/>
+          <File Name="../../../../gmax0505_streamer/bit_aligner.v"/>
+          <File Name="../../../../gmax0505_streamer/decoder.v"/>
+          <File Name="../../../../gmax0505_streamer/ddr_deserialiser.v"/>
           <File Name="../../../../camera.srcs/sources_1/bd/sensor_bd/sensor_bd.bd"/>
         </FileCollection>
       </ModuleReference>

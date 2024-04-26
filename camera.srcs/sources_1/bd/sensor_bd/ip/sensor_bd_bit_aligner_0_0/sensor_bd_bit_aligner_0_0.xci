@@ -44,7 +44,7 @@
         "n_reset_i": [ { "direction": "in" } ],
         "en_i": [ { "direction": "in" } ],
         "aligned_i": [ { "direction": "in" } ],
-        "bit_slip": [ { "direction": "out", "driver_value": "0x0" } ]
+        "bit_slip_o": [ { "direction": "out", "driver_value": "0x0" } ]
       }
     }
   }

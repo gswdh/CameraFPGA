@@ -55,7 +55,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>bit_slip</spirit:name>
+        <spirit:name>bit_slip_o</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:wireTypeDefs>

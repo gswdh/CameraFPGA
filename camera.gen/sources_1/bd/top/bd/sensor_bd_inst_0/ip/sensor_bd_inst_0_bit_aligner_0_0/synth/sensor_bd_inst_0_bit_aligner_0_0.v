@@ -60,14 +60,14 @@ module sensor_bd_inst_0_bit_aligner_0_0 (
   n_reset_i,
   en_i,
   aligned_i,
-  bit_slip
+  bit_slip_o
 );
 
 input wire clk_i;
 input wire n_reset_i;
 input wire en_i;
 input wire aligned_i;
-output wire bit_slip;
+output wire bit_slip_o;
 
   bit_aligner #(
     .HOLD_OFF_CYCLES(32)
@@ -76,6 +76,6 @@ output wire bit_slip;
     .n_reset_i(n_reset_i),
     .en_i(en_i),
     .aligned_i(aligned_i),
-    .bit_slip(bit_slip)
+    .bit_slip_o(bit_slip_o)
   );
 endmodule

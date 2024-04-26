@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-//Date        : Thu Apr 25 18:59:48 2024
+//Date        : Fri Apr 26 13:06:14 2024
 //Host        : testserver running 64-bit Ubuntu 20.04.6 LTS
 //Command     : generate_target top.bd
 //Design      : top
@@ -1386,7 +1386,7 @@ module s00_couplers_imp_OK9T26
   assign s00_couplers_to_s00_couplers_WVALID = S_AXI_wvalid;
 endmodule
 
-(* HW_HANDOFF = "top.hwdef" *) (* core_generation_info = "top,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=top,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=36,numReposBlks=25,numNonXlnxBlks=0,numHierBlks=11,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=4,numPkgbdBlks=1,bdsource=USER,da_axi4_cnt=7,da_board_cnt=5,da_clkrst_cnt=1,da_ps7_cnt=1,synth_mode=None}" *) 
+(* CORE_GENERATION_INFO = "top,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=top,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=34,numReposBlks=23,numNonXlnxBlks=0,numHierBlks=11,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=4,numPkgbdBlks=1,bdsource=USER,da_axi4_cnt=7,da_board_cnt=5,da_clkrst_cnt=1,da_ps7_cnt=1,synth_mode=None}" *) (* HW_HANDOFF = "top.hwdef" *) 
 module top
    (BADC_SPI_MISO,
     BADC_SPI_NCS,
@@ -1428,9 +1428,6 @@ module top
     SENSOR_CLK,
     USB_NRST,
     USB_REFCLK,
-    ddr_clk_0,
-    ddr_clk_ser_0,
-    ddr_data_0,
     sen_data_0_0_clk_n,
     sen_data_0_0_clk_p,
     sen_data_n,
@@ -1440,52 +1437,49 @@ module top
   input BADC_SPI_MISO;
   output [0:0]BADC_SPI_NCS;
   output BADC_SPI_SCLK;
-  (* x_interface_info = "xilinx.com:interface:ddrx:1.0 DDR ADDR" *) (* x_interface_parameter = "XIL_INTERFACENAME DDR, AXI_ARBITRATION_SCHEME TDM, BURST_LENGTH 8, CAN_DEBUG false, CAS_LATENCY 11, CAS_WRITE_LATENCY 11, CS_ENABLED true, DATA_MASK_ENABLED true, DATA_WIDTH 8, MEMORY_TYPE COMPONENTS, MEM_ADDR_MAP ROW_COLUMN_BANK, SLOT Single, TIMEPERIOD_PS 1250" *) inout [14:0]DDR_addr;
-  (* x_interface_info = "xilinx.com:interface:ddrx:1.0 DDR BA" *) inout [2:0]DDR_ba;
-  (* x_interface_info = "xilinx.com:interface:ddrx:1.0 DDR CAS_N" *) inout DDR_cas_n;
-  (* x_interface_info = "xilinx.com:interface:ddrx:1.0 DDR CK_N" *) inout DDR_ck_n;
-  (* x_interface_info = "xilinx.com:interface:ddrx:1.0 DDR CK_P" *) inout DDR_ck_p;
-  (* x_interface_info = "xilinx.com:interface:ddrx:1.0 DDR CKE" *) inout DDR_cke;
-  (* x_interface_info = "xilinx.com:interface:ddrx:1.0 DDR CS_N" *) inout DDR_cs_n;
-  (* x_interface_info = "xilinx.com:interface:ddrx:1.0 DDR DM" *) inout [3:0]DDR_dm;
-  (* x_interface_info = "xilinx.com:interface:ddrx:1.0 DDR DQ" *) inout [31:0]DDR_dq;
-  (* x_interface_info = "xilinx.com:interface:ddrx:1.0 DDR DQS_N" *) inout [3:0]DDR_dqs_n;
-  (* x_interface_info = "xilinx.com:interface:ddrx:1.0 DDR DQS_P" *) inout [3:0]DDR_dqs_p;
-  (* x_interface_info = "xilinx.com:interface:ddrx:1.0 DDR ODT" *) inout DDR_odt;
-  (* x_interface_info = "xilinx.com:interface:ddrx:1.0 DDR RAS_N" *) inout DDR_ras_n;
-  (* x_interface_info = "xilinx.com:interface:ddrx:1.0 DDR RESET_N" *) inout DDR_reset_n;
-  (* x_interface_info = "xilinx.com:interface:ddrx:1.0 DDR WE_N" *) inout DDR_we_n;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR ADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DDR, AXI_ARBITRATION_SCHEME TDM, BURST_LENGTH 8, CAN_DEBUG false, CAS_LATENCY 11, CAS_WRITE_LATENCY 11, CS_ENABLED true, DATA_MASK_ENABLED true, DATA_WIDTH 8, MEMORY_TYPE COMPONENTS, MEM_ADDR_MAP ROW_COLUMN_BANK, SLOT Single, TIMEPERIOD_PS 1250" *) inout [14:0]DDR_addr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR BA" *) inout [2:0]DDR_ba;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR CAS_N" *) inout DDR_cas_n;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR CK_N" *) inout DDR_ck_n;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR CK_P" *) inout DDR_ck_p;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR CKE" *) inout DDR_cke;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR CS_N" *) inout DDR_cs_n;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR DM" *) inout [3:0]DDR_dm;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR DQ" *) inout [31:0]DDR_dq;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR DQS_N" *) inout [3:0]DDR_dqs_n;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR DQS_P" *) inout [3:0]DDR_dqs_p;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR ODT" *) inout DDR_odt;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR RAS_N" *) inout DDR_ras_n;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR RESET_N" *) inout DDR_reset_n;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR WE_N" *) inout DDR_we_n;
   output DISP_SPI_MOSI;
   output [0:0]DISP_SPI_NCS;
   output DISP_SPI_SCLK;
-  (* x_interface_info = "xilinx.com:interface:uart:1.0 ESP_PSS_UART RxD" *) input ESP_PSS_UART_rxd;
-  (* x_interface_info = "xilinx.com:interface:uart:1.0 ESP_PSS_UART TxD" *) output ESP_PSS_UART_txd;
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 CLK.ETH_CLK25M CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME CLK.ETH_CLK25M, CLK_DOMAIN /clk_wiz_0_clk_out1, FREQ_HZ 50000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) output ETH_CLK25M;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 ESP_PSS_UART RxD" *) input ESP_PSS_UART_rxd;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 ESP_PSS_UART TxD" *) output ESP_PSS_UART_txd;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.ETH_CLK25M CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.ETH_CLK25M, CLK_DOMAIN /clk_wiz_0_clk_out1, FREQ_HZ 50000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) output ETH_CLK25M;
   output [0:0]ETH_NRST;
-  (* x_interface_info = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO DDR_VRN" *) (* x_interface_parameter = "XIL_INTERFACENAME FIXED_IO, CAN_DEBUG false" *) inout FIXED_IO_ddr_vrn;
-  (* x_interface_info = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO DDR_VRP" *) inout FIXED_IO_ddr_vrp;
-  (* x_interface_info = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO MIO" *) inout [53:0]FIXED_IO_mio;
-  (* x_interface_info = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_CLK" *) inout FIXED_IO_ps_clk;
-  (* x_interface_info = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB" *) inout FIXED_IO_ps_porb;
-  (* x_interface_info = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB" *) inout FIXED_IO_ps_srstb;
-  (* x_interface_info = "xilinx.com:interface:gpio:1.0 FPGA_GPIO_IN TRI_I" *) input [9:0]FPGA_GPIO_IN_tri_i;
-  (* x_interface_info = "xilinx.com:interface:gpio:1.0 FPGA_GPIO_OUT TRI_O" *) output [24:0]FPGA_GPIO_OUT_tri_o;
-  (* x_interface_info = "xilinx.com:interface:uart:1.0 PSS_PMC_UART RxD" *) input PSS_PMC_UART_rxd;
-  (* x_interface_info = "xilinx.com:interface:uart:1.0 PSS_PMC_UART TxD" *) output PSS_PMC_UART_txd;
-  (* x_interface_info = "xilinx.com:interface:sdio:1.0 SDIO_1_0 CDN" *) input SDIO_1_0_cdn;
-  (* x_interface_info = "xilinx.com:interface:sdio:1.0 SDIO_1_0 WP" *) input SDIO_1_0_wp;
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 CLK.SENSOR_CLK CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME CLK.SENSOR_CLK, CLK_DOMAIN /clk_wiz_0_clk_out1, FREQ_HZ 50000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) output SENSOR_CLK;
+  (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO DDR_VRN" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME FIXED_IO, CAN_DEBUG false" *) inout FIXED_IO_ddr_vrn;
+  (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO DDR_VRP" *) inout FIXED_IO_ddr_vrp;
+  (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO MIO" *) inout [53:0]FIXED_IO_mio;
+  (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_CLK" *) inout FIXED_IO_ps_clk;
+  (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB" *) inout FIXED_IO_ps_porb;
+  (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB" *) inout FIXED_IO_ps_srstb;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 FPGA_GPIO_IN TRI_I" *) input [9:0]FPGA_GPIO_IN_tri_i;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 FPGA_GPIO_OUT TRI_O" *) output [24:0]FPGA_GPIO_OUT_tri_o;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 PSS_PMC_UART RxD" *) input PSS_PMC_UART_rxd;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 PSS_PMC_UART TxD" *) output PSS_PMC_UART_txd;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:sdio:1.0 SDIO_1_0 CDN" *) input SDIO_1_0_cdn;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:sdio:1.0 SDIO_1_0 WP" *) input SDIO_1_0_wp;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.SENSOR_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.SENSOR_CLK, CLK_DOMAIN /clk_wiz_0_clk_out1, FREQ_HZ 50000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) output SENSOR_CLK;
   output [0:0]USB_NRST;
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 CLK.USB_REFCLK CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME CLK.USB_REFCLK, CLK_DOMAIN /clk_wiz_0_clk_out1, FREQ_HZ 12000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) output USB_REFCLK;
-  output [0:0]ddr_clk_0;
-  output [0:0]ddr_clk_ser_0;
-  output [1:0]ddr_data_0;
-  (* x_interface_info = "xilinx.com:interface:diff_clock:1.0 sen_data_0_0 CLK_N" *) (* x_interface_parameter = "XIL_INTERFACENAME sen_data_0_0, CAN_DEBUG false, FREQ_HZ 100000000" *) input [0:0]sen_data_0_0_clk_n;
-  (* x_interface_info = "xilinx.com:interface:diff_clock:1.0 sen_data_0_0 CLK_P" *) input [0:0]sen_data_0_0_clk_p;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.USB_REFCLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.USB_REFCLK, CLK_DOMAIN /clk_wiz_0_clk_out1, FREQ_HZ 12000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) output USB_REFCLK;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 sen_data_0_0 CLK_N" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME sen_data_0_0, CAN_DEBUG false, FREQ_HZ 100000000" *) input [0:0]sen_data_0_0_clk_n;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 sen_data_0_0 CLK_P" *) input [0:0]sen_data_0_0_clk_p;
   input [15:0]sen_data_n;
   input [15:0]sen_data_p;
-  (* x_interface_info = "xilinx.com:interface:diff_clock:1.0 sen_ddr_clk CLK_N" *) (* x_interface_parameter = "XIL_INTERFACENAME sen_ddr_clk, CAN_DEBUG false, FREQ_HZ 100000000" *) input [0:0]sen_ddr_clk_clk_n;
-  (* x_interface_info = "xilinx.com:interface:diff_clock:1.0 sen_ddr_clk CLK_P" *) input [0:0]sen_ddr_clk_clk_p;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 sen_ddr_clk CLK_N" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME sen_ddr_clk, CAN_DEBUG false, FREQ_HZ 100000000" *) input [0:0]sen_ddr_clk_clk_n;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 sen_ddr_clk CLK_P" *) input [0:0]sen_ddr_clk_clk_p;
 
   wire [31:0]S_AXI_0_1_ARADDR;
   wire S_AXI_0_1_ARREADY;
@@ -1718,9 +1712,6 @@ module top
   wire [0:0]rst_ps7_0_50M_peripheral_aresetn;
   wire [0:0]sen_data_0_0_1_CLK_N;
   wire [0:0]sen_data_0_0_1_CLK_P;
-  wire [0:0]sensor_bd_0_ddr_clk;
-  wire [0:0]sensor_bd_0_ddr_clk_ser;
-  wire [1:0]sensor_bd_0_ddr_data;
   wire [4:0]xlconcat_0_dout;
   wire [0:0]xlconstant_0_dout;
 
@@ -1742,9 +1733,6 @@ module top
   assign axi_uartlite_1_UART_RxD = ESP_PSS_UART_rxd;
   assign data_in_from_pins_n_0_0_1 = sen_data_n[15:0];
   assign data_in_from_pins_p_0_0_1 = sen_data_p[15:0];
-  assign ddr_clk_0[0] = sensor_bd_0_ddr_clk;
-  assign ddr_clk_ser_0[0] = sensor_bd_0_ddr_clk_ser;
-  assign ddr_data_0[1:0] = sensor_bd_0_ddr_data;
   assign diff_clk_in_0_0_1_CLK_N = sen_ddr_clk_clk_n[0];
   assign diff_clk_in_0_0_1_CLK_P = sen_ddr_clk_clk_p[0];
   assign io1_i_0_1 = BADC_SPI_MISO;
@@ -2249,9 +2237,6 @@ module top
         .S_AXI_0_wready(S_AXI_0_1_WREADY),
         .S_AXI_0_wstrb(S_AXI_0_1_WSTRB),
         .S_AXI_0_wvalid(S_AXI_0_1_WVALID),
-        .ddr_clk(sensor_bd_0_ddr_clk),
-        .ddr_clk_ser(sensor_bd_0_ddr_clk_ser),
-        .ddr_data(sensor_bd_0_ddr_data),
         .sen_data_0_clk_n(sen_data_0_0_1_CLK_N),
         .sen_data_0_clk_p(sen_data_0_0_1_CLK_P),
         .sen_ddr_clk_clk_n(diff_clk_in_0_0_1_CLK_N),
