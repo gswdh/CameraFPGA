@@ -36,7 +36,7 @@
       "axi_mem_intercon": {
         "s00_couplers": {}
       },
-      "sensor_bd_0": ""
+      "sensor_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -2590,22 +2590,22 @@
           }
         }
       },
-      "sensor_bd_0": {
+      "sensor_0": {
         "parameters": {
           "ACTIVE_SIM_BD": {
-            "value": "sensor_bd.bd"
+            "value": "sensor.bd"
           },
           "ACTIVE_SYNTH_BD": {
-            "value": "sensor_bd.bd"
+            "value": "sensor.bd"
           },
           "ENABLE_DFX": {
             "value": "0"
           },
           "LIST_SIM_BD": {
-            "value": "sensor_bd.bd"
+            "value": "sensor.bd"
           },
           "LIST_SYNTH_BD": {
-            "value": "sensor_bd.bd"
+            "value": "sensor.bd"
           },
           "LOCK_PROPAGATE": {
             "value": "0"
@@ -2827,35 +2827,6 @@
               }
             }
           },
-          "sen_ddr_clk": {
-            "mode": "Slave",
-            "vlnv_bus_definition": "xilinx.com:interface:diff_clock:1.0",
-            "vlnv": "xilinx.com:interface:diff_clock_rtl:1.0",
-            "parameters": {
-              "CAN_DEBUG": {
-                "value": "false",
-                "value_src": "strong"
-              },
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "default_prop"
-              }
-            },
-            "port_maps": {
-              "CLK_N": {
-                "physical_name": "sen_ddr_clk_clk_n",
-                "direction": "I",
-                "left": "0",
-                "right": "0"
-              },
-              "CLK_P": {
-                "physical_name": "sen_ddr_clk_clk_p",
-                "direction": "I",
-                "left": "0",
-                "right": "0"
-              }
-            }
-          },
           "sen_data_0": {
             "mode": "Slave",
             "vlnv_bus_definition": "xilinx.com:interface:diff_clock:1.0",
@@ -2879,6 +2850,35 @@
               },
               "CLK_N": {
                 "physical_name": "sen_data_0_clk_n",
+                "direction": "I",
+                "left": "0",
+                "right": "0"
+              }
+            }
+          },
+          "sen_ddr_clk": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:diff_clock:1.0",
+            "vlnv": "xilinx.com:interface:diff_clock_rtl:1.0",
+            "parameters": {
+              "CAN_DEBUG": {
+                "value": "false",
+                "value_src": "strong"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "default_prop"
+              }
+            },
+            "port_maps": {
+              "CLK_P": {
+                "physical_name": "sen_ddr_clk_clk_p",
+                "direction": "I",
+                "left": "0",
+                "right": "0"
+              },
+              "CLK_N": {
+                "physical_name": "sen_ddr_clk_clk_n",
                 "direction": "I",
                 "left": "0",
                 "right": "0"
@@ -2936,14 +2936,14 @@
             }
           }
         },
-        "post_compiled_compname": "sensor_bd_inst_0",
+        "post_compiled_compname": "sensor_inst_0",
         "architecture": "zynq",
         "variant_info": {
-          "sensor_bd.bd": {
-            "scoped_diagram": "sensor_bd_inst_0.bd",
-            "design_checksum": "0x172FCD50",
-            "ref_name": "sensor_bd",
-            "ref_subinst_path": "topsensor_bd_1",
+          "sensor.bd": {
+            "scoped_diagram": "sensor_inst_0.bd",
+            "design_checksum": "0x9F892E3",
+            "ref_name": "sensor",
+            "ref_subinst_path": "top_sensor_0",
             "ref_type": "Block Design",
             "source_type": "all",
             "active": "all"
@@ -2952,12 +2952,6 @@
       }
     },
     "interface_nets": {
-      "S_AXI_0_1": {
-        "interface_ports": [
-          "sensor_bd_0/S_AXI_0",
-          "ps7_0_axi_periph/M05_AXI"
-        ]
-      },
       "axi_gpio_0_GPIO": {
         "interface_ports": [
           "FPGA_GPIO_OUT",
@@ -2986,12 +2980,6 @@
         "interface_ports": [
           "ESP_PSS_UART",
           "axi_uartlite_1/UART"
-        ]
-      },
-      "diff_clk_in_0_0_1": {
-        "interface_ports": [
-          "sen_ddr_clk",
-          "sensor_bd_0/sen_ddr_clk"
         ]
       },
       "processing_system7_0_DDR": {
@@ -3048,10 +3036,22 @@
           "axi_uartlite_1/S_AXI"
         ]
       },
+      "ps7_0_axi_periph_M05_AXI": {
+        "interface_ports": [
+          "ps7_0_axi_periph/M05_AXI",
+          "sensor_0/S_AXI_0"
+        ]
+      },
       "sen_data_0_0_1": {
         "interface_ports": [
           "sen_data_0_0",
-          "sensor_bd_0/sen_data_0"
+          "sensor_0/sen_data_0"
+        ]
+      },
+      "sen_ddr_clk_1": {
+        "interface_ports": [
+          "sen_ddr_clk",
+          "sensor_0/sen_ddr_clk"
         ]
       }
     },
@@ -3185,7 +3185,7 @@
           "processing_system7_0/S_AXI_HP0_ACLK",
           "axi_mem_intercon/M00_ACLK",
           "axi_mem_intercon/ACLK",
-          "sensor_bd_0/ACLK_0"
+          "sensor_0/ACLK_0"
         ]
       },
       "rst_ps7_0_50M_peripheral_aresetn": {
@@ -3210,7 +3210,7 @@
           "axi_mem_intercon/S00_ARESETN",
           "axi_mem_intercon/M00_ARESETN",
           "axi_mem_intercon/ARESETN",
-          "sensor_bd_0/ARESETN_0"
+          "sensor_0/ARESETN_0"
         ]
       },
       "xlconcat_0_dout": {
@@ -3243,7 +3243,7 @@
                 "range": "64K"
               },
               "SEG_axi_gpio_0_Reg_1": {
-                "address_block": "/sensor_bd_0/axi_gpio_0/S_AXI/Reg",
+                "address_block": "/sensor_0/axi_gpio_0/S_AXI/Reg",
                 "offset": "0x41210000",
                 "range": "64K"
               },

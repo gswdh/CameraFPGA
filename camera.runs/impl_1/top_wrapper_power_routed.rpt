@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-| Date             : Fri Apr 26 13:11:08 2024
+| Date             : Fri Apr 26 19:13:17 2024
 | Host             : testserver running 64-bit Ubuntu 20.04.6 LTS
 | Command          : report_power -file top_wrapper_power_routed.rpt -pb top_wrapper_power_summary_routed.pb -rpx top_wrapper_power_routed.rpx
 | Design           : top_wrapper
@@ -52,17 +52,18 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.019 |       11 |       --- |             --- |
-| Slice Logic              |     0.004 |     8242 |       --- |             --- |
-|   LUT as Logic           |     0.003 |     2452 |     53200 |            4.61 |
-|   Register               |    <0.001 |     4113 |    106400 |            3.87 |
-|   CARRY4                 |    <0.001 |       81 |     13300 |            0.61 |
-|   LUT as Shift Register  |    <0.001 |      196 |     17400 |            1.13 |
+| Clocks                   |     0.020 |       11 |       --- |             --- |
+| Slice Logic              |     0.004 |     8033 |       --- |             --- |
+|   LUT as Logic           |     0.003 |     2380 |     53200 |            4.47 |
+|   Register               |    <0.001 |     4025 |    106400 |            3.78 |
+|   CARRY4                 |    <0.001 |       77 |     13300 |            0.58 |
+|   BUFG                   |    <0.001 |        1 |        32 |            3.13 |
+|   LUT as Shift Register  |    <0.001 |      185 |     17400 |            1.06 |
 |   LUT as Distributed RAM |    <0.001 |       24 |     17400 |            0.14 |
 |   F7/F8 Muxes            |    <0.001 |        6 |     53200 |            0.01 |
-|   Others                 |     0.000 |      659 |       --- |             --- |
-| Signals                  |     0.005 |     5866 |       --- |             --- |
-| Block RAM                |     0.003 |        7 |       140 |            5.00 |
+|   Others                 |     0.000 |      639 |       --- |             --- |
+| Signals                  |     0.005 |     5746 |       --- |             --- |
+| Block RAM                |     0.002 |      6.5 |       140 |            4.64 |
 | PLL                      |     0.103 |        1 |         4 |           25.00 |
 | I/O                      |     0.075 |       56 |       200 |           28.00 |
 | PS7                      |     1.354 |        1 |       --- |             --- |
@@ -86,7 +87,7 @@ Table of Contents
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vccbram   |       1.000 |     0.002 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
+| Vccbram   |       1.000 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -158,35 +159,35 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+--------------------------+-----------+
-| Name                     | Power (W) |
-+--------------------------+-----------+
-| top_wrapper              |     1.562 |
-|   dbg_hub                |     0.003 |
-|     inst                 |     0.003 |
-|       BSCANID.u_xsdbm_id |     0.003 |
-|   top_i                  |     1.549 |
-|     axi_gpio_0           |     0.001 |
-|       U0                 |     0.001 |
-|     axi_quad_spi_0       |     0.001 |
-|       U0                 |     0.001 |
-|     axi_quad_spi_1       |     0.001 |
-|       U0                 |     0.001 |
-|     axi_uartlite_0       |     0.001 |
-|       U0                 |     0.001 |
-|     axi_uartlite_1       |     0.001 |
-|       U0                 |     0.001 |
-|     clk_wiz_0            |     0.104 |
-|       inst               |     0.104 |
-|     processing_system7_0 |     1.354 |
-|       inst               |     1.354 |
-|     ps7_0_axi_periph     |     0.005 |
-|       s00_couplers       |     0.004 |
-|     sensor_bd_0          |     0.080 |
-|       decoder_0          |     0.002 |
-|       ila_0              |     0.011 |
-|       util_ds_buf_0      |     0.033 |
-|       util_ds_buf_1      |     0.033 |
-+--------------------------+-----------+
++---------------------------+-----------+
+| Name                      | Power (W) |
++---------------------------+-----------+
+| top_wrapper               |     1.562 |
+|   dbg_hub                 |     0.003 |
+|     inst                  |     0.003 |
+|       BSCANID.u_xsdbm_id  |     0.003 |
+|   top_i                   |     1.549 |
+|     axi_gpio_0            |     0.001 |
+|       U0                  |     0.001 |
+|     axi_quad_spi_0        |     0.001 |
+|       U0                  |     0.001 |
+|     axi_quad_spi_1        |     0.001 |
+|       U0                  |     0.001 |
+|     axi_uartlite_0        |     0.001 |
+|       U0                  |     0.001 |
+|     axi_uartlite_1        |     0.001 |
+|       U0                  |     0.001 |
+|     clk_wiz_0             |     0.104 |
+|       inst                |     0.104 |
+|     processing_system7_0  |     1.354 |
+|       inst                |     1.354 |
+|     ps7_0_axi_periph      |     0.005 |
+|       s00_couplers        |     0.004 |
+|     sensor_0              |     0.080 |
+|       gmax0505_streamer_0 |     0.003 |
+|       ila_0               |     0.010 |
+|       util_ds_buf_0       |     0.033 |
+|       util_ds_buf_1       |     0.033 |
++---------------------------+-----------+
 
 

@@ -1,9 +1,0 @@
-vhdl xil_defaultlib  \
-"../../../bd/sensor_bd/ip/sensor_bd_axi_gpio_0_0/sim/sensor_bd_axi_gpio_0_0.vhd" \
-"../../../bd/sensor_bd/ip/sensor_bd_proc_sys_reset_0_2/sim/sensor_bd_proc_sys_reset_0_2.vhd" \
-"../../../bd/sensor_bd/ip/sensor_bd_util_ds_buf_0_0/util_ds_buf.vhd" \
-"../../../bd/sensor_bd/ip/sensor_bd_util_ds_buf_0_0/sim/sensor_bd_util_ds_buf_0_0.vhd" \
-"../../../bd/sensor_bd/ip/sensor_bd_util_ds_buf_0_1/sim/sensor_bd_util_ds_buf_0_1.vhd" \
-
-# Do not sort compile order
-nosort

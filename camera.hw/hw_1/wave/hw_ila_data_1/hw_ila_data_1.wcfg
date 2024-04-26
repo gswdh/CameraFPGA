@@ -10,58 +10,50 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0"></ZoomStartTime>
-      <ZoomEndTime time="27"></ZoomEndTime>
+      <ZoomEndTime time="8,193"></ZoomEndTime>
       <Cursor1Time time="0"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="399"></NameColumnWidth>
-      <ValueColumnWidth column_width="107"></ValueColumnWidth>
+      <ValueColumnWidth column_width="103"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="6" />
+   <WVObjectSize size="5" />
    <wave_markers>
    </wave_markers>
-   <wvobject type="logic" fp_name="top_i/sensor_bd_0/bit_aligner_0_bit_slip_o">
+   <wvobject type="logic" fp_name="top_i/sensor_0/gmax0505_streamer_0_pixel_clk_o">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">top_i/sensor_bd_0/bit_aligner_0_bit_slip_o</obj_property>
-      <obj_property name="ObjectShortName">bit_aligner_0_bit_slip_o</obj_property>
+      <obj_property name="ElementShortName">top_i/sensor_0/gmax0505_streamer_0_pixel_clk_o</obj_property>
+      <obj_property name="ObjectShortName">gmax0505_streamer_0_pixel_clk_o</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="top_i/sensor_bd_0/decoder_0_par_clk_o">
+   <wvobject type="array" fp_name="top_i/sensor_0/gmax0505_streamer_0_pixel_data_o">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">top_i/sensor_bd_0/decoder_0_par_clk_o</obj_property>
-      <obj_property name="ObjectShortName">decoder_0_par_clk_o</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="top_i/sensor_bd_0/decoder_0_par_data_o">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">top_i/sensor_bd_0/decoder_0_par_data_o[11:0]</obj_property>
-      <obj_property name="ObjectShortName">decoder_0_par_data_o[11:0]</obj_property>
+      <obj_property name="ElementShortName">top_i/sensor_0/gmax0505_streamer_0_pixel_data_o[11:0]</obj_property>
+      <obj_property name="ObjectShortName">gmax0505_streamer_0_pixel_data_o[11:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="top_i/sensor_bd_0/word_detector_0_detected_o">
+   <wvobject type="logic" fp_name="top_i/sensor_0/word_detector_0_detected_o">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">top_i/sensor_bd_0/word_detector_0_detected_o</obj_property>
+      <obj_property name="ElementShortName">top_i/sensor_0/word_detector_0_detected_o</obj_property>
       <obj_property name="ObjectShortName">word_detector_0_detected_o</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="top_i/sensor_bd_0/xlslice_0_Dout">
+   <wvobject type="array" fp_name="top_i/sensor_0/xlslice_0_Dout">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">top_i/sensor_bd_0/xlslice_0_Dout[11:0]</obj_property>
+      <obj_property name="ElementShortName">top_i/sensor_0/xlslice_0_Dout[11:0]</obj_property>
       <obj_property name="ObjectShortName">xlslice_0_Dout[11:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="top_i/sensor_bd_0/xlslice_1_Dout">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">top_i/sensor_bd_0/xlslice_1_Dout</obj_property>
+   <wvobject type="logic" fp_name="top_i/sensor_0/xlslice_1_Dout">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_i/sensor_0/xlslice_1_Dout</obj_property>
       <obj_property name="ObjectShortName">xlslice_1_Dout</obj_property>
-      <obj_property name="label">train_en</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
