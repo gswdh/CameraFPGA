@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-| Date         : Fri Apr 26 20:17:20 2024
+| Date         : Sat Apr 27 17:40:52 2024
 | Host         : testserver running 64-bit Ubuntu 20.04.6 LTS
 | Command      : report_methodology -file top_wrapper_methodology_drc_routed.rpt -pb top_wrapper_methodology_drc_routed.pb -rpx top_wrapper_methodology_drc_routed.rpx
 | Design       : top_wrapper
@@ -23,16 +23,16 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 276
+             Violations found: 86
 +-----------+------------------+------------------------------------------------+------------+
 | Rule      | Severity         | Description                                    | Violations |
 +-----------+------------------+------------------------------------------------+------------+
 | TIMING-6  | Critical Warning | No common primary clock between related clocks | 2          |
 | TIMING-7  | Critical Warning | No common node between related clocks          | 2          |
-| TIMING-17 | Critical Warning | Non-clocked sequential cell                    | 210        |
+| TIMING-17 | Critical Warning | Non-clocked sequential cell                    | 35         |
 | LUTAR-1   | Warning          | LUT drives async reset alert                   | 4          |
 | TIMING-10 | Warning          | Missing property on synchronizer               | 1          |
-| TIMING-18 | Warning          | Missing input or output delay                  | 57         |
+| TIMING-18 | Warning          | Missing input or output delay                  | 42         |
 +-----------+------------------+------------------------------------------------+------------+
 
 2. REPORT DETAILS
@@ -59,1052 +59,177 @@ Related violations: <none>
 
 TIMING-17#1 Critical Warning
 Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/bit_aligner0/bit_slip_o_reg/C is not reached by a timing clock
+The clock pin top_i/sensor_0/bit_aligner_0/inst/bit_slip_o_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#2 Critical Warning
 Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/bit_aligner0/hold_off_timer_reg[0]/C is not reached by a timing clock
+The clock pin top_i/sensor_0/bit_aligner_0/inst/hold_off_timer_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#3 Critical Warning
 Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/bit_aligner0/hold_off_timer_reg[10]/C is not reached by a timing clock
+The clock pin top_i/sensor_0/bit_aligner_0/inst/hold_off_timer_reg[10]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#4 Critical Warning
 Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/bit_aligner0/hold_off_timer_reg[11]/C is not reached by a timing clock
+The clock pin top_i/sensor_0/bit_aligner_0/inst/hold_off_timer_reg[11]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#5 Critical Warning
 Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/bit_aligner0/hold_off_timer_reg[12]/C is not reached by a timing clock
+The clock pin top_i/sensor_0/bit_aligner_0/inst/hold_off_timer_reg[12]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#6 Critical Warning
 Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/bit_aligner0/hold_off_timer_reg[13]/C is not reached by a timing clock
+The clock pin top_i/sensor_0/bit_aligner_0/inst/hold_off_timer_reg[13]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#7 Critical Warning
 Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/bit_aligner0/hold_off_timer_reg[14]/C is not reached by a timing clock
+The clock pin top_i/sensor_0/bit_aligner_0/inst/hold_off_timer_reg[14]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#8 Critical Warning
 Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/bit_aligner0/hold_off_timer_reg[15]/C is not reached by a timing clock
+The clock pin top_i/sensor_0/bit_aligner_0/inst/hold_off_timer_reg[15]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#9 Critical Warning
 Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/bit_aligner0/hold_off_timer_reg[1]/C is not reached by a timing clock
+The clock pin top_i/sensor_0/bit_aligner_0/inst/hold_off_timer_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#10 Critical Warning
 Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/bit_aligner0/hold_off_timer_reg[2]/C is not reached by a timing clock
+The clock pin top_i/sensor_0/bit_aligner_0/inst/hold_off_timer_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#11 Critical Warning
 Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/bit_aligner0/hold_off_timer_reg[3]/C is not reached by a timing clock
+The clock pin top_i/sensor_0/bit_aligner_0/inst/hold_off_timer_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#12 Critical Warning
 Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/bit_aligner0/hold_off_timer_reg[4]/C is not reached by a timing clock
+The clock pin top_i/sensor_0/bit_aligner_0/inst/hold_off_timer_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#13 Critical Warning
 Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/bit_aligner0/hold_off_timer_reg[5]/C is not reached by a timing clock
+The clock pin top_i/sensor_0/bit_aligner_0/inst/hold_off_timer_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#14 Critical Warning
 Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/bit_aligner0/hold_off_timer_reg[6]/C is not reached by a timing clock
+The clock pin top_i/sensor_0/bit_aligner_0/inst/hold_off_timer_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#15 Critical Warning
 Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/bit_aligner0/hold_off_timer_reg[7]/C is not reached by a timing clock
+The clock pin top_i/sensor_0/bit_aligner_0/inst/hold_off_timer_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#16 Critical Warning
 Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/bit_aligner0/hold_off_timer_reg[8]/C is not reached by a timing clock
+The clock pin top_i/sensor_0/bit_aligner_0/inst/hold_off_timer_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#17 Critical Warning
 Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/bit_aligner0/hold_off_timer_reg[9]/C is not reached by a timing clock
+The clock pin top_i/sensor_0/bit_aligner_0/inst/hold_off_timer_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#18 Critical Warning
 Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[0]/C is not reached by a timing clock
+The clock pin top_i/sensor_0/bit_aligner_1/inst/bit_slip_o_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#19 Critical Warning
 Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[100]/C is not reached by a timing clock
+The clock pin top_i/sensor_0/bit_aligner_1/inst/hold_off_timer_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#20 Critical Warning
 Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[101]/C is not reached by a timing clock
+The clock pin top_i/sensor_0/bit_aligner_1/inst/hold_off_timer_reg[10]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#21 Critical Warning
 Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[102]/C is not reached by a timing clock
+The clock pin top_i/sensor_0/bit_aligner_1/inst/hold_off_timer_reg[11]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#22 Critical Warning
 Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[103]/C is not reached by a timing clock
+The clock pin top_i/sensor_0/bit_aligner_1/inst/hold_off_timer_reg[12]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#23 Critical Warning
 Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[104]/C is not reached by a timing clock
+The clock pin top_i/sensor_0/bit_aligner_1/inst/hold_off_timer_reg[13]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#24 Critical Warning
 Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[105]/C is not reached by a timing clock
+The clock pin top_i/sensor_0/bit_aligner_1/inst/hold_off_timer_reg[14]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#25 Critical Warning
 Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[106]/C is not reached by a timing clock
+The clock pin top_i/sensor_0/bit_aligner_1/inst/hold_off_timer_reg[15]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#26 Critical Warning
 Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[107]/C is not reached by a timing clock
+The clock pin top_i/sensor_0/bit_aligner_1/inst/hold_off_timer_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#27 Critical Warning
 Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[108]/C is not reached by a timing clock
+The clock pin top_i/sensor_0/bit_aligner_1/inst/hold_off_timer_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#28 Critical Warning
 Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[109]/C is not reached by a timing clock
+The clock pin top_i/sensor_0/bit_aligner_1/inst/hold_off_timer_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#29 Critical Warning
 Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[10]/C is not reached by a timing clock
+The clock pin top_i/sensor_0/bit_aligner_1/inst/hold_off_timer_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#30 Critical Warning
 Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[110]/C is not reached by a timing clock
+The clock pin top_i/sensor_0/bit_aligner_1/inst/hold_off_timer_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#31 Critical Warning
 Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[111]/C is not reached by a timing clock
+The clock pin top_i/sensor_0/bit_aligner_1/inst/hold_off_timer_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#32 Critical Warning
 Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[112]/C is not reached by a timing clock
+The clock pin top_i/sensor_0/bit_aligner_1/inst/hold_off_timer_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#33 Critical Warning
 Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[113]/C is not reached by a timing clock
+The clock pin top_i/sensor_0/bit_aligner_1/inst/hold_off_timer_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#34 Critical Warning
 Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[114]/C is not reached by a timing clock
+The clock pin top_i/sensor_0/bit_aligner_1/inst/hold_off_timer_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#35 Critical Warning
 Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[115]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#36 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[116]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#37 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[117]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#38 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[118]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#39 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[119]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#40 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[11]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#41 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[120]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#42 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[121]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#43 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[122]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#44 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[123]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#45 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[124]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#46 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[125]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#47 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[126]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#48 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[127]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#49 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[128]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#50 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[129]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#51 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[12]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#52 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[130]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#53 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[131]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#54 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[132]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#55 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[133]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#56 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[134]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#57 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[135]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#58 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[136]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#59 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[137]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#60 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[138]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#61 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[139]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#62 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[13]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#63 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[140]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#64 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[141]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#65 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[142]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#66 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[143]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#67 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[144]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#68 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[145]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#69 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[146]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#70 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[147]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#71 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[148]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#72 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[149]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#73 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[14]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#74 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[150]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#75 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[151]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#76 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[152]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#77 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[153]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#78 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[154]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#79 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[155]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#80 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[156]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#81 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[157]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#82 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[158]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#83 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[159]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#84 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[15]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#85 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[160]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#86 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[161]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#87 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[162]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#88 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[163]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#89 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[164]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#90 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[165]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#91 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[166]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#92 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[167]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#93 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[168]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#94 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[169]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#95 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[16]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#96 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[170]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#97 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[171]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#98 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[172]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#99 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[173]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#100 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[174]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#101 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[175]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#102 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[176]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#103 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[177]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#104 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[178]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#105 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[179]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#106 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[17]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#107 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[180]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#108 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[181]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#109 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[182]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#110 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[183]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#111 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[184]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#112 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[185]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#113 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[186]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#114 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[187]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#115 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[188]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#116 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[189]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#117 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[18]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#118 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[190]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#119 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[191]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#120 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[19]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#121 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[1]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#122 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[20]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#123 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[21]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#124 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[22]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#125 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[23]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#126 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[24]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#127 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[25]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#128 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[26]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#129 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[27]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#130 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[28]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#131 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[29]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#132 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[2]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#133 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[30]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#134 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[31]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#135 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[32]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#136 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[33]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#137 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[34]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#138 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[35]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#139 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[36]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#140 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[37]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#141 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[38]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#142 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[39]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#143 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[3]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#144 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[40]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#145 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[41]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#146 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[42]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#147 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[43]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#148 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[44]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#149 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[45]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#150 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[46]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#151 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[47]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#152 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[48]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#153 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[49]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#154 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[4]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#155 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[50]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#156 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[51]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#157 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[52]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#158 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[53]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#159 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[54]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#160 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[55]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#161 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[56]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#162 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[57]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#163 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[58]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#164 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[59]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#165 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[5]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#166 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[60]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#167 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[61]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#168 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[62]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#169 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[63]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#170 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[64]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#171 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[65]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#172 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[66]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#173 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[67]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#174 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[68]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#175 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[69]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#176 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[6]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#177 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[70]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#178 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[71]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#179 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[72]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#180 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[73]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#181 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[74]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#182 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[75]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#183 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[76]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#184 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[77]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#185 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[78]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#186 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[79]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#187 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[7]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#188 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[80]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#189 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[81]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#190 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[82]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#191 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[83]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#192 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[84]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#193 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[85]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#194 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[86]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#195 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[87]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#196 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[88]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#197 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[89]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#198 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[8]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#199 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[90]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#200 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[91]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#201 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[92]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#202 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[93]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#203 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[94]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#204 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[95]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#205 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[96]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#206 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[97]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#207 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[98]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#208 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[99]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#209 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/pixel_data_o_reg[9]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#210 Critical Warning
-Non-clocked sequential cell  
-The clock pin top_i/sensor_0/gmax0505_streamer_0/inst/word_detector0/detected_o_reg/C is not reached by a timing clock
+The clock pin top_i/sensor_0/word_detector_0/inst/detected_o_reg/C is not reached by a timing clock
 Related violations: <none>
 
 LUTAR-1#1 Warning
@@ -1202,225 +327,150 @@ Related violations: <none>
 
 TIMING-18#13 Warning
 Missing input or output delay  
-An input delay is missing on sen_data_0_0_clk_p[0] relative to the rising and/or falling clock edge(s) of sen_ddr_clk_clk_p[0].
+An input delay is missing on sen_ddr_data_0_0_clk_p[0] relative to the rising and/or falling clock edge(s) of sen_ddr_clk_clk_p[0].
 Related violations: <none>
 
 TIMING-18#14 Warning
 Missing input or output delay  
-An input delay is missing on sen_data_10_0_clk_p[0] relative to the rising and/or falling clock edge(s) of sen_ddr_clk_clk_p[0].
+An output delay is missing on ESP_PSS_UART_txd relative to the rising and/or falling clock edge(s) of clk_fpga_0.
 Related violations: <none>
 
 TIMING-18#15 Warning
 Missing input or output delay  
-An input delay is missing on sen_data_11_0_clk_p[0] relative to the rising and/or falling clock edge(s) of sen_ddr_clk_clk_p[0].
+An output delay is missing on ETH_NRST[0] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
 Related violations: <none>
 
 TIMING-18#16 Warning
 Missing input or output delay  
-An input delay is missing on sen_data_12_0_clk_p[0] relative to the rising and/or falling clock edge(s) of sen_ddr_clk_clk_p[0].
+An output delay is missing on FPGA_GPIO_OUT_tri_o[0] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
 Related violations: <none>
 
 TIMING-18#17 Warning
 Missing input or output delay  
-An input delay is missing on sen_data_13_0_clk_p[0] relative to the rising and/or falling clock edge(s) of sen_ddr_clk_clk_p[0].
+An output delay is missing on FPGA_GPIO_OUT_tri_o[10] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
 Related violations: <none>
 
 TIMING-18#18 Warning
 Missing input or output delay  
-An input delay is missing on sen_data_14_0_clk_p[0] relative to the rising and/or falling clock edge(s) of sen_ddr_clk_clk_p[0].
+An output delay is missing on FPGA_GPIO_OUT_tri_o[11] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
 Related violations: <none>
 
 TIMING-18#19 Warning
 Missing input or output delay  
-An input delay is missing on sen_data_15_0_clk_p[0] relative to the rising and/or falling clock edge(s) of sen_ddr_clk_clk_p[0].
+An output delay is missing on FPGA_GPIO_OUT_tri_o[12] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
 Related violations: <none>
 
 TIMING-18#20 Warning
 Missing input or output delay  
-An input delay is missing on sen_data_1_0_clk_p[0] relative to the rising and/or falling clock edge(s) of sen_ddr_clk_clk_p[0].
+An output delay is missing on FPGA_GPIO_OUT_tri_o[13] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
 Related violations: <none>
 
 TIMING-18#21 Warning
 Missing input or output delay  
-An input delay is missing on sen_data_2_0_clk_p[0] relative to the rising and/or falling clock edge(s) of sen_ddr_clk_clk_p[0].
+An output delay is missing on FPGA_GPIO_OUT_tri_o[14] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
 Related violations: <none>
 
 TIMING-18#22 Warning
 Missing input or output delay  
-An input delay is missing on sen_data_3_0_clk_p[0] relative to the rising and/or falling clock edge(s) of sen_ddr_clk_clk_p[0].
+An output delay is missing on FPGA_GPIO_OUT_tri_o[15] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
 Related violations: <none>
 
 TIMING-18#23 Warning
 Missing input or output delay  
-An input delay is missing on sen_data_4_0_clk_p[0] relative to the rising and/or falling clock edge(s) of sen_ddr_clk_clk_p[0].
+An output delay is missing on FPGA_GPIO_OUT_tri_o[16] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
 Related violations: <none>
 
 TIMING-18#24 Warning
 Missing input or output delay  
-An input delay is missing on sen_data_5_0_clk_p[0] relative to the rising and/or falling clock edge(s) of sen_ddr_clk_clk_p[0].
+An output delay is missing on FPGA_GPIO_OUT_tri_o[17] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
 Related violations: <none>
 
 TIMING-18#25 Warning
 Missing input or output delay  
-An input delay is missing on sen_data_6_0_clk_p[0] relative to the rising and/or falling clock edge(s) of sen_ddr_clk_clk_p[0].
+An output delay is missing on FPGA_GPIO_OUT_tri_o[18] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
 Related violations: <none>
 
 TIMING-18#26 Warning
 Missing input or output delay  
-An input delay is missing on sen_data_7_0_clk_p[0] relative to the rising and/or falling clock edge(s) of sen_ddr_clk_clk_p[0].
+An output delay is missing on FPGA_GPIO_OUT_tri_o[19] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
 Related violations: <none>
 
 TIMING-18#27 Warning
 Missing input or output delay  
-An input delay is missing on sen_data_8_0_clk_p[0] relative to the rising and/or falling clock edge(s) of sen_ddr_clk_clk_p[0].
+An output delay is missing on FPGA_GPIO_OUT_tri_o[1] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
 Related violations: <none>
 
 TIMING-18#28 Warning
 Missing input or output delay  
-An input delay is missing on sen_data_9_0_clk_p[0] relative to the rising and/or falling clock edge(s) of sen_ddr_clk_clk_p[0].
+An output delay is missing on FPGA_GPIO_OUT_tri_o[20] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
 Related violations: <none>
 
 TIMING-18#29 Warning
 Missing input or output delay  
-An output delay is missing on ESP_PSS_UART_txd relative to the rising and/or falling clock edge(s) of clk_fpga_0.
+An output delay is missing on FPGA_GPIO_OUT_tri_o[21] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
 Related violations: <none>
 
 TIMING-18#30 Warning
 Missing input or output delay  
-An output delay is missing on ETH_NRST[0] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
+An output delay is missing on FPGA_GPIO_OUT_tri_o[22] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
 Related violations: <none>
 
 TIMING-18#31 Warning
 Missing input or output delay  
-An output delay is missing on FPGA_GPIO_OUT_tri_o[0] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
+An output delay is missing on FPGA_GPIO_OUT_tri_o[23] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
 Related violations: <none>
 
 TIMING-18#32 Warning
 Missing input or output delay  
-An output delay is missing on FPGA_GPIO_OUT_tri_o[10] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
+An output delay is missing on FPGA_GPIO_OUT_tri_o[24] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
 Related violations: <none>
 
 TIMING-18#33 Warning
 Missing input or output delay  
-An output delay is missing on FPGA_GPIO_OUT_tri_o[11] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
+An output delay is missing on FPGA_GPIO_OUT_tri_o[2] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
 Related violations: <none>
 
 TIMING-18#34 Warning
 Missing input or output delay  
-An output delay is missing on FPGA_GPIO_OUT_tri_o[12] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
+An output delay is missing on FPGA_GPIO_OUT_tri_o[3] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
 Related violations: <none>
 
 TIMING-18#35 Warning
 Missing input or output delay  
-An output delay is missing on FPGA_GPIO_OUT_tri_o[13] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
+An output delay is missing on FPGA_GPIO_OUT_tri_o[4] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
 Related violations: <none>
 
 TIMING-18#36 Warning
 Missing input or output delay  
-An output delay is missing on FPGA_GPIO_OUT_tri_o[14] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
+An output delay is missing on FPGA_GPIO_OUT_tri_o[5] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
 Related violations: <none>
 
 TIMING-18#37 Warning
 Missing input or output delay  
-An output delay is missing on FPGA_GPIO_OUT_tri_o[15] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
+An output delay is missing on FPGA_GPIO_OUT_tri_o[6] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
 Related violations: <none>
 
 TIMING-18#38 Warning
 Missing input or output delay  
-An output delay is missing on FPGA_GPIO_OUT_tri_o[16] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
+An output delay is missing on FPGA_GPIO_OUT_tri_o[7] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
 Related violations: <none>
 
 TIMING-18#39 Warning
 Missing input or output delay  
-An output delay is missing on FPGA_GPIO_OUT_tri_o[17] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
+An output delay is missing on FPGA_GPIO_OUT_tri_o[8] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
 Related violations: <none>
 
 TIMING-18#40 Warning
 Missing input or output delay  
-An output delay is missing on FPGA_GPIO_OUT_tri_o[18] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
+An output delay is missing on FPGA_GPIO_OUT_tri_o[9] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
 Related violations: <none>
 
 TIMING-18#41 Warning
 Missing input or output delay  
-An output delay is missing on FPGA_GPIO_OUT_tri_o[19] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
-Related violations: <none>
-
-TIMING-18#42 Warning
-Missing input or output delay  
-An output delay is missing on FPGA_GPIO_OUT_tri_o[1] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
-Related violations: <none>
-
-TIMING-18#43 Warning
-Missing input or output delay  
-An output delay is missing on FPGA_GPIO_OUT_tri_o[20] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
-Related violations: <none>
-
-TIMING-18#44 Warning
-Missing input or output delay  
-An output delay is missing on FPGA_GPIO_OUT_tri_o[21] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
-Related violations: <none>
-
-TIMING-18#45 Warning
-Missing input or output delay  
-An output delay is missing on FPGA_GPIO_OUT_tri_o[22] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
-Related violations: <none>
-
-TIMING-18#46 Warning
-Missing input or output delay  
-An output delay is missing on FPGA_GPIO_OUT_tri_o[23] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
-Related violations: <none>
-
-TIMING-18#47 Warning
-Missing input or output delay  
-An output delay is missing on FPGA_GPIO_OUT_tri_o[24] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
-Related violations: <none>
-
-TIMING-18#48 Warning
-Missing input or output delay  
-An output delay is missing on FPGA_GPIO_OUT_tri_o[2] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
-Related violations: <none>
-
-TIMING-18#49 Warning
-Missing input or output delay  
-An output delay is missing on FPGA_GPIO_OUT_tri_o[3] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
-Related violations: <none>
-
-TIMING-18#50 Warning
-Missing input or output delay  
-An output delay is missing on FPGA_GPIO_OUT_tri_o[4] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
-Related violations: <none>
-
-TIMING-18#51 Warning
-Missing input or output delay  
-An output delay is missing on FPGA_GPIO_OUT_tri_o[5] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
-Related violations: <none>
-
-TIMING-18#52 Warning
-Missing input or output delay  
-An output delay is missing on FPGA_GPIO_OUT_tri_o[6] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
-Related violations: <none>
-
-TIMING-18#53 Warning
-Missing input or output delay  
-An output delay is missing on FPGA_GPIO_OUT_tri_o[7] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
-Related violations: <none>
-
-TIMING-18#54 Warning
-Missing input or output delay  
-An output delay is missing on FPGA_GPIO_OUT_tri_o[8] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
-Related violations: <none>
-
-TIMING-18#55 Warning
-Missing input or output delay  
-An output delay is missing on FPGA_GPIO_OUT_tri_o[9] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
-Related violations: <none>
-
-TIMING-18#56 Warning
-Missing input or output delay  
 An output delay is missing on PSS_PMC_UART_txd relative to the rising and/or falling clock edge(s) of clk_fpga_0.
 Related violations: <none>
 
-TIMING-18#57 Warning
+TIMING-18#42 Warning
 Missing input or output delay  
 An output delay is missing on USB_NRST[0] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
 Related violations: <none>

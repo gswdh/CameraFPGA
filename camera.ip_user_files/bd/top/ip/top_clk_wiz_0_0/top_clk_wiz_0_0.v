@@ -58,7 +58,7 @@
 // badc_spi_clk__10.00000______0.000______50.0______695.891_____87.180
 // disp_spi_clk__10.00000______0.000______50.0______695.891_____87.180
 // sensor_clk__50.00000______0.000______50.0______288.246_____87.180
-// ddr_ref_clk__200.00000______0.000______50.0______214.814_____87.180
+// delay_clk__200.00000______0.000______50.0______214.814_____87.180
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
@@ -77,7 +77,7 @@ module top_clk_wiz_0_0
   output        badc_spi_clk,
   output        disp_spi_clk,
   output        sensor_clk,
-  output        ddr_ref_clk,
+  output        delay_clk,
   // Status and control signals
   input         resetn,
  // Clock in ports
@@ -92,7 +92,7 @@ module top_clk_wiz_0_0
   .badc_spi_clk(badc_spi_clk),
   .disp_spi_clk(disp_spi_clk),
   .sensor_clk(sensor_clk),
-  .ddr_ref_clk(ddr_ref_clk),
+  .delay_clk(delay_clk),
   // Status and control signals               
   .resetn(resetn), 
  // Clock in ports

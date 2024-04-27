@@ -58,7 +58,7 @@
 // badc_spi_clk__10.00000______0.000______50.0______695.891_____87.180
 // disp_spi_clk__10.00000______0.000______50.0______695.891_____87.180
 // sensor_clk__50.00000______0.000______50.0______288.246_____87.180
-// ddr_ref_clk__200.00000______0.000______50.0______214.814_____87.180
+// delay_clk__200.00000______0.000______50.0______214.814_____87.180
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
@@ -76,7 +76,7 @@ module top_clk_wiz_0_0_clk_wiz
   output        badc_spi_clk,
   output        disp_spi_clk,
   output        sensor_clk,
-  output        ddr_ref_clk,
+  output        delay_clk,
   // Status and control signals
   input         resetn,
   input         clk_in1
@@ -104,7 +104,7 @@ wire clk_in2_top_clk_wiz_0_0;
   wire        badc_spi_clk_top_clk_wiz_0_0;
   wire        disp_spi_clk_top_clk_wiz_0_0;
   wire        sensor_clk_top_clk_wiz_0_0;
-  wire        ddr_ref_clk_top_clk_wiz_0_0;
+  wire        delay_clk_top_clk_wiz_0_0;
   wire        clk_out7_top_clk_wiz_0_0;
 
   wire [15:0] do_unused;
@@ -154,7 +154,7 @@ wire clk_in2_top_clk_wiz_0_0;
     .CLKOUT2             (badc_spi_clk_top_clk_wiz_0_0),
     .CLKOUT3             (disp_spi_clk_top_clk_wiz_0_0),
     .CLKOUT4             (sensor_clk_top_clk_wiz_0_0),
-    .CLKOUT5             (ddr_ref_clk_top_clk_wiz_0_0),
+    .CLKOUT5             (delay_clk_top_clk_wiz_0_0),
      // Input clock control
     .CLKFBIN             (clkfbout_buf_top_clk_wiz_0_0),
     .CLKIN1              (clk_in1_top_clk_wiz_0_0),
@@ -211,8 +211,8 @@ wire clk_in2_top_clk_wiz_0_0;
     .I   (sensor_clk_top_clk_wiz_0_0));
 
   BUFG clkout6_buf
-   (.O   (ddr_ref_clk),
-    .I   (ddr_ref_clk_top_clk_wiz_0_0));
+   (.O   (delay_clk),
+    .I   (delay_clk_top_clk_wiz_0_0));
 
 
 

@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-//Date        : Fri Apr 26 20:10:18 2024
+//Date        : Sat Apr 27 16:34:42 2024
 //Host        : testserver running 64-bit Ubuntu 20.04.6 LTS
 //Command     : generate_target top.bd
 //Design      : top
@@ -1386,7 +1386,7 @@ module s00_couplers_imp_OK9T26
   assign s00_couplers_to_s00_couplers_WVALID = S_AXI_wvalid;
 endmodule
 
-(* CORE_GENERATION_INFO = "top,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=top,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=46,numReposBlks=35,numNonXlnxBlks=0,numHierBlks=11,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=1,bdsource=USER,da_axi4_cnt=8,da_board_cnt=7,da_clkrst_cnt=1,da_ps7_cnt=1,synth_mode=None}" *) (* HW_HANDOFF = "top.hwdef" *) 
+(* CORE_GENERATION_INFO = "top,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=top,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=35,numReposBlks=24,numNonXlnxBlks=0,numHierBlks=11,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=6,numPkgbdBlks=1,bdsource=USER,da_axi4_cnt=8,da_board_cnt=7,da_clkrst_cnt=1,da_ps7_cnt=1,synth_mode=None}" *) (* HW_HANDOFF = "top.hwdef" *) 
 module top
    (BADC_SPI_MISO,
     BADC_SPI_NCS,
@@ -1428,42 +1428,12 @@ module top
     SENSOR_CLK,
     USB_NRST,
     USB_REFCLK,
-    sen_data_0_0_clk_n,
-    sen_data_0_0_clk_p,
-    sen_data_10_0_clk_n,
-    sen_data_10_0_clk_p,
-    sen_data_11_0_clk_n,
-    sen_data_11_0_clk_p,
-    sen_data_12_0_clk_n,
-    sen_data_12_0_clk_p,
-    sen_data_13_0_clk_n,
-    sen_data_13_0_clk_p,
-    sen_data_14_0_clk_n,
-    sen_data_14_0_clk_p,
-    sen_data_15_0_clk_n,
-    sen_data_15_0_clk_p,
-    sen_data_1_0_clk_n,
-    sen_data_1_0_clk_p,
-    sen_data_2_0_clk_n,
-    sen_data_2_0_clk_p,
-    sen_data_3_0_clk_n,
-    sen_data_3_0_clk_p,
-    sen_data_4_0_clk_n,
-    sen_data_4_0_clk_p,
-    sen_data_5_0_clk_n,
-    sen_data_5_0_clk_p,
-    sen_data_6_0_clk_n,
-    sen_data_6_0_clk_p,
-    sen_data_7_0_clk_n,
-    sen_data_7_0_clk_p,
-    sen_data_8_0_clk_n,
-    sen_data_8_0_clk_p,
-    sen_data_9_0_clk_n,
-    sen_data_9_0_clk_p,
     sen_data_n,
     sen_data_p,
     sen_ddr_clk_clk_n,
-    sen_ddr_clk_clk_p);
+    sen_ddr_clk_clk_p,
+    sen_ddr_data_0_0_clk_n,
+    sen_ddr_data_0_0_clk_p);
   input BADC_SPI_MISO;
   output [0:0]BADC_SPI_NCS;
   output BADC_SPI_SCLK;
@@ -1504,42 +1474,12 @@ module top
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.SENSOR_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.SENSOR_CLK, CLK_DOMAIN /clk_wiz_0_clk_out1, FREQ_HZ 50000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) output SENSOR_CLK;
   output [0:0]USB_NRST;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.USB_REFCLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.USB_REFCLK, CLK_DOMAIN /clk_wiz_0_clk_out1, FREQ_HZ 12000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) output USB_REFCLK;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 sen_data_0_0 CLK_N" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME sen_data_0_0, CAN_DEBUG false, FREQ_HZ 100000000" *) input [0:0]sen_data_0_0_clk_n;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 sen_data_0_0 CLK_P" *) input [0:0]sen_data_0_0_clk_p;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 sen_data_10_0 CLK_N" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME sen_data_10_0, CAN_DEBUG false, FREQ_HZ 100000000" *) input [0:0]sen_data_10_0_clk_n;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 sen_data_10_0 CLK_P" *) input [0:0]sen_data_10_0_clk_p;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 sen_data_11_0 CLK_N" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME sen_data_11_0, CAN_DEBUG false, FREQ_HZ 100000000" *) input [0:0]sen_data_11_0_clk_n;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 sen_data_11_0 CLK_P" *) input [0:0]sen_data_11_0_clk_p;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 sen_data_12_0 CLK_N" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME sen_data_12_0, CAN_DEBUG false, FREQ_HZ 100000000" *) input [0:0]sen_data_12_0_clk_n;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 sen_data_12_0 CLK_P" *) input [0:0]sen_data_12_0_clk_p;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 sen_data_13_0 CLK_N" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME sen_data_13_0, CAN_DEBUG false, FREQ_HZ 100000000" *) input [0:0]sen_data_13_0_clk_n;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 sen_data_13_0 CLK_P" *) input [0:0]sen_data_13_0_clk_p;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 sen_data_14_0 CLK_N" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME sen_data_14_0, CAN_DEBUG false, FREQ_HZ 100000000" *) input [0:0]sen_data_14_0_clk_n;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 sen_data_14_0 CLK_P" *) input [0:0]sen_data_14_0_clk_p;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 sen_data_15_0 CLK_N" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME sen_data_15_0, CAN_DEBUG false, FREQ_HZ 100000000" *) input [0:0]sen_data_15_0_clk_n;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 sen_data_15_0 CLK_P" *) input [0:0]sen_data_15_0_clk_p;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 sen_data_1_0 CLK_N" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME sen_data_1_0, CAN_DEBUG false, FREQ_HZ 100000000" *) input [0:0]sen_data_1_0_clk_n;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 sen_data_1_0 CLK_P" *) input [0:0]sen_data_1_0_clk_p;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 sen_data_2_0 CLK_N" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME sen_data_2_0, CAN_DEBUG false, FREQ_HZ 100000000" *) input [0:0]sen_data_2_0_clk_n;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 sen_data_2_0 CLK_P" *) input [0:0]sen_data_2_0_clk_p;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 sen_data_3_0 CLK_N" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME sen_data_3_0, CAN_DEBUG false, FREQ_HZ 100000000" *) input [0:0]sen_data_3_0_clk_n;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 sen_data_3_0 CLK_P" *) input [0:0]sen_data_3_0_clk_p;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 sen_data_4_0 CLK_N" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME sen_data_4_0, CAN_DEBUG false, FREQ_HZ 100000000" *) input [0:0]sen_data_4_0_clk_n;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 sen_data_4_0 CLK_P" *) input [0:0]sen_data_4_0_clk_p;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 sen_data_5_0 CLK_N" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME sen_data_5_0, CAN_DEBUG false, FREQ_HZ 100000000" *) input [0:0]sen_data_5_0_clk_n;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 sen_data_5_0 CLK_P" *) input [0:0]sen_data_5_0_clk_p;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 sen_data_6_0 CLK_N" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME sen_data_6_0, CAN_DEBUG false, FREQ_HZ 100000000" *) input [0:0]sen_data_6_0_clk_n;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 sen_data_6_0 CLK_P" *) input [0:0]sen_data_6_0_clk_p;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 sen_data_7_0 CLK_N" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME sen_data_7_0, CAN_DEBUG false, FREQ_HZ 100000000" *) input [0:0]sen_data_7_0_clk_n;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 sen_data_7_0 CLK_P" *) input [0:0]sen_data_7_0_clk_p;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 sen_data_8_0 CLK_N" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME sen_data_8_0, CAN_DEBUG false, FREQ_HZ 100000000" *) input [0:0]sen_data_8_0_clk_n;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 sen_data_8_0 CLK_P" *) input [0:0]sen_data_8_0_clk_p;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 sen_data_9_0 CLK_N" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME sen_data_9_0, CAN_DEBUG false, FREQ_HZ 100000000" *) input [0:0]sen_data_9_0_clk_n;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 sen_data_9_0 CLK_P" *) input [0:0]sen_data_9_0_clk_p;
   input [15:0]sen_data_n;
   input [15:0]sen_data_p;
   (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 sen_ddr_clk CLK_N" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME sen_ddr_clk, CAN_DEBUG false, FREQ_HZ 100000000" *) input [0:0]sen_ddr_clk_clk_n;
   (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 sen_ddr_clk CLK_P" *) input [0:0]sen_ddr_clk_clk_p;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 sen_ddr_data_0_0 CLK_N" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME sen_ddr_data_0_0, CAN_DEBUG false, FREQ_HZ 100000000" *) input [0:0]sen_ddr_data_0_0_clk_n;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 sen_ddr_data_0_0 CLK_P" *) input [0:0]sen_ddr_data_0_0_clk_p;
 
   wire [9:0]axi_gpio_0_GPIO2_TRI_I;
   wire [24:0]axi_gpio_0_GPIO_TRI_O;
@@ -1595,6 +1535,7 @@ module top
   wire axi_uartlite_1_UART_TxD;
   wire axi_uartlite_1_interrupt;
   wire clk_wiz_0_badc_spi_clk;
+  wire clk_wiz_0_delay_clk;
   wire clk_wiz_0_disp_spi_clk;
   wire clk_wiz_0_eth_clk;
   wire clk_wiz_0_sensor_clk;
@@ -1768,40 +1709,10 @@ module top
   wire [3:0]ps7_0_axi_periph_M05_AXI_WSTRB;
   wire ps7_0_axi_periph_M05_AXI_WVALID;
   wire [0:0]rst_ps7_0_50M_peripheral_aresetn;
-  wire [0:0]sen_data_0_0_1_CLK_N;
-  wire [0:0]sen_data_0_0_1_CLK_P;
-  wire [0:0]sen_data_10_0_1_CLK_N;
-  wire [0:0]sen_data_10_0_1_CLK_P;
-  wire [0:0]sen_data_11_0_1_CLK_N;
-  wire [0:0]sen_data_11_0_1_CLK_P;
-  wire [0:0]sen_data_12_0_1_CLK_N;
-  wire [0:0]sen_data_12_0_1_CLK_P;
-  wire [0:0]sen_data_13_0_1_CLK_N;
-  wire [0:0]sen_data_13_0_1_CLK_P;
-  wire [0:0]sen_data_14_0_1_CLK_N;
-  wire [0:0]sen_data_14_0_1_CLK_P;
-  wire [0:0]sen_data_15_0_1_CLK_N;
-  wire [0:0]sen_data_15_0_1_CLK_P;
-  wire [0:0]sen_data_1_0_1_CLK_N;
-  wire [0:0]sen_data_1_0_1_CLK_P;
-  wire [0:0]sen_data_2_0_1_CLK_N;
-  wire [0:0]sen_data_2_0_1_CLK_P;
-  wire [0:0]sen_data_3_0_1_CLK_N;
-  wire [0:0]sen_data_3_0_1_CLK_P;
-  wire [0:0]sen_data_4_0_1_CLK_N;
-  wire [0:0]sen_data_4_0_1_CLK_P;
-  wire [0:0]sen_data_5_0_1_CLK_N;
-  wire [0:0]sen_data_5_0_1_CLK_P;
-  wire [0:0]sen_data_6_0_1_CLK_N;
-  wire [0:0]sen_data_6_0_1_CLK_P;
-  wire [0:0]sen_data_7_0_1_CLK_N;
-  wire [0:0]sen_data_7_0_1_CLK_P;
-  wire [0:0]sen_data_8_0_1_CLK_N;
-  wire [0:0]sen_data_8_0_1_CLK_P;
-  wire [0:0]sen_data_9_0_1_CLK_N;
-  wire [0:0]sen_data_9_0_1_CLK_P;
   wire [0:0]sen_ddr_clk_1_CLK_N;
   wire [0:0]sen_ddr_clk_1_CLK_P;
+  wire [0:0]sen_ddr_data_0_0_1_CLK_N;
+  wire [0:0]sen_ddr_data_0_0_1_CLK_P;
   wire [4:0]xlconcat_0_dout;
   wire [0:0]xlconstant_0_dout;
 
@@ -1826,40 +1737,10 @@ module top
   assign io1_i_0_1 = BADC_SPI_MISO;
   assign processing_system7_0_SDIO_1_CDN = SDIO_1_0_cdn;
   assign processing_system7_0_SDIO_1_WP = SDIO_1_0_wp;
-  assign sen_data_0_0_1_CLK_N = sen_data_0_0_clk_n[0];
-  assign sen_data_0_0_1_CLK_P = sen_data_0_0_clk_p[0];
-  assign sen_data_10_0_1_CLK_N = sen_data_10_0_clk_n[0];
-  assign sen_data_10_0_1_CLK_P = sen_data_10_0_clk_p[0];
-  assign sen_data_11_0_1_CLK_N = sen_data_11_0_clk_n[0];
-  assign sen_data_11_0_1_CLK_P = sen_data_11_0_clk_p[0];
-  assign sen_data_12_0_1_CLK_N = sen_data_12_0_clk_n[0];
-  assign sen_data_12_0_1_CLK_P = sen_data_12_0_clk_p[0];
-  assign sen_data_13_0_1_CLK_N = sen_data_13_0_clk_n[0];
-  assign sen_data_13_0_1_CLK_P = sen_data_13_0_clk_p[0];
-  assign sen_data_14_0_1_CLK_N = sen_data_14_0_clk_n[0];
-  assign sen_data_14_0_1_CLK_P = sen_data_14_0_clk_p[0];
-  assign sen_data_15_0_1_CLK_N = sen_data_15_0_clk_n[0];
-  assign sen_data_15_0_1_CLK_P = sen_data_15_0_clk_p[0];
-  assign sen_data_1_0_1_CLK_N = sen_data_1_0_clk_n[0];
-  assign sen_data_1_0_1_CLK_P = sen_data_1_0_clk_p[0];
-  assign sen_data_2_0_1_CLK_N = sen_data_2_0_clk_n[0];
-  assign sen_data_2_0_1_CLK_P = sen_data_2_0_clk_p[0];
-  assign sen_data_3_0_1_CLK_N = sen_data_3_0_clk_n[0];
-  assign sen_data_3_0_1_CLK_P = sen_data_3_0_clk_p[0];
-  assign sen_data_4_0_1_CLK_N = sen_data_4_0_clk_n[0];
-  assign sen_data_4_0_1_CLK_P = sen_data_4_0_clk_p[0];
-  assign sen_data_5_0_1_CLK_N = sen_data_5_0_clk_n[0];
-  assign sen_data_5_0_1_CLK_P = sen_data_5_0_clk_p[0];
-  assign sen_data_6_0_1_CLK_N = sen_data_6_0_clk_n[0];
-  assign sen_data_6_0_1_CLK_P = sen_data_6_0_clk_p[0];
-  assign sen_data_7_0_1_CLK_N = sen_data_7_0_clk_n[0];
-  assign sen_data_7_0_1_CLK_P = sen_data_7_0_clk_p[0];
-  assign sen_data_8_0_1_CLK_N = sen_data_8_0_clk_n[0];
-  assign sen_data_8_0_1_CLK_P = sen_data_8_0_clk_p[0];
-  assign sen_data_9_0_1_CLK_N = sen_data_9_0_clk_n[0];
-  assign sen_data_9_0_1_CLK_P = sen_data_9_0_clk_p[0];
   assign sen_ddr_clk_1_CLK_N = sen_ddr_clk_clk_n[0];
   assign sen_ddr_clk_1_CLK_P = sen_ddr_clk_clk_p[0];
+  assign sen_ddr_data_0_0_1_CLK_N = sen_ddr_data_0_0_clk_n[0];
+  assign sen_ddr_data_0_0_1_CLK_P = sen_ddr_data_0_0_clk_p[0];
   top_axi_gpio_0_0 axi_gpio_0
        (.gpio2_io_i(axi_gpio_0_GPIO2_TRI_I),
         .gpio_io_o(axi_gpio_0_GPIO_TRI_O),
@@ -2060,6 +1941,7 @@ module top
   top_clk_wiz_0_0 clk_wiz_0
        (.badc_spi_clk(clk_wiz_0_badc_spi_clk),
         .clk_in1(processing_system7_0_FCLK_CLK0),
+        .delay_clk(clk_wiz_0_delay_clk),
         .disp_spi_clk(clk_wiz_0_disp_spi_clk),
         .eth_clk(clk_wiz_0_eth_clk),
         .resetn(rst_ps7_0_50M_peripheral_aresetn),
@@ -2357,40 +2239,11 @@ module top
         .S_AXI_0_wready(ps7_0_axi_periph_M05_AXI_WREADY),
         .S_AXI_0_wstrb(ps7_0_axi_periph_M05_AXI_WSTRB),
         .S_AXI_0_wvalid(ps7_0_axi_periph_M05_AXI_WVALID),
-        .sen_data_0_clk_n(sen_data_0_0_1_CLK_N),
-        .sen_data_0_clk_p(sen_data_0_0_1_CLK_P),
-        .sen_data_10_clk_n(sen_data_10_0_1_CLK_N),
-        .sen_data_10_clk_p(sen_data_10_0_1_CLK_P),
-        .sen_data_11_clk_n(sen_data_11_0_1_CLK_N),
-        .sen_data_11_clk_p(sen_data_11_0_1_CLK_P),
-        .sen_data_12_clk_n(sen_data_12_0_1_CLK_N),
-        .sen_data_12_clk_p(sen_data_12_0_1_CLK_P),
-        .sen_data_13_clk_n(sen_data_13_0_1_CLK_N),
-        .sen_data_13_clk_p(sen_data_13_0_1_CLK_P),
-        .sen_data_14_clk_n(sen_data_14_0_1_CLK_N),
-        .sen_data_14_clk_p(sen_data_14_0_1_CLK_P),
-        .sen_data_15_clk_n(sen_data_15_0_1_CLK_N),
-        .sen_data_15_clk_p(sen_data_15_0_1_CLK_P),
-        .sen_data_1_clk_n(sen_data_1_0_1_CLK_N),
-        .sen_data_1_clk_p(sen_data_1_0_1_CLK_P),
-        .sen_data_2_clk_n(sen_data_2_0_1_CLK_N),
-        .sen_data_2_clk_p(sen_data_2_0_1_CLK_P),
-        .sen_data_3_clk_n(sen_data_3_0_1_CLK_N),
-        .sen_data_3_clk_p(sen_data_3_0_1_CLK_P),
-        .sen_data_4_clk_n(sen_data_4_0_1_CLK_N),
-        .sen_data_4_clk_p(sen_data_4_0_1_CLK_P),
-        .sen_data_5_clk_n(sen_data_5_0_1_CLK_N),
-        .sen_data_5_clk_p(sen_data_5_0_1_CLK_P),
-        .sen_data_6_clk_n(sen_data_6_0_1_CLK_N),
-        .sen_data_6_clk_p(sen_data_6_0_1_CLK_P),
-        .sen_data_7_clk_n(sen_data_7_0_1_CLK_N),
-        .sen_data_7_clk_p(sen_data_7_0_1_CLK_P),
-        .sen_data_8_clk_n(sen_data_8_0_1_CLK_N),
-        .sen_data_8_clk_p(sen_data_8_0_1_CLK_P),
-        .sen_data_9_clk_n(sen_data_9_0_1_CLK_N),
-        .sen_data_9_clk_p(sen_data_9_0_1_CLK_P),
+        .ref_clk_i_0(clk_wiz_0_delay_clk),
         .sen_ddr_clk_clk_n(sen_ddr_clk_1_CLK_N),
-        .sen_ddr_clk_clk_p(sen_ddr_clk_1_CLK_P));
+        .sen_ddr_clk_clk_p(sen_ddr_clk_1_CLK_P),
+        .sen_ddr_data_0_clk_n(sen_ddr_data_0_0_1_CLK_N),
+        .sen_ddr_data_0_clk_p(sen_ddr_data_0_0_1_CLK_P));
   top_xlconcat_0_0 xlconcat_0
        (.In0(axi_uartlite_0_interrupt),
         .In1(axi_uartlite_1_interrupt),

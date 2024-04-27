@@ -1586,7 +1586,7 @@
             <spirit:name>CLK_OUT6</spirit:name>
           </spirit:logicalPort>
           <spirit:physicalPort>
-            <spirit:name>ddr_ref_clk</spirit:name>
+            <spirit:name>delay_clk</spirit:name>
           </spirit:physicalPort>
         </spirit:portMap>
       </spirit:portMaps>
@@ -1679,11 +1679,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Apr 26 19:10:43 UTC 2024</spirit:value>
+            <spirit:value>Sat Apr 27 15:32:51 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:ef2681c5</spirit:value>
+            <spirit:value>9:874142eb</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1698,11 +1698,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Apr 26 19:10:43 UTC 2024</spirit:value>
+            <spirit:value>Sat Apr 27 15:32:51 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:ef2681c5</spirit:value>
+            <spirit:value>9:874142eb</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1717,11 +1717,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Apr 26 19:10:43 UTC 2024</spirit:value>
+            <spirit:value>Sat Apr 27 15:32:51 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:e425eb39</spirit:value>
+            <spirit:value>9:1070890a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1736,11 +1736,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Apr 26 19:10:43 UTC 2024</spirit:value>
+            <spirit:value>Sat Apr 27 15:32:51 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:e425eb39</spirit:value>
+            <spirit:value>9:1070890a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1751,7 +1751,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:beef1d33</spirit:value>
+            <spirit:value>9:52f77721</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1765,11 +1765,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Apr 26 19:10:43 UTC 2024</spirit:value>
+            <spirit:value>Sat Apr 27 15:32:51 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:e425eb39</spirit:value>
+            <spirit:value>9:1070890a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1780,7 +1780,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:e425eb39</spirit:value>
+            <spirit:value>9:1070890a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2749,7 +2749,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>ddr_ref_clk</spirit:name>
+        <spirit:name>delay_clk</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:wireTypeDefs>
@@ -3078,7 +3078,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="STRING">
         <spirit:name>C_OUTCLK_SUM_ROW6</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_OUTCLK_SUM_ROW6" spirit:order="252">ddr_ref_clk__200.00000______0.000______50.0______214.814_____87.180</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_OUTCLK_SUM_ROW6" spirit:order="252">delay_clk__200.00000______0.000______50.0______214.814_____87.180</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="STRING">
         <spirit:name>C_OUTCLK_SUM_ROW7</spirit:name>
@@ -3606,7 +3606,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="STRING">
         <spirit:name>C_CLK_OUT6_PORT</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_CLK_OUT6_PORT" spirit:order="375">ddr_ref_clk</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_CLK_OUT6_PORT" spirit:order="375">delay_clk</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="STRING">
         <spirit:name>C_CLK_OUT7_PORT</spirit:name>
@@ -4575,7 +4575,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>CLK_OUT6_PORT</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.CLK_OUT6_PORT" spirit:order="49" spirit:configGroups="0 NoDisplay">ddr_ref_clk</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.CLK_OUT6_PORT" spirit:order="49" spirit:configGroups="0 NoDisplay">delay_clk</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>CLK_OUT7_PORT</spirit:name>
