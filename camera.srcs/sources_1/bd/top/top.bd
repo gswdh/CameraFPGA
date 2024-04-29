@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xE51085688034F7A2",
+      "boundary_crc": "0x51DFBA29DFA9E306",
       "device": "xc7z020clg484-2",
       "gen_directory": "../../../../camera.gen/sources_1/bd/top",
       "name": "top",
@@ -277,35 +277,6 @@
             "direction": "I"
           }
         }
-      },
-      "sen_ddr_clk": {
-        "mode": "Slave",
-        "vlnv_bus_definition": "xilinx.com:interface:diff_clock:1.0",
-        "vlnv": "xilinx.com:interface:diff_clock_rtl:1.0",
-        "parameters": {
-          "CAN_DEBUG": {
-            "value": "false",
-            "value_src": "default"
-          },
-          "FREQ_HZ": {
-            "value": "100000000",
-            "value_src": "default"
-          }
-        },
-        "port_maps": {
-          "CLK_N": {
-            "physical_name": "sen_ddr_clk_clk_n",
-            "direction": "I",
-            "left": "0",
-            "right": "0"
-          },
-          "CLK_P": {
-            "physical_name": "sen_ddr_clk_clk_p",
-            "direction": "I",
-            "left": "0",
-            "right": "0"
-          }
-        }
       }
     },
     "ports": {
@@ -431,21 +402,21 @@
           }
         }
       },
-      "sen_data_p": {
+      "ddr_clk_p_i_0_0": {
+        "direction": "I"
+      },
+      "ddr_clk_n_i_0_0": {
+        "direction": "I"
+      },
+      "ddr_data_p_i_0_0": {
         "direction": "I",
         "left": "15",
         "right": "0"
       },
-      "sen_data_n": {
+      "ddr_data_n_i_0_0": {
         "direction": "I",
         "left": "15",
         "right": "0"
-      },
-      "sen_ddr_data_p_0_0": {
-        "direction": "I"
-      },
-      "sen_ddr_data_n_0_0": {
-        "direction": "I"
       }
     },
     "components": {
@@ -2595,7 +2566,7 @@
             "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
             "parameters": {
               "ADDR_WIDTH": {
-                "value": "31",
+                "value": "16",
                 "value_src": "strong"
               },
               "ARUSER_WIDTH": {
@@ -2803,35 +2774,6 @@
                 "direction": "I"
               }
             }
-          },
-          "sen_ddr_clk": {
-            "mode": "Slave",
-            "vlnv_bus_definition": "xilinx.com:interface:diff_clock:1.0",
-            "vlnv": "xilinx.com:interface:diff_clock_rtl:1.0",
-            "parameters": {
-              "CAN_DEBUG": {
-                "value": "false",
-                "value_src": "strong"
-              },
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "default_prop"
-              }
-            },
-            "port_maps": {
-              "CLK_P": {
-                "physical_name": "sen_ddr_clk_clk_p",
-                "direction": "I",
-                "left": "0",
-                "right": "0"
-              },
-              "CLK_N": {
-                "physical_name": "sen_ddr_clk_clk_n",
-                "direction": "I",
-                "left": "0",
-                "right": "0"
-              }
-            }
           }
         },
         "ports": {
@@ -2900,11 +2842,21 @@
               }
             }
           },
-          "sen_ddr_data_p_0": {
+          "ddr_clk_p_i_0": {
             "direction": "I"
           },
-          "sen_ddr_data_n_0": {
+          "ddr_clk_n_i_0": {
             "direction": "I"
+          },
+          "ddr_data_p_i_0": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "ddr_data_n_i_0": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
           }
         },
         "post_compiled_compname": "sensor_inst_0",
@@ -2912,7 +2864,7 @@
         "variant_info": {
           "sensor.bd": {
             "scoped_diagram": "sensor_inst_0.bd",
-            "design_checksum": "0xF2CAC7FC",
+            "design_checksum": "0x6D18FAC7",
             "ref_name": "sensor",
             "ref_subinst_path": "top_sensor_0",
             "ref_type": "Block Design",
@@ -3012,12 +2964,6 @@
           "ps7_0_axi_periph/M05_AXI",
           "sensor_0/S_AXI_0"
         ]
-      },
-      "sen_ddr_clk_1": {
-        "interface_ports": [
-          "sen_ddr_clk",
-          "sensor_0/sen_ddr_clk"
-        ]
       }
     },
     "nets": {
@@ -3111,14 +3057,28 @@
           "USB_REFCLK"
         ]
       },
-      "data_in_from_pins_n_0_0_1": {
+      "ddr_clk_n_i_0_0_1": {
         "ports": [
-          "sen_data_n"
+          "ddr_clk_n_i_0_0",
+          "sensor_0/ddr_clk_n_i_0"
         ]
       },
-      "data_in_from_pins_p_0_0_1": {
+      "ddr_clk_p_i_0_0_1": {
         "ports": [
-          "sen_data_p"
+          "ddr_clk_p_i_0_0",
+          "sensor_0/ddr_clk_p_i_0"
+        ]
+      },
+      "ddr_data_n_i_0_0_1": {
+        "ports": [
+          "ddr_data_n_i_0_0",
+          "sensor_0/ddr_data_n_i_0"
+        ]
+      },
+      "ddr_data_p_i_0_0_1": {
+        "ports": [
+          "ddr_data_p_i_0_0",
+          "sensor_0/ddr_data_p_i_0"
         ]
       },
       "io1_i_0_1": {
@@ -3182,18 +3142,6 @@
           "axi_mem_intercon/M00_ARESETN",
           "axi_mem_intercon/ARESETN",
           "sensor_0/ARESETN_0"
-        ]
-      },
-      "sen_ddr_data_n_0_0_1": {
-        "ports": [
-          "sen_ddr_data_n_0_0",
-          "sensor_0/sen_ddr_data_n_0"
-        ]
-      },
-      "sen_ddr_data_p_0_0_1": {
-        "ports": [
-          "sen_ddr_data_p_0_0",
-          "sensor_0/sen_ddr_data_p_0"
         ]
       },
       "xlconcat_0_dout": {

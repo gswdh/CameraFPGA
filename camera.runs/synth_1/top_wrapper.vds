@@ -3,16 +3,16 @@
 # SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Mon Apr 29 20:55:23 2024
-# Process ID: 107066
+# Start of session at: Mon Apr 29 21:47:42 2024
+# Process ID: 134571
 # Current directory: /home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1
 # Command line: vivado -log top_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_wrapper.tcl
 # Log file: /home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/top_wrapper.vds
 # Journal file: /home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/vivado.jou
-# Running On: testserver, OS: Linux, CPU Frequency: 2558.238 MHz, CPU Physical cores: 4, Host memory: 16686 MB
+# Running On: testserver, OS: Linux, CPU Frequency: 1709.128 MHz, CPU Physical cores: 4, Host memory: 16686 MB
 #-----------------------------------------------------------
 source top_wrapper.tcl -notrace
-create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1318.531 ; gain = 0.023 ; free physical = 4111 ; free virtual = 10360
+create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1318.531 ; gain = 0.023 ; free physical = 3971 ; free virtual = 10285
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/test/Projects/CameraZynq/ip_repo/spi_dma_1_0'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/test/Xilinx/Vivado/2023.2/data/ip'.
@@ -28,9 +28,9 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 107128
+INFO: [Synth 8-7075] Helper process launched with PID 134628
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2072.684 ; gain = 403.680 ; free physical = 3167 ; free virtual = 9417
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2071.684 ; gain = 404.711 ; free physical = 3041 ; free virtual = 9356
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-11065] parameter 'CNT' becomes localparam in 'decoder' with formal parameter declaration list [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/decoder.v:19]
 INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ipshared/ae90/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:30]
@@ -489,22 +489,22 @@ INFO: [Synth 8-256] done synthesizing module 'cdc_sync__parameterized0' (0#1) [/
 INFO: [Synth 8-256] done synthesizing module 'GPIO_Core' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ipshared/6fbe/hdl/axi_gpio_v2_0_vh_rfs.vhd:181]
 INFO: [Synth 8-256] done synthesizing module 'axi_gpio' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ipshared/6fbe/hdl/axi_gpio_v2_0_vh_rfs.vhd:1356]
 INFO: [Synth 8-256] done synthesizing module 'top_axi_gpio_0_0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_axi_gpio_0_0/synth/top_axi_gpio_0_0.vhd:85]
-INFO: [Synth 8-6157] synthesizing module 'top_axi_mem_intercon_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:2258]
+INFO: [Synth 8-6157] synthesizing module 'top_axi_mem_intercon_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:2250]
 INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_OK9T26' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1110]
 INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_OK9T26' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1110]
-INFO: [Synth 8-6155] done synthesizing module 'top_axi_mem_intercon_0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:2258]
-WARNING: [Synth 8-7071] port 'S00_AXI_arready' of module 'top_axi_mem_intercon_0' is unconnected for instance 'axi_mem_intercon' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1766]
-WARNING: [Synth 8-7071] port 'S00_AXI_awready' of module 'top_axi_mem_intercon_0' is unconnected for instance 'axi_mem_intercon' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1766]
-WARNING: [Synth 8-7071] port 'S00_AXI_bid' of module 'top_axi_mem_intercon_0' is unconnected for instance 'axi_mem_intercon' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1766]
-WARNING: [Synth 8-7071] port 'S00_AXI_bresp' of module 'top_axi_mem_intercon_0' is unconnected for instance 'axi_mem_intercon' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1766]
-WARNING: [Synth 8-7071] port 'S00_AXI_bvalid' of module 'top_axi_mem_intercon_0' is unconnected for instance 'axi_mem_intercon' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1766]
-WARNING: [Synth 8-7071] port 'S00_AXI_rdata' of module 'top_axi_mem_intercon_0' is unconnected for instance 'axi_mem_intercon' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1766]
-WARNING: [Synth 8-7071] port 'S00_AXI_rid' of module 'top_axi_mem_intercon_0' is unconnected for instance 'axi_mem_intercon' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1766]
-WARNING: [Synth 8-7071] port 'S00_AXI_rlast' of module 'top_axi_mem_intercon_0' is unconnected for instance 'axi_mem_intercon' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1766]
-WARNING: [Synth 8-7071] port 'S00_AXI_rresp' of module 'top_axi_mem_intercon_0' is unconnected for instance 'axi_mem_intercon' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1766]
-WARNING: [Synth 8-7071] port 'S00_AXI_rvalid' of module 'top_axi_mem_intercon_0' is unconnected for instance 'axi_mem_intercon' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1766]
-WARNING: [Synth 8-7071] port 'S00_AXI_wready' of module 'top_axi_mem_intercon_0' is unconnected for instance 'axi_mem_intercon' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1766]
-WARNING: [Synth 8-7023] instance 'axi_mem_intercon' of module 'top_axi_mem_intercon_0' has 82 connections declared, but only 71 given [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1766]
+INFO: [Synth 8-6155] done synthesizing module 'top_axi_mem_intercon_0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:2250]
+WARNING: [Synth 8-7071] port 'S00_AXI_arready' of module 'top_axi_mem_intercon_0' is unconnected for instance 'axi_mem_intercon' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1758]
+WARNING: [Synth 8-7071] port 'S00_AXI_awready' of module 'top_axi_mem_intercon_0' is unconnected for instance 'axi_mem_intercon' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1758]
+WARNING: [Synth 8-7071] port 'S00_AXI_bid' of module 'top_axi_mem_intercon_0' is unconnected for instance 'axi_mem_intercon' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1758]
+WARNING: [Synth 8-7071] port 'S00_AXI_bresp' of module 'top_axi_mem_intercon_0' is unconnected for instance 'axi_mem_intercon' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1758]
+WARNING: [Synth 8-7071] port 'S00_AXI_bvalid' of module 'top_axi_mem_intercon_0' is unconnected for instance 'axi_mem_intercon' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1758]
+WARNING: [Synth 8-7071] port 'S00_AXI_rdata' of module 'top_axi_mem_intercon_0' is unconnected for instance 'axi_mem_intercon' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1758]
+WARNING: [Synth 8-7071] port 'S00_AXI_rid' of module 'top_axi_mem_intercon_0' is unconnected for instance 'axi_mem_intercon' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1758]
+WARNING: [Synth 8-7071] port 'S00_AXI_rlast' of module 'top_axi_mem_intercon_0' is unconnected for instance 'axi_mem_intercon' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1758]
+WARNING: [Synth 8-7071] port 'S00_AXI_rresp' of module 'top_axi_mem_intercon_0' is unconnected for instance 'axi_mem_intercon' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1758]
+WARNING: [Synth 8-7071] port 'S00_AXI_rvalid' of module 'top_axi_mem_intercon_0' is unconnected for instance 'axi_mem_intercon' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1758]
+WARNING: [Synth 8-7071] port 'S00_AXI_wready' of module 'top_axi_mem_intercon_0' is unconnected for instance 'axi_mem_intercon' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1758]
+WARNING: [Synth 8-7023] instance 'axi_mem_intercon' of module 'top_axi_mem_intercon_0' has 82 connections declared, but only 71 given [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1758]
 INFO: [Synth 8-638] synthesizing module 'top_axi_quad_spi_0_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_axi_quad_spi_0_0/synth/top_axi_quad_spi_0_0.vhd:97]
 	Parameter Async_Clk bound to: 1 - type: integer 
 	Parameter C_FAMILY bound to: zynq - type: string 
@@ -771,13 +771,13 @@ INFO: [Synth 8-256] done synthesizing module 'qspi_core_interface' (0#1) [/home/
 INFO: [Synth 8-256] done synthesizing module 'axi_quad_spi_top' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ipshared/98d8/hdl/axi_quad_spi_v3_2_rfs.vhd:34840]
 INFO: [Synth 8-256] done synthesizing module 'axi_quad_spi' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ipshared/98d8/hdl/axi_quad_spi_v3_2_rfs.vhd:36578]
 INFO: [Synth 8-256] done synthesizing module 'top_axi_quad_spi_0_0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_axi_quad_spi_0_0/synth/top_axi_quad_spi_0_0.vhd:97]
-WARNING: [Synth 8-7071] port 'io0_o' of module 'top_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1838]
-WARNING: [Synth 8-7071] port 'io0_t' of module 'top_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1838]
-WARNING: [Synth 8-7071] port 'io1_o' of module 'top_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1838]
-WARNING: [Synth 8-7071] port 'io1_t' of module 'top_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1838]
-WARNING: [Synth 8-7071] port 'sck_t' of module 'top_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1838]
-WARNING: [Synth 8-7071] port 'ss_t' of module 'top_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1838]
-WARNING: [Synth 8-7023] instance 'axi_quad_spi_0' of module 'top_axi_quad_spi_0_0' has 33 connections declared, but only 27 given [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1838]
+WARNING: [Synth 8-7071] port 'io0_o' of module 'top_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1830]
+WARNING: [Synth 8-7071] port 'io0_t' of module 'top_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1830]
+WARNING: [Synth 8-7071] port 'io1_o' of module 'top_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1830]
+WARNING: [Synth 8-7071] port 'io1_t' of module 'top_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1830]
+WARNING: [Synth 8-7071] port 'sck_t' of module 'top_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1830]
+WARNING: [Synth 8-7071] port 'ss_t' of module 'top_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1830]
+WARNING: [Synth 8-7023] instance 'axi_quad_spi_0' of module 'top_axi_quad_spi_0_0' has 33 connections declared, but only 27 given [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1830]
 INFO: [Synth 8-638] synthesizing module 'top_axi_quad_spi_0_1' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_axi_quad_spi_0_1/synth/top_axi_quad_spi_0_1.vhd:97]
 	Parameter Async_Clk bound to: 1 - type: integer 
 	Parameter C_FAMILY bound to: zynq - type: string 
@@ -831,12 +831,12 @@ INFO: [Synth 8-256] done synthesizing module 'qspi_core_interface__parameterized
 INFO: [Synth 8-256] done synthesizing module 'axi_quad_spi_top__parameterized0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ipshared/98d8/hdl/axi_quad_spi_v3_2_rfs.vhd:34840]
 INFO: [Synth 8-256] done synthesizing module 'axi_quad_spi__parameterized1' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ipshared/98d8/hdl/axi_quad_spi_v3_2_rfs.vhd:36578]
 INFO: [Synth 8-256] done synthesizing module 'top_axi_quad_spi_0_1' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_axi_quad_spi_0_1/synth/top_axi_quad_spi_0_1.vhd:97]
-WARNING: [Synth 8-7071] port 'io0_t' of module 'top_axi_quad_spi_0_1' is unconnected for instance 'axi_quad_spi_1' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1866]
-WARNING: [Synth 8-7071] port 'io1_o' of module 'top_axi_quad_spi_0_1' is unconnected for instance 'axi_quad_spi_1' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1866]
-WARNING: [Synth 8-7071] port 'io1_t' of module 'top_axi_quad_spi_0_1' is unconnected for instance 'axi_quad_spi_1' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1866]
-WARNING: [Synth 8-7071] port 'sck_t' of module 'top_axi_quad_spi_0_1' is unconnected for instance 'axi_quad_spi_1' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1866]
-WARNING: [Synth 8-7071] port 'ss_t' of module 'top_axi_quad_spi_0_1' is unconnected for instance 'axi_quad_spi_1' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1866]
-WARNING: [Synth 8-7023] instance 'axi_quad_spi_1' of module 'top_axi_quad_spi_0_1' has 33 connections declared, but only 28 given [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1866]
+WARNING: [Synth 8-7071] port 'io0_t' of module 'top_axi_quad_spi_0_1' is unconnected for instance 'axi_quad_spi_1' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1858]
+WARNING: [Synth 8-7071] port 'io1_o' of module 'top_axi_quad_spi_0_1' is unconnected for instance 'axi_quad_spi_1' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1858]
+WARNING: [Synth 8-7071] port 'io1_t' of module 'top_axi_quad_spi_0_1' is unconnected for instance 'axi_quad_spi_1' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1858]
+WARNING: [Synth 8-7071] port 'sck_t' of module 'top_axi_quad_spi_0_1' is unconnected for instance 'axi_quad_spi_1' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1858]
+WARNING: [Synth 8-7071] port 'ss_t' of module 'top_axi_quad_spi_0_1' is unconnected for instance 'axi_quad_spi_1' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1858]
+WARNING: [Synth 8-7023] instance 'axi_quad_spi_1' of module 'top_axi_quad_spi_0_1' has 33 connections declared, but only 28 given [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1858]
 INFO: [Synth 8-638] synthesizing module 'top_axi_uartlite_0_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_axi_uartlite_0_0/synth/top_axi_uartlite_0_0.vhd:86]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_S_AXI_ACLK_FREQ_HZ bound to: 100000000 - type: integer 
@@ -947,17 +947,17 @@ WARNING: [Synth 8-7071] port 'DMA2_RSTN' of module 'processing_system7_v5_5_proc
 WARNING: [Synth 8-7071] port 'DMA3_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_processing_system7_0_0/synth/top_processing_system7_0_0.v:477]
 WARNING: [Synth 8-7023] instance 'inst' of module 'processing_system7_v5_5_processing_system7' has 685 connections declared, but only 672 given [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_processing_system7_0_0/synth/top_processing_system7_0_0.v:477]
 INFO: [Synth 8-6155] done synthesizing module 'top_processing_system7_0_0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_processing_system7_0_0/synth/top_processing_system7_0_0.v:53]
-WARNING: [Synth 8-7071] port 'TTC0_WAVE0_OUT' of module 'top_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1950]
-WARNING: [Synth 8-7071] port 'TTC0_WAVE1_OUT' of module 'top_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1950]
-WARNING: [Synth 8-7071] port 'TTC0_WAVE2_OUT' of module 'top_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1950]
-WARNING: [Synth 8-7071] port 'USB1_PORT_INDCTL' of module 'top_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1950]
-WARNING: [Synth 8-7071] port 'USB1_VBUS_PWRSELECT' of module 'top_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1950]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_RCOUNT' of module 'top_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1950]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_WCOUNT' of module 'top_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1950]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_RACOUNT' of module 'top_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1950]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_WACOUNT' of module 'top_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1950]
-WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'top_processing_system7_0_0' has 116 connections declared, but only 107 given [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1950]
-INFO: [Synth 8-6157] synthesizing module 'top_ps7_0_axi_periph_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:2668]
+WARNING: [Synth 8-7071] port 'TTC0_WAVE0_OUT' of module 'top_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1942]
+WARNING: [Synth 8-7071] port 'TTC0_WAVE1_OUT' of module 'top_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1942]
+WARNING: [Synth 8-7071] port 'TTC0_WAVE2_OUT' of module 'top_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1942]
+WARNING: [Synth 8-7071] port 'USB1_PORT_INDCTL' of module 'top_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1942]
+WARNING: [Synth 8-7071] port 'USB1_VBUS_PWRSELECT' of module 'top_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1942]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_RCOUNT' of module 'top_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1942]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_WCOUNT' of module 'top_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1942]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_RACOUNT' of module 'top_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1942]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_WACOUNT' of module 'top_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1942]
+WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'top_processing_system7_0_0' has 116 connections declared, but only 107 given [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1942]
+INFO: [Synth 8-6157] synthesizing module 'top_ps7_0_axi_periph_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:2660]
 INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_1RYU2JE' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_1RYU2JE' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:13]
 INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_GEI6LB' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:145]
@@ -1078,10 +1078,10 @@ INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_1_mux_enc
 INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_30_crossbar_sasd' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ipshared/fb47/hdl/axi_crossbar_v2_1_vl_rfs.v:1234]
 INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_30_axi_crossbar' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ipshared/fb47/hdl/axi_crossbar_v2_1_vl_rfs.v:4871]
 INFO: [Synth 8-6155] done synthesizing module 'top_xbar_0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_xbar_0/synth/top_xbar_0.v:53]
-WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'top_xbar_0' is unconnected for instance 'xbar' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:3684]
-WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'top_xbar_0' is unconnected for instance 'xbar' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:3684]
-WARNING: [Synth 8-7023] instance 'xbar' of module 'top_xbar_0' has 40 connections declared, but only 38 given [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:3684]
-INFO: [Synth 8-6155] done synthesizing module 'top_ps7_0_axi_periph_0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:2668]
+WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'top_xbar_0' is unconnected for instance 'xbar' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:3676]
+WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'top_xbar_0' is unconnected for instance 'xbar' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:3676]
+WARNING: [Synth 8-7023] instance 'xbar' of module 'top_xbar_0' has 40 connections declared, but only 38 given [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:3676]
+INFO: [Synth 8-6155] done synthesizing module 'top_ps7_0_axi_periph_0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:2660]
 INFO: [Synth 8-638] synthesizing module 'top_rst_ps7_0_50M_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_rst_ps7_0_50M_0/synth/top_rst_ps7_0_50M_0.vhd:74]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
@@ -1092,15 +1092,15 @@ INFO: [Synth 8-638] synthesizing module 'top_rst_ps7_0_50M_0' [/home/test/Projec
 	Parameter C_NUM_PERP_RST bound to: 1 - type: integer 
 	Parameter C_NUM_INTERCONNECT_ARESETN bound to: 1 - type: integer 
 	Parameter C_NUM_PERP_ARESETN bound to: 1 - type: integer 
-INFO: [Synth 8-3491] module 'proc_sys_reset' declared at '/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ipshared/408c/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1271' bound to instance 'U0' of component 'proc_sys_reset' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_rst_ps7_0_50M_0/synth/top_rst_ps7_0_50M_0.vhd:129]
-INFO: [Synth 8-638] synthesizing module 'proc_sys_reset' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ipshared/408c/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1330]
+INFO: [Synth 8-3491] module 'proc_sys_reset' declared at '/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ipshared/408c/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1271' bound to instance 'U0' of component 'proc_sys_reset' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_rst_ps7_0_50M_0/synth/top_rst_ps7_0_50M_0.vhd:129]
+INFO: [Synth 8-638] synthesizing module 'proc_sys_reset' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ipshared/408c/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1330]
 	Parameter INIT bound to: 1'b1 
 	Parameter INIT bound to: 1'b1 
 	Parameter INIT bound to: 1'b0 
 	Parameter INIT bound to: 1'b1 
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-638] synthesizing module 'lpf' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ipshared/408c/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:821]
-INFO: [Synth 8-3491] module 'SRL16' declared at '/home/test/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:133721' bound to instance 'POR_SRL_I' of component 'SRL16' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ipshared/408c/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:873]
+INFO: [Synth 8-638] synthesizing module 'lpf' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ipshared/408c/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:821]
+INFO: [Synth 8-3491] module 'SRL16' declared at '/home/test/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:133721' bound to instance 'POR_SRL_I' of component 'SRL16' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ipshared/408c/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:873]
 INFO: [Synth 8-6157] synthesizing module 'SRL16' [/home/test/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:133721]
 INFO: [Synth 8-6155] done synthesizing module 'SRL16' (0#1) [/home/test/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:133721]
 INFO: [Synth 8-638] synthesizing module 'cdc_sync__parameterized8' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
@@ -1111,18 +1111,18 @@ INFO: [Synth 8-638] synthesizing module 'cdc_sync__parameterized8' [/home/test/P
 	Parameter INIT bound to: 1'b0 
 	Parameter INIT bound to: 1'b0 
 INFO: [Synth 8-256] done synthesizing module 'cdc_sync__parameterized8' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
-INFO: [Synth 8-256] done synthesizing module 'lpf' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ipshared/408c/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:821]
-INFO: [Synth 8-638] synthesizing module 'sequence_psr' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ipshared/408c/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:304]
-INFO: [Synth 8-638] synthesizing module 'upcnt_n' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ipshared/408c/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:126]
-INFO: [Synth 8-256] done synthesizing module 'upcnt_n' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ipshared/408c/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:126]
-INFO: [Synth 8-256] done synthesizing module 'sequence_psr' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ipshared/408c/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:304]
-INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ipshared/408c/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1330]
+INFO: [Synth 8-256] done synthesizing module 'lpf' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ipshared/408c/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:821]
+INFO: [Synth 8-638] synthesizing module 'sequence_psr' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ipshared/408c/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:304]
+INFO: [Synth 8-638] synthesizing module 'upcnt_n' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ipshared/408c/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:126]
+INFO: [Synth 8-256] done synthesizing module 'upcnt_n' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ipshared/408c/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:126]
+INFO: [Synth 8-256] done synthesizing module 'sequence_psr' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ipshared/408c/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:304]
+INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ipshared/408c/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1330]
 INFO: [Synth 8-256] done synthesizing module 'top_rst_ps7_0_50M_0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_rst_ps7_0_50M_0/synth/top_rst_ps7_0_50M_0.vhd:74]
-WARNING: [Synth 8-7071] port 'mb_reset' of module 'top_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:2215]
-WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'top_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:2215]
-WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'top_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:2215]
-WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'top_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:2215]
-WARNING: [Synth 8-7023] instance 'rst_ps7_0_50M' of module 'top_rst_ps7_0_50M_0' has 10 connections declared, but only 6 given [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:2215]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'top_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:2207]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'top_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:2207]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'top_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:2207]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'top_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:2207]
+WARNING: [Synth 8-7023] instance 'rst_ps7_0_50M' of module 'top_rst_ps7_0_50M_0' has 10 connections declared, but only 6 given [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:2207]
 INFO: [Synth 8-6157] synthesizing module 'sensor_inst_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/synth/sensor_inst_0.v:13]
 INFO: [Synth 8-638] synthesizing module 'sensor_inst_0_axi_gpio_0_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_axi_gpio_0_0/synth/sensor_inst_0_axi_gpio_0_0.vhd:85]
 	Parameter C_FAMILY bound to: zynq - type: string 
@@ -1235,7 +1235,10 @@ INFO: [Synth 8-256] done synthesizing module 'cdc_sync__parameterized10' (0#1) [
 INFO: [Synth 8-256] done synthesizing module 'GPIO_Core__parameterized0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ipshared/6fbe/hdl/axi_gpio_v2_0_vh_rfs.vhd:181]
 INFO: [Synth 8-256] done synthesizing module 'axi_gpio__parameterized1' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ipshared/6fbe/hdl/axi_gpio_v2_0_vh_rfs.vhd:1356]
 INFO: [Synth 8-256] done synthesizing module 'sensor_inst_0_axi_gpio_0_0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_axi_gpio_0_0/synth/sensor_inst_0_axi_gpio_0_0.vhd:85]
-INFO: [Synth 8-6157] synthesizing module 'sensor_inst_0_gmax0505_channel_0_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_gmax0505_channel_0_0/synth/sensor_inst_0_gmax0505_channel_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'sensor_inst_0_gmax0505_streamer_0_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_gmax0505_streamer_0_0/synth/sensor_inst_0_gmax0505_streamer_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'gmax0505_streamer' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:1]
+	Parameter N_CHANNELS bound to: 16 - type: integer 
+	Parameter N_BITS_PIXEL bound to: 12 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'gmax0505_channel' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_channel.v:1]
 	Parameter N_BITS_PIXEL bound to: 12 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'IBUFDS' [/home/test/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:73646]
@@ -1276,8 +1279,60 @@ INFO: [Synth 8-6157] synthesizing module 'word_detector' [/home/test/Projects/Ca
 	Parameter WORD_WIDTH bound to: 12 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'word_detector' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/word_detector.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'gmax0505_channel' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_channel.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'sensor_inst_0_gmax0505_channel_0_0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_gmax0505_channel_0_0/synth/sensor_inst_0_gmax0505_channel_0_0.v:53]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/synth/sensor_inst_0.v:155]
+WARNING: [Synth 8-7071] port 'par_clk_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
+WARNING: [Synth 8-7071] port 'delay_setting_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
+WARNING: [Synth 8-7023] instance 'channel_n' of module 'gmax0505_channel' has 10 connections declared, but only 8 given [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
+WARNING: [Synth 8-7071] port 'par_clk_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
+WARNING: [Synth 8-7071] port 'delay_setting_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
+WARNING: [Synth 8-7023] instance 'channel_n' of module 'gmax0505_channel' has 10 connections declared, but only 8 given [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
+WARNING: [Synth 8-7071] port 'par_clk_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
+WARNING: [Synth 8-7071] port 'delay_setting_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
+WARNING: [Synth 8-7023] instance 'channel_n' of module 'gmax0505_channel' has 10 connections declared, but only 8 given [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
+WARNING: [Synth 8-7071] port 'par_clk_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
+WARNING: [Synth 8-7071] port 'delay_setting_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
+WARNING: [Synth 8-7023] instance 'channel_n' of module 'gmax0505_channel' has 10 connections declared, but only 8 given [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
+WARNING: [Synth 8-7071] port 'par_clk_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
+WARNING: [Synth 8-7071] port 'delay_setting_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
+WARNING: [Synth 8-7023] instance 'channel_n' of module 'gmax0505_channel' has 10 connections declared, but only 8 given [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
+WARNING: [Synth 8-7071] port 'par_clk_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
+WARNING: [Synth 8-7071] port 'delay_setting_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
+WARNING: [Synth 8-7023] instance 'channel_n' of module 'gmax0505_channel' has 10 connections declared, but only 8 given [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
+WARNING: [Synth 8-7071] port 'par_clk_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
+WARNING: [Synth 8-7071] port 'delay_setting_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
+WARNING: [Synth 8-7023] instance 'channel_n' of module 'gmax0505_channel' has 10 connections declared, but only 8 given [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
+WARNING: [Synth 8-7071] port 'par_clk_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
+WARNING: [Synth 8-7071] port 'delay_setting_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
+WARNING: [Synth 8-7023] instance 'channel_n' of module 'gmax0505_channel' has 10 connections declared, but only 8 given [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
+WARNING: [Synth 8-7071] port 'par_clk_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
+WARNING: [Synth 8-7071] port 'delay_setting_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
+WARNING: [Synth 8-7023] instance 'channel_n' of module 'gmax0505_channel' has 10 connections declared, but only 8 given [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
+WARNING: [Synth 8-7071] port 'par_clk_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
+WARNING: [Synth 8-7071] port 'delay_setting_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
+WARNING: [Synth 8-7023] instance 'channel_n' of module 'gmax0505_channel' has 10 connections declared, but only 8 given [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
+WARNING: [Synth 8-7071] port 'par_clk_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
+WARNING: [Synth 8-7071] port 'delay_setting_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
+WARNING: [Synth 8-7023] instance 'channel_n' of module 'gmax0505_channel' has 10 connections declared, but only 8 given [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
+WARNING: [Synth 8-7071] port 'par_clk_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
+WARNING: [Synth 8-7071] port 'delay_setting_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
+WARNING: [Synth 8-7023] instance 'channel_n' of module 'gmax0505_channel' has 10 connections declared, but only 8 given [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
+WARNING: [Synth 8-7071] port 'par_clk_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
+WARNING: [Synth 8-7071] port 'delay_setting_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
+WARNING: [Synth 8-7023] instance 'channel_n' of module 'gmax0505_channel' has 10 connections declared, but only 8 given [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
+WARNING: [Synth 8-7071] port 'par_clk_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
+WARNING: [Synth 8-7071] port 'delay_setting_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
+WARNING: [Synth 8-7023] instance 'channel_n' of module 'gmax0505_channel' has 10 connections declared, but only 8 given [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
+WARNING: [Synth 8-7071] port 'par_clk_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
+WARNING: [Synth 8-7071] port 'delay_setting_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
+WARNING: [Synth 8-7023] instance 'channel_n' of module 'gmax0505_channel' has 10 connections declared, but only 8 given [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
+INFO: [Synth 8-6157] synthesizing module 'IDELAYCTRL' [/home/test/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:75727]
+INFO: [Synth 8-6155] done synthesizing module 'IDELAYCTRL' (0#1) [/home/test/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:75727]
+WARNING: [Synth 8-689] width (32) of port connection 'RDY' does not match port width (1) of module 'IDELAYCTRL' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:30]
+WARNING: [Synth 8-2900] ignoring illegal expression in output port connection [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:30]
+WARNING: [Synth 8-7071] port 'delay_setting_o' of module 'gmax0505_channel' is unconnected for instance 'channel_0' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:50]
+WARNING: [Synth 8-7023] instance 'channel_0' of module 'gmax0505_channel' has 10 connections declared, but only 9 given [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:50]
+INFO: [Synth 8-6155] done synthesizing module 'gmax0505_streamer' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sensor_inst_0_gmax0505_streamer_0_0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_gmax0505_streamer_0_0/synth/sensor_inst_0_gmax0505_streamer_0_0.v:53]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/synth/sensor_inst_0.v:153]
 INFO: [Synth 8-6157] synthesizing module 'sensor_inst_0_ila_0_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_ila_0_0/synth/sensor_inst_0_ila_0_0.v:48]
 INFO: [Synth 8-6157] synthesizing module 'CFGLUT5' [/home/test/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:2403]
 INFO: [Synth 8-6155] done synthesizing module 'CFGLUT5' (0#1) [/home/test/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:2403]
@@ -1291,52 +1346,14 @@ INFO: [Synth 8-6157] synthesizing module 'SRLC16E' [/home/test/Xilinx/Vivado/202
 INFO: [Synth 8-6155] done synthesizing module 'SRLC16E' (0#1) [/home/test/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:133826]
 INFO: [Synth 8-6157] synthesizing module 'FDRE' [/home/test/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:41005]
 INFO: [Synth 8-6155] done synthesizing module 'FDRE' (0#1) [/home/test/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:41005]
-WARNING: [Synth 8-7071] port 'clk_nobuf' of module 'ila_v6_2_14_ila' is unconnected for instance 'inst' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_ila_0_0/synth/sensor_inst_0_ila_0_0.v:3219]
-WARNING: [Synth 8-7071] port 'clkdiv_out' of module 'ila_v6_2_14_ila' is unconnected for instance 'inst' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_ila_0_0/synth/sensor_inst_0_ila_0_0.v:3219]
-WARNING: [Synth 8-7071] port 'trig_in' of module 'ila_v6_2_14_ila' is unconnected for instance 'inst' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_ila_0_0/synth/sensor_inst_0_ila_0_0.v:3219]
-WARNING: [Synth 8-7071] port 'trig_in_ack' of module 'ila_v6_2_14_ila' is unconnected for instance 'inst' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_ila_0_0/synth/sensor_inst_0_ila_0_0.v:3219]
-WARNING: [Synth 8-7071] port 'trig_out' of module 'ila_v6_2_14_ila' is unconnected for instance 'inst' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_ila_0_0/synth/sensor_inst_0_ila_0_0.v:3219]
-WARNING: [Synth 8-7071] port 'trig_out_ack' of module 'ila_v6_2_14_ila' is unconnected for instance 'inst' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_ila_0_0/synth/sensor_inst_0_ila_0_0.v:3219]
-WARNING: [Synth 8-7023] instance 'inst' of module 'ila_v6_2_14_ila' has 1033 connections declared, but only 1027 given [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_ila_0_0/synth/sensor_inst_0_ila_0_0.v:3219]
+WARNING: [Synth 8-7071] port 'clk_nobuf' of module 'ila_v6_2_14_ila' is unconnected for instance 'inst' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_ila_0_0/synth/sensor_inst_0_ila_0_0.v:3217]
+WARNING: [Synth 8-7071] port 'clkdiv_out' of module 'ila_v6_2_14_ila' is unconnected for instance 'inst' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_ila_0_0/synth/sensor_inst_0_ila_0_0.v:3217]
+WARNING: [Synth 8-7071] port 'trig_in' of module 'ila_v6_2_14_ila' is unconnected for instance 'inst' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_ila_0_0/synth/sensor_inst_0_ila_0_0.v:3217]
+WARNING: [Synth 8-7071] port 'trig_in_ack' of module 'ila_v6_2_14_ila' is unconnected for instance 'inst' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_ila_0_0/synth/sensor_inst_0_ila_0_0.v:3217]
+WARNING: [Synth 8-7071] port 'trig_out' of module 'ila_v6_2_14_ila' is unconnected for instance 'inst' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_ila_0_0/synth/sensor_inst_0_ila_0_0.v:3217]
+WARNING: [Synth 8-7071] port 'trig_out_ack' of module 'ila_v6_2_14_ila' is unconnected for instance 'inst' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_ila_0_0/synth/sensor_inst_0_ila_0_0.v:3217]
+WARNING: [Synth 8-7023] instance 'inst' of module 'ila_v6_2_14_ila' has 1033 connections declared, but only 1027 given [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_ila_0_0/synth/sensor_inst_0_ila_0_0.v:3217]
 INFO: [Synth 8-6155] done synthesizing module 'sensor_inst_0_ila_0_0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_ila_0_0/synth/sensor_inst_0_ila_0_0.v:48]
-INFO: [Synth 8-638] synthesizing module 'sensor_inst_0_proc_sys_reset_0_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_proc_sys_reset_0_0/synth/sensor_inst_0_proc_sys_reset_0_0.vhd:74]
-	Parameter C_FAMILY bound to: zynq - type: string 
-	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
-	Parameter C_AUX_RST_WIDTH bound to: 4 - type: integer 
-	Parameter C_EXT_RESET_HIGH bound to: 1'b0 
-	Parameter C_AUX_RESET_HIGH bound to: 1'b0 
-	Parameter C_NUM_BUS_RST bound to: 1 - type: integer 
-	Parameter C_NUM_PERP_RST bound to: 1 - type: integer 
-	Parameter C_NUM_INTERCONNECT_ARESETN bound to: 1 - type: integer 
-	Parameter C_NUM_PERP_ARESETN bound to: 1 - type: integer 
-INFO: [Synth 8-3491] module 'proc_sys_reset' declared at '/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ipshared/408c/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1271' bound to instance 'U0' of component 'proc_sys_reset' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_proc_sys_reset_0_0/synth/sensor_inst_0_proc_sys_reset_0_0.vhd:129]
-INFO: [Synth 8-256] done synthesizing module 'sensor_inst_0_proc_sys_reset_0_0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_proc_sys_reset_0_0/synth/sensor_inst_0_proc_sys_reset_0_0.vhd:74]
-WARNING: [Synth 8-7071] port 'mb_reset' of module 'sensor_inst_0_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/synth/sensor_inst_0.v:163]
-WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'sensor_inst_0_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/synth/sensor_inst_0.v:163]
-WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'sensor_inst_0_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/synth/sensor_inst_0.v:163]
-WARNING: [Synth 8-7071] port 'peripheral_aresetn' of module 'sensor_inst_0_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/synth/sensor_inst_0.v:163]
-WARNING: [Synth 8-7023] instance 'proc_sys_reset_0' of module 'sensor_inst_0_proc_sys_reset_0_0' has 10 connections declared, but only 6 given [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/synth/sensor_inst_0.v:163]
-INFO: [Synth 8-638] synthesizing module 'sensor_inst_0_util_ds_buf_0_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_util_ds_buf_0_0/synth/sensor_inst_0_util_ds_buf_0_0.vhd:64]
-	Parameter C_BUF_TYPE bound to: IBUFDS - type: string 
-	Parameter C_SIZE bound to: 1 - type: integer 
-	Parameter C_BUFGCE_DIV bound to: 1 - type: integer 
-	Parameter C_BUFG_GT_SYNC bound to: 0 - type: integer 
-	Parameter C_SIM_DEVICE bound to: VERSAL_AI_CORE_ES1 - type: string 
-	Parameter C_OBUFDS_GTE5_ADV bound to: 2'b00 
-	Parameter C_REFCLK_ICNTL_TX bound to: 5'b00000 
-INFO: [Synth 8-3491] module 'util_ds_buf' declared at '/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_util_ds_buf_0_0/util_ds_buf.vhd:73' bound to instance 'U0' of component 'util_ds_buf' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_util_ds_buf_0_0/synth/sensor_inst_0_util_ds_buf_0_0.vhd:201]
-INFO: [Synth 8-638] synthesizing module 'util_ds_buf' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_util_ds_buf_0_0/util_ds_buf.vhd:252]
-INFO: [Synth 8-256] done synthesizing module 'util_ds_buf' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_util_ds_buf_0_0/util_ds_buf.vhd:252]
-INFO: [Synth 8-256] done synthesizing module 'sensor_inst_0_util_ds_buf_0_0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_util_ds_buf_0_0/synth/sensor_inst_0_util_ds_buf_0_0.vhd:64]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/synth/sensor_inst_0.v:174]
-INFO: [Synth 8-6157] synthesizing module 'sensor_inst_0_util_idelay_ctrl_0_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_util_idelay_ctrl_0_0/synth/sensor_inst_0_util_idelay_ctrl_0_0.v:53]
-INFO: [Synth 8-6157] synthesizing module 'util_idelay_ctrl_v1_0_3_util_idelay_ctrl' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ipshared/6e31/hdl/util_idelay_ctrl_v1_0_vl_rfs.v:48]
-INFO: [Synth 8-6157] synthesizing module 'IDELAYCTRL' [/home/test/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:75727]
-INFO: [Synth 8-6155] done synthesizing module 'IDELAYCTRL' (0#1) [/home/test/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:75727]
-INFO: [Synth 8-6155] done synthesizing module 'util_idelay_ctrl_v1_0_3_util_idelay_ctrl' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ipshared/6e31/hdl/util_idelay_ctrl_v1_0_vl_rfs.v:48]
-INFO: [Synth 8-6155] done synthesizing module 'sensor_inst_0_util_idelay_ctrl_0_0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_util_idelay_ctrl_0_0/synth/sensor_inst_0_util_idelay_ctrl_0_0.v:53]
-WARNING: [Synth 8-7071] port 'rdy' of module 'sensor_inst_0_util_idelay_ctrl_0_0' is unconnected for instance 'util_idelay_ctrl_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/synth/sensor_inst_0.v:174]
-WARNING: [Synth 8-7023] instance 'util_idelay_ctrl_0' of module 'sensor_inst_0_util_idelay_ctrl_0_0' has 3 connections declared, but only 2 given [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/synth/sensor_inst_0.v:174]
 INFO: [Synth 8-6157] synthesizing module 'sensor_inst_0_xlslice_0_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_xlslice_0_0/synth/sensor_inst_0_xlslice_0_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_3_xlslice' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ipshared/217a/hdl/xlslice_v1_0_vl_rfs.v:58]
 INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_3_xlslice' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ipshared/217a/hdl/xlslice_v1_0_vl_rfs.v:58]
@@ -1352,12 +1369,10 @@ INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_5_xlconcat' (0#1) [
 INFO: [Synth 8-6155] done synthesizing module 'top_xlconcat_0_0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_xlconcat_0_0/synth/top_xlconcat_0_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'top_xlconstant_0_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_xlconstant_0_0/synth/top_xlconstant_0_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_8_xlconstant' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ipshared/d390/hdl/xlconstant_v1_1_vl_rfs.v:68]
-INFO: [Common 17-14] Message 'Synth 8-6157' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_8_xlconstant' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ipshared/d390/hdl/xlconstant_v1_1_vl_rfs.v:68]
 INFO: [Synth 8-6155] done synthesizing module 'top_xlconstant_0_0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_xlconstant_0_0/synth/top_xlconstant_0_0.v:53]
 INFO: [Synth 8-6155] done synthesizing module 'top' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1389]
 INFO: [Synth 8-6155] done synthesizing module 'top_wrapper' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/hdl/top_wrapper.v:13]
-INFO: [Common 17-14] Message 'Synth 8-6155' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 WARNING: [Synth 8-6014] Unused sequential element Dual.ALLOUT0_ND_G1.READ_REG_GEN[0].GPIO_DBus_i_reg was removed.  [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ipshared/6fbe/hdl/axi_gpio_v2_0_vh_rfs.vhd:693]
 WARNING: [Synth 8-6014] Unused sequential element Dual.ALLOUT0_ND_G1.READ_REG_GEN[1].GPIO_DBus_i_reg was removed.  [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ipshared/6fbe/hdl/axi_gpio_v2_0_vh_rfs.vhd:693]
 WARNING: [Synth 8-6014] Unused sequential element Dual.ALLOUT0_ND_G1.READ_REG_GEN[2].GPIO_DBus_i_reg was removed.  [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ipshared/6fbe/hdl/axi_gpio_v2_0_vh_rfs.vhd:693]
@@ -1500,51 +1515,13 @@ WARNING: [Synth 8-6014] Unused sequential element Dual.ALLOUT0_ND_G1.READ_REG_GE
 WARNING: [Synth 8-6014] Unused sequential element Dual.ALLOUT0_ND_G1.READ_REG_GEN[12].GPIO_DBus_i_reg was removed.  [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ipshared/6fbe/hdl/axi_gpio_v2_0_vh_rfs.vhd:693]
 WARNING: [Synth 8-6014] Unused sequential element Dual.ALLIN0_ND_G2.READ_REG2_GEN[0].GPIO2_DBus_i_reg was removed.  [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ipshared/6fbe/hdl/axi_gpio_v2_0_vh_rfs.vhd:722]
 WARNING: [Synth 8-6014] Unused sequential element Dual.gpio_Data_In_reg was removed.  [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ipshared/6fbe/hdl/axi_gpio_v2_0_vh_rfs.vhd:885]
-WARNING: [Synth 8-3848] Net sl_iport0 in module/entity sensor_inst_0_ila_0_0 does not have driver. [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_ila_0_0/synth/sensor_inst_0_ila_0_0.v:108]
-WARNING: [Synth 8-3848] Net BUFG_O in module/entity util_ds_buf does not have driver. [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_util_ds_buf_0_0/util_ds_buf.vhd:110]
-WARNING: [Synth 8-3848] Net BUFGCE_O in module/entity util_ds_buf does not have driver. [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_util_ds_buf_0_0/util_ds_buf.vhd:115]
-WARNING: [Synth 8-3848] Net BUFH_O in module/entity util_ds_buf does not have driver. [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_util_ds_buf_0_0/util_ds_buf.vhd:120]
-WARNING: [Synth 8-3848] Net BUFHCE_O in module/entity util_ds_buf does not have driver. [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_util_ds_buf_0_0/util_ds_buf.vhd:125]
-WARNING: [Synth 8-3848] Net BUFG_FABRIC_O in module/entity util_ds_buf does not have driver. [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_util_ds_buf_0_0/util_ds_buf.vhd:129]
-WARNING: [Synth 8-3848] Net OBUFDS_GTE5_O in module/entity util_ds_buf does not have driver. [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_util_ds_buf_0_0/util_ds_buf.vhd:134]
-WARNING: [Synth 8-3848] Net OBUFDS_GTE5_OB in module/entity util_ds_buf does not have driver. [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_util_ds_buf_0_0/util_ds_buf.vhd:135]
-WARNING: [Synth 8-3848] Net OBUFDS_GTE5_ADV_O in module/entity util_ds_buf does not have driver. [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_util_ds_buf_0_0/util_ds_buf.vhd:140]
-WARNING: [Synth 8-3848] Net OBUFDS_GTE5_ADV_OB in module/entity util_ds_buf does not have driver. [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_util_ds_buf_0_0/util_ds_buf.vhd:141]
-WARNING: [Synth 8-3848] Net OBUFDS_GTE3_O in module/entity util_ds_buf does not have driver. [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_util_ds_buf_0_0/util_ds_buf.vhd:147]
-WARNING: [Synth 8-3848] Net OBUFDS_GTE3_OB in module/entity util_ds_buf does not have driver. [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_util_ds_buf_0_0/util_ds_buf.vhd:148]
-WARNING: [Synth 8-3848] Net OBUFDS_GTE3_ADV_O in module/entity util_ds_buf does not have driver. [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_util_ds_buf_0_0/util_ds_buf.vhd:153]
-WARNING: [Synth 8-3848] Net OBUFDS_GTE3_ADV_OB in module/entity util_ds_buf does not have driver. [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_util_ds_buf_0_0/util_ds_buf.vhd:154]
-WARNING: [Synth 8-3848] Net OBUFDS_GTE4_O in module/entity util_ds_buf does not have driver. [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_util_ds_buf_0_0/util_ds_buf.vhd:160]
-WARNING: [Synth 8-3848] Net OBUFDS_GTE4_OB in module/entity util_ds_buf does not have driver. [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_util_ds_buf_0_0/util_ds_buf.vhd:161]
-WARNING: [Synth 8-3848] Net OBUFDS_GTE4_ADV_O in module/entity util_ds_buf does not have driver. [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_util_ds_buf_0_0/util_ds_buf.vhd:166]
-WARNING: [Synth 8-3848] Net OBUFDS_GTE4_ADV_OB in module/entity util_ds_buf does not have driver. [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_util_ds_buf_0_0/util_ds_buf.vhd:167]
-WARNING: [Synth 8-3848] Net IBUFDS_GTM_O in module/entity util_ds_buf does not have driver. [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_util_ds_buf_0_0/util_ds_buf.vhd:171]
-WARNING: [Synth 8-3848] Net IBUFDS_GTM_ODIV2 in module/entity util_ds_buf does not have driver. [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_util_ds_buf_0_0/util_ds_buf.vhd:172]
-WARNING: [Synth 8-3848] Net OBUFDS_GTM_O in module/entity util_ds_buf does not have driver. [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_util_ds_buf_0_0/util_ds_buf.vhd:178]
-WARNING: [Synth 8-3848] Net OBUFDS_GTM_OB in module/entity util_ds_buf does not have driver. [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_util_ds_buf_0_0/util_ds_buf.vhd:179]
-WARNING: [Synth 8-3848] Net OBUFDS_GTM_ADV_O in module/entity util_ds_buf does not have driver. [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_util_ds_buf_0_0/util_ds_buf.vhd:186]
-WARNING: [Synth 8-3848] Net OBUFDS_GTM_ADV_OB in module/entity util_ds_buf does not have driver. [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_util_ds_buf_0_0/util_ds_buf.vhd:187]
-WARNING: [Synth 8-3848] Net IBUFDS_GTME5_O in module/entity util_ds_buf does not have driver. [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_util_ds_buf_0_0/util_ds_buf.vhd:190]
-WARNING: [Synth 8-3848] Net IBUFDS_GTME5_ODIV2 in module/entity util_ds_buf does not have driver. [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_util_ds_buf_0_0/util_ds_buf.vhd:191]
-WARNING: [Synth 8-3848] Net OBUFDS_GTME5_O in module/entity util_ds_buf does not have driver. [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_util_ds_buf_0_0/util_ds_buf.vhd:199]
-WARNING: [Synth 8-3848] Net OBUFDS_GTME5_OB in module/entity util_ds_buf does not have driver. [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_util_ds_buf_0_0/util_ds_buf.vhd:200]
-WARNING: [Synth 8-3848] Net OBUFDS_GTME5_ADV_O in module/entity util_ds_buf does not have driver. [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_util_ds_buf_0_0/util_ds_buf.vhd:206]
-WARNING: [Synth 8-3848] Net OBUFDS_GTME5_ADV_OB in module/entity util_ds_buf does not have driver. [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_util_ds_buf_0_0/util_ds_buf.vhd:207]
-WARNING: [Synth 8-3848] Net BUFG_GT_O in module/entity util_ds_buf does not have driver. [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_util_ds_buf_0_0/util_ds_buf.vhd:217]
-WARNING: [Synth 8-3848] Net BUFG_PS_O in module/entity util_ds_buf does not have driver. [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_util_ds_buf_0_0/util_ds_buf.vhd:221]
-WARNING: [Synth 8-3848] Net MBUFG_GT_O1 in module/entity util_ds_buf does not have driver. [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_util_ds_buf_0_0/util_ds_buf.vhd:233]
-WARNING: [Synth 8-3848] Net MBUFG_GT_O2 in module/entity util_ds_buf does not have driver. [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_util_ds_buf_0_0/util_ds_buf.vhd:234]
-WARNING: [Synth 8-3848] Net MBUFG_GT_O3 in module/entity util_ds_buf does not have driver. [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_util_ds_buf_0_0/util_ds_buf.vhd:235]
-WARNING: [Synth 8-3848] Net MBUFG_GT_O4 in module/entity util_ds_buf does not have driver. [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_util_ds_buf_0_0/util_ds_buf.vhd:236]
-WARNING: [Synth 8-3848] Net MBUFG_PS_O1 in module/entity util_ds_buf does not have driver. [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_util_ds_buf_0_0/util_ds_buf.vhd:241]
-WARNING: [Synth 8-3848] Net MBUFG_PS_O2 in module/entity util_ds_buf does not have driver. [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_util_ds_buf_0_0/util_ds_buf.vhd:242]
-WARNING: [Synth 8-3848] Net MBUFG_PS_O3 in module/entity util_ds_buf does not have driver. [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_util_ds_buf_0_0/util_ds_buf.vhd:243]
-WARNING: [Synth 8-3848] Net MBUFG_PS_O4 in module/entity util_ds_buf does not have driver. [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_util_ds_buf_0_0/util_ds_buf.vhd:244]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gmax0505_channel_0'. This will prevent further optimization [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/synth/sensor_inst_0.v:144]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_0'. This will prevent further optimization [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/synth/sensor_inst_0.v:155]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'xlslice_1'. This will prevent further optimization [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/synth/sensor_inst_0.v:180]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'axi_gpio_0'. This will prevent further optimization [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/synth/sensor_inst_0.v:122]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'xlslice_0'. This will prevent further optimization [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/synth/sensor_inst_0.v:177]
+WARNING: [Synth 8-7137] Register sync_done_o_reg in module gmax0505_streamer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:120]
+WARNING: [Synth 8-3848] Net sl_iport0 in module/entity sensor_inst_0_ila_0_0 does not have driver. [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_ila_0_0/synth/sensor_inst_0_ila_0_0.v:106]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gmax0505_streamer_0'. This will prevent further optimization [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/synth/sensor_inst_0.v:141]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_0'. This will prevent further optimization [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/synth/sensor_inst_0.v:153]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'xlslice_1'. This will prevent further optimization [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/synth/sensor_inst_0.v:163]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'axi_gpio_0'. This will prevent further optimization [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/synth/sensor_inst_0.v:119]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'xlslice_0'. This will prevent further optimization [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/synth/sensor_inst_0.v:160]
 WARNING: [Synth 8-7129] Port In5[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
 WARNING: [Synth 8-7129] Port In6[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
 WARNING: [Synth 8-7129] Port In7[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
@@ -1647,35 +1624,26 @@ WARNING: [Synth 8-7129] Port In103[0] in module xlconcat_v2_1_5_xlconcat is eith
 WARNING: [Synth 8-7129] Port In104[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:59 ; elapsed = 00:01:03 . Memory (MB): peak = 2637.270 ; gain = 968.266 ; free physical = 2499 ; free virtual = 8749
+Finished RTL Elaboration : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 2581.129 ; gain = 914.156 ; free physical = 2443 ; free virtual = 8762
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:00 ; elapsed = 00:01:03 . Memory (MB): peak = 2637.270 ; gain = 968.266 ; free physical = 2505 ; free virtual = 8756
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:47 ; elapsed = 00:00:50 . Memory (MB): peak = 2581.129 ; gain = 914.156 ; free physical = 2452 ; free virtual = 8772
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:00 ; elapsed = 00:01:03 . Memory (MB): peak = 2637.270 ; gain = 968.266 ; free physical = 2505 ; free virtual = 8756
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:47 ; elapsed = 00:00:50 . Memory (MB): peak = 2581.129 ; gain = 914.156 ; free physical = 2452 ; free virtual = 8772
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.29 ; elapsed = 00:00:00.3 . Memory (MB): peak = 2637.270 ; gain = 0.000 ; free physical = 2564 ; free virtual = 8814
-INFO: [Netlist 29-17] Analyzing 1114 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.29 ; elapsed = 00:00:00.29 . Memory (MB): peak = 2581.129 ; gain = 0.000 ; free physical = 2453 ; free virtual = 8773
+INFO: [Netlist 29-17] Analyzing 1146 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-WARNING: [Netlist 29-1115] Found multi-term driver net: top_i/sensor_0/util_ds_buf_0/U0/<const0>.
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_clk_wiz_0_0/top_clk_wiz_0_0.xdc] for cell 'top_i/clk_wiz_0/inst'
-Finished Parsing XDC File [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_clk_wiz_0_0/top_clk_wiz_0_0.xdc] for cell 'top_i/clk_wiz_0/inst'
-Parsing XDC File [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_proc_sys_reset_0_0/sensor_inst_0_proc_sys_reset_0_0.xdc] for cell 'top_i/sensor_0/proc_sys_reset_0/U0'
-Finished Parsing XDC File [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_proc_sys_reset_0_0/sensor_inst_0_proc_sys_reset_0_0.xdc] for cell 'top_i/sensor_0/proc_sys_reset_0/U0'
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_proc_sys_reset_0_0/sensor_inst_0_proc_sys_reset_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_wrapper_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/top_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_proc_sys_reset_0_0/sensor_inst_0_proc_sys_reset_0_0_board.xdc] for cell 'top_i/sensor_0/proc_sys_reset_0/U0'
-Finished Parsing XDC File [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_proc_sys_reset_0_0/sensor_inst_0_proc_sys_reset_0_0_board.xdc] for cell 'top_i/sensor_0/proc_sys_reset_0/U0'
-Parsing XDC File [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_util_ds_buf_0_0/sensor_inst_0_util_ds_buf_0_0_board.xdc] for cell 'top_i/sensor_0/util_ds_buf_0/U0'
-Finished Parsing XDC File [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_util_ds_buf_0_0/sensor_inst_0_util_ds_buf_0_0_board.xdc] for cell 'top_i/sensor_0/util_ds_buf_0/U0'
+Parsing XDC File [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_clk_wiz_0_0/top_clk_wiz_0_0_board.xdc] for cell 'top_i/clk_wiz_0/inst'
+Finished Parsing XDC File [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_clk_wiz_0_0/top_clk_wiz_0_0_board.xdc] for cell 'top_i/clk_wiz_0/inst'
 Parsing XDC File [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_ila_0_0/ila_v6_2/constraints/ila.xdc] for cell 'top_i/sensor_0/ila_0/inst'
 Finished Parsing XDC File [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_ila_0_0/ila_v6_2/constraints/ila.xdc] for cell 'top_i/sensor_0/ila_0/inst'
 Parsing XDC File [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_axi_gpio_0_0/sensor_inst_0_axi_gpio_0_0.xdc] for cell 'top_i/sensor_0/axi_gpio_0/U0'
@@ -1692,12 +1660,12 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/top_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Parsing XDC File [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_axi_quad_spi_0_1/top_axi_quad_spi_0_1_board.xdc] for cell 'top_i/axi_quad_spi_1/U0'
 Finished Parsing XDC File [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_axi_quad_spi_0_1/top_axi_quad_spi_0_1_board.xdc] for cell 'top_i/axi_quad_spi_1/U0'
+Parsing XDC File [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_clk_wiz_0_0/top_clk_wiz_0_0.xdc] for cell 'top_i/clk_wiz_0/inst'
+Finished Parsing XDC File [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_clk_wiz_0_0/top_clk_wiz_0_0.xdc] for cell 'top_i/clk_wiz_0/inst'
 Parsing XDC File [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_processing_system7_0_0/top_processing_system7_0_0.xdc] for cell 'top_i/processing_system7_0/inst'
 Finished Parsing XDC File [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_processing_system7_0_0/top_processing_system7_0_0.xdc] for cell 'top_i/processing_system7_0/inst'
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_processing_system7_0_0/top_processing_system7_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/top_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_clk_wiz_0_0/top_clk_wiz_0_0_board.xdc] for cell 'top_i/clk_wiz_0/inst'
-Finished Parsing XDC File [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_clk_wiz_0_0/top_clk_wiz_0_0_board.xdc] for cell 'top_i/clk_wiz_0/inst'
 Parsing XDC File [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_axi_quad_spi_0_0/top_axi_quad_spi_0_0.xdc] for cell 'top_i/axi_quad_spi_0/U0'
 Finished Parsing XDC File [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_axi_quad_spi_0_0/top_axi_quad_spi_0_0.xdc] for cell 'top_i/axi_quad_spi_0/U0'
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_axi_quad_spi_0_0/top_axi_quad_spi_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_wrapper_propImpl.xdc].
@@ -1720,59 +1688,7 @@ Parsing XDC File [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1
 Finished Parsing XDC File [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_axi_gpio_0_0/top_axi_gpio_0_0_board.xdc] for cell 'top_i/axi_gpio_0/U0'
 INFO: [Timing 38-2] Deriving generated clocks
 Parsing XDC File [/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/constrs_1/new/pins.xdc]
-WARNING: [Vivado 12-584] No ports matched 'sen_data_0_0_clk_p[0]'. [/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/constrs_1/new/pins.xdc:127]
-WARNING: [Vivado 12-584] No ports matched 'sen_data_0_0_clk_p[0]'. [/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/constrs_1/new/pins.xdc:128]
-WARNING: [Vivado 12-584] No ports matched 'sen_data_0_0_clk_p[0]'. [/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/constrs_1/new/pins.xdc:129]
-WARNING: [Vivado 12-584] No ports matched 'sen_data_1_0_clk_p[0]'. [/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/constrs_1/new/pins.xdc:130]
-WARNING: [Vivado 12-584] No ports matched 'sen_data_1_0_clk_p[0]'. [/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/constrs_1/new/pins.xdc:131]
-WARNING: [Vivado 12-584] No ports matched 'sen_data_1_0_clk_p[0]'. [/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/constrs_1/new/pins.xdc:132]
-WARNING: [Vivado 12-584] No ports matched 'sen_data_2_0_clk_p[0]'. [/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/constrs_1/new/pins.xdc:133]
-WARNING: [Vivado 12-584] No ports matched 'sen_data_2_0_clk_p[0]'. [/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/constrs_1/new/pins.xdc:134]
-WARNING: [Vivado 12-584] No ports matched 'sen_data_2_0_clk_p[0]'. [/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/constrs_1/new/pins.xdc:135]
-WARNING: [Vivado 12-584] No ports matched 'sen_data_3_0_clk_p[0]'. [/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/constrs_1/new/pins.xdc:136]
-WARNING: [Vivado 12-584] No ports matched 'sen_data_3_0_clk_p[0]'. [/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/constrs_1/new/pins.xdc:137]
-WARNING: [Vivado 12-584] No ports matched 'sen_data_3_0_clk_p[0]'. [/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/constrs_1/new/pins.xdc:138]
-WARNING: [Vivado 12-584] No ports matched 'sen_data_4_0_clk_p[0]'. [/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/constrs_1/new/pins.xdc:139]
-WARNING: [Vivado 12-584] No ports matched 'sen_data_4_0_clk_p[0]'. [/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/constrs_1/new/pins.xdc:140]
-WARNING: [Vivado 12-584] No ports matched 'sen_data_4_0_clk_p[0]'. [/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/constrs_1/new/pins.xdc:141]
-WARNING: [Vivado 12-584] No ports matched 'sen_data_5_0_clk_p[0]'. [/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/constrs_1/new/pins.xdc:142]
-WARNING: [Vivado 12-584] No ports matched 'sen_data_5_0_clk_p[0]'. [/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/constrs_1/new/pins.xdc:143]
-WARNING: [Vivado 12-584] No ports matched 'sen_data_5_0_clk_p[0]'. [/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/constrs_1/new/pins.xdc:144]
-WARNING: [Vivado 12-584] No ports matched 'sen_data_6_0_clk_p[0]'. [/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/constrs_1/new/pins.xdc:145]
-WARNING: [Vivado 12-584] No ports matched 'sen_data_6_0_clk_p[0]'. [/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/constrs_1/new/pins.xdc:146]
-WARNING: [Vivado 12-584] No ports matched 'sen_data_6_0_clk_p[0]'. [/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/constrs_1/new/pins.xdc:147]
-WARNING: [Vivado 12-584] No ports matched 'sen_data_7_0_clk_p[0]'. [/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/constrs_1/new/pins.xdc:148]
-WARNING: [Vivado 12-584] No ports matched 'sen_data_7_0_clk_p[0]'. [/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/constrs_1/new/pins.xdc:149]
-WARNING: [Vivado 12-584] No ports matched 'sen_data_7_0_clk_p[0]'. [/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/constrs_1/new/pins.xdc:150]
-WARNING: [Vivado 12-584] No ports matched 'sen_data_8_0_clk_p[0]'. [/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/constrs_1/new/pins.xdc:151]
-WARNING: [Vivado 12-584] No ports matched 'sen_data_8_0_clk_p[0]'. [/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/constrs_1/new/pins.xdc:152]
-WARNING: [Vivado 12-584] No ports matched 'sen_data_8_0_clk_p[0]'. [/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/constrs_1/new/pins.xdc:153]
-WARNING: [Vivado 12-584] No ports matched 'sen_data_9_0_clk_p[0]'. [/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/constrs_1/new/pins.xdc:154]
-WARNING: [Vivado 12-584] No ports matched 'sen_data_9_0_clk_p[0]'. [/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/constrs_1/new/pins.xdc:155]
-WARNING: [Vivado 12-584] No ports matched 'sen_data_9_0_clk_p[0]'. [/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/constrs_1/new/pins.xdc:156]
-WARNING: [Vivado 12-584] No ports matched 'sen_data_10_0_clk_p[0]'. [/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/constrs_1/new/pins.xdc:157]
-WARNING: [Vivado 12-584] No ports matched 'sen_data_10_0_clk_p[0]'. [/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/constrs_1/new/pins.xdc:158]
-WARNING: [Vivado 12-584] No ports matched 'sen_data_10_0_clk_p[0]'. [/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/constrs_1/new/pins.xdc:159]
-WARNING: [Vivado 12-584] No ports matched 'sen_data_11_0_clk_p[0]'. [/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/constrs_1/new/pins.xdc:160]
-WARNING: [Vivado 12-584] No ports matched 'sen_data_11_0_clk_p[0]'. [/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/constrs_1/new/pins.xdc:161]
-WARNING: [Vivado 12-584] No ports matched 'sen_data_11_0_clk_p[0]'. [/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/constrs_1/new/pins.xdc:162]
-WARNING: [Vivado 12-584] No ports matched 'sen_data_12_0_clk_p[0]'. [/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/constrs_1/new/pins.xdc:163]
-WARNING: [Vivado 12-584] No ports matched 'sen_data_12_0_clk_p[0]'. [/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/constrs_1/new/pins.xdc:164]
-WARNING: [Vivado 12-584] No ports matched 'sen_data_12_0_clk_p[0]'. [/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/constrs_1/new/pins.xdc:165]
-WARNING: [Vivado 12-584] No ports matched 'sen_data_13_0_clk_p[0]'. [/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/constrs_1/new/pins.xdc:166]
-WARNING: [Vivado 12-584] No ports matched 'sen_data_13_0_clk_p[0]'. [/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/constrs_1/new/pins.xdc:167]
-WARNING: [Vivado 12-584] No ports matched 'sen_data_13_0_clk_p[0]'. [/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/constrs_1/new/pins.xdc:168]
-WARNING: [Vivado 12-584] No ports matched 'sen_data_14_0_clk_p[0]'. [/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/constrs_1/new/pins.xdc:169]
-WARNING: [Vivado 12-584] No ports matched 'sen_data_14_0_clk_p[0]'. [/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/constrs_1/new/pins.xdc:170]
-WARNING: [Vivado 12-584] No ports matched 'sen_data_14_0_clk_p[0]'. [/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/constrs_1/new/pins.xdc:171]
-WARNING: [Vivado 12-584] No ports matched 'sen_data_15_0_clk_p[0]'. [/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/constrs_1/new/pins.xdc:172]
-WARNING: [Vivado 12-584] No ports matched 'sen_data_15_0_clk_p[0]'. [/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/constrs_1/new/pins.xdc:173]
-WARNING: [Vivado 12-584] No ports matched 'sen_data_15_0_clk_p[0]'. [/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/constrs_1/new/pins.xdc:174]
-WARNING: [Vivado 12-584] No ports matched 'sen_ddr_data_0_0_clk_p[0]'. [/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/constrs_1/new/pins.xdc:176]
-WARNING: [Vivado 12-584] No ports matched 'sen_ddr_data_0_0_clk_p[0]'. [/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/constrs_1/new/pins.xdc:177]
-WARNING: [Vivado 12-584] No ports matched 'sen_ddr_data_0_0_clk_p[0]'. [/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/constrs_1/new/pins.xdc:178]
 Finished Parsing XDC File [/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/constrs_1/new/pins.xdc]
-WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/constrs_1/new/pins.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/top_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/constrs_1/new/pins.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/top_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Parsing XDC File [/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/dont_touch.xdc]
@@ -1785,28 +1701,28 @@ Parsing XDC File [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1
 Finished Parsing XDC File [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_axi_quad_spi_0_1/top_axi_quad_spi_0_1_clocks.xdc] for cell 'top_i/axi_quad_spi_1/U0'
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2669.285 ; gain = 0.000 ; free physical = 2508 ; free virtual = 8759
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2613.145 ; gain = 0.000 ; free physical = 2437 ; free virtual = 8756
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 962 instances were transformed.
-  CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 72 instances
-  CFGLUT5 => SRLC32E: 10 instances
+  A total of 1020 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 144 instances
+  CFGLUT5 => SRLC32E: 9 instances
   FD => FDRE: 22 instances
-  FDR => FDRE: 822 instances
+  FDR => FDRE: 810 instances
   FDRSE => FDRSE (FDRE, LUT4, VCC): 34 instances
-  SRL16 => SRL16E: 2 instances
+  SRL16 => SRL16E: 1 instance 
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.24 ; elapsed = 00:00:00.24 . Memory (MB): peak = 2669.320 ; gain = 0.000 ; free physical = 2507 ; free virtual = 8758
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.21 ; elapsed = 00:00:00.21 . Memory (MB): peak = 2613.180 ; gain = 0.000 ; free physical = 2440 ; free virtual = 8759
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:17 ; elapsed = 00:01:21 . Memory (MB): peak = 2669.320 ; gain = 1000.316 ; free physical = 2515 ; free virtual = 8765
+Finished Constraint Validation : Time (s): cpu = 00:01:03 ; elapsed = 00:01:05 . Memory (MB): peak = 2613.180 ; gain = 946.207 ; free physical = 2446 ; free virtual = 8766
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:17 ; elapsed = 00:01:21 . Memory (MB): peak = 2669.320 ; gain = 1000.316 ; free physical = 2515 ; free virtual = 8765
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:03 ; elapsed = 00:01:05 . Memory (MB): peak = 2613.180 ; gain = 946.207 ; free physical = 2446 ; free virtual = 8765
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -1837,14 +1753,11 @@ Applied set_property KEEP_HIERARCHY = SOFT for top_i/axi_mem_intercon. (constrai
 Applied set_property KEEP_HIERARCHY = SOFT for top_i/sensor_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for top_i/sensor_0/axi_gpio_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for top_i/sensor_0/ila_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for top_i/sensor_0/util_ds_buf_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for top_i/sensor_0/xlslice_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for top_i/sensor_0/xlslice_1. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for top_i/sensor_0/gmax0505_channel_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for top_i/sensor_0/util_idelay_ctrl_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for top_i/sensor_0/proc_sys_reset_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for top_i/sensor_0/gmax0505_streamer_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:18 ; elapsed = 00:01:22 . Memory (MB): peak = 2669.320 ; gain = 1000.316 ; free physical = 2515 ; free virtual = 8767
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:03 ; elapsed = 00:01:06 . Memory (MB): peak = 2613.180 ; gain = 946.207 ; free physical = 2456 ; free virtual = 8776
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'slave_attachment'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'slave_attachment__parameterized0'
@@ -1860,7 +1773,6 @@ INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in modul
 INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_3_reg_p2s__parameterized3'
 INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_3_reg_p2s__parameterized4'
 INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_3_reg_p2s__parameterized5'
-INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_3_reg_p2s__parameterized6'
 INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'ltlib_v1_0_1_generic_memrd'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
@@ -1997,16 +1909,6 @@ INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in m
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
 *
-                    IDLE |                             0001 |                             0001
-                     REG |                             0010 |                             0010
-                     P2S |                             0100 |                             0100
-                     S2P |                             1000 |                             1000
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_3_reg_p2s__parameterized6'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-*
               RESET_ADDR |                          0000001 |                          0000001
             REQUEST_READ |                          0000010 |                          0000010
            WAIT_READ_ACK |                          0000100 |                          0000100
@@ -2017,7 +1919,7 @@ INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in m
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'ltlib_v1_0_1_generic_memrd'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:26 ; elapsed = 00:01:30 . Memory (MB): peak = 2669.320 ; gain = 1000.316 ; free physical = 2567 ; free virtual = 8822
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:10 ; elapsed = 00:01:13 . Memory (MB): peak = 2613.180 ; gain = 946.207 ; free physical = 2539 ; free virtual = 8862
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -2143,25 +2045,25 @@ INFO: [Synth 8-3332] Sequential element (gpio_core_1/Dual.INPUT_DOUBLE_REGS4/GEN
 INFO: [Synth 8-3332] Sequential element (gpio_core_1/Dual.INPUT_DOUBLE_REGS4/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[24].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4) is unused and will be removed from module axi_gpio.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:53 ; elapsed = 00:01:58 . Memory (MB): peak = 2669.320 ; gain = 1000.316 ; free physical = 2544 ; free virtual = 8823
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:04 ; elapsed = 00:02:08 . Memory (MB): peak = 2613.180 ; gain = 946.207 ; free physical = 2507 ; free virtual = 8853
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:02 ; elapsed = 00:02:06 . Memory (MB): peak = 2669.320 ; gain = 1000.316 ; free physical = 2538 ; free virtual = 8818
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:13 ; elapsed = 00:02:17 . Memory (MB): peak = 2613.180 ; gain = 946.207 ; free physical = 2512 ; free virtual = 8858
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:02:04 ; elapsed = 00:02:09 . Memory (MB): peak = 2669.320 ; gain = 1000.316 ; free physical = 2538 ; free virtual = 8818
+Finished Timing Optimization : Time (s): cpu = 00:02:15 ; elapsed = 00:02:19 . Memory (MB): peak = 2613.180 ; gain = 946.207 ; free physical = 2512 ; free virtual = 8858
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:02:08 ; elapsed = 00:02:12 . Memory (MB): peak = 2669.320 ; gain = 1000.316 ; free physical = 2554 ; free virtual = 8834
+Finished Technology Mapping : Time (s): cpu = 00:02:20 ; elapsed = 00:02:24 . Memory (MB): peak = 2613.180 ; gain = 946.207 ; free physical = 2513 ; free virtual = 8859
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -2219,37 +2121,37 @@ WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[0] to constant 0
 WARNING: [Synth 8-3295] tying undriven pin inst:trig_in to constant 0
 WARNING: [Synth 8-3295] tying undriven pin inst:trig_out_ack to constant 0
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:13 ; elapsed = 00:02:18 . Memory (MB): peak = 2669.320 ; gain = 1000.316 ; free physical = 2544 ; free virtual = 8823
+Finished IO Insertion : Time (s): cpu = 00:02:25 ; elapsed = 00:02:29 . Memory (MB): peak = 2613.180 ; gain = 946.207 ; free physical = 2493 ; free virtual = 8839
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:13 ; elapsed = 00:02:18 . Memory (MB): peak = 2669.320 ; gain = 1000.316 ; free physical = 2544 ; free virtual = 8823
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:25 ; elapsed = 00:02:29 . Memory (MB): peak = 2613.180 ; gain = 946.207 ; free physical = 2493 ; free virtual = 8839
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:14 ; elapsed = 00:02:19 . Memory (MB): peak = 2669.320 ; gain = 1000.316 ; free physical = 2543 ; free virtual = 8823
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:26 ; elapsed = 00:02:30 . Memory (MB): peak = 2613.180 ; gain = 946.207 ; free physical = 2492 ; free virtual = 8838
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:14 ; elapsed = 00:02:19 . Memory (MB): peak = 2669.320 ; gain = 1000.316 ; free physical = 2543 ; free virtual = 8823
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:26 ; elapsed = 00:02:30 . Memory (MB): peak = 2613.180 ; gain = 946.207 ; free physical = 2492 ; free virtual = 8838
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:14 ; elapsed = 00:02:19 . Memory (MB): peak = 2669.320 ; gain = 1000.316 ; free physical = 2543 ; free virtual = 8823
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:26 ; elapsed = 00:02:30 . Memory (MB): peak = 2613.180 ; gain = 946.207 ; free physical = 2492 ; free virtual = 8838
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:14 ; elapsed = 00:02:19 . Memory (MB): peak = 2669.320 ; gain = 1000.316 ; free physical = 2543 ; free virtual = 8822
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:26 ; elapsed = 00:02:30 . Memory (MB): peak = 2613.180 ; gain = 946.207 ; free physical = 2492 ; free virtual = 8838
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -2266,64 +2168,65 @@ Report Cell Usage:
 |      |Cell       |Count |
 +------+-----------+------+
 |1     |BIBUF      |   130|
-|2     |BUFG       |    11|
-|3     |CARRY4     |    77|
-|4     |CFGLUT5    |    82|
+|2     |BUFG       |    21|
+|3     |CARRY4     |   226|
+|4     |CFGLUT5    |   153|
 |5     |IDELAYCTRL |     1|
-|6     |IDELAYE2   |     1|
-|7     |LUT1       |   115|
-|8     |LUT2       |   228|
-|9     |LUT3       |   501|
-|10    |LUT4       |   363|
-|11    |LUT5       |   570|
-|12    |LUT6       |  1145|
-|13    |MUXF7      |   114|
+|6     |IDELAYE2   |    16|
+|7     |LUT1       |   147|
+|8     |LUT2       |   462|
+|9     |LUT3       |   755|
+|10    |LUT4       |   477|
+|11    |LUT5       |  1665|
+|12    |LUT6       |  1173|
+|13    |MUXF7      |     6|
 |14    |PLLE2_ADV  |     1|
 |15    |PS7        |     1|
-|16    |RAMB36E1   |   120|
-|19    |SRL16      |     2|
-|20    |SRL16E     |    90|
-|21    |SRLC16E    |     2|
-|22    |SRLC32E    |    64|
-|23    |FD         |     3|
-|24    |FDCE       |    84|
-|25    |FDR        |   282|
-|26    |FDRE       |  3026|
-|27    |FDSE       |    98|
-|28    |IBUF       |    15|
-|29    |IBUFDS     |     2|
-|30    |OBUF       |    37|
+|16    |RAMB18E1   |     1|
+|17    |RAMB36E1   |    46|
+|18    |SRL16      |     1|
+|19    |SRL16E     |   265|
+|20    |SRLC16E    |     2|
+|21    |SRLC32E    |    64|
+|22    |FD         |     3|
+|23    |FDCE       |  1536|
+|24    |FDR        |   274|
+|25    |FDRE       |  3668|
+|26    |FDSE       |    95|
+|27    |IBUF       |    15|
+|28    |IBUFDS     |    17|
+|29    |OBUF       |    37|
 +------+-----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:14 ; elapsed = 00:02:19 . Memory (MB): peak = 2669.320 ; gain = 1000.316 ; free physical = 2543 ; free virtual = 8822
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:26 ; elapsed = 00:02:30 . Memory (MB): peak = 2613.180 ; gain = 946.207 ; free physical = 2492 ; free virtual = 8838
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 7910 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:02:04 ; elapsed = 00:02:09 . Memory (MB): peak = 2669.320 ; gain = 968.266 ; free physical = 2554 ; free virtual = 8834
-Synthesis Optimization Complete : Time (s): cpu = 00:02:14 ; elapsed = 00:02:19 . Memory (MB): peak = 2669.320 ; gain = 1000.316 ; free physical = 2554 ; free virtual = 8833
+Synthesis finished with 0 errors, 0 critical warnings and 3863 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:16 ; elapsed = 00:02:21 . Memory (MB): peak = 2613.180 ; gain = 914.156 ; free physical = 2492 ; free virtual = 8838
+Synthesis Optimization Complete : Time (s): cpu = 00:02:26 ; elapsed = 00:02:30 . Memory (MB): peak = 2613.180 ; gain = 946.207 ; free physical = 2492 ; free virtual = 8838
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.15 ; elapsed = 00:00:00.15 . Memory (MB): peak = 2669.320 ; gain = 0.000 ; free physical = 2783 ; free virtual = 9063
-INFO: [Netlist 29-17] Analyzing 684 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.16 ; elapsed = 00:00:00.16 . Memory (MB): peak = 2613.180 ; gain = 0.000 ; free physical = 2719 ; free virtual = 9066
+INFO: [Netlist 29-17] Analyzing 744 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Chipscope 16-324] Core: top_i/sensor_0/ila_0 UUID: 05cfc1e2-87ff-57cf-b102-d3de584161ea 
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2669.320 ; gain = 0.000 ; free physical = 2839 ; free virtual = 9120
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2613.180 ; gain = 0.000 ; free physical = 2774 ; free virtual = 9121
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 369 instances were transformed.
-  CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 72 instances
-  CFGLUT5 => SRLC32E: 10 instances
+  A total of 431 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 144 instances
+  CFGLUT5 => SRLC32E: 9 instances
   FD => FDRE: 3 instances
-  FDR => FDRE: 282 instances
-  SRL16 => SRL16E: 2 instances
+  FDR => FDRE: 274 instances
+  SRL16 => SRL16E: 1 instance 
 
-Synth Design complete | Checksum: a1e2aede
+Synth Design complete | Checksum: d3c80cf9
 INFO: [Common 17-83] Releasing license: Synthesis
-785 Infos, 460 Warnings, 0 Critical Warnings and 0 Errors encountered.
+770 Infos, 410 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:27 ; elapsed = 00:02:28 . Memory (MB): peak = 2669.320 ; gain = 1350.781 ; free physical = 2790 ; free virtual = 9071
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2304.899; main = 1974.122; forked = 378.131
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3657.527; main = 2669.289; forked = 988.238
-Write ShapeDB Complete: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2693.297 ; gain = 0.000 ; free physical = 2782 ; free virtual = 9064
+synth_design: Time (s): cpu = 00:02:39 ; elapsed = 00:02:40 . Memory (MB): peak = 2613.180 ; gain = 1294.641 ; free physical = 2731 ; free virtual = 9077
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2262.129; main = 1921.701; forked = 384.389
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3601.391; main = 2613.148; forked = 988.242
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2637.156 ; gain = 0.000 ; free physical = 2714 ; free virtual = 9063
 INFO: [Common 17-1381] The checkpoint '/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/top_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_wrapper_utilization_synth.rpt -pb top_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Apr 29 20:58:10 2024...
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 29 21:50:40 2024...

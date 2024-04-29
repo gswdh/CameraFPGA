@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-//Date        : Mon Apr 29 20:55:08 2024
+//Date        : Mon Apr 29 21:47:32 2024
 //Host        : testserver running 64-bit Ubuntu 20.04.6 LTS
 //Command     : generate_target sensor_inst_0_wrapper.bd
 //Design      : sensor_inst_0_wrapper
@@ -30,11 +30,11 @@ module sensor_inst_0_wrapper
     S_AXI_0_wready,
     S_AXI_0_wstrb,
     S_AXI_0_wvalid,
-    ref_clk_i_0,
-    sen_ddr_clk_clk_n,
-    sen_ddr_clk_clk_p,
-    sen_ddr_data_n_0,
-    sen_ddr_data_p_0);
+    ddr_clk_n_i_0,
+    ddr_clk_p_i_0,
+    ddr_data_n_i_0,
+    ddr_data_p_i_0,
+    ref_clk_i_0);
   input ACLK_0;
   input ARESETN_0;
   input [31:0]S_AXI_0_araddr;
@@ -54,11 +54,11 @@ module sensor_inst_0_wrapper
   output S_AXI_0_wready;
   input [3:0]S_AXI_0_wstrb;
   input S_AXI_0_wvalid;
+  input ddr_clk_n_i_0;
+  input ddr_clk_p_i_0;
+  input [15:0]ddr_data_n_i_0;
+  input [15:0]ddr_data_p_i_0;
   input ref_clk_i_0;
-  input [0:0]sen_ddr_clk_clk_n;
-  input [0:0]sen_ddr_clk_clk_p;
-  input sen_ddr_data_n_0;
-  input sen_ddr_data_p_0;
 
   wire ACLK_0;
   wire ARESETN_0;
@@ -79,11 +79,11 @@ module sensor_inst_0_wrapper
   wire S_AXI_0_wready;
   wire [3:0]S_AXI_0_wstrb;
   wire S_AXI_0_wvalid;
+  wire ddr_clk_n_i_0;
+  wire ddr_clk_p_i_0;
+  wire [15:0]ddr_data_n_i_0;
+  wire [15:0]ddr_data_p_i_0;
   wire ref_clk_i_0;
-  wire [0:0]sen_ddr_clk_clk_n;
-  wire [0:0]sen_ddr_clk_clk_p;
-  wire sen_ddr_data_n_0;
-  wire sen_ddr_data_p_0;
 
   sensor_inst_0 sensor_inst_0_i
        (.ACLK_0(ACLK_0),
@@ -105,9 +105,9 @@ module sensor_inst_0_wrapper
         .S_AXI_0_wready(S_AXI_0_wready),
         .S_AXI_0_wstrb(S_AXI_0_wstrb),
         .S_AXI_0_wvalid(S_AXI_0_wvalid),
-        .ref_clk_i_0(ref_clk_i_0),
-        .sen_ddr_clk_clk_n(sen_ddr_clk_clk_n),
-        .sen_ddr_clk_clk_p(sen_ddr_clk_clk_p),
-        .sen_ddr_data_n_0(sen_ddr_data_n_0),
-        .sen_ddr_data_p_0(sen_ddr_data_p_0));
+        .ddr_clk_n_i_0(ddr_clk_n_i_0),
+        .ddr_clk_p_i_0(ddr_clk_p_i_0),
+        .ddr_data_n_i_0(ddr_data_n_i_0),
+        .ddr_data_p_i_0(ddr_data_p_i_0),
+        .ref_clk_i_0(ref_clk_i_0));
 endmodule
