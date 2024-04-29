@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xA51A1CBC9B45766A",
+      "boundary_crc": "0x699FD066EC6CEC74",
       "design_src": "/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/sources_1/bd/sensor/sensor.bd",
       "device": "xc7z020clg484-2",
       "name": "sensor_inst_0",
@@ -17,13 +17,9 @@
       "util_ds_buf_0": "",
       "xlslice_0": "",
       "xlslice_1": "",
-      "idelay2_wrapper_0": "",
-      "util_ds_buf_1": "",
-      "ddr_deserialiser_0": "",
-      "word_detector_0": "",
-      "decoder_0": "",
-      "bit_aligner_0": "",
-      "bit_aligner_1": ""
+      "gmax0505_channel_0": "",
+      "util_idelay_ctrl_0": "",
+      "proc_sys_reset_0": ""
     },
     "interface_ports": {
       "S_AXI_0": {
@@ -275,35 +271,6 @@
             "right": "0"
           }
         }
-      },
-      "sen_ddr_data_0": {
-        "mode": "Slave",
-        "vlnv_bus_definition": "xilinx.com:interface:diff_clock:1.0",
-        "vlnv": "xilinx.com:interface:diff_clock_rtl:1.0",
-        "parameters": {
-          "CAN_DEBUG": {
-            "value": "false",
-            "value_src": "strong"
-          },
-          "FREQ_HZ": {
-            "value": "100000000",
-            "value_src": "default_prop"
-          }
-        },
-        "port_maps": {
-          "CLK_P": {
-            "physical_name": "sen_ddr_data_0_clk_p",
-            "direction": "I",
-            "left": "0",
-            "right": "0"
-          },
-          "CLK_N": {
-            "physical_name": "sen_ddr_data_0_clk_n",
-            "direction": "I",
-            "left": "0",
-            "right": "0"
-          }
-        }
       }
     },
     "ports": {
@@ -371,6 +338,12 @@
             "value_src": "ip_prop"
           }
         }
+      },
+      "sen_ddr_data_p_0": {
+        "direction": "I"
+      },
+      "sen_ddr_data_n_0": {
+        "direction": "I"
       }
     },
     "components": {
@@ -415,7 +388,7 @@
             "value": "Native"
           },
           "C_NUM_OF_PROBES": {
-            "value": "10"
+            "value": "6"
           },
           "C_PROBE2_WIDTH": {
             "value": "1"
@@ -427,13 +400,13 @@
             "value": "12"
           },
           "C_PROBE5_WIDTH": {
-            "value": "1"
-          },
-          "C_PROBE7_WIDTH": {
             "value": "5"
           },
+          "C_PROBE7_WIDTH": {
+            "value": "1"
+          },
           "C_PROBE9_WIDTH": {
-            "value": "2"
+            "value": "1"
           }
         }
       },
@@ -477,182 +450,19 @@
           }
         }
       },
-      "idelay2_wrapper_0": {
-        "vlnv": "xilinx.com:module_ref:idelay2_wrapper:1.0",
+      "gmax0505_channel_0": {
+        "vlnv": "xilinx.com:module_ref:gmax0505_channel:1.0",
         "ip_revision": "1",
-        "xci_name": "sensor_inst_0_idelay2_wrapper_0_0",
-        "xci_path": "ip/sensor_inst_0_idelay2_wrapper_0_0/sensor_inst_0_idelay2_wrapper_0_0.xci",
-        "inst_hier_path": "idelay2_wrapper_0",
+        "xci_name": "sensor_inst_0_gmax0505_channel_0_0",
+        "xci_path": "ip/sensor_inst_0_gmax0505_channel_0_0/sensor_inst_0_gmax0505_channel_0_0.xci",
+        "inst_hier_path": "gmax0505_channel_0",
         "reference_info": {
           "ref_type": "hdl",
-          "ref_name": "idelay2_wrapper",
+          "ref_name": "gmax0505_channel",
           "boundary_crc": "0x0"
         },
         "ports": {
-          "ref_clk_i": {
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "200000000",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "/clk_wiz_0_clk_out1",
-                "value_src": "ip_prop"
-              }
-            }
-          },
-          "clk_i": {
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "user_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "default_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "top_processing_system7_0_0_FCLK_CLK0",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "nrst_i": {
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "const_prop"
-              }
-            }
-          },
-          "inc_delay_i": {
-            "direction": "I"
-          },
-          "delay_setting_o": {
-            "direction": "O",
-            "left": "4",
-            "right": "0"
-          },
-          "data_i": {
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "default_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "sensor_inst_0_util_ds_buf_1_0_IBUF_OUT",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "data_o": {
-            "direction": "O"
-          }
-        }
-      },
-      "util_ds_buf_1": {
-        "vlnv": "xilinx.com:ip:util_ds_buf:2.2",
-        "ip_revision": "31",
-        "xci_name": "sensor_inst_0_util_ds_buf_1_0",
-        "xci_path": "ip/sensor_inst_0_util_ds_buf_1_0/sensor_inst_0_util_ds_buf_1_0.xci",
-        "inst_hier_path": "util_ds_buf_1"
-      },
-      "ddr_deserialiser_0": {
-        "vlnv": "xilinx.com:module_ref:ddr_deserialiser:1.0",
-        "ip_revision": "1",
-        "xci_name": "sensor_inst_0_ddr_deserialiser_0_0",
-        "xci_path": "ip/sensor_inst_0_ddr_deserialiser_0_0/sensor_inst_0_ddr_deserialiser_0_0.xci",
-        "inst_hier_path": "ddr_deserialiser_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "ddr_deserialiser",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "ddr_clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "ip_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "sensor_inst_0_util_ds_buf_0_0_IBUF_OUT",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "ddr_data": {
-            "direction": "I"
-          },
-          "data": {
-            "direction": "O",
-            "left": "1",
-            "right": "0"
-          }
-        }
-      },
-      "word_detector_0": {
-        "vlnv": "xilinx.com:module_ref:word_detector:1.0",
-        "ip_revision": "1",
-        "xci_name": "sensor_inst_0_word_detector_0_0",
-        "xci_path": "ip/sensor_inst_0_word_detector_0_0_1/sensor_inst_0_word_detector_0_0.xci",
-        "inst_hier_path": "word_detector_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "word_detector",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk_i": {
-            "direction": "I"
-          },
-          "data_i": {
-            "direction": "I",
-            "left": "11",
-            "right": "0"
-          },
-          "word_i": {
-            "direction": "I",
-            "left": "11",
-            "right": "0"
-          },
-          "detected_o": {
-            "direction": "O"
-          }
-        }
-      },
-      "decoder_0": {
-        "vlnv": "xilinx.com:module_ref:decoder:1.0",
-        "ip_revision": "1",
-        "xci_name": "sensor_inst_0_decoder_0_0",
-        "xci_path": "ip/sensor_inst_0_decoder_0_0/sensor_inst_0_decoder_0_0.xci",
-        "inst_hier_path": "decoder_0",
-        "parameters": {
-          "DIV": {
-            "value": "12"
-          }
-        },
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "decoder",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "ser_clk_i": {
+          "ddr_clk_i": {
             "direction": "I",
             "parameters": {
               "FREQ_HZ": {
@@ -678,13 +488,22 @@
               }
             }
           },
-          "bitslip_i": {
+          "ddr_data_p_i": {
             "direction": "I"
           },
-          "ser_data_i": {
+          "ddr_data_n_i": {
+            "direction": "I"
+          },
+          "sync_word_i": {
             "direction": "I",
-            "left": "1",
+            "left": "11",
             "right": "0"
+          },
+          "sync_en_i": {
+            "direction": "I"
+          },
+          "sync_done_o": {
+            "direction": "O"
           },
           "par_clk_o": {
             "direction": "O"
@@ -693,97 +512,30 @@
             "direction": "O",
             "left": "11",
             "right": "0"
+          },
+          "delay_setting_o": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
           }
         }
       },
-      "bit_aligner_0": {
-        "vlnv": "xilinx.com:module_ref:bit_aligner:1.0",
-        "ip_revision": "1",
-        "xci_name": "sensor_inst_0_bit_aligner_0_0",
-        "xci_path": "ip/sensor_inst_0_bit_aligner_0_0_1/sensor_inst_0_bit_aligner_0_0.xci",
-        "inst_hier_path": "bit_aligner_0",
-        "parameters": {
-          "HOLD_OFF_CYCLES": {
-            "value": "12"
-          }
-        },
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "bit_aligner",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk_i": {
-            "direction": "I"
-          },
-          "n_reset_i": {
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "const_prop"
-              }
-            }
-          },
-          "en_i": {
-            "direction": "I"
-          },
-          "aligned_i": {
-            "direction": "I"
-          },
-          "bit_slip_o": {
-            "direction": "O"
-          }
-        }
+      "util_idelay_ctrl_0": {
+        "vlnv": "xilinx.com:ip:util_idelay_ctrl:1.0",
+        "ip_revision": "3",
+        "xci_name": "sensor_inst_0_util_idelay_ctrl_0_0",
+        "xci_path": "ip/sensor_inst_0_util_idelay_ctrl_0_0/sensor_inst_0_util_idelay_ctrl_0_0.xci",
+        "inst_hier_path": "util_idelay_ctrl_0"
       },
-      "bit_aligner_1": {
-        "vlnv": "xilinx.com:module_ref:bit_aligner:1.0",
-        "ip_revision": "1",
-        "xci_name": "sensor_inst_0_bit_aligner_1_0",
-        "xci_path": "ip/sensor_inst_0_bit_aligner_1_0/sensor_inst_0_bit_aligner_1_0.xci",
-        "inst_hier_path": "bit_aligner_1",
-        "parameters": {
-          "HOLD_OFF_CYCLES": {
-            "value": "256"
-          }
-        },
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "bit_aligner",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk_i": {
-            "direction": "I"
-          },
-          "n_reset_i": {
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "const_prop"
-              }
-            }
-          },
-          "en_i": {
-            "direction": "I"
-          },
-          "aligned_i": {
-            "direction": "I"
-          },
-          "bit_slip_o": {
-            "direction": "O"
-          }
-        }
+      "proc_sys_reset_0": {
+        "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
+        "ip_revision": "14",
+        "xci_name": "sensor_inst_0_proc_sys_reset_0_0",
+        "xci_path": "ip/sensor_inst_0_proc_sys_reset_0_0/sensor_inst_0_proc_sys_reset_0_0.xci",
+        "inst_hier_path": "proc_sys_reset_0"
       }
     },
     "interface_nets": {
-      "CLK_IN_D_0_1": {
-        "interface_ports": [
-          "sen_ddr_data_0",
-          "util_ds_buf_1/CLK_IN_D"
-        ]
-      },
       "S_AXI_0_1": {
         "interface_ports": [
           "S_AXI_0",
@@ -803,17 +555,15 @@
           "ACLK_0",
           "axi_gpio_0/s_axi_aclk",
           "ila_0/clk",
-          "idelay2_wrapper_0/clk_i"
+          "proc_sys_reset_0/slowest_sync_clk"
         ]
       },
       "ARESETN_0_1": {
         "ports": [
           "ARESETN_0",
           "axi_gpio_0/s_axi_aresetn",
-          "idelay2_wrapper_0/nrst_i",
-          "decoder_0/nrst_i",
-          "bit_aligner_0/n_reset_i",
-          "bit_aligner_1/n_reset_i"
+          "proc_sys_reset_0/ext_reset_in",
+          "gmax0505_channel_0/nrst_i"
         ]
       },
       "axi_gpio_0_gpio_io_o": {
@@ -823,97 +573,73 @@
           "xlslice_1/Din"
         ]
       },
-      "bit_aligner_0_bit_slip_o": {
+      "ddr_data_n_i_0_1": {
         "ports": [
-          "bit_aligner_0/bit_slip_o",
-          "ila_0/probe5",
-          "decoder_0/bitslip_i"
+          "sen_ddr_data_n_0",
+          "gmax0505_channel_0/ddr_data_n_i"
         ]
       },
-      "bit_aligner_1_bit_slip_o": {
+      "ddr_data_p_i_0_1": {
         "ports": [
-          "bit_aligner_1/bit_slip_o",
-          "ila_0/probe6",
-          "idelay2_wrapper_0/inc_delay_i"
+          "sen_ddr_data_p_0",
+          "gmax0505_channel_0/ddr_data_p_i"
         ]
       },
-      "ddr_deserialiser_0_data": {
+      "gmax0505_channel_0_delay_setting_o": {
         "ports": [
-          "ddr_deserialiser_0/data",
-          "ila_0/probe9",
-          "decoder_0/ser_data_i"
+          "gmax0505_channel_0/delay_setting_o",
+          "ila_0/probe5"
         ]
       },
-      "decoder_0_par_clk_o": {
+      "gmax0505_channel_0_par_clk_o": {
         "ports": [
-          "decoder_0/par_clk_o",
-          "word_detector_0/clk_i",
-          "ila_0/probe0",
-          "bit_aligner_0/clk_i",
-          "bit_aligner_1/clk_i"
+          "gmax0505_channel_0/par_clk_o",
+          "ila_0/probe0"
         ]
       },
-      "decoder_0_par_data_o": {
+      "gmax0505_channel_0_par_data_o": {
         "ports": [
-          "decoder_0/par_data_o",
-          "word_detector_0/data_i",
+          "gmax0505_channel_0/par_data_o",
           "ila_0/probe3"
         ]
       },
-      "idelay2_wrapper_0_data_o": {
+      "proc_sys_reset_0_peripheral_reset": {
         "ports": [
-          "idelay2_wrapper_0/data_o",
-          "ddr_deserialiser_0/ddr_data"
-        ]
-      },
-      "idelay2_wrapper_0_delay_setting_o": {
-        "ports": [
-          "idelay2_wrapper_0/delay_setting_o",
-          "ila_0/probe7"
+          "proc_sys_reset_0/peripheral_reset",
+          "util_idelay_ctrl_0/rst"
         ]
       },
       "ref_clk_i_0_1": {
         "ports": [
           "ref_clk_i_0",
-          "idelay2_wrapper_0/ref_clk_i"
+          "util_idelay_ctrl_0/ref_clk"
         ]
       },
       "util_ds_buf_0_IBUF_OUT": {
         "ports": [
           "util_ds_buf_0/IBUF_OUT",
-          "ila_0/probe8",
-          "decoder_0/ser_clk_i",
-          "ddr_deserialiser_0/ddr_clk"
-        ]
-      },
-      "util_ds_buf_1_IBUF_OUT": {
-        "ports": [
-          "util_ds_buf_1/IBUF_OUT",
-          "idelay2_wrapper_0/data_i"
+          "gmax0505_channel_0/ddr_clk_i"
         ]
       },
       "word_detector_0_detected_o1": {
         "ports": [
-          "word_detector_0/detected_o",
+          "gmax0505_channel_0/sync_done_o",
           "ila_0/probe2",
-          "axi_gpio_0/gpio2_io_i",
-          "bit_aligner_0/aligned_i",
-          "bit_aligner_1/aligned_i"
+          "axi_gpio_0/gpio2_io_i"
         ]
       },
       "xlslice_0_Dout": {
         "ports": [
           "xlslice_0/Dout",
           "ila_0/probe4",
-          "word_detector_0/word_i"
+          "gmax0505_channel_0/sync_word_i"
         ]
       },
       "xlslice_1_Dout": {
         "ports": [
           "xlslice_1/Dout",
           "ila_0/probe1",
-          "bit_aligner_0/en_i",
-          "bit_aligner_1/en_i"
+          "gmax0505_channel_0/sync_en_i"
         ]
       }
     },

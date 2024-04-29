@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-//Date        : Mon Apr 29 07:44:34 2024
+//Date        : Mon Apr 29 20:54:39 2024
 //Host        : testserver running 64-bit Ubuntu 20.04.6 LTS
 //Command     : generate_target top.bd
 //Design      : top
@@ -1386,7 +1386,7 @@ module s00_couplers_imp_OK9T26
   assign s00_couplers_to_s00_couplers_WVALID = S_AXI_wvalid;
 endmodule
 
-(* CORE_GENERATION_INFO = "top,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=top,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=35,numReposBlks=24,numNonXlnxBlks=0,numHierBlks=11,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=6,numPkgbdBlks=1,bdsource=USER,da_axi4_cnt=8,da_board_cnt=7,da_clkrst_cnt=1,da_ps7_cnt=1,synth_mode=None}" *) (* HW_HANDOFF = "top.hwdef" *) 
+(* CORE_GENERATION_INFO = "top,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=top,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=31,numReposBlks=20,numNonXlnxBlks=0,numHierBlks=11,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=1,bdsource=USER,da_axi4_cnt=8,da_board_cnt=7,da_clkrst_cnt=1,da_ps7_cnt=1,synth_mode=None}" *) (* HW_HANDOFF = "top.hwdef" *) 
 module top
    (BADC_SPI_MISO,
     BADC_SPI_NCS,
@@ -1432,8 +1432,8 @@ module top
     sen_data_p,
     sen_ddr_clk_clk_n,
     sen_ddr_clk_clk_p,
-    sen_ddr_data_0_0_clk_n,
-    sen_ddr_data_0_0_clk_p);
+    sen_ddr_data_n_0_0,
+    sen_ddr_data_p_0_0);
   input BADC_SPI_MISO;
   output [0:0]BADC_SPI_NCS;
   output BADC_SPI_SCLK;
@@ -1478,8 +1478,8 @@ module top
   input [15:0]sen_data_p;
   (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 sen_ddr_clk CLK_N" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME sen_ddr_clk, CAN_DEBUG false, FREQ_HZ 100000000" *) input [0:0]sen_ddr_clk_clk_n;
   (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 sen_ddr_clk CLK_P" *) input [0:0]sen_ddr_clk_clk_p;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 sen_ddr_data_0_0 CLK_N" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME sen_ddr_data_0_0, CAN_DEBUG false, FREQ_HZ 100000000" *) input [0:0]sen_ddr_data_0_0_clk_n;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 sen_ddr_data_0_0 CLK_P" *) input [0:0]sen_ddr_data_0_0_clk_p;
+  input sen_ddr_data_n_0_0;
+  input sen_ddr_data_p_0_0;
 
   wire [9:0]axi_gpio_0_GPIO2_TRI_I;
   wire [24:0]axi_gpio_0_GPIO_TRI_O;
@@ -1711,8 +1711,8 @@ module top
   wire [0:0]rst_ps7_0_50M_peripheral_aresetn;
   wire [0:0]sen_ddr_clk_1_CLK_N;
   wire [0:0]sen_ddr_clk_1_CLK_P;
-  wire [0:0]sen_ddr_data_0_0_1_CLK_N;
-  wire [0:0]sen_ddr_data_0_0_1_CLK_P;
+  wire sen_ddr_data_n_0_0_1;
+  wire sen_ddr_data_p_0_0_1;
   wire [4:0]xlconcat_0_dout;
   wire [0:0]xlconstant_0_dout;
 
@@ -1739,8 +1739,8 @@ module top
   assign processing_system7_0_SDIO_1_WP = SDIO_1_0_wp;
   assign sen_ddr_clk_1_CLK_N = sen_ddr_clk_clk_n[0];
   assign sen_ddr_clk_1_CLK_P = sen_ddr_clk_clk_p[0];
-  assign sen_ddr_data_0_0_1_CLK_N = sen_ddr_data_0_0_clk_n[0];
-  assign sen_ddr_data_0_0_1_CLK_P = sen_ddr_data_0_0_clk_p[0];
+  assign sen_ddr_data_n_0_0_1 = sen_ddr_data_n_0_0;
+  assign sen_ddr_data_p_0_0_1 = sen_ddr_data_p_0_0;
   top_axi_gpio_0_0 axi_gpio_0
        (.gpio2_io_i(axi_gpio_0_GPIO2_TRI_I),
         .gpio_io_o(axi_gpio_0_GPIO_TRI_O),
@@ -2242,8 +2242,8 @@ module top
         .ref_clk_i_0(clk_wiz_0_delay_clk),
         .sen_ddr_clk_clk_n(sen_ddr_clk_1_CLK_N),
         .sen_ddr_clk_clk_p(sen_ddr_clk_1_CLK_P),
-        .sen_ddr_data_0_clk_n(sen_ddr_data_0_0_1_CLK_N),
-        .sen_ddr_data_0_clk_p(sen_ddr_data_0_0_1_CLK_P));
+        .sen_ddr_data_n_0(sen_ddr_data_n_0_0_1),
+        .sen_ddr_data_p_0(sen_ddr_data_p_0_0_1));
   top_xlconcat_0_0 xlconcat_0
        (.In0(axi_uartlite_0_interrupt),
         .In1(axi_uartlite_1_interrupt),

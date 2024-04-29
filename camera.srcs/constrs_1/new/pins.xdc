@@ -177,6 +177,10 @@ set_property IOSTANDARD DIFF_HSTL_II_18 [get_ports {sen_ddr_data_0_0_clk_p[0]}]
 set_property IN_TERM UNTUNED_SPLIT_60 [get_ports {sen_ddr_data_0_0_clk_p[0]}]
 set_property PACKAGE_PIN J20 [get_ports {sen_ddr_data_0_0_clk_p[0]}]
 
+
+set_property IOSTANDARD DIFF_HSTL_II_18 [get_ports sen_ddr_data_p_0_0]
+set_property IN_TERM UNTUNED_SPLIT_60 [get_ports sen_ddr_data_p_0_0]
+set_property PACKAGE_PIN J20 [get_ports sen_ddr_data_p_0_0]
 set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]
 set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]
 set_property C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub]

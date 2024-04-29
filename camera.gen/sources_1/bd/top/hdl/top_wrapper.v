@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-//Date        : Mon Apr 29 07:44:34 2024
+//Date        : Mon Apr 29 20:54:40 2024
 //Host        : testserver running 64-bit Ubuntu 20.04.6 LTS
 //Command     : generate_target top_wrapper.bd
 //Design      : top_wrapper
@@ -55,8 +55,8 @@ module top_wrapper
     sen_data_p,
     sen_ddr_clk_clk_n,
     sen_ddr_clk_clk_p,
-    sen_ddr_data_0_0_clk_n,
-    sen_ddr_data_0_0_clk_p);
+    sen_ddr_data_n_0_0,
+    sen_ddr_data_p_0_0);
   input BADC_SPI_MISO;
   output [0:0]BADC_SPI_NCS;
   output BADC_SPI_SCLK;
@@ -101,8 +101,8 @@ module top_wrapper
   input [15:0]sen_data_p;
   input [0:0]sen_ddr_clk_clk_n;
   input [0:0]sen_ddr_clk_clk_p;
-  input [0:0]sen_ddr_data_0_0_clk_n;
-  input [0:0]sen_ddr_data_0_0_clk_p;
+  input sen_ddr_data_n_0_0;
+  input sen_ddr_data_p_0_0;
 
   wire BADC_SPI_MISO;
   wire [0:0]BADC_SPI_NCS;
@@ -148,8 +148,8 @@ module top_wrapper
   wire [15:0]sen_data_p;
   wire [0:0]sen_ddr_clk_clk_n;
   wire [0:0]sen_ddr_clk_clk_p;
-  wire [0:0]sen_ddr_data_0_0_clk_n;
-  wire [0:0]sen_ddr_data_0_0_clk_p;
+  wire sen_ddr_data_n_0_0;
+  wire sen_ddr_data_p_0_0;
 
   top top_i
        (.BADC_SPI_MISO(BADC_SPI_MISO),
@@ -196,6 +196,6 @@ module top_wrapper
         .sen_data_p(sen_data_p),
         .sen_ddr_clk_clk_n(sen_ddr_clk_clk_n),
         .sen_ddr_clk_clk_p(sen_ddr_clk_clk_p),
-        .sen_ddr_data_0_0_clk_n(sen_ddr_data_0_0_clk_n),
-        .sen_ddr_data_0_0_clk_p(sen_ddr_data_0_0_clk_p));
+        .sen_ddr_data_n_0_0(sen_ddr_data_n_0_0),
+        .sen_ddr_data_p_0_0(sen_ddr_data_p_0_0));
 endmodule

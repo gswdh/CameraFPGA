@@ -9,50 +9,36 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0"></ZoomStartTime>
-      <ZoomEndTime time="273"></ZoomEndTime>
-      <Cursor1Time time="7"></Cursor1Time>
+      <ZoomStartTime time="54,490"></ZoomStartTime>
+      <ZoomEndTime time="54,559"></ZoomEndTime>
+      <Cursor1Time time="54,520"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="399"></NameColumnWidth>
-      <ValueColumnWidth column_width="79"></ValueColumnWidth>
+      <ValueColumnWidth column_width="75"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="10" />
+   <WVObjectSize size="6" />
    <wave_markers>
    </wave_markers>
-   <wvobject type="logic" fp_name="top_i/sensor_0/bit_aligner_0_bit_slip_o">
+   <wvobject type="array" fp_name="top_i/sensor_0/gmax0505_channel_0_delay_setting_o">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">top_i/sensor_0/bit_aligner_0_bit_slip_o</obj_property>
-      <obj_property name="ObjectShortName">bit_aligner_0_bit_slip_o</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="top_i/sensor_0/bit_aligner_1_bit_slip_o">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">top_i/sensor_0/bit_aligner_1_bit_slip_o</obj_property>
-      <obj_property name="ObjectShortName">bit_aligner_1_bit_slip_o</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="top_i/sensor_0/decoder_0_par_clk_o">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">top_i/sensor_0/decoder_0_par_clk_o</obj_property>
-      <obj_property name="ObjectShortName">decoder_0_par_clk_o</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="top_i/sensor_0/decoder_0_par_data_o">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">top_i/sensor_0/decoder_0_par_data_o[11:0]</obj_property>
-      <obj_property name="ObjectShortName">decoder_0_par_data_o[11:0]</obj_property>
+      <obj_property name="ElementShortName">top_i/sensor_0/gmax0505_channel_0_delay_setting_o[4:0]</obj_property>
+      <obj_property name="ObjectShortName">gmax0505_channel_0_delay_setting_o[4:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="top_i/sensor_0/idelay2_wrapper_0_delay_setting_o">
+   <wvobject type="logic" fp_name="top_i/sensor_0/gmax0505_channel_0_par_clk_o">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">top_i/sensor_0/idelay2_wrapper_0_delay_setting_o[4:0]</obj_property>
-      <obj_property name="ObjectShortName">idelay2_wrapper_0_delay_setting_o[4:0]</obj_property>
+      <obj_property name="ElementShortName">top_i/sensor_0/gmax0505_channel_0_par_clk_o</obj_property>
+      <obj_property name="ObjectShortName">gmax0505_channel_0_par_clk_o</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="top_i/sensor_0/gmax0505_channel_0_par_data_o">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_i/sensor_0/gmax0505_channel_0_par_data_o[11:0]</obj_property>
+      <obj_property name="ObjectShortName">gmax0505_channel_0_par_data_o[11:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
@@ -76,22 +62,6 @@
       <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">top_i/sensor_0/xlslice_1_Dout</obj_property>
       <obj_property name="ObjectShortName">xlslice_1_Dout</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="top_i/sensor_0/ddr_deserialiser_0_data">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">top_i/sensor_0/ddr_deserialiser_0_data[1:0]</obj_property>
-      <obj_property name="ObjectShortName">ddr_deserialiser_0_data[1:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-      <obj_property name="isExpanded"></obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="top_i/sensor_0/util_ds_buf_0_IBUF_OUT">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">top_i/sensor_0/util_ds_buf_0_IBUF_OUT</obj_property>
-      <obj_property name="ObjectShortName">util_ds_buf_0_IBUF_OUT</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
