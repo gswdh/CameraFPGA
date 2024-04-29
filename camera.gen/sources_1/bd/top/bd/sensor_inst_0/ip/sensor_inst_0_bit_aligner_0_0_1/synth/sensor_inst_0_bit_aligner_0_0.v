@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "bit_aligner,Vivado 2023.2" *)
 (* CHECK_LICENSE_TYPE = "sensor_inst_0_bit_aligner_0_0,bit_aligner,{}" *)
-(* CORE_GENERATION_INFO = "sensor_inst_0_bit_aligner_0_0,bit_aligner,{x_ipProduct=Vivado 2023.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=bit_aligner,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,HOLD_OFF_CYCLES=6}" *)
+(* CORE_GENERATION_INFO = "sensor_inst_0_bit_aligner_0_0,bit_aligner,{x_ipProduct=Vivado 2023.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=bit_aligner,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,HOLD_OFF_CYCLES=12}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module sensor_inst_0_bit_aligner_0_0 (
@@ -70,7 +70,7 @@ input wire aligned_i;
 output wire bit_slip_o;
 
   bit_aligner #(
-    .HOLD_OFF_CYCLES(6)
+    .HOLD_OFF_CYCLES(12)
   ) inst (
     .clk_i(clk_i),
     .n_reset_i(n_reset_i),

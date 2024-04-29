@@ -2618,7 +2618,7 @@
             "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
             "parameters": {
               "ADDR_WIDTH": {
-                "value": "16",
+                "value": "31",
                 "value_src": "strong"
               },
               "ARUSER_WIDTH": {
@@ -2958,7 +2958,7 @@
         "variant_info": {
           "sensor.bd": {
             "scoped_diagram": "sensor_inst_0.bd",
-            "design_checksum": "0xDF30FA22",
+            "design_checksum": "0x53BBB766",
             "ref_name": "sensor",
             "ref_subinst_path": "top_sensor_0",
             "ref_type": "Block Design",

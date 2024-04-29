@@ -74,7 +74,7 @@
       <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
         <spirit:name>HOLD_OFF_CYCLES</spirit:name>
         <spirit:displayName>Hold Off Cycles</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.HOLD_OFF_CYCLES">128</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.HOLD_OFF_CYCLES">256</spirit:value>
       </spirit:modelParameter>
     </spirit:modelParameters>
   </spirit:model>
@@ -83,7 +83,7 @@
     <spirit:parameter>
       <spirit:name>HOLD_OFF_CYCLES</spirit:name>
       <spirit:displayName>Hold Off Cycles</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.HOLD_OFF_CYCLES">128</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.HOLD_OFF_CYCLES">256</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Component_Name</spirit:name>

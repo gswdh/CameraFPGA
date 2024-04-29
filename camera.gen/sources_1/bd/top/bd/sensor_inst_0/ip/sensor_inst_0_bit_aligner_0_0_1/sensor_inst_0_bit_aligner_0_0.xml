@@ -14,7 +14,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:cac7dbc4</spirit:value>
+            <spirit:value>9:fb5fb134</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -26,7 +26,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:d3982a73</spirit:value>
+            <spirit:value>9:f36639cf</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -37,7 +37,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:d3982a73</spirit:value>
+            <spirit:value>9:f36639cf</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -53,11 +53,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Apr 27 15:34:45 UTC 2024</spirit:value>
+            <spirit:value>Mon Apr 29 06:44:37 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:cac7dbc4</spirit:value>
+            <spirit:value>9:fb5fb134</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -73,11 +73,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Apr 27 15:34:45 UTC 2024</spirit:value>
+            <spirit:value>Mon Apr 29 06:44:37 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:d3982a73</spirit:value>
+            <spirit:value>9:f36639cf</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -156,7 +156,7 @@
       <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
         <spirit:name>HOLD_OFF_CYCLES</spirit:name>
         <spirit:displayName>Hold Off Cycles</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.HOLD_OFF_CYCLES">6</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.HOLD_OFF_CYCLES">12</spirit:value>
       </spirit:modelParameter>
     </spirit:modelParameters>
   </spirit:model>
@@ -183,7 +183,7 @@
     <spirit:parameter>
       <spirit:name>HOLD_OFF_CYCLES</spirit:name>
       <spirit:displayName>Hold Off Cycles</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.HOLD_OFF_CYCLES">6</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.HOLD_OFF_CYCLES">12</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Component_Name</spirit:name>

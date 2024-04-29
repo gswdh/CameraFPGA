@@ -1,7 +1,7 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"0.515116",
-   "Default View_TopLeft":"-571,1101",
+   "Default View_TopLeft":"-567,932",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0 TLS
 #  -string -flagsOSRD
@@ -23,25 +23,25 @@ preplace inst word_detector_0 -pg 1 -lvl 6 -x 2430 -y 2180 -defaultsOSRD
 preplace inst decoder_0 -pg 1 -lvl 5 -x 1870 -y 2160 -defaultsOSRD
 preplace inst bit_aligner_0 -pg 1 -lvl 6 -x 2430 -y 2480 -defaultsOSRD
 preplace inst bit_aligner_1 -pg 1 -lvl 6 -x 2430 -y 2700 -defaultsOSRD
-preplace netloc ACLK_0_1 1 0 3 200 1210 540J 1190 NJ
-preplace netloc ARESETN_0_1 1 0 6 210 1220 520 2260 N 2260 N 2260 1700 2260 2240
+preplace netloc ACLK_0_1 1 0 3 200 1210 540J 1170 NJ
+preplace netloc ARESETN_0_1 1 0 6 210 1220 520 2260 N 2260 N 2260 1700 2260 2250
 preplace netloc axi_gpio_0_gpio_io_o 1 1 1 550 1280n
-preplace netloc xlslice_0_Dout 1 2 4 920 1120 N 1120 N 1120 2290
-preplace netloc xlslice_1_Dout 1 2 4 900 1130 N 1130 N 1130 2250
-preplace netloc ref_clk_i_0_1 1 0 2 NJ 2120 NJ
-preplace netloc util_ds_buf_1_IBUF_OUT 1 1 1 510 1870n
-preplace netloc util_ds_buf_0_IBUF_OUT 1 1 4 NJ 1770 N 1770 1190 2090 1430
+preplace netloc bit_aligner_0_bit_slip_o 1 2 5 950 2230 N 2230 1710 2250 2040J 2100 2580
+preplace netloc bit_aligner_1_bit_slip_o 1 1 6 550 2270 910J 2270 NJ 2270 NJ 2270 NJ 2270 2570
+preplace netloc ddr_deserialiser_0_data 1 2 3 940 2240 N 2240 1430
+preplace netloc decoder_0_par_clk_o 1 2 4 930 2280 N 2280 N 2280 2260
+preplace netloc decoder_0_par_data_o 1 2 4 900 2290 N 2290 N 2290 2030
 preplace netloc idelay2_wrapper_0_data_o 1 2 2 N 2170 N
-preplace netloc ddr_deserialiser_0_data 1 4 1 1430 2160n
-preplace netloc decoder_0_par_clk_o 1 2 4 940 2280 N 2280 N 2280 2270
-preplace netloc decoder_0_par_data_o 1 2 4 910 2290 N 2290 N 2290 2030
-preplace netloc word_detector_0_detected_o1 1 1 6 530 1220 910 1110 N 1110 N 1110 2280 2090 2570
-preplace netloc bit_aligner_0_bit_slip_o 1 2 5 950 2230 N 2230 1710 2250 2260J 2100 2580
-preplace netloc bit_aligner_1_bit_slip_o 1 1 6 550 2270 920J 2270 NJ 2270 NJ 2270 NJ 2270 2570
-preplace netloc idelay2_wrapper_0_delay_setting_o 1 2 1 930 1350n
+preplace netloc idelay2_wrapper_0_delay_setting_o 1 2 1 890 1330n
+preplace netloc ref_clk_i_0_1 1 0 2 NJ 2120 NJ
+preplace netloc util_ds_buf_0_IBUF_OUT 1 1 4 NJ 1770 920 1770 1190 2090 1430
+preplace netloc util_ds_buf_1_IBUF_OUT 1 1 1 510 1870n
+preplace netloc word_detector_0_detected_o1 1 1 6 530 1220 900 1090 N 1090 N 1090 2280 2090 2570
+preplace netloc xlslice_0_Dout 1 2 4 890 1110 N 1110 N 1110 2290
+preplace netloc xlslice_1_Dout 1 2 4 880 1100 N 1100 N 1100 2270
+preplace netloc CLK_IN_D_0_1 1 0 1 N 1870
 preplace netloc S_AXI_0_1 1 0 1 NJ 1290
 preplace netloc diff_clk_in_0_1 1 0 1 10J 1770n
-preplace netloc CLK_IN_D_0_1 1 0 1 N 1870
 levelinfo -pg 1 -10 360 710 1050 1310 1870 2430 2650
 pagesize -pg 1 -db -bbox -sgen -180 0 2770 2790
 "

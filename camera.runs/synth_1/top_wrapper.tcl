@@ -71,7 +71,6 @@ proc create_report { reportName command } {
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param tcl.collectionResultDisplayLimit 0
-set_param chipscope.maxJobs 1
 set_param xicom.use_bs_reader 1
 set_msg_config -id {HDL-1065} -limit 10000
 OPTRACE "Creating in-memory project" START { }
@@ -93,6 +92,7 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
+  /home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/edge_capture.v
   /home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/idelay2_wrapper.v
   /home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/ddr_deserialiser.v
   /home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/word_detector.v

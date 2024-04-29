@@ -369,7 +369,7 @@
             "value": "Native"
           },
           "C_NUM_OF_PROBES": {
-            "value": "8"
+            "value": "10"
           },
           "C_PROBE2_WIDTH": {
             "value": "1"
@@ -385,6 +385,9 @@
           },
           "C_PROBE7_WIDTH": {
             "value": "5"
+          },
+          "C_PROBE9_WIDTH": {
+            "value": "2"
           }
         }
       },
@@ -641,7 +644,7 @@
         "inst_hier_path": "bit_aligner_0",
         "parameters": {
           "HOLD_OFF_CYCLES": {
-            "value": "6"
+            "value": "12"
           }
         },
         "reference_info": {
@@ -681,7 +684,7 @@
         "inst_hier_path": "bit_aligner_1",
         "parameters": {
           "HOLD_OFF_CYCLES": {
-            "value": "128"
+            "value": "256"
           }
         },
         "reference_info": {
@@ -747,10 +750,10 @@
         "ports": [
           "ARESETN_0",
           "axi_gpio_0/s_axi_aresetn",
+          "idelay2_wrapper_0/nrst_i",
           "decoder_0/nrst_i",
           "bit_aligner_0/n_reset_i",
-          "bit_aligner_1/n_reset_i",
-          "idelay2_wrapper_0/nrst_i"
+          "bit_aligner_1/n_reset_i"
         ]
       },
       "axi_gpio_0_gpio_io_o": {
@@ -763,8 +766,8 @@
       "bit_aligner_0_bit_slip_o": {
         "ports": [
           "bit_aligner_0/bit_slip_o",
-          "decoder_0/bitslip_i",
-          "ila_0/probe5"
+          "ila_0/probe5",
+          "decoder_0/bitslip_i"
         ]
       },
       "bit_aligner_1_bit_slip_o": {
@@ -777,6 +780,7 @@
       "ddr_deserialiser_0_data": {
         "ports": [
           "ddr_deserialiser_0/data",
+          "ila_0/probe9",
           "decoder_0/ser_data_i"
         ]
       },
@@ -784,9 +788,9 @@
         "ports": [
           "decoder_0/par_clk_o",
           "word_detector_0/clk_i",
+          "ila_0/probe0",
           "bit_aligner_0/clk_i",
-          "bit_aligner_1/clk_i",
-          "ila_0/probe0"
+          "bit_aligner_1/clk_i"
         ]
       },
       "decoder_0_par_data_o": {
@@ -817,8 +821,9 @@
       "util_ds_buf_0_IBUF_OUT": {
         "ports": [
           "util_ds_buf_0/IBUF_OUT",
-          "ddr_deserialiser_0/ddr_clk",
-          "decoder_0/ser_clk_i"
+          "ila_0/probe8",
+          "decoder_0/ser_clk_i",
+          "ddr_deserialiser_0/ddr_clk"
         ]
       },
       "util_ds_buf_1_IBUF_OUT": {
@@ -830,10 +835,10 @@
       "word_detector_0_detected_o1": {
         "ports": [
           "word_detector_0/detected_o",
-          "bit_aligner_0/aligned_i",
-          "bit_aligner_1/aligned_i",
           "ila_0/probe2",
-          "axi_gpio_0/gpio2_io_i"
+          "axi_gpio_0/gpio2_io_i",
+          "bit_aligner_0/aligned_i",
+          "bit_aligner_1/aligned_i"
         ]
       },
       "xlslice_0_Dout": {
@@ -847,8 +852,8 @@
         "ports": [
           "xlslice_1/Dout",
           "ila_0/probe1",
-          "bit_aligner_1/en_i",
-          "bit_aligner_0/en_i"
+          "bit_aligner_0/en_i",
+          "bit_aligner_1/en_i"
         ]
       }
     },

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-| Date         : Sat Apr 27 17:40:52 2024
+| Date         : Mon Apr 29 07:51:54 2024
 | Host         : testserver running 64-bit Ubuntu 20.04.6 LTS
 | Command      : report_methodology -file top_wrapper_methodology_drc_routed.rpt -pb top_wrapper_methodology_drc_routed.pb -rpx top_wrapper_methodology_drc_routed.rpx
 | Design       : top_wrapper
@@ -23,13 +23,13 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 86
+             Violations found: 98
 +-----------+------------------+------------------------------------------------+------------+
 | Rule      | Severity         | Description                                    | Violations |
 +-----------+------------------+------------------------------------------------+------------+
 | TIMING-6  | Critical Warning | No common primary clock between related clocks | 2          |
 | TIMING-7  | Critical Warning | No common node between related clocks          | 2          |
-| TIMING-17 | Critical Warning | Non-clocked sequential cell                    | 35         |
+| TIMING-17 | Critical Warning | Non-clocked sequential cell                    | 47         |
 | LUTAR-1   | Warning          | LUT drives async reset alert                   | 4          |
 | TIMING-10 | Warning          | Missing property on synchronizer               | 1          |
 | TIMING-18 | Warning          | Missing input or output delay                  | 42         |
@@ -228,6 +228,66 @@ The clock pin top_i/sensor_0/bit_aligner_1/inst/hold_off_timer_reg[9]/C is not r
 Related violations: <none>
 
 TIMING-17#35 Critical Warning
+Non-clocked sequential cell  
+The clock pin top_i/sensor_0/decoder_0/inst/par_data_o_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#36 Critical Warning
+Non-clocked sequential cell  
+The clock pin top_i/sensor_0/decoder_0/inst/par_data_o_reg[10]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#37 Critical Warning
+Non-clocked sequential cell  
+The clock pin top_i/sensor_0/decoder_0/inst/par_data_o_reg[11]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#38 Critical Warning
+Non-clocked sequential cell  
+The clock pin top_i/sensor_0/decoder_0/inst/par_data_o_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#39 Critical Warning
+Non-clocked sequential cell  
+The clock pin top_i/sensor_0/decoder_0/inst/par_data_o_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#40 Critical Warning
+Non-clocked sequential cell  
+The clock pin top_i/sensor_0/decoder_0/inst/par_data_o_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#41 Critical Warning
+Non-clocked sequential cell  
+The clock pin top_i/sensor_0/decoder_0/inst/par_data_o_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#42 Critical Warning
+Non-clocked sequential cell  
+The clock pin top_i/sensor_0/decoder_0/inst/par_data_o_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#43 Critical Warning
+Non-clocked sequential cell  
+The clock pin top_i/sensor_0/decoder_0/inst/par_data_o_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#44 Critical Warning
+Non-clocked sequential cell  
+The clock pin top_i/sensor_0/decoder_0/inst/par_data_o_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#45 Critical Warning
+Non-clocked sequential cell  
+The clock pin top_i/sensor_0/decoder_0/inst/par_data_o_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#46 Critical Warning
+Non-clocked sequential cell  
+The clock pin top_i/sensor_0/decoder_0/inst/par_data_o_reg[9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#47 Critical Warning
 Non-clocked sequential cell  
 The clock pin top_i/sensor_0/word_detector_0/inst/detected_o_reg/C is not reached by a timing clock
 Related violations: <none>

@@ -69,7 +69,7 @@ input wire aligned_i;
 output wire bit_slip_o;
 
   bit_aligner #(
-    .HOLD_OFF_CYCLES(128)
+    .HOLD_OFF_CYCLES(256)
   ) inst (
     .clk_i(clk_i),
     .n_reset_i(n_reset_i),
