@@ -74,6 +74,7 @@ set_param checkpoint.writeSynthRtdsInDcp 1
 set_param tcl.collectionResultDisplayLimit 0
 set_param chipscope.maxJobs 1
 set_param xicom.use_bs_reader 1
+set_param tcl.statsThreshold 360
 set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config -id {HDL-1065} -limit 10000
 set_msg_config -id {Synth 8-256} -limit 10000
@@ -98,6 +99,7 @@ OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
   /home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/bit_aligner.v
+  /home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/clk_divider.v
   /home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/ddr_deserialiser.v
   /home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/decoder.v
   /home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/edge_capture.v

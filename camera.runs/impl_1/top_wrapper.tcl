@@ -130,6 +130,7 @@ set rc [catch {
   set_param tcl.collectionResultDisplayLimit 0
   set_param chipscope.maxJobs 1
   set_param xicom.use_bs_reader 1
+  set_param tcl.statsThreshold 360
   set_param runs.launchOptions { -jobs 4  }
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7z020clg484-2

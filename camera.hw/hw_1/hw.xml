@@ -164,7 +164,7 @@
         <net name="top_i/sensor_0/decoder_0_par_data_o[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq5&apos;hXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq5&apos;hXX"/>
@@ -210,7 +210,7 @@
         <net name="top_i/sensor_0/gmax0505_channel_0_par_clk_o"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq12&apos;hXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq12&apos;hXXX"/>
@@ -240,6 +240,239 @@
         <net name="top_i/sensor_0/gmax0505_channel_0_par_data_o[2]"/>
         <net name="top_i/sensor_0/gmax0505_channel_0_par_data_o[1]"/>
         <net name="top_i/sensor_0/gmax0505_channel_0_par_data_o[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe0[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_clk_o"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq192&apos;hXXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq192&apos;hXXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe3[191:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq192&apos;hXXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[191]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[190]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[189]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[188]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[187]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[186]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[185]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[184]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[183]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[182]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[181]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[180]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[179]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[178]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[177]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[176]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[175]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[174]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[173]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[172]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[171]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[170]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[169]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[168]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[167]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[166]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[165]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[164]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[163]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[162]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[161]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[160]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[159]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[158]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[157]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[156]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[155]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[154]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[153]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[152]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[151]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[150]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[149]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[148]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[147]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[146]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[145]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[144]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[143]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[142]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[141]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[140]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[139]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[138]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[137]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[136]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[135]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[134]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[133]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[132]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[131]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[130]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[129]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[128]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[127]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[126]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[125]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[124]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[123]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[122]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[121]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[120]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[119]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[118]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[117]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[116]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[115]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[114]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[113]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[112]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[111]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[110]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[109]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[108]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[107]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[106]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[105]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[104]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[103]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[102]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[101]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[100]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[99]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[98]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[97]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[96]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[95]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[94]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[93]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[92]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[91]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[90]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[89]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[88]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[87]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[86]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[85]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[84]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[83]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[82]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[81]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[80]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[79]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[78]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[77]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[76]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[75]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[74]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[73]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[72]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[71]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[70]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[69]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[68]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[67]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[66]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[65]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[64]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[63]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[62]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[61]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[60]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[59]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[58]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[57]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[56]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[55]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[54]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[53]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[52]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[51]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[50]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[49]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[48]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[47]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[46]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[45]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[44]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[43]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[42]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[41]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[40]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[39]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[38]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[37]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[36]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[35]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[34]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[33]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[32]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[31]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[30]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[29]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[28]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[27]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[26]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[25]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[24]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[23]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[22]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[21]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[20]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[19]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[18]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[17]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[16]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[15]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[14]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[13]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[12]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[11]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[10]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[9]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[8]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[7]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[6]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[5]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[4]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[3]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[2]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[1]"/>
+        <net name="top_i/sensor_0/gmax0505_streamer_0_par_data_o[0]"/>
       </nets>
     </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">

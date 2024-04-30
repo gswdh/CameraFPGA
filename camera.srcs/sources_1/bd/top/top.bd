@@ -2566,7 +2566,7 @@
             "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
             "parameters": {
               "ADDR_WIDTH": {
-                "value": "16",
+                "value": "31",
                 "value_src": "strong"
               },
               "ARUSER_WIDTH": {

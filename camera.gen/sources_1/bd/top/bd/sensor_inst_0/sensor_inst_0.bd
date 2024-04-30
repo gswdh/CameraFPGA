@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xF21437D5E1F6FC6D",
+      "boundary_crc": "0xF21437D5CA94A40E",
       "design_src": "/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/sources_1/bd/sensor/sensor.bd",
       "device": "xc7z020clg484-2",
       "name": "sensor_inst_0",
@@ -25,7 +25,7 @@
         "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
         "parameters": {
           "ADDR_WIDTH": {
-            "value": "16",
+            "value": "31",
             "value_src": "strong"
           },
           "ARUSER_WIDTH": {
@@ -152,8 +152,8 @@
         "address_space_ref": "S_AXI_0",
         "base_address": {
           "minimum": "0x00000000",
-          "maximum": "0x0000FFFF",
-          "width": "16"
+          "maximum": "0x7FFFFFFF",
+          "width": "31"
         },
         "port_maps": {
           "ARADDR": {
@@ -596,12 +596,12 @@
       "/": {
         "address_spaces": {
           "S_AXI_0": {
-            "range": "64K",
-            "width": "16",
+            "range": "2G",
+            "width": "31",
             "segments": {
               "SEG_axi_gpio_0_Reg": {
                 "address_block": "/axi_gpio_0/S_AXI/Reg",
-                "offset": "0x0000",
+                "offset": "0x41210000",
                 "range": "64K"
               }
             }

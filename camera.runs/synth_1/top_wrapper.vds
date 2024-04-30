@@ -3,16 +3,15 @@
 # SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Mon Apr 29 21:47:42 2024
-# Process ID: 134571
+# Start of session at: Tue Apr 30 18:08:35 2024
+# Process ID: 243584
 # Current directory: /home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1
 # Command line: vivado -log top_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_wrapper.tcl
 # Log file: /home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/top_wrapper.vds
 # Journal file: /home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/vivado.jou
-# Running On: testserver, OS: Linux, CPU Frequency: 1709.128 MHz, CPU Physical cores: 4, Host memory: 16686 MB
+# Running On: testserver, OS: Linux, CPU Frequency: 1675.550 MHz, CPU Physical cores: 4, Host memory: 16686 MB
 #-----------------------------------------------------------
 source top_wrapper.tcl -notrace
-create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1318.531 ; gain = 0.023 ; free physical = 3971 ; free virtual = 10285
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/test/Projects/CameraZynq/ip_repo/spi_dma_1_0'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/test/Xilinx/Vivado/2023.2/data/ip'.
@@ -28,11 +27,10 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 134628
+INFO: [Synth 8-7075] Helper process launched with PID 243716
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2071.684 ; gain = 404.711 ; free physical = 3041 ; free virtual = 9356
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2071.750 ; gain = 403.711 ; free physical = 2553 ; free virtual = 8688
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-11065] parameter 'CNT' becomes localparam in 'decoder' with formal parameter declaration list [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/decoder.v:19]
 INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ipshared/ae90/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:30]
 INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ipshared/ae90/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:32]
 INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ipshared/ae90/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:69]
@@ -1252,8 +1250,8 @@ INFO: [Synth 8-6157] synthesizing module 'decoder' [/home/test/Projects/CameraZy
 	Parameter DIV bound to: 12 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'edge_capture' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/edge_capture.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'edge_capture' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/edge_capture.v:1]
-WARNING: [Synth 8-7071] port 'falling_o' of module 'edge_capture' is unconnected for instance 'edge_cap0' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/decoder.v:25]
-WARNING: [Synth 8-7023] instance 'edge_cap0' of module 'edge_capture' has 5 connections declared, but only 4 given [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/decoder.v:25]
+WARNING: [Synth 8-7071] port 'falling_o' of module 'edge_capture' is unconnected for instance 'edge_cap0' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/decoder.v:24]
+WARNING: [Synth 8-7023] instance 'edge_cap0' of module 'edge_capture' has 5 connections declared, but only 4 given [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/decoder.v:24]
 INFO: [Synth 8-6155] done synthesizing module 'decoder' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/decoder.v:1]
 WARNING: [Synth 8-7071] port 'falling_o' of module 'edge_capture' is unconnected for instance 'edge_cap_0' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_channel.v:72]
 WARNING: [Synth 8-7023] instance 'edge_cap_0' of module 'edge_capture' has 5 connections declared, but only 4 given [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_channel.v:72]
@@ -1279,57 +1277,45 @@ INFO: [Synth 8-6157] synthesizing module 'word_detector' [/home/test/Projects/Ca
 	Parameter WORD_WIDTH bound to: 12 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'word_detector' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/word_detector.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'gmax0505_channel' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_channel.v:1]
-WARNING: [Synth 8-7071] port 'par_clk_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
-WARNING: [Synth 8-7071] port 'delay_setting_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
-WARNING: [Synth 8-7023] instance 'channel_n' of module 'gmax0505_channel' has 10 connections declared, but only 8 given [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
-WARNING: [Synth 8-7071] port 'par_clk_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
-WARNING: [Synth 8-7071] port 'delay_setting_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
-WARNING: [Synth 8-7023] instance 'channel_n' of module 'gmax0505_channel' has 10 connections declared, but only 8 given [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
-WARNING: [Synth 8-7071] port 'par_clk_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
-WARNING: [Synth 8-7071] port 'delay_setting_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
-WARNING: [Synth 8-7023] instance 'channel_n' of module 'gmax0505_channel' has 10 connections declared, but only 8 given [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
-WARNING: [Synth 8-7071] port 'par_clk_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
-WARNING: [Synth 8-7071] port 'delay_setting_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
-WARNING: [Synth 8-7023] instance 'channel_n' of module 'gmax0505_channel' has 10 connections declared, but only 8 given [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
-WARNING: [Synth 8-7071] port 'par_clk_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
-WARNING: [Synth 8-7071] port 'delay_setting_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
-WARNING: [Synth 8-7023] instance 'channel_n' of module 'gmax0505_channel' has 10 connections declared, but only 8 given [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
-WARNING: [Synth 8-7071] port 'par_clk_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
-WARNING: [Synth 8-7071] port 'delay_setting_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
-WARNING: [Synth 8-7023] instance 'channel_n' of module 'gmax0505_channel' has 10 connections declared, but only 8 given [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
-WARNING: [Synth 8-7071] port 'par_clk_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
-WARNING: [Synth 8-7071] port 'delay_setting_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
-WARNING: [Synth 8-7023] instance 'channel_n' of module 'gmax0505_channel' has 10 connections declared, but only 8 given [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
-WARNING: [Synth 8-7071] port 'par_clk_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
-WARNING: [Synth 8-7071] port 'delay_setting_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
-WARNING: [Synth 8-7023] instance 'channel_n' of module 'gmax0505_channel' has 10 connections declared, but only 8 given [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
-WARNING: [Synth 8-7071] port 'par_clk_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
-WARNING: [Synth 8-7071] port 'delay_setting_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
-WARNING: [Synth 8-7023] instance 'channel_n' of module 'gmax0505_channel' has 10 connections declared, but only 8 given [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
-WARNING: [Synth 8-7071] port 'par_clk_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
-WARNING: [Synth 8-7071] port 'delay_setting_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
-WARNING: [Synth 8-7023] instance 'channel_n' of module 'gmax0505_channel' has 10 connections declared, but only 8 given [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
-WARNING: [Synth 8-7071] port 'par_clk_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
-WARNING: [Synth 8-7071] port 'delay_setting_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
-WARNING: [Synth 8-7023] instance 'channel_n' of module 'gmax0505_channel' has 10 connections declared, but only 8 given [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
-WARNING: [Synth 8-7071] port 'par_clk_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
-WARNING: [Synth 8-7071] port 'delay_setting_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
-WARNING: [Synth 8-7023] instance 'channel_n' of module 'gmax0505_channel' has 10 connections declared, but only 8 given [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
-WARNING: [Synth 8-7071] port 'par_clk_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
-WARNING: [Synth 8-7071] port 'delay_setting_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
-WARNING: [Synth 8-7023] instance 'channel_n' of module 'gmax0505_channel' has 10 connections declared, but only 8 given [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
-WARNING: [Synth 8-7071] port 'par_clk_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
-WARNING: [Synth 8-7071] port 'delay_setting_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
-WARNING: [Synth 8-7023] instance 'channel_n' of module 'gmax0505_channel' has 10 connections declared, but only 8 given [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
-WARNING: [Synth 8-7071] port 'par_clk_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
-WARNING: [Synth 8-7071] port 'delay_setting_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
-WARNING: [Synth 8-7023] instance 'channel_n' of module 'gmax0505_channel' has 10 connections declared, but only 8 given [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:81]
+WARNING: [Synth 8-7071] port 'delay_setting_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:91]
+WARNING: [Synth 8-7023] instance 'channel_n' of module 'gmax0505_channel' has 10 connections declared, but only 9 given [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:91]
+WARNING: [Synth 8-7071] port 'delay_setting_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:91]
+WARNING: [Synth 8-7023] instance 'channel_n' of module 'gmax0505_channel' has 10 connections declared, but only 9 given [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:91]
+WARNING: [Synth 8-7071] port 'delay_setting_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:91]
+WARNING: [Synth 8-7023] instance 'channel_n' of module 'gmax0505_channel' has 10 connections declared, but only 9 given [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:91]
+WARNING: [Synth 8-7071] port 'delay_setting_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:91]
+WARNING: [Synth 8-7023] instance 'channel_n' of module 'gmax0505_channel' has 10 connections declared, but only 9 given [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:91]
+WARNING: [Synth 8-7071] port 'delay_setting_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:91]
+WARNING: [Synth 8-7023] instance 'channel_n' of module 'gmax0505_channel' has 10 connections declared, but only 9 given [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:91]
+WARNING: [Synth 8-7071] port 'delay_setting_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:91]
+WARNING: [Synth 8-7023] instance 'channel_n' of module 'gmax0505_channel' has 10 connections declared, but only 9 given [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:91]
+WARNING: [Synth 8-7071] port 'delay_setting_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:91]
+WARNING: [Synth 8-7023] instance 'channel_n' of module 'gmax0505_channel' has 10 connections declared, but only 9 given [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:91]
+WARNING: [Synth 8-7071] port 'delay_setting_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:91]
+WARNING: [Synth 8-7023] instance 'channel_n' of module 'gmax0505_channel' has 10 connections declared, but only 9 given [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:91]
+WARNING: [Synth 8-7071] port 'delay_setting_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:91]
+WARNING: [Synth 8-7023] instance 'channel_n' of module 'gmax0505_channel' has 10 connections declared, but only 9 given [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:91]
+WARNING: [Synth 8-7071] port 'delay_setting_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:91]
+WARNING: [Synth 8-7023] instance 'channel_n' of module 'gmax0505_channel' has 10 connections declared, but only 9 given [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:91]
+WARNING: [Synth 8-7071] port 'delay_setting_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:91]
+WARNING: [Synth 8-7023] instance 'channel_n' of module 'gmax0505_channel' has 10 connections declared, but only 9 given [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:91]
+WARNING: [Synth 8-7071] port 'delay_setting_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:91]
+WARNING: [Synth 8-7023] instance 'channel_n' of module 'gmax0505_channel' has 10 connections declared, but only 9 given [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:91]
+WARNING: [Synth 8-7071] port 'delay_setting_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:91]
+WARNING: [Synth 8-7023] instance 'channel_n' of module 'gmax0505_channel' has 10 connections declared, but only 9 given [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:91]
+WARNING: [Synth 8-7071] port 'delay_setting_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:91]
+WARNING: [Synth 8-7023] instance 'channel_n' of module 'gmax0505_channel' has 10 connections declared, but only 9 given [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:91]
+WARNING: [Synth 8-7071] port 'delay_setting_o' of module 'gmax0505_channel' is unconnected for instance 'channel_n' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:91]
+WARNING: [Synth 8-7023] instance 'channel_n' of module 'gmax0505_channel' has 10 connections declared, but only 9 given [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:91]
 INFO: [Synth 8-6157] synthesizing module 'IDELAYCTRL' [/home/test/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:75727]
 INFO: [Synth 8-6155] done synthesizing module 'IDELAYCTRL' (0#1) [/home/test/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:75727]
-WARNING: [Synth 8-689] width (32) of port connection 'RDY' does not match port width (1) of module 'IDELAYCTRL' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:30]
-WARNING: [Synth 8-2900] ignoring illegal expression in output port connection [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:30]
-WARNING: [Synth 8-7071] port 'delay_setting_o' of module 'gmax0505_channel' is unconnected for instance 'channel_0' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:50]
-WARNING: [Synth 8-7023] instance 'channel_0' of module 'gmax0505_channel' has 10 connections declared, but only 9 given [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:50]
+WARNING: [Synth 8-689] width (32) of port connection 'RDY' does not match port width (1) of module 'IDELAYCTRL' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:31]
+WARNING: [Synth 8-2900] ignoring illegal expression in output port connection [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:31]
+INFO: [Synth 8-6157] synthesizing module 'clk_divider' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/clk_divider.v:1]
+	Parameter DIV bound to: 6 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'clk_divider' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/clk_divider.v:1]
+WARNING: [Synth 8-7071] port 'delay_setting_o' of module 'gmax0505_channel' is unconnected for instance 'channel_0' [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:60]
+WARNING: [Synth 8-7023] instance 'channel_0' of module 'gmax0505_channel' has 10 connections declared, but only 9 given [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:60]
 INFO: [Synth 8-6155] done synthesizing module 'gmax0505_streamer' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'sensor_inst_0_gmax0505_streamer_0_0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_gmax0505_streamer_0_0/synth/sensor_inst_0_gmax0505_streamer_0_0.v:53]
 WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/synth/sensor_inst_0.v:153]
@@ -1369,10 +1355,12 @@ INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_5_xlconcat' (0#1) [
 INFO: [Synth 8-6155] done synthesizing module 'top_xlconcat_0_0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_xlconcat_0_0/synth/top_xlconcat_0_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'top_xlconstant_0_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_xlconstant_0_0/synth/top_xlconstant_0_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_8_xlconstant' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ipshared/d390/hdl/xlconstant_v1_1_vl_rfs.v:68]
+INFO: [Common 17-14] Message 'Synth 8-6157' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_8_xlconstant' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ipshared/d390/hdl/xlconstant_v1_1_vl_rfs.v:68]
 INFO: [Synth 8-6155] done synthesizing module 'top_xlconstant_0_0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_xlconstant_0_0/synth/top_xlconstant_0_0.v:53]
 INFO: [Synth 8-6155] done synthesizing module 'top' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:1389]
 INFO: [Synth 8-6155] done synthesizing module 'top_wrapper' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/hdl/top_wrapper.v:13]
+INFO: [Common 17-14] Message 'Synth 8-6155' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 WARNING: [Synth 8-6014] Unused sequential element Dual.ALLOUT0_ND_G1.READ_REG_GEN[0].GPIO_DBus_i_reg was removed.  [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ipshared/6fbe/hdl/axi_gpio_v2_0_vh_rfs.vhd:693]
 WARNING: [Synth 8-6014] Unused sequential element Dual.ALLOUT0_ND_G1.READ_REG_GEN[1].GPIO_DBus_i_reg was removed.  [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ipshared/6fbe/hdl/axi_gpio_v2_0_vh_rfs.vhd:693]
 WARNING: [Synth 8-6014] Unused sequential element Dual.ALLOUT0_ND_G1.READ_REG_GEN[2].GPIO_DBus_i_reg was removed.  [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ipshared/6fbe/hdl/axi_gpio_v2_0_vh_rfs.vhd:693]
@@ -1515,7 +1503,7 @@ WARNING: [Synth 8-6014] Unused sequential element Dual.ALLOUT0_ND_G1.READ_REG_GE
 WARNING: [Synth 8-6014] Unused sequential element Dual.ALLOUT0_ND_G1.READ_REG_GEN[12].GPIO_DBus_i_reg was removed.  [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ipshared/6fbe/hdl/axi_gpio_v2_0_vh_rfs.vhd:693]
 WARNING: [Synth 8-6014] Unused sequential element Dual.ALLIN0_ND_G2.READ_REG2_GEN[0].GPIO2_DBus_i_reg was removed.  [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ipshared/6fbe/hdl/axi_gpio_v2_0_vh_rfs.vhd:722]
 WARNING: [Synth 8-6014] Unused sequential element Dual.gpio_Data_In_reg was removed.  [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ipshared/6fbe/hdl/axi_gpio_v2_0_vh_rfs.vhd:885]
-WARNING: [Synth 8-7137] Register sync_done_o_reg in module gmax0505_streamer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:120]
+WARNING: [Synth 8-7137] Register sync_done_o_reg in module gmax0505_streamer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:131]
 WARNING: [Synth 8-3848] Net sl_iport0 in module/entity sensor_inst_0_ila_0_0 does not have driver. [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_ila_0_0/synth/sensor_inst_0_ila_0_0.v:106]
 INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gmax0505_streamer_0'. This will prevent further optimization [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/synth/sensor_inst_0.v:141]
 INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_0'. This will prevent further optimization [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/synth/sensor_inst_0.v:153]
@@ -1624,18 +1612,18 @@ WARNING: [Synth 8-7129] Port In103[0] in module xlconcat_v2_1_5_xlconcat is eith
 WARNING: [Synth 8-7129] Port In104[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 2581.129 ; gain = 914.156 ; free physical = 2443 ; free virtual = 8762
+Finished RTL Elaboration : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 2581.195 ; gain = 913.156 ; free physical = 1966 ; free virtual = 8105
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:47 ; elapsed = 00:00:50 . Memory (MB): peak = 2581.129 ; gain = 914.156 ; free physical = 2452 ; free virtual = 8772
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:47 ; elapsed = 00:00:50 . Memory (MB): peak = 2581.195 ; gain = 913.156 ; free physical = 1966 ; free virtual = 8105
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:47 ; elapsed = 00:00:50 . Memory (MB): peak = 2581.129 ; gain = 914.156 ; free physical = 2452 ; free virtual = 8772
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:47 ; elapsed = 00:00:50 . Memory (MB): peak = 2581.195 ; gain = 913.156 ; free physical = 1966 ; free virtual = 8105
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.29 ; elapsed = 00:00:00.29 . Memory (MB): peak = 2581.129 ; gain = 0.000 ; free physical = 2453 ; free virtual = 8773
+Netlist sorting complete. Time (s): cpu = 00:00:00.29 ; elapsed = 00:00:00.29 . Memory (MB): peak = 2581.195 ; gain = 0.000 ; free physical = 1964 ; free virtual = 8103
 INFO: [Netlist 29-17] Analyzing 1146 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -1701,7 +1689,7 @@ Parsing XDC File [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1
 Finished Parsing XDC File [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_axi_quad_spi_0_1/top_axi_quad_spi_0_1_clocks.xdc] for cell 'top_i/axi_quad_spi_1/U0'
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2613.145 ; gain = 0.000 ; free physical = 2437 ; free virtual = 8756
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2613.211 ; gain = 0.000 ; free physical = 1943 ; free virtual = 8082
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1020 instances were transformed.
   CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 144 instances
@@ -1711,18 +1699,18 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   FDRSE => FDRSE (FDRE, LUT4, VCC): 34 instances
   SRL16 => SRL16E: 1 instance 
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.21 ; elapsed = 00:00:00.21 . Memory (MB): peak = 2613.180 ; gain = 0.000 ; free physical = 2440 ; free virtual = 8759
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.2 ; elapsed = 00:00:00.21 . Memory (MB): peak = 2613.246 ; gain = 0.000 ; free physical = 1943 ; free virtual = 8083
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:03 ; elapsed = 00:01:05 . Memory (MB): peak = 2613.180 ; gain = 946.207 ; free physical = 2446 ; free virtual = 8766
+Finished Constraint Validation : Time (s): cpu = 00:01:02 ; elapsed = 00:01:05 . Memory (MB): peak = 2613.246 ; gain = 945.207 ; free physical = 1948 ; free virtual = 8087
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:03 ; elapsed = 00:01:05 . Memory (MB): peak = 2613.180 ; gain = 946.207 ; free physical = 2446 ; free virtual = 8765
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:02 ; elapsed = 00:01:05 . Memory (MB): peak = 2613.246 ; gain = 945.207 ; free physical = 1948 ; free virtual = 8087
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -1757,7 +1745,7 @@ Applied set_property KEEP_HIERARCHY = SOFT for top_i/sensor_0/xlslice_0. (constr
 Applied set_property KEEP_HIERARCHY = SOFT for top_i/sensor_0/xlslice_1. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for top_i/sensor_0/gmax0505_streamer_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:03 ; elapsed = 00:01:06 . Memory (MB): peak = 2613.180 ; gain = 946.207 ; free physical = 2456 ; free virtual = 8776
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:03 ; elapsed = 00:01:06 . Memory (MB): peak = 2613.246 ; gain = 945.207 ; free physical = 1944 ; free virtual = 8084
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'slave_attachment'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'slave_attachment__parameterized0'
@@ -1919,7 +1907,7 @@ INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in m
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'ltlib_v1_0_1_generic_memrd'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:10 ; elapsed = 00:01:13 . Memory (MB): peak = 2613.180 ; gain = 946.207 ; free physical = 2539 ; free virtual = 8862
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:10 ; elapsed = 00:01:13 . Memory (MB): peak = 2613.246 ; gain = 945.207 ; free physical = 2013 ; free virtual = 8156
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -2045,25 +2033,25 @@ INFO: [Synth 8-3332] Sequential element (gpio_core_1/Dual.INPUT_DOUBLE_REGS4/GEN
 INFO: [Synth 8-3332] Sequential element (gpio_core_1/Dual.INPUT_DOUBLE_REGS4/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[24].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4) is unused and will be removed from module axi_gpio.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:04 ; elapsed = 00:02:08 . Memory (MB): peak = 2613.180 ; gain = 946.207 ; free physical = 2507 ; free virtual = 8853
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:03 ; elapsed = 00:02:07 . Memory (MB): peak = 2613.246 ; gain = 945.207 ; free physical = 1991 ; free virtual = 8158
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:13 ; elapsed = 00:02:17 . Memory (MB): peak = 2613.180 ; gain = 946.207 ; free physical = 2512 ; free virtual = 8858
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:11 ; elapsed = 00:02:15 . Memory (MB): peak = 2613.246 ; gain = 945.207 ; free physical = 1995 ; free virtual = 8162
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:02:15 ; elapsed = 00:02:19 . Memory (MB): peak = 2613.180 ; gain = 946.207 ; free physical = 2512 ; free virtual = 8858
+Finished Timing Optimization : Time (s): cpu = 00:02:14 ; elapsed = 00:02:18 . Memory (MB): peak = 2613.246 ; gain = 945.207 ; free physical = 1995 ; free virtual = 8162
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:02:20 ; elapsed = 00:02:24 . Memory (MB): peak = 2613.180 ; gain = 946.207 ; free physical = 2513 ; free virtual = 8859
+Finished Technology Mapping : Time (s): cpu = 00:02:18 ; elapsed = 00:02:23 . Memory (MB): peak = 2613.246 ; gain = 945.207 ; free physical = 1994 ; free virtual = 8160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -2121,37 +2109,37 @@ WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[0] to constant 0
 WARNING: [Synth 8-3295] tying undriven pin inst:trig_in to constant 0
 WARNING: [Synth 8-3295] tying undriven pin inst:trig_out_ack to constant 0
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:25 ; elapsed = 00:02:29 . Memory (MB): peak = 2613.180 ; gain = 946.207 ; free physical = 2493 ; free virtual = 8839
+Finished IO Insertion : Time (s): cpu = 00:02:23 ; elapsed = 00:02:28 . Memory (MB): peak = 2613.246 ; gain = 945.207 ; free physical = 2011 ; free virtual = 8177
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:25 ; elapsed = 00:02:29 . Memory (MB): peak = 2613.180 ; gain = 946.207 ; free physical = 2493 ; free virtual = 8839
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:23 ; elapsed = 00:02:28 . Memory (MB): peak = 2613.246 ; gain = 945.207 ; free physical = 2009 ; free virtual = 8176
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:26 ; elapsed = 00:02:30 . Memory (MB): peak = 2613.180 ; gain = 946.207 ; free physical = 2492 ; free virtual = 8838
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:24 ; elapsed = 00:02:29 . Memory (MB): peak = 2613.246 ; gain = 945.207 ; free physical = 1982 ; free virtual = 8149
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:26 ; elapsed = 00:02:30 . Memory (MB): peak = 2613.180 ; gain = 946.207 ; free physical = 2492 ; free virtual = 8838
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:24 ; elapsed = 00:02:29 . Memory (MB): peak = 2613.246 ; gain = 945.207 ; free physical = 1982 ; free virtual = 8149
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:26 ; elapsed = 00:02:30 . Memory (MB): peak = 2613.180 ; gain = 946.207 ; free physical = 2492 ; free virtual = 8838
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:25 ; elapsed = 00:02:29 . Memory (MB): peak = 2613.246 ; gain = 945.207 ; free physical = 1982 ; free virtual = 8149
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:26 ; elapsed = 00:02:30 . Memory (MB): peak = 2613.180 ; gain = 946.207 ; free physical = 2492 ; free virtual = 8838
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:25 ; elapsed = 00:02:29 . Memory (MB): peak = 2613.246 ; gain = 945.207 ; free physical = 1982 ; free virtual = 8149
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -2168,17 +2156,17 @@ Report Cell Usage:
 |      |Cell       |Count |
 +------+-----------+------+
 |1     |BIBUF      |   130|
-|2     |BUFG       |    21|
-|3     |CARRY4     |   226|
+|2     |BUFG       |    11|
+|3     |CARRY4     |   247|
 |4     |CFGLUT5    |   153|
 |5     |IDELAYCTRL |     1|
 |6     |IDELAYE2   |    16|
-|7     |LUT1       |   147|
-|8     |LUT2       |   462|
-|9     |LUT3       |   755|
-|10    |LUT4       |   477|
-|11    |LUT5       |  1665|
-|12    |LUT6       |  1173|
+|7     |LUT1       |   613|
+|8     |LUT2       |   486|
+|9     |LUT3       |   719|
+|10    |LUT4       |   491|
+|11    |LUT5       |   769|
+|12    |LUT6       |  1653|
 |13    |MUXF7      |     6|
 |14    |PLLE2_ADV  |     1|
 |15    |PS7        |     1|
@@ -2189,7 +2177,7 @@ Report Cell Usage:
 |20    |SRLC16E    |     2|
 |21    |SRLC32E    |    64|
 |22    |FD         |     3|
-|23    |FDCE       |  1536|
+|23    |FDCE       |  1476|
 |24    |FDR        |   274|
 |25    |FDRE       |  3668|
 |26    |FDSE       |    95|
@@ -2198,19 +2186,19 @@ Report Cell Usage:
 |29    |OBUF       |    37|
 +------+-----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:26 ; elapsed = 00:02:30 . Memory (MB): peak = 2613.180 ; gain = 946.207 ; free physical = 2492 ; free virtual = 8838
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:25 ; elapsed = 00:02:29 . Memory (MB): peak = 2613.246 ; gain = 945.207 ; free physical = 1982 ; free virtual = 8149
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 3863 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:02:16 ; elapsed = 00:02:21 . Memory (MB): peak = 2613.180 ; gain = 914.156 ; free physical = 2492 ; free virtual = 8838
-Synthesis Optimization Complete : Time (s): cpu = 00:02:26 ; elapsed = 00:02:30 . Memory (MB): peak = 2613.180 ; gain = 946.207 ; free physical = 2492 ; free virtual = 8838
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:15 ; elapsed = 00:02:20 . Memory (MB): peak = 2613.246 ; gain = 913.156 ; free physical = 1982 ; free virtual = 8149
+Synthesis Optimization Complete : Time (s): cpu = 00:02:25 ; elapsed = 00:02:29 . Memory (MB): peak = 2613.246 ; gain = 945.207 ; free physical = 1982 ; free virtual = 8149
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.16 ; elapsed = 00:00:00.16 . Memory (MB): peak = 2613.180 ; gain = 0.000 ; free physical = 2719 ; free virtual = 9066
-INFO: [Netlist 29-17] Analyzing 744 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.16 ; elapsed = 00:00:00.16 . Memory (MB): peak = 2613.246 ; gain = 0.000 ; free physical = 2207 ; free virtual = 8374
+INFO: [Netlist 29-17] Analyzing 765 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Chipscope 16-324] Core: top_i/sensor_0/ila_0 UUID: 05cfc1e2-87ff-57cf-b102-d3de584161ea 
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2613.180 ; gain = 0.000 ; free physical = 2774 ; free virtual = 9121
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2613.246 ; gain = 0.000 ; free physical = 2267 ; free virtual = 8434
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 431 instances were transformed.
   CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 144 instances
@@ -2219,14 +2207,13 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   FDR => FDRE: 274 instances
   SRL16 => SRL16E: 1 instance 
 
-Synth Design complete | Checksum: d3c80cf9
+Synth Design complete | Checksum: 49978bdb
 INFO: [Common 17-83] Releasing license: Synthesis
-770 Infos, 410 Warnings, 0 Critical Warnings and 0 Errors encountered.
+774 Infos, 394 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:39 ; elapsed = 00:02:40 . Memory (MB): peak = 2613.180 ; gain = 1294.641 ; free physical = 2731 ; free virtual = 9077
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2262.129; main = 1921.701; forked = 384.389
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3601.391; main = 2613.148; forked = 988.242
-Write ShapeDB Complete: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2637.156 ; gain = 0.000 ; free physical = 2714 ; free virtual = 9063
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.statsThreshold
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2637.223 ; gain = 0.000 ; free physical = 2198 ; free virtual = 8366
 INFO: [Common 17-1381] The checkpoint '/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/top_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_wrapper_utilization_synth.rpt -pb top_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Apr 29 21:50:40 2024...
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 30 18:11:31 2024...
