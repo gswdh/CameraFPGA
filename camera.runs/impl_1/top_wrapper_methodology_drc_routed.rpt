@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-| Date         : Tue Apr 30 18:15:31 2024
+| Date         : Tue Apr 30 21:34:58 2024
 | Host         : testserver running 64-bit Ubuntu 20.04.6 LTS
 | Command      : report_methodology -file top_wrapper_methodology_drc_routed.rpt -pb top_wrapper_methodology_drc_routed.pb -rpx top_wrapper_methodology_drc_routed.rpx
 | Design       : top_wrapper
@@ -23,7 +23,7 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 1068
+             Violations found: 1066
 +-----------+------------------+------------------------------------------------+------------+
 | Rule      | Severity         | Description                                    | Violations |
 +-----------+------------------+------------------------------------------------+------------+
@@ -32,7 +32,6 @@ Table of Contents
 | TIMING-17 | Critical Warning | Non-clocked sequential cell                    | 1000       |
 | LUTAR-1   | Warning          | LUT drives async reset alert                   | 4          |
 | TIMING-10 | Warning          | Missing property on synchronizer               | 1          |
-| TIMING-16 | Warning          | Large setup violation                          | 2          |
 | TIMING-18 | Warning          | Missing input or output delay                  | 57         |
 +-----------+------------------+------------------------------------------------+------------+
 
@@ -5089,16 +5088,6 @@ Related violations: <none>
 TIMING-10#1 Warning
 Missing property on synchronizer  
 One or more logic synchronizer has been detected between 2 clock domains but the synchronizer does not have the property ASYNC_REG defined on one or both registers. It is recommended to run report_cdc for a complete and detailed CDC coverage
-Related violations: <none>
-
-TIMING-16#1 Warning
-Large setup violation  
-There is a large setup violation of -3.547 ns between top_i/sensor_0/gmax0505_streamer_0/inst/clk_div_0/cntr_reg[0]/C (clocked by ddr_clk_p_i_0_0) and top_i/sensor_0/gmax0505_streamer_0/inst/clk_div_0/cntr_reg[1]/D (clocked by ddr_clk_p_i_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#2 Warning
-Large setup violation  
-There is a large setup violation of -3.570 ns between top_i/sensor_0/gmax0505_streamer_0/inst/clk_div_0/cntr_reg[0]/C (clocked by ddr_clk_p_i_0_0) and top_i/sensor_0/gmax0505_streamer_0/inst/clk_div_0/cntr_reg[2]/D (clocked by ddr_clk_p_i_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-18#1 Warning

@@ -14,10 +14,10 @@
       <Cursor1Time time="0"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="399"></NameColumnWidth>
-      <ValueColumnWidth column_width="67"></ValueColumnWidth>
+      <NameColumnWidth column_width="439"></NameColumnWidth>
+      <ValueColumnWidth column_width="70"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="5" />
+   <WVObjectSize size="6" />
    <wave_markers>
    </wave_markers>
    <wvobject type="logic" fp_name="top_i/sensor_0/gmax0505_streamer_0_par_clk_o">
@@ -54,6 +54,14 @@
       <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">top_i/sensor_0/xlslice_1_Dout</obj_property>
       <obj_property name="ObjectShortName">xlslice_1_Dout</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="user_probe_0">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">user_probe_0[11:0]</obj_property>
+      <obj_property name="ObjectShortName">user_probe_0[11:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
