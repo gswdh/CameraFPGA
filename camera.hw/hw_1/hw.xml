@@ -38,6 +38,7 @@
   <ObjectList object_type="hw_probe" gui_info="">
     <Object name="top_i/sensor_0/bit_aligner_0_bit_slip_o" gui_info=""/>
     <Object name="top_i/sensor_0/bit_aligner_1_bit_slip_o" gui_info=""/>
+    <Object name="top_i/sensor_0/word_detector_0_detected_o1" gui_info="Trigger Setup=0"/>
     <Object name="top_i/sensor_0/xlslice_1_Dout" gui_info=""/>
     <Object name="top_i/sensor_bd_0/decoder_0_par_data_o[9:0]" gui_info=""/>
     <Object name="top_i/sensor_bd_0/fifo_generator_0_dout[31:0]" gui_info=""/>

@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xF21437D5CA94A40E",
+      "boundary_crc": "0xF21437D5DF3AE5D0",
       "design_src": "/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/sources_1/bd/sensor/sensor.bd",
       "device": "xc7z020clg484-2",
       "name": "sensor_inst_0",
@@ -57,24 +57,24 @@
             "value_src": "const_prop"
           },
           "HAS_BURST": {
-            "value": "0",
-            "value_src": "strong"
+            "value": "1",
+            "value_src": "const_prop"
           },
           "HAS_CACHE": {
-            "value": "0",
-            "value_src": "strong"
+            "value": "1",
+            "value_src": "const_prop"
           },
           "HAS_LOCK": {
-            "value": "0",
-            "value_src": "strong"
+            "value": "1",
+            "value_src": "const_prop"
           },
           "HAS_PROT": {
             "value": "1",
             "value_src": "const_prop"
           },
           "HAS_QOS": {
-            "value": "0",
-            "value_src": "strong"
+            "value": "1",
+            "value_src": "const_prop"
           },
           "HAS_REGION": {
             "value": "0",
@@ -90,7 +90,7 @@
           },
           "ID_WIDTH": {
             "value": "0",
-            "value_src": "default_prop"
+            "value_src": "ip_prop"
           },
           "INSERT_VIP": {
             "value": "0",
@@ -101,16 +101,16 @@
             "value_src": "ip_prop"
           },
           "NUM_READ_OUTSTANDING": {
-            "value": "2",
-            "value_src": "strong"
+            "value": "8",
+            "value_src": "ip_prop"
           },
           "NUM_READ_THREADS": {
             "value": "1",
             "value_src": "default_prop"
           },
           "NUM_WRITE_OUTSTANDING": {
-            "value": "2",
-            "value_src": "strong"
+            "value": "8",
+            "value_src": "ip_prop"
           },
           "NUM_WRITE_THREADS": {
             "value": "1",
@@ -122,7 +122,7 @@
           },
           "PROTOCOL": {
             "value": "AXI4LITE",
-            "value_src": "strong"
+            "value_src": "user_prop"
           },
           "READ_WRITE_MODE": {
             "value": "READ_WRITE",

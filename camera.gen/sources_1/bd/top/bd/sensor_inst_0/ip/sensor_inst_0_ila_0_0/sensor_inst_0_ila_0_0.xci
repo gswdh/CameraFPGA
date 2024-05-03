@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "sensor_inst_0_ila_0_0",
-    "cell_name": "sensor_0/ila_0",
+    "cell_name": "ila_0",
     "component_reference": "xilinx.com:ip:ila:6.2",
     "ip_revision": "14",
     "gen_directory": ".",

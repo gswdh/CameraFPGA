@@ -1,11 +1,15 @@
 vhdl xil_defaultlib  \
 "../../../../camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_axi_gpio_0_0/sim/sensor_inst_0_axi_gpio_0_0.vhd" \
-"../../../bd/top/ip/top_axi_gpio_0_0/sim/top_axi_gpio_0_0.vhd" \
+"../../../../camera.gen/sources_1/bd/top/bd/evf_inst_0/ip/evf_inst_0_mipi_dsi_tx_subsystem_0_0/bd_0/ip/ip_0/sim/bd_5350_proc_sys_reset_0_0.vhd" \
+"../../../../camera.gen/sources_1/bd/top/bd/evf_inst_0/ip/evf_inst_0_mipi_dsi_tx_subsystem_0_0/bd_0/ip/ip_1/sim/bd_5350_proc_sys_reset_1_0.vhd" \
+"../../../../camera.gen/sources_1/bd/top/bd/evf_inst_0/ip/evf_inst_0_axi_vdma_0_0/sim/evf_inst_0_axi_vdma_0_0.vhd" \
+"../../../../camera.gen/sources_1/bd/top/bd/evf_inst_0/ip/evf_inst_0_proc_sys_reset_0_0/sim/evf_inst_0_proc_sys_reset_0_0.vhd" \
+"../../../../camera.gen/sources_1/bd/top/bd/peripherals_inst_0/ip/peripherals_inst_0_axi_gpio_0_0/sim/peripherals_inst_0_axi_gpio_0_0.vhd" \
+"../../../../camera.gen/sources_1/bd/top/bd/peripherals_inst_0/ip/peripherals_inst_0_axi_uartlite_0_0/sim/peripherals_inst_0_axi_uartlite_0_0.vhd" \
+"../../../../camera.gen/sources_1/bd/top/bd/peripherals_inst_0/ip/peripherals_inst_0_axi_uartlite_1_0/sim/peripherals_inst_0_axi_uartlite_1_0.vhd" \
+"../../../../camera.gen/sources_1/bd/top/bd/peripherals_inst_0/ip/peripherals_inst_0_axi_quad_spi_0_0/sim/peripherals_inst_0_axi_quad_spi_0_0.vhd" \
+"../../../../camera.gen/sources_1/bd/top/bd/peripherals_inst_0/ip/peripherals_inst_0_axi_quad_spi_1_0/sim/peripherals_inst_0_axi_quad_spi_1_0.vhd" \
 "../../../bd/top/ip/top_rst_ps7_0_50M_0/sim/top_rst_ps7_0_50M_0.vhd" \
-"../../../bd/top/ip/top_axi_uartlite_0_0/sim/top_axi_uartlite_0_0.vhd" \
-"../../../bd/top/ip/top_axi_quad_spi_0_0/sim/top_axi_quad_spi_0_0.vhd" \
-"../../../bd/top/ip/top_axi_quad_spi_0_1/sim/top_axi_quad_spi_0_1.vhd" \
-"../../../bd/top/ip/top_axi_uartlite_0_1/sim/top_axi_uartlite_0_1.vhd" \
 
 # Do not sort compile order
 nosort

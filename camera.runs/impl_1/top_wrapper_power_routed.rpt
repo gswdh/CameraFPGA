@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-| Date             : Tue Apr 30 21:35:03 2024
+| Date             : Fri May  3 09:39:34 2024
 | Host             : testserver running 64-bit Ubuntu 20.04.6 LTS
 | Command          : report_power -file top_wrapper_power_routed.rpt -pb top_wrapper_power_summary_routed.pb -rpx top_wrapper_power_routed.rpx
 | Design           : top_wrapper
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 2.371        |
+| Total On-Chip Power (W)  | 2.843        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 2.200        |
-| Device Static (W)        | 0.171        |
+| Dynamic (W)              | 2.652        |
+| Device Static (W)        | 0.191        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 57.7         |
-| Junction Temperature (C) | 52.3         |
+| Max Ambient (C)          | 52.2         |
+| Junction Temperature (C) | 57.8         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,23 +52,24 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.032 |       12 |       --- |             --- |
-| Slice Logic              |     0.008 |    12927 |       --- |             --- |
-|   LUT as Logic           |     0.007 |     3815 |     53200 |            7.17 |
-|   Register               |    <0.001 |     6270 |    106400 |            5.89 |
-|   CARRY4                 |    <0.001 |      246 |     13300 |            1.85 |
-|   LUT as Distributed RAM |    <0.001 |       24 |     17400 |            0.14 |
-|   LUT as Shift Register  |    <0.001 |      362 |     17400 |            2.08 |
-|   F7/F8 Muxes            |    <0.001 |        6 |     53200 |            0.01 |
-|   Others                 |     0.000 |     1006 |       --- |             --- |
+| Clocks                   |     0.078 |       23 |       --- |             --- |
+| Slice Logic              |     0.022 |    32234 |       --- |             --- |
+|   LUT as Logic           |     0.020 |    10472 |     53200 |           19.68 |
+|   Register               |     0.001 |    15464 |    106400 |           14.53 |
+|   CARRY4                 |     0.001 |      582 |     13300 |            4.38 |
+|   LUT as Distributed RAM |    <0.001 |      192 |     17400 |            1.10 |
+|   F7/F8 Muxes            |    <0.001 |       19 |     53200 |            0.04 |
+|   LUT as Shift Register  |    <0.001 |      563 |     17400 |            3.24 |
+|   Others                 |     0.000 |     1682 |       --- |             --- |
 |   BUFG                   |     0.000 |        1 |        32 |            3.13 |
-| Signals                  |     0.010 |     9062 |       --- |             --- |
-| Block RAM                |     0.015 |     46.5 |       140 |           33.21 |
-| PLL                      |     0.103 |        1 |         4 |           25.00 |
-| I/O                      |     0.678 |       86 |       200 |           43.00 |
+| Signals                  |     0.028 |    23369 |       --- |             --- |
+| Block RAM                |     0.026 |     57.5 |       140 |           41.07 |
+| MMCM                     |     0.321 |        3 |         4 |           75.00 |
+| PLL                      |     0.095 |        1 |         4 |           25.00 |
+| I/O                      |     0.728 |      108 |       200 |           54.00 |
 | PS7                      |     1.354 |        1 |       --- |             --- |
-| Static Power             |     0.171 |          |           |                 |
-| Total                    |     2.370 |          |           |                 |
+| Static Power             |     0.191 |          |           |                 |
+| Total                    |     2.843 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -78,20 +79,20 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.089 |       0.066 |      0.022 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.143 |       0.125 |      0.018 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.003 |       0.002 |      0.001 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.195 |       0.167 |      0.029 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.318 |       0.298 |      0.020 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vcco18    |       1.800 |     0.305 |       0.304 |      0.001 |       NA    | Unspecified | NA         |
+| Vcco18    |       1.800 |     0.329 |       0.328 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vccbram   |       1.000 |     0.006 |       0.001 |      0.005 |       NA    | Unspecified | NA         |
+| Vccbram   |       1.000 |     0.009 |       0.002 |      0.007 |       NA    | Unspecified | NA         |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vccpint   |       1.000 |     0.776 |       0.736 |      0.039 |       NA    | Unspecified | NA         |
+| Vccpint   |       1.000 |     0.783 |       0.736 |      0.047 |       NA    | Unspecified | NA         |
 | Vccpaux   |       1.800 |     0.037 |       0.027 |      0.010 |       NA    | Unspecified | NA         |
 | Vccpll    |       1.800 |     0.017 |       0.014 |      0.003 |       NA    | Unspecified | NA         |
 | Vcco_ddr  |       1.500 |     0.356 |       0.354 |      0.002 |       NA    | Unspecified | NA         |
@@ -138,20 +139,30 @@ Table of Contents
 2.2 Clock Constraints
 ---------------------
 
-+--------------------------------------------------------------------------------------------+-------------------------------------------------------------------+-----------------+
-| Clock                                                                                      | Domain                                                            | Constraint (ns) |
-+--------------------------------------------------------------------------------------------+-------------------------------------------------------------------+-----------------+
-| badc_spi_clk_top_clk_wiz_0_0                                                               | top_i/clk_wiz_0/inst/badc_spi_clk_top_clk_wiz_0_0                 |           100.0 |
-| clk_fpga_0                                                                                 | top_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]            |            10.0 |
-| clkfbout_top_clk_wiz_0_0                                                                   | top_i/clk_wiz_0/inst/clkfbout_top_clk_wiz_0_0                     |            10.0 |
-| dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/TCK |            33.0 |
-| ddr_clk_p_i_0_0                                                                            | ddr_clk_p_i_0_0                                                   |             5.0 |
-| delay_clk_top_clk_wiz_0_0                                                                  | top_i/clk_wiz_0/inst/delay_clk_top_clk_wiz_0_0                    |             5.0 |
-| disp_spi_clk_top_clk_wiz_0_0                                                               | top_i/clk_wiz_0/inst/disp_spi_clk_top_clk_wiz_0_0                 |           100.0 |
-| eth_clk_top_clk_wiz_0_0                                                                    | top_i/clk_wiz_0/inst/eth_clk_top_clk_wiz_0_0                      |            20.0 |
-| sensor_clk_top_clk_wiz_0_0                                                                 | top_i/clk_wiz_0/inst/sensor_clk_top_clk_wiz_0_0                   |            20.0 |
-| usb_clk_top_clk_wiz_0_0                                                                    | top_i/clk_wiz_0/inst/usb_clk_top_clk_wiz_0_0                      |            83.3 |
-+--------------------------------------------------------------------------------------------+-------------------------------------------------------------------+-----------------+
++--------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+| Clock                                                                                      | Domain                                                                                                                                                                                                                                                       | Constraint (ns) |
++--------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+| badc_spi_clk_peripherals_inst_0_clk_wiz_0_0                                                | top_i/peripherals_0/clk_wiz_0/inst/badc_spi_clk_peripherals_inst_0_clk_wiz_0_0                                                                                                                                                                               |           100.0 |
+| clk_fpga_0                                                                                 | top_i/processing_system7_0/inst/FCLK_CLK0                                                                                                                                                                                                                    |            10.0 |
+| clk_fpga_0                                                                                 | top_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]                                                                                                                                                                                                       |            10.0 |
+| clk_ref_evf_inst_0_clk_wiz_0_0                                                             | top_i/evf_0/clk_wiz_0/inst/clk_ref_evf_inst_0_clk_wiz_0_0                                                                                                                                                                                                    |             5.0 |
+| clkfb_i                                                                                    | top_i/evf_0/mipi_dsi_tx_subsystem_0/inst/mipi_dphy_0/inst/inst/bd_5350_mipi_dphy_0_0_tx_support_i/master_tx.bd_5350_mipi_dphy_0_0_tx_clock_module_support_i/bd_5350_mipi_dphy_0_0_clock_module_tx_i/inst/clkfb_out                                           |             5.0 |
+| clkfbout_evf_inst_0_clk_wiz_0_0                                                            | top_i/evf_0/clk_wiz_0/inst/clkfbout_evf_inst_0_clk_wiz_0_0                                                                                                                                                                                                   |            10.0 |
+| clkfbout_peripherals_inst_0_clk_wiz_0_0                                                    | top_i/peripherals_0/clk_wiz_0/inst/clkfbout_peripherals_inst_0_clk_wiz_0_0                                                                                                                                                                                   |            50.0 |
+| clkfbout_top_clk_wiz_0_1                                                                   | top_i/clk_wiz_0/inst/clkfbout_top_clk_wiz_0_1                                                                                                                                                                                                                |            10.0 |
+| dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/TCK                                                                                                                                                                                            |            33.0 |
+| ddr_clk_p_i_0_0                                                                            | ddr_clk_p_i_0_0                                                                                                                                                                                                                                              |             5.0 |
+| delay_clk_top_clk_wiz_0_1                                                                  | top_i/clk_wiz_0/inst/delay_clk_top_clk_wiz_0_1                                                                                                                                                                                                               |             5.0 |
+| disp_spi_clk_peripherals_inst_0_clk_wiz_0_0                                                | top_i/peripherals_0/clk_wiz_0/inst/disp_spi_clk_peripherals_inst_0_clk_wiz_0_0                                                                                                                                                                               |           100.0 |
+| div_clk_w                                                                                  | top_i/evf_0/mipi_dsi_tx_subsystem_0/inst/mipi_dphy_0/inst/inst/bd_5350_mipi_dphy_0_0_tx_support_i/master_tx.bd_5350_mipi_dphy_0_0_tx_clock_module_support_i/txbyteclkhs_out                                                                                  |            10.0 |
+| eth_clk_top_clk_wiz_0_1                                                                    | top_i/clk_wiz_0/inst/eth_clk_top_clk_wiz_0_1                                                                                                                                                                                                                 |            40.0 |
+| master_tx.bd_5350_mipi_dphy_0_0_tx_clock_module_support_i_n_4                              | top_i/evf_0/mipi_dsi_tx_subsystem_0/inst/mipi_dphy_0/inst/inst/bd_5350_mipi_dphy_0_0_tx_support_i/master_tx.bd_5350_mipi_dphy_0_0_tx_clock_module_support_i/oserdes_clkdiv_out                                                                               |            10.0 |
+| mmcm_clk_out2_bd_5350_mipi_dphy_0_0_clock_module_tx                                        | top_i/evf_0/mipi_dsi_tx_subsystem_0/inst/mipi_dphy_0/inst/inst/bd_5350_mipi_dphy_0_0_tx_support_i/master_tx.bd_5350_mipi_dphy_0_0_tx_clock_module_support_i/bd_5350_mipi_dphy_0_0_clock_module_tx_i/inst/mmcm_clk_out2_bd_5350_mipi_dphy_0_0_clock_module_tx |            50.0 |
+| sensor_clk_top_clk_wiz_0_1                                                                 | top_i/clk_wiz_0/inst/sensor_clk_top_clk_wiz_0_1                                                                                                                                                                                                              |            20.0 |
+| serial_clk                                                                                 | top_i/evf_0/mipi_dsi_tx_subsystem_0/inst/mipi_dphy_0/inst/inst/bd_5350_mipi_dphy_0_0_tx_support_i/master_tx.bd_5350_mipi_dphy_0_0_tx_clock_module_support_i/bd_5350_mipi_dphy_0_0_clock_module_tx_i/inst/mmcm_clk_out0                                       |             2.5 |
+| serial_clk90                                                                               | top_i/evf_0/mipi_dsi_tx_subsystem_0/inst/mipi_dphy_0/inst/inst/bd_5350_mipi_dphy_0_0_tx_support_i/master_tx.bd_5350_mipi_dphy_0_0_tx_clock_module_support_i/bd_5350_mipi_dphy_0_0_clock_module_tx_i/inst/mmcm_clk_out1                                       |             2.5 |
+| usb_clk_top_clk_wiz_0_1                                                                    | top_i/clk_wiz_0/inst/usb_clk_top_clk_wiz_0_1                                                                                                                                                                                                                 |            83.3 |
++--------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
 
 
 3. Detailed Reports
@@ -160,33 +171,38 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+---------------------------+-----------+
-| Name                      | Power (W) |
-+---------------------------+-----------+
-| top_wrapper               |     2.200 |
-|   dbg_hub                 |     0.003 |
-|     inst                  |     0.003 |
-|       BSCANID.u_xsdbm_id  |     0.003 |
-|   top_i                   |     2.187 |
-|     axi_gpio_0            |     0.001 |
-|       U0                  |     0.001 |
-|     axi_quad_spi_0        |     0.001 |
-|       U0                  |     0.001 |
-|     axi_quad_spi_1        |     0.001 |
-|       U0                  |     0.001 |
-|     axi_uartlite_0        |     0.001 |
-|       U0                  |     0.001 |
-|     axi_uartlite_1        |     0.001 |
-|       U0                  |     0.001 |
-|     clk_wiz_0             |     0.104 |
-|       inst                |     0.104 |
-|     processing_system7_0  |     1.354 |
-|       inst                |     1.354 |
-|     ps7_0_axi_periph      |     0.005 |
-|       s00_couplers        |     0.004 |
-|     sensor_0              |     0.718 |
-|       gmax0505_streamer_0 |     0.690 |
-|       ila_0               |     0.028 |
-+---------------------------+-----------+
++-------------------------------+-----------+
+| Name                          | Power (W) |
++-------------------------------+-----------+
+| top_wrapper                   |     2.652 |
+|   dbg_hub                     |     0.003 |
+|     inst                      |     0.003 |
+|       BSCANID.u_xsdbm_id      |     0.003 |
+|   top_i                       |     2.640 |
+|     axi_interconnect_0        |     0.002 |
+|       s00_couplers            |     0.002 |
+|     axi_interconnect_1        |     0.008 |
+|       m02_couplers            |     0.003 |
+|       xbar                    |     0.005 |
+|     clk_wiz_0                 |     0.117 |
+|       inst                    |     0.117 |
+|     evf_0                     |     0.337 |
+|       axi_clock_converter_0   |     0.002 |
+|       axi_interconnect_0      |     0.004 |
+|       axi_vdma_0              |     0.010 |
+|       clk_wiz_0               |     0.107 |
+|       mipi_dsi_tx_subsystem_0 |     0.213 |
+|     peripherals_0             |     0.105 |
+|       axi_interconnect_0      |     0.005 |
+|       axi_quad_spi_0          |     0.001 |
+|       axi_uartlite_0          |     0.001 |
+|       axi_uartlite_1          |     0.001 |
+|       clk_wiz_0               |     0.095 |
+|     processing_system7_0      |     1.356 |
+|       inst                    |     1.356 |
+|     sensor_0                  |     0.716 |
+|       gmax0505_streamer_0     |     0.690 |
+|       ila_0                   |     0.025 |
++-------------------------------+-----------+
 
 

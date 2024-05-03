@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "sensor_inst_0_gmax0505_streamer_0_0",
-    "cell_name": "sensor_0/gmax0505_streamer_0",
+    "cell_name": "gmax0505_streamer_0",
     "component_reference": "xilinx.com:module_ref:gmax0505_streamer:1.0",
     "ip_revision": "1",
     "gen_directory": ".",

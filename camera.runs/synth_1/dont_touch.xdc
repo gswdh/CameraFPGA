@@ -9,55 +9,38 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top || ORIG
 # IP: bd/top/ip/top_processing_system7_0_0/top_processing_system7_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_processing_system7_0_0 || ORIG_REF_NAME==top_processing_system7_0_0} -quiet] -quiet
 
-# IP: bd/top/ip/top_axi_gpio_0_0/top_axi_gpio_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_axi_gpio_0_0 || ORIG_REF_NAME==top_axi_gpio_0_0} -quiet] -quiet
-
-# IP: bd/top/ip/top_xbar_0/top_xbar_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_xbar_0 || ORIG_REF_NAME==top_xbar_0} -quiet] -quiet
-
-# IP: bd/top/ip/top_ps7_0_axi_periph_0/top_ps7_0_axi_periph_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_ps7_0_axi_periph_0 || ORIG_REF_NAME==top_ps7_0_axi_periph_0} -quiet] -quiet
-
 # IP: bd/top/ip/top_rst_ps7_0_50M_0/top_rst_ps7_0_50M_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_rst_ps7_0_50M_0 || ORIG_REF_NAME==top_rst_ps7_0_50M_0} -quiet] -quiet
 
-# IP: bd/top/ip/top_axi_uartlite_0_0/top_axi_uartlite_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_axi_uartlite_0_0 || ORIG_REF_NAME==top_axi_uartlite_0_0} -quiet] -quiet
+# IP: bd/top/ip/top_clk_wiz_0_1/top_clk_wiz_0_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_clk_wiz_0_1 || ORIG_REF_NAME==top_clk_wiz_0_1} -quiet] -quiet
 
-# IP: bd/top/ip/top_axi_quad_spi_0_0/top_axi_quad_spi_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_axi_quad_spi_0_0 || ORIG_REF_NAME==top_axi_quad_spi_0_0} -quiet] -quiet
+# IP: bd/top/ip/top_axi_interconnect_0_0/top_axi_interconnect_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_axi_interconnect_0_0 || ORIG_REF_NAME==top_axi_interconnect_0_0} -quiet] -quiet
 
-# IP: bd/top/ip/top_clk_wiz_0_0/top_clk_wiz_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_clk_wiz_0_0 || ORIG_REF_NAME==top_clk_wiz_0_0} -quiet] -quiet
+# IP: bd/top/ip/top_xbar_2/top_xbar_2.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_xbar_2 || ORIG_REF_NAME==top_xbar_2} -quiet] -quiet
 
-# IP: bd/top/ip/top_axi_quad_spi_0_1/top_axi_quad_spi_0_1.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_axi_quad_spi_0_1 || ORIG_REF_NAME==top_axi_quad_spi_0_1} -quiet] -quiet
+# IP: bd/top/ip/top_axi_interconnect_1_0/top_axi_interconnect_1_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_axi_interconnect_1_0 || ORIG_REF_NAME==top_axi_interconnect_1_0} -quiet] -quiet
 
-# IP: bd/top/ip/top_xlconstant_0_0/top_xlconstant_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_xlconstant_0_0 || ORIG_REF_NAME==top_xlconstant_0_0} -quiet] -quiet
+# IP: bd/top/ip/top_xlconcat_0_1/top_xlconcat_0_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_xlconcat_0_1 || ORIG_REF_NAME==top_xlconcat_0_1} -quiet] -quiet
 
-# IP: bd/top/ip/top_axi_uartlite_0_1/top_axi_uartlite_0_1.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_axi_uartlite_0_1 || ORIG_REF_NAME==top_axi_uartlite_0_1} -quiet] -quiet
-
-# IP: bd/top/ip/top_xlconcat_0_0/top_xlconcat_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_xlconcat_0_0 || ORIG_REF_NAME==top_xlconcat_0_0} -quiet] -quiet
-
-# IP: bd/top/ip/top_axi_mem_intercon_0/top_axi_mem_intercon_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_axi_mem_intercon_0 || ORIG_REF_NAME==top_axi_mem_intercon_0} -quiet] -quiet
+# IP: bd/top/ip/top_auto_ds_0/top_auto_ds_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_auto_ds_0 || ORIG_REF_NAME==top_auto_ds_0} -quiet] -quiet
 
 # IP: bd/top/ip/top_auto_pc_0/top_auto_pc_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_auto_pc_0 || ORIG_REF_NAME==top_auto_pc_0} -quiet] -quiet
 
+# IP: bd/top/ip/top_auto_pc_2/top_auto_pc_2.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_auto_pc_2 || ORIG_REF_NAME==top_auto_pc_2} -quiet] -quiet
+
+# IP: bd/top/ip/top_auto_pc_1/top_auto_pc_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_auto_pc_1 || ORIG_REF_NAME==top_auto_pc_1} -quiet] -quiet
+
 # XDC: /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_processing_system7_0_0/top_processing_system7_0_0.xdc
 set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==top_processing_system7_0_0 || ORIG_REF_NAME==top_processing_system7_0_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
-
-# XDC: /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_axi_gpio_0_0/top_axi_gpio_0_0_board.xdc
-set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==top_axi_gpio_0_0 || ORIG_REF_NAME==top_axi_gpio_0_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
-
-# XDC: /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_axi_gpio_0_0/top_axi_gpio_0_0_ooc.xdc
-
-# XDC: /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_axi_gpio_0_0/top_axi_gpio_0_0.xdc
-#dup# set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==top_axi_gpio_0_0 || ORIG_REF_NAME==top_axi_gpio_0_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
 
 # XDC: /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_rst_ps7_0_50M_0/top_rst_ps7_0_50M_0_board.xdc
 set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==top_rst_ps7_0_50M_0 || ORIG_REF_NAME==top_rst_ps7_0_50M_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
@@ -65,52 +48,23 @@ set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filte
 # XDC: /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_rst_ps7_0_50M_0/top_rst_ps7_0_50M_0.xdc
 #dup# set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==top_rst_ps7_0_50M_0 || ORIG_REF_NAME==top_rst_ps7_0_50M_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
 
-# XDC: /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_axi_uartlite_0_0/top_axi_uartlite_0_0_board.xdc
-set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==top_axi_uartlite_0_0 || ORIG_REF_NAME==top_axi_uartlite_0_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
+# XDC: /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_clk_wiz_0_1/top_clk_wiz_0_1_board.xdc
+set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==top_clk_wiz_0_1 || ORIG_REF_NAME==top_clk_wiz_0_1} -quiet] {/inst } ]/inst ] -quiet] -quiet
 
-# XDC: /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_axi_uartlite_0_0/top_axi_uartlite_0_0_ooc.xdc
+# XDC: /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_clk_wiz_0_1/top_clk_wiz_0_1.xdc
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==top_clk_wiz_0_1 || ORIG_REF_NAME==top_clk_wiz_0_1} -quiet] {/inst } ]/inst ] -quiet] -quiet
 
-# XDC: /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_axi_uartlite_0_0/top_axi_uartlite_0_0.xdc
-#dup# set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==top_axi_uartlite_0_0 || ORIG_REF_NAME==top_axi_uartlite_0_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
+# XDC: /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_clk_wiz_0_1/top_clk_wiz_0_1_ooc.xdc
 
-# XDC: /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_axi_quad_spi_0_0/top_axi_quad_spi_0_0_board.xdc
-set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==top_axi_quad_spi_0_0 || ORIG_REF_NAME==top_axi_quad_spi_0_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
+# XDC: /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_auto_ds_0/top_auto_ds_0_clocks.xdc
+set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==top_auto_ds_0 || ORIG_REF_NAME==top_auto_ds_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
 
-# XDC: /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_axi_quad_spi_0_0/top_axi_quad_spi_0_0.xdc
-#dup# set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==top_axi_quad_spi_0_0 || ORIG_REF_NAME==top_axi_quad_spi_0_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
-
-# XDC: /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_axi_quad_spi_0_0/top_axi_quad_spi_0_0_ooc.xdc
-
-# XDC: /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_axi_quad_spi_0_0/top_axi_quad_spi_0_0_clocks.xdc
-#dup# set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==top_axi_quad_spi_0_0 || ORIG_REF_NAME==top_axi_quad_spi_0_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
-
-# XDC: /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_clk_wiz_0_0/top_clk_wiz_0_0_board.xdc
-set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==top_clk_wiz_0_0 || ORIG_REF_NAME==top_clk_wiz_0_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
-
-# XDC: /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_clk_wiz_0_0/top_clk_wiz_0_0.xdc
-#dup# set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==top_clk_wiz_0_0 || ORIG_REF_NAME==top_clk_wiz_0_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
-
-# XDC: /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_clk_wiz_0_0/top_clk_wiz_0_0_ooc.xdc
-
-# XDC: /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_axi_quad_spi_0_1/top_axi_quad_spi_0_1_board.xdc
-set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==top_axi_quad_spi_0_1 || ORIG_REF_NAME==top_axi_quad_spi_0_1} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
-
-# XDC: /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_axi_quad_spi_0_1/top_axi_quad_spi_0_1.xdc
-#dup# set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==top_axi_quad_spi_0_1 || ORIG_REF_NAME==top_axi_quad_spi_0_1} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
-
-# XDC: /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_axi_quad_spi_0_1/top_axi_quad_spi_0_1_ooc.xdc
-
-# XDC: /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_axi_quad_spi_0_1/top_axi_quad_spi_0_1_clocks.xdc
-#dup# set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==top_axi_quad_spi_0_1 || ORIG_REF_NAME==top_axi_quad_spi_0_1} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
-
-# XDC: /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_axi_uartlite_0_1/top_axi_uartlite_0_1_board.xdc
-set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==top_axi_uartlite_0_1 || ORIG_REF_NAME==top_axi_uartlite_0_1} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
-
-# XDC: /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_axi_uartlite_0_1/top_axi_uartlite_0_1_ooc.xdc
-
-# XDC: /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_axi_uartlite_0_1/top_axi_uartlite_0_1.xdc
-#dup# set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==top_axi_uartlite_0_1 || ORIG_REF_NAME==top_axi_uartlite_0_1} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
+# XDC: /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_auto_ds_0/top_auto_ds_0_ooc.xdc
 
 # XDC: /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_auto_pc_0/top_auto_pc_0_ooc.xdc
+
+# XDC: /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_auto_pc_2/top_auto_pc_2_ooc.xdc
+
+# XDC: /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_auto_pc_1/top_auto_pc_1_ooc.xdc
 
 # XDC: /home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/top_ooc.xdc
