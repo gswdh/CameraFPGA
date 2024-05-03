@@ -28,7 +28,8 @@
         "m03_couplers": {},
         "m04_couplers": {}
       },
-      "xlconcat_0": ""
+      "xlconcat_0": "",
+      "axi_register_slice_0": ""
     },
     "interface_ports": {
       "ESP_PSS_UART": {
@@ -1571,13 +1572,29 @@
             "value": "4"
           }
         }
+      },
+      "axi_register_slice_0": {
+        "vlnv": "xilinx.com:ip:axi_register_slice:2.1",
+        "ip_revision": "29",
+        "xci_name": "peripherals_axi_register_slice_0_0",
+        "xci_path": "ip/peripherals_axi_register_slice_0_0/peripherals_axi_register_slice_0_0.xci",
+        "inst_hier_path": "axi_register_slice_0",
+        "interface_ports": {
+          "S_AXI": {
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "mode": "Slave",
+            "bridges": [
+              "M_AXI"
+            ]
+          }
+        }
       }
     },
     "interface_nets": {
       "S00_AXI_0_1": {
         "interface_ports": [
           "S00_AXI_0",
-          "axi_interconnect_0/S00_AXI"
+          "axi_register_slice_0/S_AXI"
         ]
       },
       "axi_gpio_0_GPIO": {
@@ -1634,6 +1651,12 @@
           "axi_quad_spi_1/SPI_0"
         ]
       },
+      "axi_register_slice_0_M_AXI": {
+        "interface_ports": [
+          "axi_register_slice_0/M_AXI",
+          "axi_interconnect_0/S00_AXI"
+        ]
+      },
       "axi_uartlite_0_UART": {
         "interface_ports": [
           "PSS_PMC_UART",
@@ -1663,7 +1686,8 @@
           "axi_uartlite_0/s_axi_aclk",
           "axi_gpio_0/s_axi_aclk",
           "axi_quad_spi_0/s_axi_aclk",
-          "axi_quad_spi_1/s_axi_aclk"
+          "axi_quad_spi_1/s_axi_aclk",
+          "axi_register_slice_0/aclk"
         ]
       },
       "ARESETN_0_1": {
@@ -1681,7 +1705,8 @@
           "axi_uartlite_0/s_axi_aresetn",
           "clk_wiz_0/resetn",
           "axi_uartlite_1/s_axi_aresetn",
-          "axi_interconnect_0/M00_ARESETN"
+          "axi_interconnect_0/M00_ARESETN",
+          "axi_register_slice_0/aresetn"
         ]
       },
       "axi_quad_spi_0_ip2intc_irpt": {

@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-//Date        : Fri May  3 08:54:39 2024
+//Date        : Fri May  3 18:13:01 2024
 //Host        : testserver running 64-bit Ubuntu 20.04.6 LTS
 //Command     : generate_target top.bd
 //Design      : top
@@ -1491,7 +1491,7 @@ module s00_couplers_imp_MHSTQF
         .s_axi_wvalid(s00_couplers_to_auto_pc_WVALID));
 endmodule
 
-(* CORE_GENERATION_INFO = "top,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=top,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=51,numReposBlks=30,numNonXlnxBlks=0,numHierBlks=21,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=3,bdsource=USER,da_axi4_cnt=11,da_board_cnt=7,da_clkrst_cnt=7,da_ps7_cnt=1,synth_mode=None}" *) (* HW_HANDOFF = "top.hwdef" *) 
+(* CORE_GENERATION_INFO = "top,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=top,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=55,numReposBlks=34,numNonXlnxBlks=0,numHierBlks=21,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=2,numPkgbdBlks=3,bdsource=USER,da_axi4_cnt=11,da_board_cnt=7,da_clkrst_cnt=7,da_ps7_cnt=1,synth_mode=None}" *) (* HW_HANDOFF = "top.hwdef" *) 
 module top
    (DDR_addr,
     DDR_ba,
@@ -1870,7 +1870,7 @@ module top
   wire processing_system7_0_SDIO_1_CDN;
   wire processing_system7_0_SDIO_1_WP;
   wire [0:0]rst_ps7_0_50M_peripheral_aresetn;
-  wire [6:0]xlconcat_0_dout;
+  wire [5:0]xlconcat_0_dout;
 
   assign ESP_PSS_UART_txd = peripherals_0_ESP_PSS_UART_TxD;
   assign ETH_CLK25M = peripherals_0_ETH_CLK25M;
@@ -2113,7 +2113,7 @@ module top
         .S00_AXI_0_araddr(axi_interconnect_1_M01_AXI_ARADDR),
         .S00_AXI_0_arburst(axi_interconnect_1_M01_AXI_ARBURST),
         .S00_AXI_0_arcache(axi_interconnect_1_M01_AXI_ARCACHE),
-        .S00_AXI_0_arid_1(axi_interconnect_1_M01_AXI_ARID),
+        .S00_AXI_0_arid(axi_interconnect_1_M01_AXI_ARID),
         .S00_AXI_0_arlen(axi_interconnect_1_M01_AXI_ARLEN),
         .S00_AXI_0_arlock(axi_interconnect_1_M01_AXI_ARLOCK),
         .S00_AXI_0_arprot(axi_interconnect_1_M01_AXI_ARPROT),
@@ -2125,7 +2125,7 @@ module top
         .S00_AXI_0_awaddr(axi_interconnect_1_M01_AXI_AWADDR),
         .S00_AXI_0_awburst(axi_interconnect_1_M01_AXI_AWBURST),
         .S00_AXI_0_awcache(axi_interconnect_1_M01_AXI_AWCACHE),
-        .S00_AXI_0_awid_1(axi_interconnect_1_M01_AXI_AWID),
+        .S00_AXI_0_awid(axi_interconnect_1_M01_AXI_AWID),
         .S00_AXI_0_awlen(axi_interconnect_1_M01_AXI_AWLEN),
         .S00_AXI_0_awlock(axi_interconnect_1_M01_AXI_AWLOCK),
         .S00_AXI_0_awprot(axi_interconnect_1_M01_AXI_AWPROT),
@@ -2134,12 +2134,12 @@ module top
         .S00_AXI_0_awregion(axi_interconnect_1_M01_AXI_AWREGION),
         .S00_AXI_0_awsize(axi_interconnect_1_M01_AXI_AWSIZE),
         .S00_AXI_0_awvalid(axi_interconnect_1_M01_AXI_AWVALID),
-        .S00_AXI_0_bid_1(axi_interconnect_1_M01_AXI_BID),
+        .S00_AXI_0_bid(axi_interconnect_1_M01_AXI_BID),
         .S00_AXI_0_bready(axi_interconnect_1_M01_AXI_BREADY),
         .S00_AXI_0_bresp(axi_interconnect_1_M01_AXI_BRESP),
         .S00_AXI_0_bvalid(axi_interconnect_1_M01_AXI_BVALID),
         .S00_AXI_0_rdata(axi_interconnect_1_M01_AXI_RDATA),
-        .S00_AXI_0_rid_1(axi_interconnect_1_M01_AXI_RID),
+        .S00_AXI_0_rid(axi_interconnect_1_M01_AXI_RID),
         .S00_AXI_0_rlast(axi_interconnect_1_M01_AXI_RLAST),
         .S00_AXI_0_rready(axi_interconnect_1_M01_AXI_RREADY),
         .S00_AXI_0_rresp(axi_interconnect_1_M01_AXI_RRESP),
@@ -2184,7 +2184,7 @@ module top
         .S00_AXI_0_araddr(axi_interconnect_1_M00_AXI_ARADDR),
         .S00_AXI_0_arburst(axi_interconnect_1_M00_AXI_ARBURST),
         .S00_AXI_0_arcache(axi_interconnect_1_M00_AXI_ARCACHE),
-        .S00_AXI_0_arid_1(axi_interconnect_1_M00_AXI_ARID),
+        .S00_AXI_0_arid(axi_interconnect_1_M00_AXI_ARID),
         .S00_AXI_0_arlen(axi_interconnect_1_M00_AXI_ARLEN),
         .S00_AXI_0_arlock(axi_interconnect_1_M00_AXI_ARLOCK),
         .S00_AXI_0_arprot(axi_interconnect_1_M00_AXI_ARPROT),
@@ -2196,7 +2196,7 @@ module top
         .S00_AXI_0_awaddr(axi_interconnect_1_M00_AXI_AWADDR),
         .S00_AXI_0_awburst(axi_interconnect_1_M00_AXI_AWBURST),
         .S00_AXI_0_awcache(axi_interconnect_1_M00_AXI_AWCACHE),
-        .S00_AXI_0_awid_1(axi_interconnect_1_M00_AXI_AWID),
+        .S00_AXI_0_awid(axi_interconnect_1_M00_AXI_AWID),
         .S00_AXI_0_awlen(axi_interconnect_1_M00_AXI_AWLEN),
         .S00_AXI_0_awlock(axi_interconnect_1_M00_AXI_AWLOCK),
         .S00_AXI_0_awprot(axi_interconnect_1_M00_AXI_AWPROT),
@@ -2205,12 +2205,12 @@ module top
         .S00_AXI_0_awregion(axi_interconnect_1_M00_AXI_AWREGION),
         .S00_AXI_0_awsize(axi_interconnect_1_M00_AXI_AWSIZE),
         .S00_AXI_0_awvalid(axi_interconnect_1_M00_AXI_AWVALID),
-        .S00_AXI_0_bid_1(axi_interconnect_1_M00_AXI_BID),
+        .S00_AXI_0_bid(axi_interconnect_1_M00_AXI_BID),
         .S00_AXI_0_bready(axi_interconnect_1_M00_AXI_BREADY),
         .S00_AXI_0_bresp(axi_interconnect_1_M00_AXI_BRESP),
         .S00_AXI_0_bvalid(axi_interconnect_1_M00_AXI_BVALID),
         .S00_AXI_0_rdata(axi_interconnect_1_M00_AXI_RDATA),
-        .S00_AXI_0_rid_1(axi_interconnect_1_M00_AXI_RID),
+        .S00_AXI_0_rid(axi_interconnect_1_M00_AXI_RID),
         .S00_AXI_0_rlast(axi_interconnect_1_M00_AXI_RLAST),
         .S00_AXI_0_rready(axi_interconnect_1_M00_AXI_RREADY),
         .S00_AXI_0_rresp(axi_interconnect_1_M00_AXI_RRESP),
@@ -2380,7 +2380,7 @@ module top
         .ddr_data_p_i_0(ddr_data_p_i_0_0_1),
         .ref_clk_i_0(clk_wiz_0_delay_clk));
   top_xlconcat_0_1 xlconcat_0
-       (.In0({1'b0,peripherals_0_interrupts}),
+       (.In0(peripherals_0_interrupts),
         .In1(evf_0_vmda_int),
         .In2(evf_0_dsi_int),
         .dout(xlconcat_0_dout));

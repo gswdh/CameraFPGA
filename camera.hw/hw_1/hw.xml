@@ -22,7 +22,7 @@
     <Object name="top_i/sensor_0/ila_0" gui_info="">
       <Properties Property="CONTROL.DATA_DEPTH" value="131072"/>
       <Properties Property="CONTROL.TRIGGER_CONDITION" value="AND"/>
-      <Properties Property="CONTROL.TRIGGER_POSITION" value="127"/>
+      <Properties Property="CONTROL.TRIGGER_POSITION" value="4"/>
       <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
     </Object>
     <Object name="top_i/sensor_bd_0/ila_0" gui_info="">
@@ -38,8 +38,10 @@
   <ObjectList object_type="hw_probe" gui_info="">
     <Object name="top_i/sensor_0/bit_aligner_0_bit_slip_o" gui_info=""/>
     <Object name="top_i/sensor_0/bit_aligner_1_bit_slip_o" gui_info=""/>
+    <Object name="top_i/sensor_0/frame_detector_0_de_o" gui_info=""/>
     <Object name="top_i/sensor_0/word_detector_0_detected_o1" gui_info="Trigger Setup=0"/>
     <Object name="top_i/sensor_0/xlslice_1_Dout" gui_info=""/>
+    <Object name="top_i/sensor_0/xlslice_2_Dout[11:0]" gui_info=""/>
     <Object name="top_i/sensor_bd_0/decoder_0_par_data_o[9:0]" gui_info=""/>
     <Object name="top_i/sensor_bd_0/fifo_generator_0_dout[31:0]" gui_info=""/>
     <Object name="top_i/sensor_bd_0/fifo_generator_0_empty" gui_info=""/>
@@ -168,6 +170,69 @@
     </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe3[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="top_i/sensor_0/frame_detector_0_de_o"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe2[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="top_i/sensor_0/frame_detector_0_h_sync_o"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe1[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="top_i/sensor_0/frame_detector_0_v_sync_o"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq5&apos;hXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq5&apos;hXX"/>
         <Option Id="DISPLAY_AS_ENUM" value="1"/>
@@ -265,7 +330,7 @@
         <net name="top_i/sensor_0/gmax0505_streamer_0_par_clk_o"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq192&apos;hXXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq192&apos;hXXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX"/>
@@ -830,7 +895,7 @@
         <net name="top_i/sensor_0/word_detector_0_detected_o1"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq12&apos;hXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq12&apos;hXXX"/>
@@ -881,6 +946,38 @@
       </probeOptions>
       <nets>
         <net name="top_i/sensor_0/xlslice_1_Dout"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq12&apos;hXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq12&apos;hXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe4[11:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq12&apos;hXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="top_i/sensor_0/xlslice_2_Dout[11]"/>
+        <net name="top_i/sensor_0/xlslice_2_Dout[10]"/>
+        <net name="top_i/sensor_0/xlslice_2_Dout[9]"/>
+        <net name="top_i/sensor_0/xlslice_2_Dout[8]"/>
+        <net name="top_i/sensor_0/xlslice_2_Dout[7]"/>
+        <net name="top_i/sensor_0/xlslice_2_Dout[6]"/>
+        <net name="top_i/sensor_0/xlslice_2_Dout[5]"/>
+        <net name="top_i/sensor_0/xlslice_2_Dout[4]"/>
+        <net name="top_i/sensor_0/xlslice_2_Dout[3]"/>
+        <net name="top_i/sensor_0/xlslice_2_Dout[2]"/>
+        <net name="top_i/sensor_0/xlslice_2_Dout[1]"/>
+        <net name="top_i/sensor_0/xlslice_2_Dout[0]"/>
       </nets>
     </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
@@ -2381,7 +2478,7 @@
         <net name="top_i/sensor_bd_0/xlslice_3_Dout[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="user" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="user" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq12&apos;hXXX"/>
         <Option Id="CELL_HINT" value="top_i/sensor_0/ila_0"/>

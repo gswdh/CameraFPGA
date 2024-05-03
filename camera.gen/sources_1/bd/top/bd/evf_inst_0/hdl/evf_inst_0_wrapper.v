@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-//Date        : Fri May  3 08:54:44 2024
+//Date        : Fri May  3 18:13:07 2024
 //Host        : testserver running 64-bit Ubuntu 20.04.6 LTS
 //Command     : generate_target evf_inst_0_wrapper.bd
 //Design      : evf_inst_0_wrapper
@@ -16,7 +16,7 @@ module evf_inst_0_wrapper
     S00_AXI_0_araddr,
     S00_AXI_0_arburst,
     S00_AXI_0_arcache,
-    S00_AXI_0_arid_1,
+    S00_AXI_0_arid,
     S00_AXI_0_arlen,
     S00_AXI_0_arlock,
     S00_AXI_0_arprot,
@@ -28,7 +28,7 @@ module evf_inst_0_wrapper
     S00_AXI_0_awaddr,
     S00_AXI_0_awburst,
     S00_AXI_0_awcache,
-    S00_AXI_0_awid_1,
+    S00_AXI_0_awid,
     S00_AXI_0_awlen,
     S00_AXI_0_awlock,
     S00_AXI_0_awprot,
@@ -37,12 +37,12 @@ module evf_inst_0_wrapper
     S00_AXI_0_awregion,
     S00_AXI_0_awsize,
     S00_AXI_0_awvalid,
-    S00_AXI_0_bid_1,
+    S00_AXI_0_bid,
     S00_AXI_0_bready,
     S00_AXI_0_bresp,
     S00_AXI_0_bvalid,
     S00_AXI_0_rdata,
-    S00_AXI_0_rid_1,
+    S00_AXI_0_rid,
     S00_AXI_0_rlast,
     S00_AXI_0_rready,
     S00_AXI_0_rresp,
@@ -80,7 +80,7 @@ module evf_inst_0_wrapper
   input [31:0]S00_AXI_0_araddr;
   input [1:0]S00_AXI_0_arburst;
   input [3:0]S00_AXI_0_arcache;
-  input [11:0]S00_AXI_0_arid_1;
+  input [11:0]S00_AXI_0_arid;
   input [7:0]S00_AXI_0_arlen;
   input [0:0]S00_AXI_0_arlock;
   input [2:0]S00_AXI_0_arprot;
@@ -92,7 +92,7 @@ module evf_inst_0_wrapper
   input [31:0]S00_AXI_0_awaddr;
   input [1:0]S00_AXI_0_awburst;
   input [3:0]S00_AXI_0_awcache;
-  input [11:0]S00_AXI_0_awid_1;
+  input [11:0]S00_AXI_0_awid;
   input [7:0]S00_AXI_0_awlen;
   input [0:0]S00_AXI_0_awlock;
   input [2:0]S00_AXI_0_awprot;
@@ -101,12 +101,12 @@ module evf_inst_0_wrapper
   input [3:0]S00_AXI_0_awregion;
   input [2:0]S00_AXI_0_awsize;
   input [0:0]S00_AXI_0_awvalid;
-  output [11:0]S00_AXI_0_bid_1;
+  output [11:0]S00_AXI_0_bid;
   input [0:0]S00_AXI_0_bready;
   output [1:0]S00_AXI_0_bresp;
   output [0:0]S00_AXI_0_bvalid;
   output [31:0]S00_AXI_0_rdata;
-  output [11:0]S00_AXI_0_rid_1;
+  output [11:0]S00_AXI_0_rid;
   output [0:0]S00_AXI_0_rlast;
   input [0:0]S00_AXI_0_rready;
   output [1:0]S00_AXI_0_rresp;
@@ -145,7 +145,7 @@ module evf_inst_0_wrapper
   wire [31:0]S00_AXI_0_araddr;
   wire [1:0]S00_AXI_0_arburst;
   wire [3:0]S00_AXI_0_arcache;
-  wire [11:0]S00_AXI_0_arid_1;
+  wire [11:0]S00_AXI_0_arid;
   wire [7:0]S00_AXI_0_arlen;
   wire [0:0]S00_AXI_0_arlock;
   wire [2:0]S00_AXI_0_arprot;
@@ -157,7 +157,7 @@ module evf_inst_0_wrapper
   wire [31:0]S00_AXI_0_awaddr;
   wire [1:0]S00_AXI_0_awburst;
   wire [3:0]S00_AXI_0_awcache;
-  wire [11:0]S00_AXI_0_awid_1;
+  wire [11:0]S00_AXI_0_awid;
   wire [7:0]S00_AXI_0_awlen;
   wire [0:0]S00_AXI_0_awlock;
   wire [2:0]S00_AXI_0_awprot;
@@ -166,12 +166,12 @@ module evf_inst_0_wrapper
   wire [3:0]S00_AXI_0_awregion;
   wire [2:0]S00_AXI_0_awsize;
   wire [0:0]S00_AXI_0_awvalid;
-  wire [11:0]S00_AXI_0_bid_1;
+  wire [11:0]S00_AXI_0_bid;
   wire [0:0]S00_AXI_0_bready;
   wire [1:0]S00_AXI_0_bresp;
   wire [0:0]S00_AXI_0_bvalid;
   wire [31:0]S00_AXI_0_rdata;
-  wire [11:0]S00_AXI_0_rid_1;
+  wire [11:0]S00_AXI_0_rid;
   wire [0:0]S00_AXI_0_rlast;
   wire [0:0]S00_AXI_0_rready;
   wire [1:0]S00_AXI_0_rresp;
@@ -211,7 +211,7 @@ module evf_inst_0_wrapper
         .S00_AXI_0_araddr(S00_AXI_0_araddr),
         .S00_AXI_0_arburst(S00_AXI_0_arburst),
         .S00_AXI_0_arcache(S00_AXI_0_arcache),
-        .S00_AXI_0_arid_1(S00_AXI_0_arid_1),
+        .S00_AXI_0_arid(S00_AXI_0_arid),
         .S00_AXI_0_arlen(S00_AXI_0_arlen),
         .S00_AXI_0_arlock(S00_AXI_0_arlock),
         .S00_AXI_0_arprot(S00_AXI_0_arprot),
@@ -223,7 +223,7 @@ module evf_inst_0_wrapper
         .S00_AXI_0_awaddr(S00_AXI_0_awaddr),
         .S00_AXI_0_awburst(S00_AXI_0_awburst),
         .S00_AXI_0_awcache(S00_AXI_0_awcache),
-        .S00_AXI_0_awid_1(S00_AXI_0_awid_1),
+        .S00_AXI_0_awid(S00_AXI_0_awid),
         .S00_AXI_0_awlen(S00_AXI_0_awlen),
         .S00_AXI_0_awlock(S00_AXI_0_awlock),
         .S00_AXI_0_awprot(S00_AXI_0_awprot),
@@ -232,12 +232,12 @@ module evf_inst_0_wrapper
         .S00_AXI_0_awregion(S00_AXI_0_awregion),
         .S00_AXI_0_awsize(S00_AXI_0_awsize),
         .S00_AXI_0_awvalid(S00_AXI_0_awvalid),
-        .S00_AXI_0_bid_1(S00_AXI_0_bid_1),
+        .S00_AXI_0_bid(S00_AXI_0_bid),
         .S00_AXI_0_bready(S00_AXI_0_bready),
         .S00_AXI_0_bresp(S00_AXI_0_bresp),
         .S00_AXI_0_bvalid(S00_AXI_0_bvalid),
         .S00_AXI_0_rdata(S00_AXI_0_rdata),
-        .S00_AXI_0_rid_1(S00_AXI_0_rid_1),
+        .S00_AXI_0_rid(S00_AXI_0_rid),
         .S00_AXI_0_rlast(S00_AXI_0_rlast),
         .S00_AXI_0_rready(S00_AXI_0_rready),
         .S00_AXI_0_rresp(S00_AXI_0_rresp),

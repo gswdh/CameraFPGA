@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x9E5E212A823D983C",
+      "boundary_crc": "0x9E5E212AB7C7B3DC",
       "device": "xc7z020clg484-2",
       "gen_directory": "../../../../camera.gen/sources_1/bd/evf",
       "name": "evf",
@@ -23,7 +23,8 @@
       },
       "clk_wiz_0": "",
       "proc_sys_reset_0": "",
-      "axi_clock_converter_0": ""
+      "axi_clock_converter_0": "",
+      "axi_register_slice_0": ""
     },
     "interface_ports": {
       "mipi_evf_out": {
@@ -98,7 +99,7 @@
             "value": "32"
           },
           "FREQ_HZ": {
-            "value": "10000000"
+            "value": "100000000"
           },
           "HAS_BRESP": {
             "value": "1"
@@ -398,7 +399,7 @@
             "value": "128"
           },
           "FREQ_HZ": {
-            "value": "10000000"
+            "value": "100000000"
           },
           "HAS_BRESP": {
             "value": "0"
@@ -577,7 +578,7 @@
             "value_src": "default"
           },
           "FREQ_HZ": {
-            "value": "10000000"
+            "value": "100000000"
           },
           "FREQ_TOLERANCE_HZ": {
             "value": "0",
@@ -1170,7 +1171,7 @@
         "inst_hier_path": "clk_wiz_0",
         "parameters": {
           "CLKOUT1_JITTER": {
-            "value": "595.907"
+            "value": "114.829"
           },
           "CLKOUT1_REQUESTED_OUT_FREQ": {
             "value": "200.000"
@@ -1179,7 +1180,7 @@
             "value": "clk_ref"
           },
           "MMCM_CLKOUT0_DIVIDE_F": {
-            "value": "3.125"
+            "value": "5.000"
           },
           "RESET_PORT": {
             "value": "resetn"
@@ -1214,13 +1215,29 @@
             ]
           }
         }
+      },
+      "axi_register_slice_0": {
+        "vlnv": "xilinx.com:ip:axi_register_slice:2.1",
+        "ip_revision": "29",
+        "xci_name": "evf_axi_register_slice_0_0",
+        "xci_path": "ip/evf_axi_register_slice_0_0/evf_axi_register_slice_0_0.xci",
+        "inst_hier_path": "axi_register_slice_0",
+        "interface_ports": {
+          "S_AXI": {
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "mode": "Slave",
+            "bridges": [
+              "M_AXI"
+            ]
+          }
+        }
       }
     },
     "interface_nets": {
       "S00_AXI_0_1": {
         "interface_ports": [
           "S00_AXI_0",
-          "axi_interconnect_0/S00_AXI"
+          "axi_register_slice_0/S_AXI"
         ]
       },
       "axi_clock_converter_0_M_AXI": {
@@ -1239,6 +1256,12 @@
         "interface_ports": [
           "axi_interconnect_0/M01_AXI",
           "axi_vdma_0/S_AXI_LITE"
+        ]
+      },
+      "axi_register_slice_0_M_AXI": {
+        "interface_ports": [
+          "axi_register_slice_0/M_AXI",
+          "axi_interconnect_0/S00_AXI"
         ]
       },
       "axi_vdma_0_M_AXIS_MM2S": {
@@ -1273,7 +1296,8 @@
           "axi_interconnect_0/S00_ACLK",
           "clk_wiz_0/clk_in1",
           "axi_interconnect_0/M00_ACLK",
-          "axi_clock_converter_0/s_axi_aclk"
+          "axi_clock_converter_0/s_axi_aclk",
+          "axi_register_slice_0/aclk"
         ]
       },
       "ARESETN_0_1": {
@@ -1287,7 +1311,8 @@
           "clk_wiz_0/resetn",
           "proc_sys_reset_0/ext_reset_in",
           "axi_interconnect_0/M00_ARESETN",
-          "axi_clock_converter_0/s_axi_aresetn"
+          "axi_clock_converter_0/s_axi_aresetn",
+          "axi_register_slice_0/aresetn"
         ]
       },
       "axi_vdma_0_mm2s_introut": {

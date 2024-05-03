@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-//Date        : Fri May  3 08:54:42 2024
+//Date        : Fri May  3 18:13:06 2024
 //Host        : testserver running 64-bit Ubuntu 20.04.6 LTS
 //Command     : generate_target peripherals_inst_0_wrapper.bd
 //Design      : peripherals_inst_0_wrapper
@@ -23,7 +23,6 @@ module peripherals_inst_0_wrapper
     S00_AXI_0_arburst,
     S00_AXI_0_arcache,
     S00_AXI_0_arid,
-    S00_AXI_0_arid_1,
     S00_AXI_0_arlen,
     S00_AXI_0_arlock,
     S00_AXI_0_arprot,
@@ -36,7 +35,6 @@ module peripherals_inst_0_wrapper
     S00_AXI_0_awburst,
     S00_AXI_0_awcache,
     S00_AXI_0_awid,
-    S00_AXI_0_awid_1,
     S00_AXI_0_awlen,
     S00_AXI_0_awlock,
     S00_AXI_0_awprot,
@@ -46,13 +44,11 @@ module peripherals_inst_0_wrapper
     S00_AXI_0_awsize,
     S00_AXI_0_awvalid,
     S00_AXI_0_bid,
-    S00_AXI_0_bid_1,
     S00_AXI_0_bready,
     S00_AXI_0_bresp,
     S00_AXI_0_bvalid,
     S00_AXI_0_rdata,
     S00_AXI_0_rid,
-    S00_AXI_0_rid_1,
     S00_AXI_0_rlast,
     S00_AXI_0_rready,
     S00_AXI_0_rresp,
@@ -83,7 +79,6 @@ module peripherals_inst_0_wrapper
   input [1:0]S00_AXI_0_arburst;
   input [3:0]S00_AXI_0_arcache;
   input [11:0]S00_AXI_0_arid;
-  input [11:0]S00_AXI_0_arid_1;
   input [7:0]S00_AXI_0_arlen;
   input [0:0]S00_AXI_0_arlock;
   input [2:0]S00_AXI_0_arprot;
@@ -96,7 +91,6 @@ module peripherals_inst_0_wrapper
   input [1:0]S00_AXI_0_awburst;
   input [3:0]S00_AXI_0_awcache;
   input [11:0]S00_AXI_0_awid;
-  input [11:0]S00_AXI_0_awid_1;
   input [7:0]S00_AXI_0_awlen;
   input [0:0]S00_AXI_0_awlock;
   input [2:0]S00_AXI_0_awprot;
@@ -106,13 +100,11 @@ module peripherals_inst_0_wrapper
   input [2:0]S00_AXI_0_awsize;
   input [0:0]S00_AXI_0_awvalid;
   output [11:0]S00_AXI_0_bid;
-  output [11:0]S00_AXI_0_bid_1;
   input [0:0]S00_AXI_0_bready;
   output [1:0]S00_AXI_0_bresp;
   output [0:0]S00_AXI_0_bvalid;
   output [31:0]S00_AXI_0_rdata;
   output [11:0]S00_AXI_0_rid;
-  output [11:0]S00_AXI_0_rid_1;
   output [0:0]S00_AXI_0_rlast;
   input [0:0]S00_AXI_0_rready;
   output [1:0]S00_AXI_0_rresp;
@@ -144,7 +136,6 @@ module peripherals_inst_0_wrapper
   wire [1:0]S00_AXI_0_arburst;
   wire [3:0]S00_AXI_0_arcache;
   wire [11:0]S00_AXI_0_arid;
-  wire [11:0]S00_AXI_0_arid_1;
   wire [7:0]S00_AXI_0_arlen;
   wire [0:0]S00_AXI_0_arlock;
   wire [2:0]S00_AXI_0_arprot;
@@ -157,7 +148,6 @@ module peripherals_inst_0_wrapper
   wire [1:0]S00_AXI_0_awburst;
   wire [3:0]S00_AXI_0_awcache;
   wire [11:0]S00_AXI_0_awid;
-  wire [11:0]S00_AXI_0_awid_1;
   wire [7:0]S00_AXI_0_awlen;
   wire [0:0]S00_AXI_0_awlock;
   wire [2:0]S00_AXI_0_awprot;
@@ -167,13 +157,11 @@ module peripherals_inst_0_wrapper
   wire [2:0]S00_AXI_0_awsize;
   wire [0:0]S00_AXI_0_awvalid;
   wire [11:0]S00_AXI_0_bid;
-  wire [11:0]S00_AXI_0_bid_1;
   wire [0:0]S00_AXI_0_bready;
   wire [1:0]S00_AXI_0_bresp;
   wire [0:0]S00_AXI_0_bvalid;
   wire [31:0]S00_AXI_0_rdata;
   wire [11:0]S00_AXI_0_rid;
-  wire [11:0]S00_AXI_0_rid_1;
   wire [0:0]S00_AXI_0_rlast;
   wire [0:0]S00_AXI_0_rready;
   wire [1:0]S00_AXI_0_rresp;
@@ -270,7 +258,6 @@ module peripherals_inst_0_wrapper
         .S00_AXI_0_arburst(S00_AXI_0_arburst),
         .S00_AXI_0_arcache(S00_AXI_0_arcache),
         .S00_AXI_0_arid(S00_AXI_0_arid),
-        .S00_AXI_0_arid_1(S00_AXI_0_arid_1),
         .S00_AXI_0_arlen(S00_AXI_0_arlen),
         .S00_AXI_0_arlock(S00_AXI_0_arlock),
         .S00_AXI_0_arprot(S00_AXI_0_arprot),
@@ -283,7 +270,6 @@ module peripherals_inst_0_wrapper
         .S00_AXI_0_awburst(S00_AXI_0_awburst),
         .S00_AXI_0_awcache(S00_AXI_0_awcache),
         .S00_AXI_0_awid(S00_AXI_0_awid),
-        .S00_AXI_0_awid_1(S00_AXI_0_awid_1),
         .S00_AXI_0_awlen(S00_AXI_0_awlen),
         .S00_AXI_0_awlock(S00_AXI_0_awlock),
         .S00_AXI_0_awprot(S00_AXI_0_awprot),
@@ -293,13 +279,11 @@ module peripherals_inst_0_wrapper
         .S00_AXI_0_awsize(S00_AXI_0_awsize),
         .S00_AXI_0_awvalid(S00_AXI_0_awvalid),
         .S00_AXI_0_bid(S00_AXI_0_bid),
-        .S00_AXI_0_bid_1(S00_AXI_0_bid_1),
         .S00_AXI_0_bready(S00_AXI_0_bready),
         .S00_AXI_0_bresp(S00_AXI_0_bresp),
         .S00_AXI_0_bvalid(S00_AXI_0_bvalid),
         .S00_AXI_0_rdata(S00_AXI_0_rdata),
         .S00_AXI_0_rid(S00_AXI_0_rid),
-        .S00_AXI_0_rid_1(S00_AXI_0_rid_1),
         .S00_AXI_0_rlast(S00_AXI_0_rlast),
         .S00_AXI_0_rready(S00_AXI_0_rready),
         .S00_AXI_0_rresp(S00_AXI_0_rresp),

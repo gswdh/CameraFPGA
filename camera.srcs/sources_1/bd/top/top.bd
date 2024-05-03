@@ -1463,7 +1463,7 @@
             "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
             "parameters": {
               "ADDR_WIDTH": {
-                "value": "31",
+                "value": "16",
                 "value_src": "strong"
               },
               "ARUSER_WIDTH": {
@@ -1487,7 +1487,7 @@
                 "value_src": "strong"
               },
               "FREQ_HZ": {
-                "value": "100000000",
+                "value": "1e+08",
                 "value_src": "user_prop"
               },
               "HAS_BRESP": {
@@ -1691,7 +1691,7 @@
                 "value_src": "default_prop"
               },
               "FREQ_HZ": {
-                "value": "100000000",
+                "value": "1e+08",
                 "value_src": "user_prop"
               },
               "FREQ_TOLERANCE_HZ": {
@@ -1761,7 +1761,7 @@
         "variant_info": {
           "sensor.bd": {
             "scoped_diagram": "sensor_inst_0.bd",
-            "design_checksum": "0x6D18FAC7",
+            "design_checksum": "0xF52BACF6",
             "ref_name": "sensor",
             "ref_subinst_path": "top_sensor_0",
             "ref_type": "Block Design",
@@ -1869,7 +1869,7 @@
                 "value_src": "strong"
               },
               "FREQ_HZ": {
-                "value": "100000000",
+                "value": "1e+08",
                 "value_src": "user_prop"
               },
               "HAS_BRESP": {
@@ -2181,25 +2181,25 @@
                 "right": "0"
               },
               "ARID": {
-                "physical_name": "S00_AXI_0_arid_1",
+                "physical_name": "S00_AXI_0_arid",
                 "direction": "I",
                 "left": "11",
                 "right": "0"
               },
               "AWID": {
-                "physical_name": "S00_AXI_0_awid_1",
+                "physical_name": "S00_AXI_0_awid",
                 "direction": "I",
                 "left": "11",
                 "right": "0"
               },
               "BID": {
-                "physical_name": "S00_AXI_0_bid_1",
+                "physical_name": "S00_AXI_0_bid",
                 "direction": "O",
                 "left": "11",
                 "right": "0"
               },
               "RID": {
-                "physical_name": "S00_AXI_0_rid_1",
+                "physical_name": "S00_AXI_0_rid",
                 "direction": "O",
                 "left": "11",
                 "right": "0"
@@ -2236,7 +2236,7 @@
                 "value_src": "auto_prop"
               },
               "FREQ_HZ": {
-                "value": "100000000",
+                "value": "1e+08",
                 "value_src": "user_prop"
               },
               "HAS_BRESP": {
@@ -2426,7 +2426,7 @@
                 "value_src": "default_prop"
               },
               "FREQ_HZ": {
-                "value": "100000000",
+                "value": "1e+08",
                 "value_src": "user_prop"
               },
               "FREQ_TOLERANCE_HZ": {
@@ -2491,7 +2491,7 @@
         "variant_info": {
           "evf.bd": {
             "scoped_diagram": "evf_inst_0.bd",
-            "design_checksum": "0x54268560",
+            "design_checksum": "0xB54F1B5B",
             "ref_name": "evf",
             "ref_subinst_path": "top_evf_0",
             "ref_type": "Block Design",
@@ -2813,7 +2813,7 @@
                 "value_src": "strong"
               },
               "FREQ_HZ": {
-                "value": "100000000",
+                "value": "1e+08",
                 "value_src": "user_prop"
               },
               "HAS_BRESP": {
@@ -3125,25 +3125,25 @@
                 "right": "0"
               },
               "ARID": {
-                "physical_name": "S00_AXI_0_arid_1",
+                "physical_name": "S00_AXI_0_arid",
                 "direction": "I",
                 "left": "11",
                 "right": "0"
               },
               "AWID": {
-                "physical_name": "S00_AXI_0_awid_1",
+                "physical_name": "S00_AXI_0_awid",
                 "direction": "I",
                 "left": "11",
                 "right": "0"
               },
               "BID": {
-                "physical_name": "S00_AXI_0_bid_1",
+                "physical_name": "S00_AXI_0_bid",
                 "direction": "O",
                 "left": "11",
                 "right": "0"
               },
               "RID": {
-                "physical_name": "S00_AXI_0_rid_1",
+                "physical_name": "S00_AXI_0_rid",
                 "direction": "O",
                 "left": "11",
                 "right": "0"
@@ -3174,7 +3174,7 @@
                 "value_src": "default_prop"
               },
               "FREQ_HZ": {
-                "value": "100000000",
+                "value": "1e+08",
                 "value_src": "user_prop"
               },
               "FREQ_TOLERANCE_HZ": {
@@ -3230,7 +3230,7 @@
         "variant_info": {
           "peripherals.bd": {
             "scoped_diagram": "peripherals_inst_0.bd",
-            "design_checksum": "0x1EB1FE21",
+            "design_checksum": "0xCA9BF2E6",
             "ref_name": "peripherals",
             "ref_subinst_path": "top_peripherals_0",
             "ref_type": "Block Design",
@@ -4037,6 +4037,9 @@
         "xci_path": "ip/top_xlconcat_0_1/top_xlconcat_0_1.xci",
         "inst_hier_path": "xlconcat_0",
         "parameters": {
+          "IN0_WIDTH": {
+            "value": "4"
+          },
           "NUM_PORTS": {
             "value": "3"
           }
@@ -4321,38 +4324,6 @@
         "address_spaces": {
           "Data_MM2S": {
             "segments": {
-              "SEG_axi_gpio_0_Reg": {
-                "address_block": "/peripherals_0/axi_gpio_0/S_AXI/Reg",
-                "offset": "0x40000000",
-                "range": "64K",
-                "is_excluded": "TRUE"
-              },
-              "SEG_axi_quad_spi_0_Reg": {
-                "address_block": "/peripherals_0/axi_quad_spi_0/AXI_LITE/Reg",
-                "offset": "0x44A10000",
-                "range": "64K",
-                "is_excluded": "TRUE",
-                "offset_high_param": "C_HIGHADDR"
-              },
-              "SEG_axi_quad_spi_1_Reg": {
-                "address_block": "/peripherals_0/axi_quad_spi_1/AXI_LITE/Reg",
-                "offset": "0x44A20000",
-                "range": "64K",
-                "is_excluded": "TRUE",
-                "offset_high_param": "C_HIGHADDR"
-              },
-              "SEG_axi_uartlite_0_Reg": {
-                "address_block": "/peripherals_0/axi_uartlite_0/S_AXI/Reg",
-                "offset": "0x40600000",
-                "range": "64K",
-                "is_excluded": "TRUE"
-              },
-              "SEG_axi_uartlite_1_Reg": {
-                "address_block": "/peripherals_0/axi_uartlite_1/S_AXI/Reg",
-                "offset": "0x40610000",
-                "range": "64K",
-                "is_excluded": "TRUE"
-              },
               "SEG_vdma_axi_mm_Reg": {
                 "address_block": "/processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM",
                 "offset": "0x00000000",

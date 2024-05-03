@@ -115,6 +115,9 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
+set_msg_config -id {HDL-1065} -limit 10000
+set_msg_config  -id {PS7-6}  -suppress 
+set_msg_config  -id {xilinx.com:ip:processing_system7:5.5-1}  -suppress 
 
 OPTRACE "impl_1" START { ROLLUP_1 }
 OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }

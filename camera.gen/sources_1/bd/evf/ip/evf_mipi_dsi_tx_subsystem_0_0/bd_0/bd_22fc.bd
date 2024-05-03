@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xBD8C0DE1EB995E02",
+      "boundary_crc": "0xBD8C0DE13546DF52",
       "design_src": "SBD",
       "device": "xc7z020clg484-2",
       "name": "bd_22fc",
@@ -169,7 +169,7 @@
             "value_src": "default_prop"
           },
           "FREQ_HZ": {
-            "value": "10000000",
+            "value": "100000000",
             "value_src": "user_prop"
           },
           "HAS_TKEEP": {
@@ -239,7 +239,7 @@
             "value_src": "default_prop"
           },
           "FREQ_HZ": {
-            "value": "10000000",
+            "value": "100000000",
             "value_src": "user_prop"
           },
           "FREQ_TOLERANCE_HZ": {

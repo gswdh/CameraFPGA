@@ -1,7 +1,7 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.48951",
-   "Default View_TopLeft":"-1097,2",
+   "Default View_ScaleFactor":"0.714519",
+   "Default View_TopLeft":"248,-151",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0 TLS
 #  -string -flagsOSRD
@@ -62,10 +62,10 @@ preplace netloc peripherals_0_FPGA_GPIO_OUT 1 4 1 NJ 610
 preplace netloc peripherals_0_PSS_PMC_UART 1 4 1 NJ 630
 preplace netloc peripherals_0_badc_spi 1 4 1 NJ 670
 preplace netloc peripherals_0_disp_spi 1 4 1 NJ 650
+preplace netloc peripherals_0_evf_i2c 1 4 1 NJ 690
 preplace netloc processing_system7_0_DDR 1 4 1 NJ 60
 preplace netloc processing_system7_0_FIXED_IO 1 4 1 NJ 80
 preplace netloc processing_system7_0_SDIO_1 1 4 1 NJ 100
-preplace netloc peripherals_0_evf_i2c 1 4 1 NJ 690
 levelinfo -pg 1 -10 180 520 900 1350 1620
 pagesize -pg 1 -db -bbox -sgen -230 0 1790 1150
 "

@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x4A683F6804B33F5D",
+      "boundary_crc": "0x2DF9C8D5CD5C7D0E",
       "design_src": "/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/sources_1/bd/peripherals/peripherals.bd",
       "device": "xc7z020clg484-2",
       "name": "peripherals_inst_0",
@@ -29,7 +29,8 @@
         "m03_couplers": {},
         "m04_couplers": {}
       },
-      "xlconcat_0": ""
+      "xlconcat_0": "",
+      "axi_register_slice_0": ""
     },
     "interface_ports": {
       "ESP_PSS_UART": {
@@ -236,7 +237,7 @@
             "value_src": "strong"
           },
           "FREQ_HZ": {
-            "value": "100000000",
+            "value": "1e+08",
             "value_src": "user_prop"
           },
           "HAS_BRESP": {
@@ -554,25 +555,25 @@
             "right": "0"
           },
           "ARID": {
-            "physical_name": "S00_AXI_0_arid_1",
+            "physical_name": "S00_AXI_0_arid",
             "direction": "I",
             "left": "11",
             "right": "0"
           },
           "AWID": {
-            "physical_name": "S00_AXI_0_awid_1",
+            "physical_name": "S00_AXI_0_awid",
             "direction": "I",
             "left": "11",
             "right": "0"
           },
           "BID": {
-            "physical_name": "S00_AXI_0_bid_1",
+            "physical_name": "S00_AXI_0_bid",
             "direction": "O",
             "left": "11",
             "right": "0"
           },
           "RID": {
-            "physical_name": "S00_AXI_0_rid_1",
+            "physical_name": "S00_AXI_0_rid",
             "direction": "O",
             "left": "11",
             "right": "0"
@@ -603,7 +604,7 @@
             "value_src": "default_prop"
           },
           "FREQ_HZ": {
-            "value": "100000000",
+            "value": "1e+08",
             "value_src": "user_prop"
           },
           "FREQ_TOLERANCE_HZ": {
@@ -659,7 +660,7 @@
         "vlnv": "xilinx.com:ip:axi_gpio:2.0",
         "ip_revision": "31",
         "xci_name": "peripherals_inst_0_axi_gpio_0_0",
-        "xci_path": "ip/peripherals_inst_0_axi_gpio_0_0/peripherals_inst_0_axi_gpio_0_0.xci",
+        "xci_path": "ip/peripherals_inst_0_axi_gpio_0_0_1/peripherals_inst_0_axi_gpio_0_0.xci",
         "inst_hier_path": "axi_gpio_0",
         "parameters": {
           "C_ALL_INPUTS_2": {
@@ -683,7 +684,7 @@
         "vlnv": "xilinx.com:ip:axi_uartlite:2.0",
         "ip_revision": "33",
         "xci_name": "peripherals_inst_0_axi_uartlite_0_0",
-        "xci_path": "ip/peripherals_inst_0_axi_uartlite_0_0/peripherals_inst_0_axi_uartlite_0_0.xci",
+        "xci_path": "ip/peripherals_inst_0_axi_uartlite_0_0_1/peripherals_inst_0_axi_uartlite_0_0.xci",
         "inst_hier_path": "axi_uartlite_0",
         "parameters": {
           "C_BAUDRATE": {
@@ -695,7 +696,7 @@
         "vlnv": "xilinx.com:ip:axi_uartlite:2.0",
         "ip_revision": "33",
         "xci_name": "peripherals_inst_0_axi_uartlite_1_0",
-        "xci_path": "ip/peripherals_inst_0_axi_uartlite_1_0/peripherals_inst_0_axi_uartlite_1_0.xci",
+        "xci_path": "ip/peripherals_inst_0_axi_uartlite_1_0_1/peripherals_inst_0_axi_uartlite_1_0.xci",
         "inst_hier_path": "axi_uartlite_1",
         "parameters": {
           "C_BAUDRATE": {
@@ -707,7 +708,7 @@
         "vlnv": "xilinx.com:ip:clk_wiz:6.0",
         "ip_revision": "13",
         "xci_name": "peripherals_inst_0_clk_wiz_0_0",
-        "xci_path": "ip/peripherals_inst_0_clk_wiz_0_0/peripherals_inst_0_clk_wiz_0_0.xci",
+        "xci_path": "ip/peripherals_inst_0_clk_wiz_0_0_1/peripherals_inst_0_clk_wiz_0_0.xci",
         "inst_hier_path": "clk_wiz_0",
         "parameters": {
           "CLKIN1_JITTER_PS": {
@@ -911,7 +912,7 @@
         "vlnv": "xilinx.com:ip:axi_quad_spi:3.2",
         "ip_revision": "28",
         "xci_name": "peripherals_inst_0_axi_quad_spi_0_0",
-        "xci_path": "ip/peripherals_inst_0_axi_quad_spi_0_0/peripherals_inst_0_axi_quad_spi_0_0.xci",
+        "xci_path": "ip/peripherals_inst_0_axi_quad_spi_0_0_1/peripherals_inst_0_axi_quad_spi_0_0.xci",
         "inst_hier_path": "axi_quad_spi_0",
         "parameters": {
           "C_USE_STARTUP": {
@@ -926,7 +927,7 @@
         "vlnv": "xilinx.com:ip:axi_quad_spi:3.2",
         "ip_revision": "28",
         "xci_name": "peripherals_inst_0_axi_quad_spi_1_0",
-        "xci_path": "ip/peripherals_inst_0_axi_quad_spi_1_0/peripherals_inst_0_axi_quad_spi_1_0.xci",
+        "xci_path": "ip/peripherals_inst_0_axi_quad_spi_1_0_1/peripherals_inst_0_axi_quad_spi_1_0.xci",
         "inst_hier_path": "axi_quad_spi_1",
         "parameters": {
           "C_USE_STARTUP": {
@@ -939,7 +940,7 @@
       },
       "axi_interconnect_0": {
         "vlnv": "xilinx.com:ip:axi_interconnect:2.1",
-        "xci_path": "ip/peripherals_inst_0_axi_interconnect_0_0/peripherals_inst_0_axi_interconnect_0_0.xci",
+        "xci_path": "ip/peripherals_inst_0_axi_interconnect_0_0_1/peripherals_inst_0_axi_interconnect_0_0.xci",
         "inst_hier_path": "axi_interconnect_0",
         "xci_name": "peripherals_inst_0_axi_interconnect_0_0",
         "parameters": {
@@ -1003,15 +1004,11 @@
               },
               "AWVALID": {
                 "physical_name": "S00_AXI_awvalid",
-                "direction": "I",
-                "left": "0",
-                "right": "0"
+                "direction": "I"
               },
               "AWREADY": {
                 "physical_name": "S00_AXI_awready",
-                "direction": "O",
-                "left": "0",
-                "right": "0"
+                "direction": "O"
               },
               "WDATA": {
                 "physical_name": "S00_AXI_wdata",
@@ -1027,21 +1024,15 @@
               },
               "WLAST": {
                 "physical_name": "S00_AXI_wlast",
-                "direction": "I",
-                "left": "0",
-                "right": "0"
+                "direction": "I"
               },
               "WVALID": {
                 "physical_name": "S00_AXI_wvalid",
-                "direction": "I",
-                "left": "0",
-                "right": "0"
+                "direction": "I"
               },
               "WREADY": {
                 "physical_name": "S00_AXI_wready",
-                "direction": "O",
-                "left": "0",
-                "right": "0"
+                "direction": "O"
               },
               "BRESP": {
                 "physical_name": "S00_AXI_bresp",
@@ -1051,15 +1042,11 @@
               },
               "BVALID": {
                 "physical_name": "S00_AXI_bvalid",
-                "direction": "O",
-                "left": "0",
-                "right": "0"
+                "direction": "O"
               },
               "BREADY": {
                 "physical_name": "S00_AXI_bready",
-                "direction": "I",
-                "left": "0",
-                "right": "0"
+                "direction": "I"
               },
               "ARADDR": {
                 "physical_name": "S00_AXI_araddr",
@@ -1111,15 +1098,11 @@
               },
               "ARVALID": {
                 "physical_name": "S00_AXI_arvalid",
-                "direction": "I",
-                "left": "0",
-                "right": "0"
+                "direction": "I"
               },
               "ARREADY": {
                 "physical_name": "S00_AXI_arready",
-                "direction": "O",
-                "left": "0",
-                "right": "0"
+                "direction": "O"
               },
               "RDATA": {
                 "physical_name": "S00_AXI_rdata",
@@ -1135,21 +1118,15 @@
               },
               "RLAST": {
                 "physical_name": "S00_AXI_rlast",
-                "direction": "O",
-                "left": "0",
-                "right": "0"
+                "direction": "O"
               },
               "RVALID": {
                 "physical_name": "S00_AXI_rvalid",
-                "direction": "O",
-                "left": "0",
-                "right": "0"
+                "direction": "O"
               },
               "RREADY": {
                 "physical_name": "S00_AXI_rready",
-                "direction": "I",
-                "left": "0",
-                "right": "0"
+                "direction": "I"
               },
               "ARID": {
                 "physical_name": "S00_AXI_arid",
@@ -1851,7 +1828,7 @@
             "vlnv": "xilinx.com:ip:axi_crossbar:2.1",
             "ip_revision": "30",
             "xci_name": "peripherals_inst_0_xbar_0",
-            "xci_path": "ip/peripherals_inst_0_xbar_0/peripherals_inst_0_xbar_0.xci",
+            "xci_path": "ip/peripherals_inst_0_xbar_0_1/peripherals_inst_0_xbar_0.xci",
             "inst_hier_path": "axi_interconnect_0/xbar",
             "parameters": {
               "M00_A01_BASE_ADDR": {
@@ -2756,15 +2733,11 @@
                   },
                   "AWVALID": {
                     "physical_name": "S_AXI_awvalid",
-                    "direction": "I",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "I"
                   },
                   "AWREADY": {
                     "physical_name": "S_AXI_awready",
-                    "direction": "O",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "O"
                   },
                   "WDATA": {
                     "physical_name": "S_AXI_wdata",
@@ -2780,21 +2753,15 @@
                   },
                   "WLAST": {
                     "physical_name": "S_AXI_wlast",
-                    "direction": "I",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "I"
                   },
                   "WVALID": {
                     "physical_name": "S_AXI_wvalid",
-                    "direction": "I",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "I"
                   },
                   "WREADY": {
                     "physical_name": "S_AXI_wready",
-                    "direction": "O",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "O"
                   },
                   "BRESP": {
                     "physical_name": "S_AXI_bresp",
@@ -2804,15 +2771,11 @@
                   },
                   "BVALID": {
                     "physical_name": "S_AXI_bvalid",
-                    "direction": "O",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "O"
                   },
                   "BREADY": {
                     "physical_name": "S_AXI_bready",
-                    "direction": "I",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "I"
                   },
                   "ARADDR": {
                     "physical_name": "S_AXI_araddr",
@@ -2864,15 +2827,11 @@
                   },
                   "ARVALID": {
                     "physical_name": "S_AXI_arvalid",
-                    "direction": "I",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "I"
                   },
                   "ARREADY": {
                     "physical_name": "S_AXI_arready",
-                    "direction": "O",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "O"
                   },
                   "RDATA": {
                     "physical_name": "S_AXI_rdata",
@@ -2888,21 +2847,15 @@
                   },
                   "RLAST": {
                     "physical_name": "S_AXI_rlast",
-                    "direction": "O",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "O"
                   },
                   "RVALID": {
                     "physical_name": "S_AXI_rvalid",
-                    "direction": "O",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "O"
                   },
                   "RREADY": {
                     "physical_name": "S_AXI_rready",
-                    "direction": "I",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "I"
                   },
                   "ARID": {
                     "physical_name": "S_AXI_arid",
@@ -4470,11 +4423,27 @@
         "vlnv": "xilinx.com:ip:xlconcat:2.1",
         "ip_revision": "5",
         "xci_name": "peripherals_inst_0_xlconcat_0_0",
-        "xci_path": "ip/peripherals_inst_0_xlconcat_0_0/peripherals_inst_0_xlconcat_0_0.xci",
+        "xci_path": "ip/peripherals_inst_0_xlconcat_0_0_1/peripherals_inst_0_xlconcat_0_0.xci",
         "inst_hier_path": "xlconcat_0",
         "parameters": {
           "NUM_PORTS": {
             "value": "4"
+          }
+        }
+      },
+      "axi_register_slice_0": {
+        "vlnv": "xilinx.com:ip:axi_register_slice:2.1",
+        "ip_revision": "29",
+        "xci_name": "peripherals_inst_0_axi_register_slice_0_0",
+        "xci_path": "ip/peripherals_inst_0_axi_register_slice_0_0/peripherals_inst_0_axi_register_slice_0_0.xci",
+        "inst_hier_path": "axi_register_slice_0",
+        "interface_ports": {
+          "S_AXI": {
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "mode": "Slave",
+            "bridges": [
+              "M_AXI"
+            ]
           }
         }
       }
@@ -4483,7 +4452,7 @@
       "S00_AXI_0_1": {
         "interface_ports": [
           "S00_AXI_0",
-          "axi_interconnect_0/S00_AXI"
+          "axi_register_slice_0/S_AXI"
         ]
       },
       "axi_gpio_0_GPIO": {
@@ -4540,6 +4509,12 @@
           "axi_quad_spi_1/SPI_0"
         ]
       },
+      "axi_register_slice_0_M_AXI": {
+        "interface_ports": [
+          "axi_register_slice_0/M_AXI",
+          "axi_interconnect_0/S00_AXI"
+        ]
+      },
       "axi_uartlite_0_UART": {
         "interface_ports": [
           "PSS_PMC_UART",
@@ -4569,7 +4544,8 @@
           "axi_uartlite_0/s_axi_aclk",
           "axi_gpio_0/s_axi_aclk",
           "axi_quad_spi_0/s_axi_aclk",
-          "axi_quad_spi_1/s_axi_aclk"
+          "axi_quad_spi_1/s_axi_aclk",
+          "axi_register_slice_0/aclk"
         ]
       },
       "ARESETN_0_1": {
@@ -4587,7 +4563,8 @@
           "axi_uartlite_0/s_axi_aresetn",
           "clk_wiz_0/resetn",
           "axi_uartlite_1/s_axi_aresetn",
-          "axi_interconnect_0/M00_ARESETN"
+          "axi_interconnect_0/M00_ARESETN",
+          "axi_register_slice_0/aresetn"
         ]
       },
       "axi_quad_spi_0_ip2intc_irpt": {
