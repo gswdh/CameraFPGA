@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "sensor_inst_0_xlslice_2_0",
-    "cell_name": "sensor_0/xlslice_2",
+    "cell_name": "xlslice_2",
     "component_reference": "xilinx.com:ip:xlslice:1.0",
     "ip_revision": "3",
     "gen_directory": ".",

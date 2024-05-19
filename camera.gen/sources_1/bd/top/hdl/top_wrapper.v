@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-//Date        : Fri May  3 18:13:01 2024
+//Date        : Sun May 19 08:24:25 2024
 //Host        : testserver running 64-bit Ubuntu 20.04.6 LTS
 //Command     : generate_target top_wrapper.bd
 //Design      : top_wrapper
@@ -64,7 +64,11 @@ module top_wrapper
     mipi_evf_out_0_data_hs_n,
     mipi_evf_out_0_data_hs_p,
     mipi_evf_out_0_data_lp_n,
-    mipi_evf_out_0_data_lp_p);
+    mipi_evf_out_0_data_lp_p,
+    tdig0_0,
+    tdig1_0,
+    texp0_0,
+    texp1_0);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -90,8 +94,8 @@ module top_wrapper
   inout FIXED_IO_ps_clk;
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
-  input [9:0]FPGA_GPIO_IN_tri_i;
-  output [24:0]FPGA_GPIO_OUT_tri_o;
+  input [7:0]FPGA_GPIO_IN_tri_i;
+  output [22:0]FPGA_GPIO_OUT_tri_o;
   input PSS_PMC_UART_rxd;
   output PSS_PMC_UART_txd;
   input SDIO_1_0_cdn;
@@ -119,6 +123,10 @@ module top_wrapper
   output [3:0]mipi_evf_out_0_data_hs_p;
   output [3:0]mipi_evf_out_0_data_lp_n;
   output [3:0]mipi_evf_out_0_data_lp_p;
+  input tdig0_0;
+  input tdig1_0;
+  output texp0_0;
+  output [0:0]texp1_0;
 
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -145,8 +153,8 @@ module top_wrapper
   wire FIXED_IO_ps_clk;
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
-  wire [9:0]FPGA_GPIO_IN_tri_i;
-  wire [24:0]FPGA_GPIO_OUT_tri_o;
+  wire [7:0]FPGA_GPIO_IN_tri_i;
+  wire [22:0]FPGA_GPIO_OUT_tri_o;
   wire PSS_PMC_UART_rxd;
   wire PSS_PMC_UART_txd;
   wire SDIO_1_0_cdn;
@@ -198,6 +206,10 @@ module top_wrapper
   wire [3:0]mipi_evf_out_0_data_hs_p;
   wire [3:0]mipi_evf_out_0_data_lp_n;
   wire [3:0]mipi_evf_out_0_data_lp_p;
+  wire tdig0_0;
+  wire tdig1_0;
+  wire texp0_0;
+  wire [0:0]texp1_0;
 
   IOBUF badc_spi_0_io0_iobuf
        (.I(badc_spi_0_io0_o),
@@ -309,5 +321,9 @@ module top_wrapper
         .mipi_evf_out_0_data_hs_n(mipi_evf_out_0_data_hs_n),
         .mipi_evf_out_0_data_hs_p(mipi_evf_out_0_data_hs_p),
         .mipi_evf_out_0_data_lp_n(mipi_evf_out_0_data_lp_n),
-        .mipi_evf_out_0_data_lp_p(mipi_evf_out_0_data_lp_p));
+        .mipi_evf_out_0_data_lp_p(mipi_evf_out_0_data_lp_p),
+        .tdig0_0(tdig0_0),
+        .tdig1_0(tdig1_0),
+        .texp0_0(texp0_0),
+        .texp1_0(texp1_0));
 endmodule

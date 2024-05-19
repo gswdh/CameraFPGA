@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "evf_inst_0_axi_interconnect_0_0",
-    "cell_name": "evf_0/axi_interconnect_0",
+    "cell_name": "axi_interconnect_0",
     "component_reference": "xilinx.com:ip:axi_interconnect:2.1",
     "ip_revision": "30",
     "gen_directory": ".",

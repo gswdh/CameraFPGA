@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x2DF9C8D5CD5C7D0E",
+      "boundary_crc": "0x5709835A057105AA",
       "design_src": "/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/sources_1/bd/peripherals/peripherals.bd",
       "device": "xc7z020clg484-2",
       "name": "peripherals_inst_0",
@@ -12,12 +12,9 @@
       "variant": "true"
     },
     "design_tree": {
-      "axi_gpio_0": "",
       "axi_uartlite_0": "",
       "axi_uartlite_1": "",
       "clk_wiz_0": "",
-      "axi_quad_spi_0": "",
-      "axi_quad_spi_1": "",
       "axi_interconnect_0": {
         "xbar": "",
         "s00_couplers": {
@@ -30,7 +27,10 @@
         "m04_couplers": {}
       },
       "xlconcat_0": "",
-      "axi_register_slice_0": ""
+      "axi_register_slice_0": "",
+      "axi_quad_spi_0": "",
+      "axi_quad_spi_1": "",
+      "axi_gpio_0": ""
     },
     "interface_ports": {
       "ESP_PSS_UART": {
@@ -56,7 +56,7 @@
           "TRI_I": {
             "physical_name": "FPGA_GPIO_IN_tri_i",
             "direction": "I",
-            "left": "9",
+            "left": "7",
             "right": "0"
           }
         }
@@ -69,7 +69,7 @@
           "TRI_O": {
             "physical_name": "FPGA_GPIO_OUT_tri_o",
             "direction": "O",
-            "left": "24",
+            "left": "22",
             "right": "0"
           }
         }
@@ -579,11 +579,6 @@
             "right": "0"
           }
         }
-      },
-      "evf_i2c": {
-        "mode": "Master",
-        "vlnv_bus_definition": "xilinx.com:interface:iic:1.0",
-        "vlnv": "xilinx.com:interface:iic_rtl:1.0"
       }
     },
     "ports": {
@@ -656,30 +651,6 @@
       }
     },
     "components": {
-      "axi_gpio_0": {
-        "vlnv": "xilinx.com:ip:axi_gpio:2.0",
-        "ip_revision": "31",
-        "xci_name": "peripherals_inst_0_axi_gpio_0_0",
-        "xci_path": "ip/peripherals_inst_0_axi_gpio_0_0_1/peripherals_inst_0_axi_gpio_0_0.xci",
-        "inst_hier_path": "axi_gpio_0",
-        "parameters": {
-          "C_ALL_INPUTS_2": {
-            "value": "1"
-          },
-          "C_ALL_OUTPUTS": {
-            "value": "1"
-          },
-          "C_GPIO2_WIDTH": {
-            "value": "10"
-          },
-          "C_GPIO_WIDTH": {
-            "value": "25"
-          },
-          "C_IS_DUAL": {
-            "value": "1"
-          }
-        }
-      },
       "axi_uartlite_0": {
         "vlnv": "xilinx.com:ip:axi_uartlite:2.0",
         "ip_revision": "33",
@@ -905,36 +876,6 @@
           },
           "USE_PHASE_ALIGNMENT": {
             "value": "true"
-          }
-        }
-      },
-      "axi_quad_spi_0": {
-        "vlnv": "xilinx.com:ip:axi_quad_spi:3.2",
-        "ip_revision": "28",
-        "xci_name": "peripherals_inst_0_axi_quad_spi_0_0",
-        "xci_path": "ip/peripherals_inst_0_axi_quad_spi_0_0_1/peripherals_inst_0_axi_quad_spi_0_0.xci",
-        "inst_hier_path": "axi_quad_spi_0",
-        "parameters": {
-          "C_USE_STARTUP": {
-            "value": "0"
-          },
-          "FIFO_INCLUDED": {
-            "value": "0"
-          }
-        }
-      },
-      "axi_quad_spi_1": {
-        "vlnv": "xilinx.com:ip:axi_quad_spi:3.2",
-        "ip_revision": "28",
-        "xci_name": "peripherals_inst_0_axi_quad_spi_1_0",
-        "xci_path": "ip/peripherals_inst_0_axi_quad_spi_1_0_1/peripherals_inst_0_axi_quad_spi_1_0.xci",
-        "inst_hier_path": "axi_quad_spi_1",
-        "parameters": {
-          "C_USE_STARTUP": {
-            "value": "0"
-          },
-          "FIFO_INCLUDED": {
-            "value": "0"
           }
         }
       },
@@ -1179,15 +1120,11 @@
               },
               "AWVALID": {
                 "physical_name": "M00_AXI_awvalid",
-                "direction": "O",
-                "left": "0",
-                "right": "0"
+                "direction": "O"
               },
               "AWREADY": {
                 "physical_name": "M00_AXI_awready",
-                "direction": "I",
-                "left": "0",
-                "right": "0"
+                "direction": "I"
               },
               "WDATA": {
                 "physical_name": "M00_AXI_wdata",
@@ -1203,15 +1140,11 @@
               },
               "WVALID": {
                 "physical_name": "M00_AXI_wvalid",
-                "direction": "O",
-                "left": "0",
-                "right": "0"
+                "direction": "O"
               },
               "WREADY": {
                 "physical_name": "M00_AXI_wready",
-                "direction": "I",
-                "left": "0",
-                "right": "0"
+                "direction": "I"
               },
               "BRESP": {
                 "physical_name": "M00_AXI_bresp",
@@ -1221,15 +1154,11 @@
               },
               "BVALID": {
                 "physical_name": "M00_AXI_bvalid",
-                "direction": "I",
-                "left": "0",
-                "right": "0"
+                "direction": "I"
               },
               "BREADY": {
                 "physical_name": "M00_AXI_bready",
-                "direction": "O",
-                "left": "0",
-                "right": "0"
+                "direction": "O"
               },
               "ARADDR": {
                 "physical_name": "M00_AXI_araddr",
@@ -1239,15 +1168,11 @@
               },
               "ARVALID": {
                 "physical_name": "M00_AXI_arvalid",
-                "direction": "O",
-                "left": "0",
-                "right": "0"
+                "direction": "O"
               },
               "ARREADY": {
                 "physical_name": "M00_AXI_arready",
-                "direction": "I",
-                "left": "0",
-                "right": "0"
+                "direction": "I"
               },
               "RDATA": {
                 "physical_name": "M00_AXI_rdata",
@@ -1263,15 +1188,11 @@
               },
               "RVALID": {
                 "physical_name": "M00_AXI_rvalid",
-                "direction": "I",
-                "left": "0",
-                "right": "0"
+                "direction": "I"
               },
               "RREADY": {
                 "physical_name": "M00_AXI_rready",
-                "direction": "O",
-                "left": "0",
-                "right": "0"
+                "direction": "O"
               }
             }
           },
@@ -1506,15 +1427,11 @@
               },
               "AWVALID": {
                 "physical_name": "M03_AXI_awvalid",
-                "direction": "O",
-                "left": "0",
-                "right": "0"
+                "direction": "O"
               },
               "AWREADY": {
                 "physical_name": "M03_AXI_awready",
-                "direction": "I",
-                "left": "0",
-                "right": "0"
+                "direction": "I"
               },
               "WDATA": {
                 "physical_name": "M03_AXI_wdata",
@@ -1530,15 +1447,11 @@
               },
               "WVALID": {
                 "physical_name": "M03_AXI_wvalid",
-                "direction": "O",
-                "left": "0",
-                "right": "0"
+                "direction": "O"
               },
               "WREADY": {
                 "physical_name": "M03_AXI_wready",
-                "direction": "I",
-                "left": "0",
-                "right": "0"
+                "direction": "I"
               },
               "BRESP": {
                 "physical_name": "M03_AXI_bresp",
@@ -1548,15 +1461,11 @@
               },
               "BVALID": {
                 "physical_name": "M03_AXI_bvalid",
-                "direction": "I",
-                "left": "0",
-                "right": "0"
+                "direction": "I"
               },
               "BREADY": {
                 "physical_name": "M03_AXI_bready",
-                "direction": "O",
-                "left": "0",
-                "right": "0"
+                "direction": "O"
               },
               "ARADDR": {
                 "physical_name": "M03_AXI_araddr",
@@ -1566,15 +1475,11 @@
               },
               "ARVALID": {
                 "physical_name": "M03_AXI_arvalid",
-                "direction": "O",
-                "left": "0",
-                "right": "0"
+                "direction": "O"
               },
               "ARREADY": {
                 "physical_name": "M03_AXI_arready",
-                "direction": "I",
-                "left": "0",
-                "right": "0"
+                "direction": "I"
               },
               "RDATA": {
                 "physical_name": "M03_AXI_rdata",
@@ -1590,15 +1495,11 @@
               },
               "RVALID": {
                 "physical_name": "M03_AXI_rvalid",
-                "direction": "I",
-                "left": "0",
-                "right": "0"
+                "direction": "I"
               },
               "RREADY": {
                 "physical_name": "M03_AXI_rready",
-                "direction": "O",
-                "left": "0",
-                "right": "0"
+                "direction": "O"
               }
             }
           },
@@ -1615,15 +1516,11 @@
               },
               "AWVALID": {
                 "physical_name": "M04_AXI_awvalid",
-                "direction": "O",
-                "left": "0",
-                "right": "0"
+                "direction": "O"
               },
               "AWREADY": {
                 "physical_name": "M04_AXI_awready",
-                "direction": "I",
-                "left": "0",
-                "right": "0"
+                "direction": "I"
               },
               "WDATA": {
                 "physical_name": "M04_AXI_wdata",
@@ -1639,15 +1536,11 @@
               },
               "WVALID": {
                 "physical_name": "M04_AXI_wvalid",
-                "direction": "O",
-                "left": "0",
-                "right": "0"
+                "direction": "O"
               },
               "WREADY": {
                 "physical_name": "M04_AXI_wready",
-                "direction": "I",
-                "left": "0",
-                "right": "0"
+                "direction": "I"
               },
               "BRESP": {
                 "physical_name": "M04_AXI_bresp",
@@ -1657,15 +1550,11 @@
               },
               "BVALID": {
                 "physical_name": "M04_AXI_bvalid",
-                "direction": "I",
-                "left": "0",
-                "right": "0"
+                "direction": "I"
               },
               "BREADY": {
                 "physical_name": "M04_AXI_bready",
-                "direction": "O",
-                "left": "0",
-                "right": "0"
+                "direction": "O"
               },
               "ARADDR": {
                 "physical_name": "M04_AXI_araddr",
@@ -1675,15 +1564,11 @@
               },
               "ARVALID": {
                 "physical_name": "M04_AXI_arvalid",
-                "direction": "O",
-                "left": "0",
-                "right": "0"
+                "direction": "O"
               },
               "ARREADY": {
                 "physical_name": "M04_AXI_arready",
-                "direction": "I",
-                "left": "0",
-                "right": "0"
+                "direction": "I"
               },
               "RDATA": {
                 "physical_name": "M04_AXI_rdata",
@@ -1699,15 +1584,11 @@
               },
               "RVALID": {
                 "physical_name": "M04_AXI_rvalid",
-                "direction": "I",
-                "left": "0",
-                "right": "0"
+                "direction": "I"
               },
               "RREADY": {
                 "physical_name": "M04_AXI_rready",
-                "direction": "O",
-                "left": "0",
-                "right": "0"
+                "direction": "O"
               }
             }
           }
@@ -3000,15 +2881,11 @@
                   },
                   "AWVALID": {
                     "physical_name": "M_AXI_awvalid",
-                    "direction": "O",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "O"
                   },
                   "AWREADY": {
                     "physical_name": "M_AXI_awready",
-                    "direction": "I",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "I"
                   },
                   "WDATA": {
                     "physical_name": "M_AXI_wdata",
@@ -3024,15 +2901,11 @@
                   },
                   "WVALID": {
                     "physical_name": "M_AXI_wvalid",
-                    "direction": "O",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "O"
                   },
                   "WREADY": {
                     "physical_name": "M_AXI_wready",
-                    "direction": "I",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "I"
                   },
                   "BRESP": {
                     "physical_name": "M_AXI_bresp",
@@ -3042,15 +2915,11 @@
                   },
                   "BVALID": {
                     "physical_name": "M_AXI_bvalid",
-                    "direction": "I",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "I"
                   },
                   "BREADY": {
                     "physical_name": "M_AXI_bready",
-                    "direction": "O",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "O"
                   },
                   "ARADDR": {
                     "physical_name": "M_AXI_araddr",
@@ -3060,15 +2929,11 @@
                   },
                   "ARVALID": {
                     "physical_name": "M_AXI_arvalid",
-                    "direction": "O",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "O"
                   },
                   "ARREADY": {
                     "physical_name": "M_AXI_arready",
-                    "direction": "I",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "I"
                   },
                   "RDATA": {
                     "physical_name": "M_AXI_rdata",
@@ -3084,15 +2949,11 @@
                   },
                   "RVALID": {
                     "physical_name": "M_AXI_rvalid",
-                    "direction": "I",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "I"
                   },
                   "RREADY": {
                     "physical_name": "M_AXI_rready",
-                    "direction": "O",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "O"
                   }
                 }
               },
@@ -3109,15 +2970,11 @@
                   },
                   "AWVALID": {
                     "physical_name": "S_AXI_awvalid",
-                    "direction": "I",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "I"
                   },
                   "AWREADY": {
                     "physical_name": "S_AXI_awready",
-                    "direction": "O",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "O"
                   },
                   "WDATA": {
                     "physical_name": "S_AXI_wdata",
@@ -3133,15 +2990,11 @@
                   },
                   "WVALID": {
                     "physical_name": "S_AXI_wvalid",
-                    "direction": "I",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "I"
                   },
                   "WREADY": {
                     "physical_name": "S_AXI_wready",
-                    "direction": "O",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "O"
                   },
                   "BRESP": {
                     "physical_name": "S_AXI_bresp",
@@ -3151,15 +3004,11 @@
                   },
                   "BVALID": {
                     "physical_name": "S_AXI_bvalid",
-                    "direction": "O",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "O"
                   },
                   "BREADY": {
                     "physical_name": "S_AXI_bready",
-                    "direction": "I",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "I"
                   },
                   "ARADDR": {
                     "physical_name": "S_AXI_araddr",
@@ -3169,15 +3018,11 @@
                   },
                   "ARVALID": {
                     "physical_name": "S_AXI_arvalid",
-                    "direction": "I",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "I"
                   },
                   "ARREADY": {
                     "physical_name": "S_AXI_arready",
-                    "direction": "O",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "O"
                   },
                   "RDATA": {
                     "physical_name": "S_AXI_rdata",
@@ -3193,15 +3038,11 @@
                   },
                   "RVALID": {
                     "physical_name": "S_AXI_rvalid",
-                    "direction": "O",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "O"
                   },
                   "RREADY": {
                     "physical_name": "S_AXI_rready",
-                    "direction": "I",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "I"
                   }
                 }
               }
@@ -3792,15 +3633,11 @@
                   },
                   "AWVALID": {
                     "physical_name": "M_AXI_awvalid",
-                    "direction": "O",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "O"
                   },
                   "AWREADY": {
                     "physical_name": "M_AXI_awready",
-                    "direction": "I",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "I"
                   },
                   "WDATA": {
                     "physical_name": "M_AXI_wdata",
@@ -3816,15 +3653,11 @@
                   },
                   "WVALID": {
                     "physical_name": "M_AXI_wvalid",
-                    "direction": "O",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "O"
                   },
                   "WREADY": {
                     "physical_name": "M_AXI_wready",
-                    "direction": "I",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "I"
                   },
                   "BRESP": {
                     "physical_name": "M_AXI_bresp",
@@ -3834,15 +3667,11 @@
                   },
                   "BVALID": {
                     "physical_name": "M_AXI_bvalid",
-                    "direction": "I",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "I"
                   },
                   "BREADY": {
                     "physical_name": "M_AXI_bready",
-                    "direction": "O",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "O"
                   },
                   "ARADDR": {
                     "physical_name": "M_AXI_araddr",
@@ -3852,15 +3681,11 @@
                   },
                   "ARVALID": {
                     "physical_name": "M_AXI_arvalid",
-                    "direction": "O",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "O"
                   },
                   "ARREADY": {
                     "physical_name": "M_AXI_arready",
-                    "direction": "I",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "I"
                   },
                   "RDATA": {
                     "physical_name": "M_AXI_rdata",
@@ -3876,15 +3701,11 @@
                   },
                   "RVALID": {
                     "physical_name": "M_AXI_rvalid",
-                    "direction": "I",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "I"
                   },
                   "RREADY": {
                     "physical_name": "M_AXI_rready",
-                    "direction": "O",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "O"
                   }
                 }
               },
@@ -3901,15 +3722,11 @@
                   },
                   "AWVALID": {
                     "physical_name": "S_AXI_awvalid",
-                    "direction": "I",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "I"
                   },
                   "AWREADY": {
                     "physical_name": "S_AXI_awready",
-                    "direction": "O",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "O"
                   },
                   "WDATA": {
                     "physical_name": "S_AXI_wdata",
@@ -3925,15 +3742,11 @@
                   },
                   "WVALID": {
                     "physical_name": "S_AXI_wvalid",
-                    "direction": "I",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "I"
                   },
                   "WREADY": {
                     "physical_name": "S_AXI_wready",
-                    "direction": "O",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "O"
                   },
                   "BRESP": {
                     "physical_name": "S_AXI_bresp",
@@ -3943,15 +3756,11 @@
                   },
                   "BVALID": {
                     "physical_name": "S_AXI_bvalid",
-                    "direction": "O",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "O"
                   },
                   "BREADY": {
                     "physical_name": "S_AXI_bready",
-                    "direction": "I",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "I"
                   },
                   "ARADDR": {
                     "physical_name": "S_AXI_araddr",
@@ -3961,15 +3770,11 @@
                   },
                   "ARVALID": {
                     "physical_name": "S_AXI_arvalid",
-                    "direction": "I",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "I"
                   },
                   "ARREADY": {
                     "physical_name": "S_AXI_arready",
-                    "direction": "O",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "O"
                   },
                   "RDATA": {
                     "physical_name": "S_AXI_rdata",
@@ -3985,15 +3790,11 @@
                   },
                   "RVALID": {
                     "physical_name": "S_AXI_rvalid",
-                    "direction": "O",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "O"
                   },
                   "RREADY": {
                     "physical_name": "S_AXI_rready",
-                    "direction": "I",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "I"
                   }
                 }
               }
@@ -4056,15 +3857,11 @@
                   },
                   "AWVALID": {
                     "physical_name": "M_AXI_awvalid",
-                    "direction": "O",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "O"
                   },
                   "AWREADY": {
                     "physical_name": "M_AXI_awready",
-                    "direction": "I",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "I"
                   },
                   "WDATA": {
                     "physical_name": "M_AXI_wdata",
@@ -4080,15 +3877,11 @@
                   },
                   "WVALID": {
                     "physical_name": "M_AXI_wvalid",
-                    "direction": "O",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "O"
                   },
                   "WREADY": {
                     "physical_name": "M_AXI_wready",
-                    "direction": "I",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "I"
                   },
                   "BRESP": {
                     "physical_name": "M_AXI_bresp",
@@ -4098,15 +3891,11 @@
                   },
                   "BVALID": {
                     "physical_name": "M_AXI_bvalid",
-                    "direction": "I",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "I"
                   },
                   "BREADY": {
                     "physical_name": "M_AXI_bready",
-                    "direction": "O",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "O"
                   },
                   "ARADDR": {
                     "physical_name": "M_AXI_araddr",
@@ -4116,15 +3905,11 @@
                   },
                   "ARVALID": {
                     "physical_name": "M_AXI_arvalid",
-                    "direction": "O",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "O"
                   },
                   "ARREADY": {
                     "physical_name": "M_AXI_arready",
-                    "direction": "I",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "I"
                   },
                   "RDATA": {
                     "physical_name": "M_AXI_rdata",
@@ -4140,15 +3925,11 @@
                   },
                   "RVALID": {
                     "physical_name": "M_AXI_rvalid",
-                    "direction": "I",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "I"
                   },
                   "RREADY": {
                     "physical_name": "M_AXI_rready",
-                    "direction": "O",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "O"
                   }
                 }
               },
@@ -4165,15 +3946,11 @@
                   },
                   "AWVALID": {
                     "physical_name": "S_AXI_awvalid",
-                    "direction": "I",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "I"
                   },
                   "AWREADY": {
                     "physical_name": "S_AXI_awready",
-                    "direction": "O",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "O"
                   },
                   "WDATA": {
                     "physical_name": "S_AXI_wdata",
@@ -4189,15 +3966,11 @@
                   },
                   "WVALID": {
                     "physical_name": "S_AXI_wvalid",
-                    "direction": "I",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "I"
                   },
                   "WREADY": {
                     "physical_name": "S_AXI_wready",
-                    "direction": "O",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "O"
                   },
                   "BRESP": {
                     "physical_name": "S_AXI_bresp",
@@ -4207,15 +3980,11 @@
                   },
                   "BVALID": {
                     "physical_name": "S_AXI_bvalid",
-                    "direction": "O",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "O"
                   },
                   "BREADY": {
                     "physical_name": "S_AXI_bready",
-                    "direction": "I",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "I"
                   },
                   "ARADDR": {
                     "physical_name": "S_AXI_araddr",
@@ -4225,15 +3994,11 @@
                   },
                   "ARVALID": {
                     "physical_name": "S_AXI_arvalid",
-                    "direction": "I",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "I"
                   },
                   "ARREADY": {
                     "physical_name": "S_AXI_arready",
-                    "direction": "O",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "O"
                   },
                   "RDATA": {
                     "physical_name": "S_AXI_rdata",
@@ -4249,15 +4014,11 @@
                   },
                   "RVALID": {
                     "physical_name": "S_AXI_rvalid",
-                    "direction": "O",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "O"
                   },
                   "RREADY": {
                     "physical_name": "S_AXI_rready",
-                    "direction": "I",
-                    "left": "0",
-                    "right": "0"
+                    "direction": "I"
                   }
                 }
               }
@@ -4446,6 +4207,69 @@
             ]
           }
         }
+      },
+      "axi_quad_spi_0": {
+        "vlnv": "xilinx.com:ip:axi_quad_spi:3.2",
+        "ip_revision": "28",
+        "xci_name": "peripherals_inst_0_axi_quad_spi_0_0",
+        "xci_path": "ip/peripherals_inst_0_axi_quad_spi_0_0_1/peripherals_inst_0_axi_quad_spi_0_0.xci",
+        "inst_hier_path": "axi_quad_spi_0",
+        "parameters": {
+          "C_SCK_RATIO": {
+            "value": "4"
+          },
+          "C_USE_STARTUP": {
+            "value": "0"
+          },
+          "FIFO_INCLUDED": {
+            "value": "0"
+          }
+        }
+      },
+      "axi_quad_spi_1": {
+        "vlnv": "xilinx.com:ip:axi_quad_spi:3.2",
+        "ip_revision": "28",
+        "xci_name": "peripherals_inst_0_axi_quad_spi_1_0",
+        "xci_path": "ip/peripherals_inst_0_axi_quad_spi_1_0_1/peripherals_inst_0_axi_quad_spi_1_0.xci",
+        "inst_hier_path": "axi_quad_spi_1",
+        "parameters": {
+          "C_SCK_RATIO": {
+            "value": "2"
+          },
+          "C_USE_STARTUP": {
+            "value": "0"
+          },
+          "FIFO_INCLUDED": {
+            "value": "0"
+          },
+          "Master_mode": {
+            "value": "1"
+          }
+        }
+      },
+      "axi_gpio_0": {
+        "vlnv": "xilinx.com:ip:axi_gpio:2.0",
+        "ip_revision": "31",
+        "xci_name": "peripherals_inst_0_axi_gpio_0_0",
+        "xci_path": "ip/peripherals_inst_0_axi_gpio_0_0_1/peripherals_inst_0_axi_gpio_0_0.xci",
+        "inst_hier_path": "axi_gpio_0",
+        "parameters": {
+          "C_ALL_INPUTS_2": {
+            "value": "1"
+          },
+          "C_ALL_OUTPUTS": {
+            "value": "1"
+          },
+          "C_GPIO2_WIDTH": {
+            "value": "8"
+          },
+          "C_GPIO_WIDTH": {
+            "value": "23"
+          },
+          "C_IS_DUAL": {
+            "value": "1"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -4469,8 +4293,8 @@
       },
       "axi_interconnect_0_M00_AXI": {
         "interface_ports": [
-          "axi_interconnect_0/M00_AXI",
-          "axi_gpio_0/S_AXI"
+          "axi_gpio_0/S_AXI",
+          "axi_interconnect_0/M00_AXI"
         ]
       },
       "axi_interconnect_0_M01_AXI": {
@@ -4487,14 +4311,14 @@
       },
       "axi_interconnect_0_M03_AXI": {
         "interface_ports": [
-          "axi_interconnect_0/M03_AXI",
-          "axi_quad_spi_1/AXI_LITE"
+          "axi_quad_spi_1/AXI_LITE",
+          "axi_interconnect_0/M03_AXI"
         ]
       },
       "axi_interconnect_0_M04_AXI": {
         "interface_ports": [
-          "axi_interconnect_0/M04_AXI",
-          "axi_quad_spi_0/AXI_LITE"
+          "axi_quad_spi_0/AXI_LITE",
+          "axi_interconnect_0/M04_AXI"
         ]
       },
       "axi_quad_spi_0_SPI_0": {
@@ -4542,10 +4366,10 @@
           "axi_interconnect_0/M01_ACLK",
           "axi_uartlite_1/s_axi_aclk",
           "axi_uartlite_0/s_axi_aclk",
-          "axi_gpio_0/s_axi_aclk",
+          "axi_register_slice_0/aclk",
           "axi_quad_spi_0/s_axi_aclk",
           "axi_quad_spi_1/s_axi_aclk",
-          "axi_register_slice_0/aclk"
+          "axi_gpio_0/s_axi_aclk"
         ]
       },
       "ARESETN_0_1": {
@@ -4556,15 +4380,15 @@
           "axi_interconnect_0/M01_ARESETN",
           "axi_interconnect_0/M02_ARESETN",
           "axi_interconnect_0/M03_ARESETN",
-          "axi_quad_spi_1/s_axi_aresetn",
           "axi_interconnect_0/M04_ARESETN",
-          "axi_quad_spi_0/s_axi_aresetn",
-          "axi_gpio_0/s_axi_aresetn",
           "axi_uartlite_0/s_axi_aresetn",
           "clk_wiz_0/resetn",
           "axi_uartlite_1/s_axi_aresetn",
           "axi_interconnect_0/M00_ARESETN",
-          "axi_register_slice_0/aresetn"
+          "axi_register_slice_0/aresetn",
+          "axi_quad_spi_0/s_axi_aresetn",
+          "axi_quad_spi_1/s_axi_aresetn",
+          "axi_gpio_0/s_axi_aresetn"
         ]
       },
       "axi_quad_spi_0_ip2intc_irpt": {

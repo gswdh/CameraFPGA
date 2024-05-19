@@ -3293,7 +3293,7 @@
         "address_spaces": {
           "Data_MM2S": {
             "segments": {
-              "SEG_vdma_axi_mm_Reg": {
+              "SEG_processing_system7_0_HP0_DDR_LOWOCM": {
                 "address_block": "/vdma_axi_mm/Reg",
                 "offset": "0x00000000",
                 "range": "2M"

@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xD52CF3E4AB804362",
+      "boundary_crc": "0x98F9B852BB46A8CF",
       "device": "xc7z020clg484-2",
       "gen_directory": "../../../../camera.gen/sources_1/bd/top",
       "name": "top",
@@ -213,7 +213,7 @@
           "TRI_O": {
             "physical_name": "FPGA_GPIO_OUT_tri_o",
             "direction": "O",
-            "left": "24",
+            "left": "22",
             "right": "0"
           }
         }
@@ -241,7 +241,7 @@
           "TRI_I": {
             "physical_name": "FPGA_GPIO_IN_tri_i",
             "direction": "I",
-            "left": "9",
+            "left": "7",
             "right": "0"
           }
         }
@@ -440,11 +440,6 @@
             "direction": "O"
           }
         }
-      },
-      "evf_i2c_0": {
-        "mode": "Master",
-        "vlnv_bus_definition": "xilinx.com:interface:iic:1.0",
-        "vlnv": "xilinx.com:interface:iic_rtl:1.0"
       }
     },
     "ports": {
@@ -563,6 +558,20 @@
         "direction": "I",
         "left": "15",
         "right": "0"
+      },
+      "texp0_0": {
+        "direction": "O"
+      },
+      "texp1_0": {
+        "direction": "O",
+        "left": "0",
+        "right": "0"
+      },
+      "tdig0_0": {
+        "direction": "I"
+      },
+      "tdig1_0": {
+        "direction": "I"
       }
     },
     "components": {
@@ -1754,6 +1763,26 @@
             "direction": "I",
             "left": "15",
             "right": "0"
+          },
+          "tdig0": {
+            "direction": "I"
+          },
+          "tdig1": {
+            "direction": "I"
+          },
+          "int_ready_o_0": {
+            "direction": "O"
+          },
+          "int_frame_done_o_0": {
+            "direction": "O"
+          },
+          "texp0": {
+            "direction": "O"
+          },
+          "texp1": {
+            "direction": "O",
+            "left": "0",
+            "right": "0"
           }
         },
         "post_compiled_compname": "sensor_inst_0",
@@ -1761,7 +1790,7 @@
         "variant_info": {
           "sensor.bd": {
             "scoped_diagram": "sensor_inst_0.bd",
-            "design_checksum": "0xF52BACF6",
+            "design_checksum": "0xB933C45D",
             "ref_name": "sensor",
             "ref_subinst_path": "top_sensor_0",
             "ref_type": "Block Design",
@@ -2632,7 +2661,7 @@
               "TRI_I": {
                 "physical_name": "FPGA_GPIO_IN_tri_i",
                 "direction": "I",
-                "left": "9",
+                "left": "7",
                 "right": "0"
               }
             }
@@ -2645,7 +2674,7 @@
               "TRI_O": {
                 "physical_name": "FPGA_GPIO_OUT_tri_o",
                 "direction": "O",
-                "left": "24",
+                "left": "22",
                 "right": "0"
               }
             }
@@ -3149,11 +3178,6 @@
                 "right": "0"
               }
             }
-          },
-          "evf_i2c": {
-            "mode": "Master",
-            "vlnv_bus_definition": "xilinx.com:interface:iic:1.0",
-            "vlnv": "xilinx.com:interface:iic_rtl:1.0"
           }
         },
         "ports": {
@@ -3230,7 +3254,7 @@
         "variant_info": {
           "peripherals.bd": {
             "scoped_diagram": "peripherals_inst_0.bd",
-            "design_checksum": "0xCA9BF2E6",
+            "design_checksum": "0x8B06780A",
             "ref_name": "peripherals",
             "ref_subinst_path": "top_peripherals_0",
             "ref_type": "Block Design",
@@ -4041,7 +4065,7 @@
             "value": "4"
           },
           "NUM_PORTS": {
-            "value": "3"
+            "value": "5"
           }
         }
       }
@@ -4123,12 +4147,6 @@
         "interface_ports": [
           "disp_spi_0",
           "peripherals_0/disp_spi"
-        ]
-      },
-      "peripherals_0_evf_i2c": {
-        "interface_ports": [
-          "evf_i2c_0",
-          "peripherals_0/evf_i2c"
         ]
       },
       "processing_system7_0_DDR": {
@@ -4262,6 +4280,42 @@
           "axi_interconnect_1/S00_ARESETN"
         ]
       },
+      "sensor_0_int_frame_done_o_0": {
+        "ports": [
+          "sensor_0/int_frame_done_o_0",
+          "xlconcat_0/In4"
+        ]
+      },
+      "sensor_0_int_ready_o_0": {
+        "ports": [
+          "sensor_0/int_ready_o_0",
+          "xlconcat_0/In3"
+        ]
+      },
+      "sensor_0_texp0": {
+        "ports": [
+          "sensor_0/texp0",
+          "texp0_0"
+        ]
+      },
+      "sensor_0_texp1": {
+        "ports": [
+          "sensor_0/texp1",
+          "texp1_0"
+        ]
+      },
+      "tdig0_0_1": {
+        "ports": [
+          "tdig0_0",
+          "sensor_0/tdig0"
+        ]
+      },
+      "tdig1_0_1": {
+        "ports": [
+          "tdig1_0",
+          "sensor_0/tdig1"
+        ]
+      },
       "xlconcat_0_dout": {
         "ports": [
           "xlconcat_0/dout",
@@ -4324,7 +4378,7 @@
         "address_spaces": {
           "Data_MM2S": {
             "segments": {
-              "SEG_vdma_axi_mm_Reg": {
+              "SEG_processing_system7_0_HP0_DDR_LOWOCM": {
                 "address_block": "/processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM",
                 "offset": "0x00000000",
                 "range": "2M"

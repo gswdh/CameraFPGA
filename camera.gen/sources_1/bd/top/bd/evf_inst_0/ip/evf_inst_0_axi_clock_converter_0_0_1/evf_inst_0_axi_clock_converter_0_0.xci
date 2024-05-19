@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "evf_inst_0_axi_clock_converter_0_0",
-    "cell_name": "evf_0/axi_clock_converter_0",
+    "cell_name": "axi_clock_converter_0",
     "component_reference": "xilinx.com:ip:axi_clock_converter:2.1",
     "ip_revision": "28",
     "gen_directory": ".",

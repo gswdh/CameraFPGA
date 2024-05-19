@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "evf_inst_0_mipi_dsi_tx_subsystem_0_0",
-    "cell_name": "evf_0/mipi_dsi_tx_subsystem_0",
+    "cell_name": "mipi_dsi_tx_subsystem_0",
     "component_reference": "xilinx.com:ip:mipi_dsi_tx_subsystem:2.3",
     "ip_revision": "3",
     "gen_directory": ".",

@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-//Date        : Fri May  3 18:13:06 2024
+//Date        : Sun May 19 08:24:27 2024
 //Host        : testserver running 64-bit Ubuntu 20.04.6 LTS
 //Command     : generate_target peripherals_inst_0_wrapper.bd
 //Design      : peripherals_inst_0_wrapper
@@ -71,8 +71,8 @@ module peripherals_inst_0_wrapper
   input ARESETN_0;
   input ESP_PSS_UART_rxd;
   output ESP_PSS_UART_txd;
-  input [9:0]FPGA_GPIO_IN_tri_i;
-  output [24:0]FPGA_GPIO_OUT_tri_o;
+  input [7:0]FPGA_GPIO_IN_tri_i;
+  output [22:0]FPGA_GPIO_OUT_tri_o;
   input PSS_PMC_UART_rxd;
   output PSS_PMC_UART_txd;
   input [31:0]S00_AXI_0_araddr;
@@ -128,8 +128,8 @@ module peripherals_inst_0_wrapper
   wire ARESETN_0;
   wire ESP_PSS_UART_rxd;
   wire ESP_PSS_UART_txd;
-  wire [9:0]FPGA_GPIO_IN_tri_i;
-  wire [24:0]FPGA_GPIO_OUT_tri_o;
+  wire [7:0]FPGA_GPIO_IN_tri_i;
+  wire [22:0]FPGA_GPIO_OUT_tri_o;
   wire PSS_PMC_UART_rxd;
   wire PSS_PMC_UART_txd;
   wire [31:0]S00_AXI_0_araddr;

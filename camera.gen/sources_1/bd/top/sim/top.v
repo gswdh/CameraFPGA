@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-//Date        : Fri May  3 18:13:01 2024
+//Date        : Sun May 19 08:24:24 2024
 //Host        : testserver running 64-bit Ubuntu 20.04.6 LTS
 //Command     : generate_target top.bd
 //Design      : top
@@ -1491,7 +1491,7 @@ module s00_couplers_imp_MHSTQF
         .s_axi_wvalid(s00_couplers_to_auto_pc_WVALID));
 endmodule
 
-(* CORE_GENERATION_INFO = "top,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=top,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=55,numReposBlks=34,numNonXlnxBlks=0,numHierBlks=21,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=2,numPkgbdBlks=3,bdsource=USER,da_axi4_cnt=11,da_board_cnt=7,da_clkrst_cnt=7,da_ps7_cnt=1,synth_mode=None}" *) (* HW_HANDOFF = "top.hwdef" *) 
+(* CORE_GENERATION_INFO = "top,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=top,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=61,numReposBlks=40,numNonXlnxBlks=0,numHierBlks=21,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=3,numPkgbdBlks=3,bdsource=USER,da_axi4_cnt=11,da_board_cnt=7,da_clkrst_cnt=7,da_ps7_cnt=1,synth_mode=None}" *) (* HW_HANDOFF = "top.hwdef" *) 
 module top
    (DDR_addr,
     DDR_ba,
@@ -1562,7 +1562,11 @@ module top
     mipi_evf_out_0_data_hs_n,
     mipi_evf_out_0_data_hs_p,
     mipi_evf_out_0_data_lp_n,
-    mipi_evf_out_0_data_lp_p);
+    mipi_evf_out_0_data_lp_p,
+    tdig0_0,
+    tdig1_0,
+    texp0_0,
+    texp1_0);
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR ADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DDR, AXI_ARBITRATION_SCHEME TDM, BURST_LENGTH 8, CAN_DEBUG false, CAS_LATENCY 11, CAS_WRITE_LATENCY 11, CS_ENABLED true, DATA_MASK_ENABLED true, DATA_WIDTH 8, MEMORY_TYPE COMPONENTS, MEM_ADDR_MAP ROW_COLUMN_BANK, SLOT Single, TIMEPERIOD_PS 1250" *) inout [14:0]DDR_addr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR BA" *) inout [2:0]DDR_ba;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR CAS_N" *) inout DDR_cas_n;
@@ -1588,8 +1592,8 @@ module top
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_CLK" *) inout FIXED_IO_ps_clk;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB" *) inout FIXED_IO_ps_porb;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB" *) inout FIXED_IO_ps_srstb;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 FPGA_GPIO_IN TRI_I" *) input [9:0]FPGA_GPIO_IN_tri_i;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 FPGA_GPIO_OUT TRI_O" *) output [24:0]FPGA_GPIO_OUT_tri_o;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 FPGA_GPIO_IN TRI_I" *) input [7:0]FPGA_GPIO_IN_tri_i;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 FPGA_GPIO_OUT TRI_O" *) output [22:0]FPGA_GPIO_OUT_tri_o;
   (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 PSS_PMC_UART RxD" *) input PSS_PMC_UART_rxd;
   (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 PSS_PMC_UART TxD" *) output PSS_PMC_UART_txd;
   (* X_INTERFACE_INFO = "xilinx.com:interface:sdio:1.0 SDIO_1_0 CDN" *) input SDIO_1_0_cdn;
@@ -1633,6 +1637,10 @@ module top
   (* X_INTERFACE_INFO = "xilinx.com:interface:mipi_phy:1.0 mipi_evf_out_0 DATA_HS_P" *) output [3:0]mipi_evf_out_0_data_hs_p;
   (* X_INTERFACE_INFO = "xilinx.com:interface:mipi_phy:1.0 mipi_evf_out_0 DATA_LP_N" *) output [3:0]mipi_evf_out_0_data_lp_n;
   (* X_INTERFACE_INFO = "xilinx.com:interface:mipi_phy:1.0 mipi_evf_out_0 DATA_LP_P" *) output [3:0]mipi_evf_out_0_data_lp_p;
+  input tdig0_0;
+  input tdig1_0;
+  output texp0_0;
+  output [0:0]texp1_0;
 
   wire [31:0]S00_AXI_1_ARADDR;
   wire [1:0]S00_AXI_1_ARBURST;
@@ -1814,8 +1822,8 @@ module top
   wire peripherals_0_ESP_PSS_UART_RxD;
   wire peripherals_0_ESP_PSS_UART_TxD;
   wire peripherals_0_ETH_CLK25M;
-  wire [9:0]peripherals_0_FPGA_GPIO_IN_TRI_I;
-  wire [24:0]peripherals_0_FPGA_GPIO_OUT_TRI_O;
+  wire [7:0]peripherals_0_FPGA_GPIO_IN_TRI_I;
+  wire [22:0]peripherals_0_FPGA_GPIO_OUT_TRI_O;
   wire peripherals_0_PSS_PMC_UART_RxD;
   wire peripherals_0_PSS_PMC_UART_TxD;
   wire peripherals_0_USB_REFCLK;
@@ -1870,12 +1878,18 @@ module top
   wire processing_system7_0_SDIO_1_CDN;
   wire processing_system7_0_SDIO_1_WP;
   wire [0:0]rst_ps7_0_50M_peripheral_aresetn;
-  wire [5:0]xlconcat_0_dout;
+  wire sensor_0_int_frame_done_o_0;
+  wire sensor_0_int_ready_o_0;
+  wire sensor_0_texp0;
+  wire [0:0]sensor_0_texp1;
+  wire tdig0_0_1;
+  wire tdig1_0_1;
+  wire [7:0]xlconcat_0_dout;
 
   assign ESP_PSS_UART_txd = peripherals_0_ESP_PSS_UART_TxD;
   assign ETH_CLK25M = peripherals_0_ETH_CLK25M;
   assign ETH_NRST[0] = rst_ps7_0_50M_peripheral_aresetn;
-  assign FPGA_GPIO_OUT_tri_o[24:0] = peripherals_0_FPGA_GPIO_OUT_TRI_O;
+  assign FPGA_GPIO_OUT_tri_o[22:0] = peripherals_0_FPGA_GPIO_OUT_TRI_O;
   assign PSS_PMC_UART_txd = peripherals_0_PSS_PMC_UART_TxD;
   assign SENSOR_CLK = clk_wiz_0_sensor_clk;
   assign USB_NRST[0] = rst_ps7_0_50M_peripheral_aresetn;
@@ -1909,7 +1923,7 @@ module top
   assign mipi_evf_out_0_data_lp_n[3:0] = evf_0_mipi_evf_out_DATA_LP_N;
   assign mipi_evf_out_0_data_lp_p[3:0] = evf_0_mipi_evf_out_DATA_LP_P;
   assign peripherals_0_ESP_PSS_UART_RxD = ESP_PSS_UART_rxd;
-  assign peripherals_0_FPGA_GPIO_IN_TRI_I = FPGA_GPIO_IN_tri_i[9:0];
+  assign peripherals_0_FPGA_GPIO_IN_TRI_I = FPGA_GPIO_IN_tri_i[7:0];
   assign peripherals_0_PSS_PMC_UART_RxD = PSS_PMC_UART_rxd;
   assign peripherals_0_badc_spi_IO0_I = badc_spi_0_io0_i;
   assign peripherals_0_badc_spi_IO1_I = badc_spi_0_io1_i;
@@ -1921,6 +1935,10 @@ module top
   assign peripherals_0_disp_spi_SS_I = disp_spi_0_ss_i[0];
   assign processing_system7_0_SDIO_1_CDN = SDIO_1_0_cdn;
   assign processing_system7_0_SDIO_1_WP = SDIO_1_0_wp;
+  assign tdig0_0_1 = tdig0_0;
+  assign tdig1_0_1 = tdig1_0;
+  assign texp0_0 = sensor_0_texp0;
+  assign texp1_0[0] = sensor_0_texp1;
   top_axi_interconnect_0_0 axi_interconnect_0
        (.ACLK(processing_system7_0_FCLK_CLK0),
         .ARESETN(rst_ps7_0_50M_peripheral_aresetn),
@@ -2378,11 +2396,19 @@ module top
         .ddr_clk_p_i_0(ddr_clk_p_i_0_0_1),
         .ddr_data_n_i_0(ddr_data_n_i_0_0_1),
         .ddr_data_p_i_0(ddr_data_p_i_0_0_1),
-        .ref_clk_i_0(clk_wiz_0_delay_clk));
+        .int_frame_done_o_0(sensor_0_int_frame_done_o_0),
+        .int_ready_o_0(sensor_0_int_ready_o_0),
+        .ref_clk_i_0(clk_wiz_0_delay_clk),
+        .tdig0(tdig0_0_1),
+        .tdig1(tdig1_0_1),
+        .texp0(sensor_0_texp0),
+        .texp1(sensor_0_texp1));
   top_xlconcat_0_1 xlconcat_0
        (.In0(peripherals_0_interrupts),
         .In1(evf_0_vmda_int),
         .In2(evf_0_dsi_int),
+        .In3(sensor_0_int_ready_o_0),
+        .In4(sensor_0_int_frame_done_o_0),
         .dout(xlconcat_0_dout));
 endmodule
 

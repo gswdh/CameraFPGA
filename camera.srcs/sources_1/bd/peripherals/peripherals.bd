@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x71C8D601FAEE6A19",
+      "boundary_crc": "0x3063D4EE19A4875B",
       "device": "xc7z020clg484-2",
       "gen_directory": "../../../../camera.gen/sources_1/bd/peripherals",
       "name": "peripherals",
@@ -11,12 +11,9 @@
       "validated": "true"
     },
     "design_tree": {
-      "axi_gpio_0": "",
       "axi_uartlite_0": "",
       "axi_uartlite_1": "",
       "clk_wiz_0": "",
-      "axi_quad_spi_0": "",
-      "axi_quad_spi_1": "",
       "axi_interconnect_0": {
         "xbar": "",
         "s00_couplers": {
@@ -29,7 +26,10 @@
         "m04_couplers": {}
       },
       "xlconcat_0": "",
-      "axi_register_slice_0": ""
+      "axi_register_slice_0": "",
+      "axi_quad_spi_0": "",
+      "axi_quad_spi_1": "",
+      "axi_gpio_0": ""
     },
     "interface_ports": {
       "ESP_PSS_UART": {
@@ -55,7 +55,7 @@
           "TRI_I": {
             "physical_name": "FPGA_GPIO_IN_tri_i",
             "direction": "I",
-            "left": "9",
+            "left": "7",
             "right": "0"
           }
         }
@@ -68,7 +68,7 @@
           "TRI_O": {
             "physical_name": "FPGA_GPIO_OUT_tri_o",
             "direction": "O",
-            "left": "24",
+            "left": "22",
             "right": "0"
           }
         }
@@ -522,11 +522,6 @@
             "right": "0"
           }
         }
-      },
-      "evf_i2c": {
-        "mode": "Master",
-        "vlnv_bus_definition": "xilinx.com:interface:iic:1.0",
-        "vlnv": "xilinx.com:interface:iic_rtl:1.0"
       }
     },
     "ports": {
@@ -598,30 +593,6 @@
       }
     },
     "components": {
-      "axi_gpio_0": {
-        "vlnv": "xilinx.com:ip:axi_gpio:2.0",
-        "ip_revision": "31",
-        "xci_name": "peripherals_axi_gpio_0_0",
-        "xci_path": "ip/peripherals_axi_gpio_0_0/peripherals_axi_gpio_0_0.xci",
-        "inst_hier_path": "axi_gpio_0",
-        "parameters": {
-          "C_ALL_INPUTS_2": {
-            "value": "1"
-          },
-          "C_ALL_OUTPUTS": {
-            "value": "1"
-          },
-          "C_GPIO2_WIDTH": {
-            "value": "10"
-          },
-          "C_GPIO_WIDTH": {
-            "value": "25"
-          },
-          "C_IS_DUAL": {
-            "value": "1"
-          }
-        }
-      },
       "axi_uartlite_0": {
         "vlnv": "xilinx.com:ip:axi_uartlite:2.0",
         "ip_revision": "33",
@@ -847,36 +818,6 @@
           },
           "USE_PHASE_ALIGNMENT": {
             "value": "true"
-          }
-        }
-      },
-      "axi_quad_spi_0": {
-        "vlnv": "xilinx.com:ip:axi_quad_spi:3.2",
-        "ip_revision": "28",
-        "xci_name": "peripherals_axi_quad_spi_0_0",
-        "xci_path": "ip/peripherals_axi_quad_spi_0_0/peripherals_axi_quad_spi_0_0.xci",
-        "inst_hier_path": "axi_quad_spi_0",
-        "parameters": {
-          "C_USE_STARTUP": {
-            "value": "0"
-          },
-          "FIFO_INCLUDED": {
-            "value": "0"
-          }
-        }
-      },
-      "axi_quad_spi_1": {
-        "vlnv": "xilinx.com:ip:axi_quad_spi:3.2",
-        "ip_revision": "28",
-        "xci_name": "peripherals_axi_quad_spi_0_1",
-        "xci_path": "ip/peripherals_axi_quad_spi_0_1/peripherals_axi_quad_spi_0_1.xci",
-        "inst_hier_path": "axi_quad_spi_1",
-        "parameters": {
-          "C_USE_STARTUP": {
-            "value": "0"
-          },
-          "FIFO_INCLUDED": {
-            "value": "0"
           }
         }
       },
@@ -1588,6 +1529,69 @@
             ]
           }
         }
+      },
+      "axi_quad_spi_0": {
+        "vlnv": "xilinx.com:ip:axi_quad_spi:3.2",
+        "ip_revision": "28",
+        "xci_name": "peripherals_axi_quad_spi_0_2",
+        "xci_path": "ip/peripherals_axi_quad_spi_0_2/peripherals_axi_quad_spi_0_2.xci",
+        "inst_hier_path": "axi_quad_spi_0",
+        "parameters": {
+          "C_SCK_RATIO": {
+            "value": "4"
+          },
+          "C_USE_STARTUP": {
+            "value": "0"
+          },
+          "FIFO_INCLUDED": {
+            "value": "0"
+          }
+        }
+      },
+      "axi_quad_spi_1": {
+        "vlnv": "xilinx.com:ip:axi_quad_spi:3.2",
+        "ip_revision": "28",
+        "xci_name": "peripherals_axi_quad_spi_1_0",
+        "xci_path": "ip/peripherals_axi_quad_spi_1_0/peripherals_axi_quad_spi_1_0.xci",
+        "inst_hier_path": "axi_quad_spi_1",
+        "parameters": {
+          "C_SCK_RATIO": {
+            "value": "2"
+          },
+          "C_USE_STARTUP": {
+            "value": "0"
+          },
+          "FIFO_INCLUDED": {
+            "value": "0"
+          },
+          "Master_mode": {
+            "value": "1"
+          }
+        }
+      },
+      "axi_gpio_0": {
+        "vlnv": "xilinx.com:ip:axi_gpio:2.0",
+        "ip_revision": "31",
+        "xci_name": "peripherals_axi_gpio_0_1",
+        "xci_path": "ip/peripherals_axi_gpio_0_1/peripherals_axi_gpio_0_1.xci",
+        "inst_hier_path": "axi_gpio_0",
+        "parameters": {
+          "C_ALL_INPUTS_2": {
+            "value": "1"
+          },
+          "C_ALL_OUTPUTS": {
+            "value": "1"
+          },
+          "C_GPIO2_WIDTH": {
+            "value": "8"
+          },
+          "C_GPIO_WIDTH": {
+            "value": "23"
+          },
+          "C_IS_DUAL": {
+            "value": "1"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -1611,8 +1615,8 @@
       },
       "axi_interconnect_0_M00_AXI": {
         "interface_ports": [
-          "axi_interconnect_0/M00_AXI",
-          "axi_gpio_0/S_AXI"
+          "axi_gpio_0/S_AXI",
+          "axi_interconnect_0/M00_AXI"
         ]
       },
       "axi_interconnect_0_M01_AXI": {
@@ -1629,14 +1633,14 @@
       },
       "axi_interconnect_0_M03_AXI": {
         "interface_ports": [
-          "axi_interconnect_0/M03_AXI",
-          "axi_quad_spi_1/AXI_LITE"
+          "axi_quad_spi_1/AXI_LITE",
+          "axi_interconnect_0/M03_AXI"
         ]
       },
       "axi_interconnect_0_M04_AXI": {
         "interface_ports": [
-          "axi_interconnect_0/M04_AXI",
-          "axi_quad_spi_0/AXI_LITE"
+          "axi_quad_spi_0/AXI_LITE",
+          "axi_interconnect_0/M04_AXI"
         ]
       },
       "axi_quad_spi_0_SPI_0": {
@@ -1684,10 +1688,10 @@
           "axi_interconnect_0/M01_ACLK",
           "axi_uartlite_1/s_axi_aclk",
           "axi_uartlite_0/s_axi_aclk",
-          "axi_gpio_0/s_axi_aclk",
+          "axi_register_slice_0/aclk",
           "axi_quad_spi_0/s_axi_aclk",
           "axi_quad_spi_1/s_axi_aclk",
-          "axi_register_slice_0/aclk"
+          "axi_gpio_0/s_axi_aclk"
         ]
       },
       "ARESETN_0_1": {
@@ -1698,15 +1702,15 @@
           "axi_interconnect_0/M01_ARESETN",
           "axi_interconnect_0/M02_ARESETN",
           "axi_interconnect_0/M03_ARESETN",
-          "axi_quad_spi_1/s_axi_aresetn",
           "axi_interconnect_0/M04_ARESETN",
-          "axi_quad_spi_0/s_axi_aresetn",
-          "axi_gpio_0/s_axi_aresetn",
           "axi_uartlite_0/s_axi_aresetn",
           "clk_wiz_0/resetn",
           "axi_uartlite_1/s_axi_aresetn",
           "axi_interconnect_0/M00_ARESETN",
-          "axi_register_slice_0/aresetn"
+          "axi_register_slice_0/aresetn",
+          "axi_quad_spi_0/s_axi_aresetn",
+          "axi_quad_spi_1/s_axi_aresetn",
+          "axi_gpio_0/s_axi_aresetn"
         ]
       },
       "axi_quad_spi_0_ip2intc_irpt": {

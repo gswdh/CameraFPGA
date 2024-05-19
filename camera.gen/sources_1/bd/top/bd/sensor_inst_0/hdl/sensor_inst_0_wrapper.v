@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-//Date        : Fri May  3 18:13:03 2024
+//Date        : Sun May 19 08:24:32 2024
 //Host        : testserver running 64-bit Ubuntu 20.04.6 LTS
 //Command     : generate_target sensor_inst_0_wrapper.bd
 //Design      : sensor_inst_0_wrapper
@@ -34,7 +34,13 @@ module sensor_inst_0_wrapper
     ddr_clk_p_i_0,
     ddr_data_n_i_0,
     ddr_data_p_i_0,
-    ref_clk_i_0);
+    int_frame_done_o_0,
+    int_ready_o_0,
+    ref_clk_i_0,
+    tdig0,
+    tdig1,
+    texp0,
+    texp1);
   input ACLK_0;
   input ARESETN_0;
   input [31:0]S_AXI_0_araddr;
@@ -58,7 +64,13 @@ module sensor_inst_0_wrapper
   input ddr_clk_p_i_0;
   input [15:0]ddr_data_n_i_0;
   input [15:0]ddr_data_p_i_0;
+  output int_frame_done_o_0;
+  output int_ready_o_0;
   input ref_clk_i_0;
+  input tdig0;
+  input tdig1;
+  output texp0;
+  output [0:0]texp1;
 
   wire ACLK_0;
   wire ARESETN_0;
@@ -83,7 +95,13 @@ module sensor_inst_0_wrapper
   wire ddr_clk_p_i_0;
   wire [15:0]ddr_data_n_i_0;
   wire [15:0]ddr_data_p_i_0;
+  wire int_frame_done_o_0;
+  wire int_ready_o_0;
   wire ref_clk_i_0;
+  wire tdig0;
+  wire tdig1;
+  wire texp0;
+  wire [0:0]texp1;
 
   sensor_inst_0 sensor_inst_0_i
        (.ACLK_0(ACLK_0),
@@ -109,5 +127,11 @@ module sensor_inst_0_wrapper
         .ddr_clk_p_i_0(ddr_clk_p_i_0),
         .ddr_data_n_i_0(ddr_data_n_i_0),
         .ddr_data_p_i_0(ddr_data_p_i_0),
-        .ref_clk_i_0(ref_clk_i_0));
+        .int_frame_done_o_0(int_frame_done_o_0),
+        .int_ready_o_0(int_ready_o_0),
+        .ref_clk_i_0(ref_clk_i_0),
+        .tdig0(tdig0),
+        .tdig1(tdig1),
+        .texp0(texp0),
+        .texp1(texp1));
 endmodule

@@ -58,6 +58,7 @@
 module sensor_inst_0_gmax0505_streamer_0_0 (
   ddr_clk_p_i,
   ddr_clk_n_i,
+  ddr_clk_debug,
   nrst_i,
   delay_clk,
   ddr_data_p_i,
@@ -71,6 +72,7 @@ module sensor_inst_0_gmax0505_streamer_0_0 (
 
 input wire ddr_clk_p_i;
 input wire ddr_clk_n_i;
+output wire ddr_clk_debug;
 input wire nrst_i;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME delay_clk, FREQ_HZ 200000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 delay_clk CLK" *)
@@ -89,6 +91,7 @@ output wire [191 : 0] par_data_o;
   ) inst (
     .ddr_clk_p_i(ddr_clk_p_i),
     .ddr_clk_n_i(ddr_clk_n_i),
+    .ddr_clk_debug(ddr_clk_debug),
     .nrst_i(nrst_i),
     .delay_clk(delay_clk),
     .ddr_data_p_i(ddr_data_p_i),

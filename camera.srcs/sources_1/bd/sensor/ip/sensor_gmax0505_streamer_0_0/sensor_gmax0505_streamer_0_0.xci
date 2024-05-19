@@ -44,6 +44,7 @@
       "ports": {
         "ddr_clk_p_i": [ { "direction": "in" } ],
         "ddr_clk_n_i": [ { "direction": "in" } ],
+        "ddr_clk_debug": [ { "direction": "out" } ],
         "nrst_i": [ { "direction": "in" } ],
         "delay_clk": [ { "direction": "in" } ],
         "ddr_data_p_i": [ { "direction": "in", "size_left": "15", "size_right": "0" } ],
