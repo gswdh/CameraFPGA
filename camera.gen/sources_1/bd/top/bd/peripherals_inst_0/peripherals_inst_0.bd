@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x5709835A057105AA",
+      "boundary_crc": "0x93F025F551876998",
       "design_src": "/home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/sources_1/bd/peripherals/peripherals.bd",
       "device": "xc7z020clg484-2",
       "name": "peripherals_inst_0",
@@ -555,25 +555,25 @@
             "right": "0"
           },
           "ARID": {
-            "physical_name": "S00_AXI_0_arid",
+            "physical_name": "S00_AXI_0_arid_1",
             "direction": "I",
             "left": "11",
             "right": "0"
           },
           "AWID": {
-            "physical_name": "S00_AXI_0_awid",
+            "physical_name": "S00_AXI_0_awid_1",
             "direction": "I",
             "left": "11",
             "right": "0"
           },
           "BID": {
-            "physical_name": "S00_AXI_0_bid",
+            "physical_name": "S00_AXI_0_bid_1",
             "direction": "O",
             "left": "11",
             "right": "0"
           },
           "RID": {
-            "physical_name": "S00_AXI_0_rid",
+            "physical_name": "S00_AXI_0_rid_1",
             "direction": "O",
             "left": "11",
             "right": "0"
@@ -659,7 +659,7 @@
         "inst_hier_path": "axi_uartlite_0",
         "parameters": {
           "C_BAUDRATE": {
-            "value": "110"
+            "value": "115200"
           }
         }
       },
@@ -671,7 +671,7 @@
         "inst_hier_path": "axi_uartlite_1",
         "parameters": {
           "C_BAUDRATE": {
-            "value": "110"
+            "value": "115200"
           }
         }
       },

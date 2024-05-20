@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-//Date        : Sun May 19 08:24:27 2024
+//Date        : Mon May 20 17:33:05 2024
 //Host        : testserver running 64-bit Ubuntu 20.04.6 LTS
 //Command     : generate_target peripherals_inst_0.bd
 //Design      : peripherals_inst_0
@@ -684,6 +684,7 @@ module peripherals_inst_0
     S00_AXI_0_arburst,
     S00_AXI_0_arcache,
     S00_AXI_0_arid,
+    S00_AXI_0_arid_1,
     S00_AXI_0_arlen,
     S00_AXI_0_arlock,
     S00_AXI_0_arprot,
@@ -696,6 +697,7 @@ module peripherals_inst_0
     S00_AXI_0_awburst,
     S00_AXI_0_awcache,
     S00_AXI_0_awid,
+    S00_AXI_0_awid_1,
     S00_AXI_0_awlen,
     S00_AXI_0_awlock,
     S00_AXI_0_awprot,
@@ -705,11 +707,13 @@ module peripherals_inst_0
     S00_AXI_0_awsize,
     S00_AXI_0_awvalid,
     S00_AXI_0_bid,
+    S00_AXI_0_bid_1,
     S00_AXI_0_bready,
     S00_AXI_0_bresp,
     S00_AXI_0_bvalid,
     S00_AXI_0_rdata,
     S00_AXI_0_rid,
+    S00_AXI_0_rid_1,
     S00_AXI_0_rlast,
     S00_AXI_0_rready,
     S00_AXI_0_rresp,
@@ -755,7 +759,8 @@ module peripherals_inst_0
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI_0 ARADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S00_AXI_0, ADDR_WIDTH 32, ARUSER_WIDTH 0, AWUSER_WIDTH 0, BUSER_WIDTH 0, CLK_DOMAIN top_processing_system7_0_0_FCLK_CLK0, DATA_WIDTH 32, FREQ_HZ 1e+08, HAS_BRESP 1, HAS_BURST 1, HAS_CACHE 1, HAS_LOCK 1, HAS_PROT 1, HAS_QOS 1, HAS_REGION 0, HAS_RRESP 1, HAS_WSTRB 1, ID_WIDTH 12, INSERT_VIP 0, MAX_BURST_LENGTH 16, NUM_READ_OUTSTANDING 8, NUM_READ_THREADS 1, NUM_WRITE_OUTSTANDING 8, NUM_WRITE_THREADS 1, PHASE 0.0, PROTOCOL AXI4, READ_WRITE_MODE READ_WRITE, RUSER_BITS_PER_BYTE 0, RUSER_WIDTH 0, SUPPORTS_NARROW_BURST 0, WUSER_BITS_PER_BYTE 0, WUSER_WIDTH 0" *) input [31:0]S00_AXI_0_araddr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI_0 ARBURST" *) input [1:0]S00_AXI_0_arburst;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI_0 ARCACHE" *) input [3:0]S00_AXI_0_arcache;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI_0 ARID" *) input [11:0]S00_AXI_0_arid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI_0 " *) input [11:0]S00_AXI_0_arid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI_0 ARID" *) input [11:0]S00_AXI_0_arid_1;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI_0 ARLEN" *) input [7:0]S00_AXI_0_arlen;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI_0 ARLOCK" *) input [0:0]S00_AXI_0_arlock;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI_0 ARPROT" *) input [2:0]S00_AXI_0_arprot;
@@ -767,7 +772,8 @@ module peripherals_inst_0
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI_0 AWADDR" *) input [31:0]S00_AXI_0_awaddr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI_0 AWBURST" *) input [1:0]S00_AXI_0_awburst;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI_0 AWCACHE" *) input [3:0]S00_AXI_0_awcache;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI_0 AWID" *) input [11:0]S00_AXI_0_awid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI_0 " *) input [11:0]S00_AXI_0_awid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI_0 AWID" *) input [11:0]S00_AXI_0_awid_1;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI_0 AWLEN" *) input [7:0]S00_AXI_0_awlen;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI_0 AWLOCK" *) input [0:0]S00_AXI_0_awlock;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI_0 AWPROT" *) input [2:0]S00_AXI_0_awprot;
@@ -776,12 +782,14 @@ module peripherals_inst_0
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI_0 AWREGION" *) input [3:0]S00_AXI_0_awregion;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI_0 AWSIZE" *) input [2:0]S00_AXI_0_awsize;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI_0 AWVALID" *) input [0:0]S00_AXI_0_awvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI_0 BID" *) output [11:0]S00_AXI_0_bid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI_0 " *) output [11:0]S00_AXI_0_bid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI_0 BID" *) output [11:0]S00_AXI_0_bid_1;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI_0 BREADY" *) input [0:0]S00_AXI_0_bready;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI_0 BRESP" *) output [1:0]S00_AXI_0_bresp;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI_0 BVALID" *) output [0:0]S00_AXI_0_bvalid;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI_0 RDATA" *) output [31:0]S00_AXI_0_rdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI_0 RID" *) output [11:0]S00_AXI_0_rid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI_0 " *) output [11:0]S00_AXI_0_rid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI_0 RID" *) output [11:0]S00_AXI_0_rid_1;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI_0 RLAST" *) output [0:0]S00_AXI_0_rlast;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI_0 RREADY" *) input [0:0]S00_AXI_0_rready;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI_0 RRESP" *) output [1:0]S00_AXI_0_rresp;
@@ -1028,7 +1036,7 @@ module peripherals_inst_0
   assign S00_AXI_0_1_ARADDR = S00_AXI_0_araddr[31:0];
   assign S00_AXI_0_1_ARBURST = S00_AXI_0_arburst[1:0];
   assign S00_AXI_0_1_ARCACHE = S00_AXI_0_arcache[3:0];
-  assign S00_AXI_0_1_ARID = S00_AXI_0_arid[11:0];
+  assign S00_AXI_0_1_ARID = S00_AXI_0_arid_1[11:0];
   assign S00_AXI_0_1_ARLEN = S00_AXI_0_arlen[7:0];
   assign S00_AXI_0_1_ARLOCK = S00_AXI_0_arlock[0];
   assign S00_AXI_0_1_ARPROT = S00_AXI_0_arprot[2:0];
@@ -1039,7 +1047,7 @@ module peripherals_inst_0
   assign S00_AXI_0_1_AWADDR = S00_AXI_0_awaddr[31:0];
   assign S00_AXI_0_1_AWBURST = S00_AXI_0_awburst[1:0];
   assign S00_AXI_0_1_AWCACHE = S00_AXI_0_awcache[3:0];
-  assign S00_AXI_0_1_AWID = S00_AXI_0_awid[11:0];
+  assign S00_AXI_0_1_AWID = S00_AXI_0_awid_1[11:0];
   assign S00_AXI_0_1_AWLEN = S00_AXI_0_awlen[7:0];
   assign S00_AXI_0_1_AWLOCK = S00_AXI_0_awlock[0];
   assign S00_AXI_0_1_AWPROT = S00_AXI_0_awprot[2:0];
@@ -1055,11 +1063,11 @@ module peripherals_inst_0
   assign S00_AXI_0_1_WVALID = S00_AXI_0_wvalid[0];
   assign S00_AXI_0_arready[0] = S00_AXI_0_1_ARREADY;
   assign S00_AXI_0_awready[0] = S00_AXI_0_1_AWREADY;
-  assign S00_AXI_0_bid[11:0] = S00_AXI_0_1_BID;
+  assign S00_AXI_0_bid_1[11:0] = S00_AXI_0_1_BID;
   assign S00_AXI_0_bresp[1:0] = S00_AXI_0_1_BRESP;
   assign S00_AXI_0_bvalid[0] = S00_AXI_0_1_BVALID;
   assign S00_AXI_0_rdata[31:0] = S00_AXI_0_1_RDATA;
-  assign S00_AXI_0_rid[11:0] = S00_AXI_0_1_RID;
+  assign S00_AXI_0_rid_1[11:0] = S00_AXI_0_1_RID;
   assign S00_AXI_0_rlast[0] = S00_AXI_0_1_RLAST;
   assign S00_AXI_0_rresp[1:0] = S00_AXI_0_1_RRESP;
   assign S00_AXI_0_rvalid[0] = S00_AXI_0_1_RVALID;

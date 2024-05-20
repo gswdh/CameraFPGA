@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-//Date        : Sun May 19 08:24:24 2024
+//Date        : Mon May 20 17:33:03 2024
 //Host        : testserver running 64-bit Ubuntu 20.04.6 LTS
 //Command     : generate_target top.bd
 //Design      : top
@@ -2202,7 +2202,7 @@ module top
         .S00_AXI_0_araddr(axi_interconnect_1_M00_AXI_ARADDR),
         .S00_AXI_0_arburst(axi_interconnect_1_M00_AXI_ARBURST),
         .S00_AXI_0_arcache(axi_interconnect_1_M00_AXI_ARCACHE),
-        .S00_AXI_0_arid(axi_interconnect_1_M00_AXI_ARID),
+        .S00_AXI_0_arid_1(axi_interconnect_1_M00_AXI_ARID),
         .S00_AXI_0_arlen(axi_interconnect_1_M00_AXI_ARLEN),
         .S00_AXI_0_arlock(axi_interconnect_1_M00_AXI_ARLOCK),
         .S00_AXI_0_arprot(axi_interconnect_1_M00_AXI_ARPROT),
@@ -2214,7 +2214,7 @@ module top
         .S00_AXI_0_awaddr(axi_interconnect_1_M00_AXI_AWADDR),
         .S00_AXI_0_awburst(axi_interconnect_1_M00_AXI_AWBURST),
         .S00_AXI_0_awcache(axi_interconnect_1_M00_AXI_AWCACHE),
-        .S00_AXI_0_awid(axi_interconnect_1_M00_AXI_AWID),
+        .S00_AXI_0_awid_1(axi_interconnect_1_M00_AXI_AWID),
         .S00_AXI_0_awlen(axi_interconnect_1_M00_AXI_AWLEN),
         .S00_AXI_0_awlock(axi_interconnect_1_M00_AXI_AWLOCK),
         .S00_AXI_0_awprot(axi_interconnect_1_M00_AXI_AWPROT),
@@ -2223,12 +2223,12 @@ module top
         .S00_AXI_0_awregion(axi_interconnect_1_M00_AXI_AWREGION),
         .S00_AXI_0_awsize(axi_interconnect_1_M00_AXI_AWSIZE),
         .S00_AXI_0_awvalid(axi_interconnect_1_M00_AXI_AWVALID),
-        .S00_AXI_0_bid(axi_interconnect_1_M00_AXI_BID),
+        .S00_AXI_0_bid_1(axi_interconnect_1_M00_AXI_BID),
         .S00_AXI_0_bready(axi_interconnect_1_M00_AXI_BREADY),
         .S00_AXI_0_bresp(axi_interconnect_1_M00_AXI_BRESP),
         .S00_AXI_0_bvalid(axi_interconnect_1_M00_AXI_BVALID),
         .S00_AXI_0_rdata(axi_interconnect_1_M00_AXI_RDATA),
-        .S00_AXI_0_rid(axi_interconnect_1_M00_AXI_RID),
+        .S00_AXI_0_rid_1(axi_interconnect_1_M00_AXI_RID),
         .S00_AXI_0_rlast(axi_interconnect_1_M00_AXI_RLAST),
         .S00_AXI_0_rready(axi_interconnect_1_M00_AXI_RREADY),
         .S00_AXI_0_rresp(axi_interconnect_1_M00_AXI_RRESP),

@@ -601,7 +601,7 @@
         "inst_hier_path": "axi_uartlite_0",
         "parameters": {
           "C_BAUDRATE": {
-            "value": "110"
+            "value": "115200"
           }
         }
       },
@@ -613,7 +613,7 @@
         "inst_hier_path": "axi_uartlite_1",
         "parameters": {
           "C_BAUDRATE": {
-            "value": "110"
+            "value": "115200"
           }
         }
       },

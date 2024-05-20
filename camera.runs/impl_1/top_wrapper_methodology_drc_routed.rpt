@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-| Date         : Sun May 19 10:44:35 2024
+| Date         : Mon May 20 17:45:26 2024
 | Host         : testserver running 64-bit Ubuntu 20.04.6 LTS
 | Command      : report_methodology -file top_wrapper_methodology_drc_routed.rpt -pb top_wrapper_methodology_drc_routed.pb -rpx top_wrapper_methodology_drc_routed.rpx
 | Design       : top_wrapper
@@ -5181,42 +5181,42 @@ Related violations: <none>
 
 TIMING-16#1 Warning
 Large setup violation  
-There is a large setup violation of -2.329 ns between ddr_clk_p_i_0_0 (clocked by ddr_clk_p_i_0_0) and top_i/sensor_0/ila_1/inst/ila_core_inst/shifted_data_in_reg[7][0]_srl8/D (clocked by delay_clk_top_clk_wiz_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.326 ns between ddr_clk_p_i_0_0 (clocked by ddr_clk_p_i_0_0) and top_i/sensor_0/ila_1/inst/ila_core_inst/shifted_data_in_reg[7][0]_srl8/D (clocked by delay_clk_top_clk_wiz_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#2 Warning
 Large setup violation  
-There is a large setup violation of -2.686 ns between top_i/sensor_0/gmax0505_streamer_0/inst/clk_div_0/clk_out_o_reg_replica/C (clocked by ddr_clk_p_i_0_0) and top_i/sensor_0/ila_0/inst/ila_core_inst/shifted_data_in_reg[7][0]_srl8_srlopt/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.617 ns between ddr_clk_p_i_0_0 (clocked by ddr_clk_p_i_0_0) and top_i/sensor_0/ila_1/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[0].U_M/allx_typeA_match_detection.ltlib_v1_0_1_allx_typeA_inst/probeDelay1_reg[0]/D (clocked by delay_clk_top_clk_wiz_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#3 Warning
 Large setup violation  
-There is a large setup violation of -2.704 ns between top_i/sensor_0/gmax0505_streamer_0/inst/clk_div_0/clk_out_o_reg_replica/C (clocked by ddr_clk_p_i_0_0) and top_i/sensor_0/ila_2/inst/ila_core_inst/shifted_data_in_reg[7][0]_srl8_srlopt/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.693 ns between top_i/sensor_0/gmax0505_streamer_0/inst/clk_div_0/clk_out_o_reg_replica/C (clocked by ddr_clk_p_i_0_0) and top_i/sensor_0/ila_2/inst/ila_core_inst/shifted_data_in_reg[7][0]_srl8_srlopt/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#4 Warning
 Large setup violation  
-There is a large setup violation of -2.711 ns between top_i/sensor_0/gmax0505_streamer_0/inst/clk_div_0/clk_out_o_reg_replica/C (clocked by ddr_clk_p_i_0_0) and top_i/sensor_0/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[0].U_M/allx_typeA_match_detection.ltlib_v1_0_1_allx_typeA_inst/probeDelay1_reg[0]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.711 ns between top_i/sensor_0/gmax0505_streamer_0/inst/clk_div_0/clk_out_o_reg_replica/C (clocked by ddr_clk_p_i_0_0) and top_i/sensor_0/ila_0/inst/ila_core_inst/shifted_data_in_reg[7][0]_srl8_srlopt/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#5 Warning
 Large setup violation  
-There is a large setup violation of -2.724 ns between top_i/sensor_0/gmax0505_streamer_0/inst/clk_div_0/clk_out_o_reg_replica/C (clocked by ddr_clk_p_i_0_0) and top_i/sensor_0/ila_2/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[0].U_M/allx_typeA_match_detection.ltlib_v1_0_1_allx_typeA_inst/probeDelay1_reg[0]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.715 ns between top_i/sensor_0/gmax0505_streamer_0/inst/clk_div_0/clk_out_o_reg_replica/C (clocked by ddr_clk_p_i_0_0) and top_i/sensor_0/ila_2/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[0].U_M/allx_typeA_match_detection.ltlib_v1_0_1_allx_typeA_inst/probeDelay1_reg[0]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#6 Warning
 Large setup violation  
-There is a large setup violation of -2.766 ns between ddr_clk_p_i_0_0 (clocked by ddr_clk_p_i_0_0) and top_i/sensor_0/ila_1/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[0].U_M/allx_typeA_match_detection.ltlib_v1_0_1_allx_typeA_inst/probeDelay1_reg[0]/D (clocked by delay_clk_top_clk_wiz_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.155 ns between top_i/sensor_0/gmax0505_streamer_0/inst/clk_div_0/clk_out_o_reg_replica/C (clocked by ddr_clk_p_i_0_0) and top_i/sensor_0/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[0].U_M/allx_typeA_match_detection.ltlib_v1_0_1_allx_typeA_inst/probeDelay1_reg[0]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#7 Warning
 Large setup violation  
-There is a large setup violation of -4.694 ns between top_i/sensor_0/gmax0505_streamer_0/inst/clk_div_0/clk_out_o_reg_replica/C (clocked by ddr_clk_p_i_0_0) and top_i/sensor_0/ila_1/inst/ila_core_inst/shifted_data_in_reg[7][3]_srl8_srlopt/D (clocked by delay_clk_top_clk_wiz_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -4.691 ns between top_i/sensor_0/gmax0505_streamer_0/inst/clk_div_0/clk_out_o_reg_replica/C (clocked by ddr_clk_p_i_0_0) and top_i/sensor_0/ila_1/inst/ila_core_inst/shifted_data_in_reg[7][3]_srl8_srlopt/D (clocked by delay_clk_top_clk_wiz_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#8 Warning
 Large setup violation  
-There is a large setup violation of -5.159 ns between top_i/sensor_0/gmax0505_streamer_0/inst/clk_div_0/clk_out_o_reg_replica/C (clocked by ddr_clk_p_i_0_0) and top_i/sensor_0/ila_1/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[3].U_M/allx_typeA_match_detection.ltlib_v1_0_1_allx_typeA_inst/probeDelay1_reg[0]/D (clocked by delay_clk_top_clk_wiz_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -5.158 ns between top_i/sensor_0/gmax0505_streamer_0/inst/clk_div_0/clk_out_o_reg_replica/C (clocked by ddr_clk_p_i_0_0) and top_i/sensor_0/ila_1/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[3].U_M/allx_typeA_match_detection.ltlib_v1_0_1_allx_typeA_inst/probeDelay1_reg[0]/D (clocked by delay_clk_top_clk_wiz_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-18#1 Warning

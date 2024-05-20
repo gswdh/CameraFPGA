@@ -3,20 +3,20 @@
 # SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Sun May 19 10:32:49 2024
-# Process ID: 51608
+# Start of session at: Mon May 20 17:33:28 2024
+# Process ID: 287727
 # Current directory: /home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1
 # Command line: vivado -log top_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_wrapper.tcl
 # Log file: /home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/top_wrapper.vds
 # Journal file: /home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/vivado.jou
-# Running On: testserver, OS: Linux, CPU Frequency: 2276.145 MHz, CPU Physical cores: 4, Host memory: 16686 MB
+# Running On: testserver, OS: Linux, CPU Frequency: 2390.139 MHz, CPU Physical cores: 4, Host memory: 16686 MB
 #-----------------------------------------------------------
 source top_wrapper.tcl -notrace
-create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1317.531 ; gain = 0.023 ; free physical = 6237 ; free virtual = 11632
+create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1317.531 ; gain = 0.023 ; free physical = 690 ; free virtual = 8894
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/test/Projects/CameraZynq/ip_repo/spi_dma_1_0'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/test/Xilinx/Vivado/2023.2/data/ip'.
-add_files: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1325.539 ; gain = 8.008 ; free physical = 6280 ; free virtual = 11675
+add_files: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1325.539 ; gain = 8.008 ; free physical = 722 ; free virtual = 8926
 Command: read_checkpoint -auto_incremental -incremental /home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/utils_1/imports/synth_1/top_wrapper.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from /home/test/Projects/CameraZynq/CameraFPGA/camera.srcs/utils_1/imports/synth_1/top_wrapper.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -29,9 +29,9 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 51691
+INFO: [Synth 8-7075] Helper process launched with PID 287804
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2101.535 ; gain = 403.711 ; free physical = 5217 ; free virtual = 10611
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 2101.535 ; gain = 403.711 ; free physical = 183 ; free virtual = 8108
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-11241] undeclared symbol 'dl4_txulpsesc', assumed default net type 'wire' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/evf_inst_0/ip/evf_inst_0_mipi_dsi_tx_subsystem_0_0_1/bd_0/ip/ip_5/bd_5350_mipi_dphy_0_0/support/bd_5350_mipi_dphy_0_0_support.v:640]
 INFO: [Synth 8-11241] undeclared symbol 'dl5_txulpsesc', assumed default net type 'wire' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/evf_inst_0/ip/evf_inst_0_mipi_dsi_tx_subsystem_0_0_1/bd_0/ip/ip_5/bd_5350_mipi_dphy_0_0/support/bd_5350_mipi_dphy_0_0_support.v:654]
@@ -1139,9 +1139,9 @@ INFO: [Synth 8-256] done synthesizing module 'cdc_sync__parameterized5' (0#1) [/
 INFO: [Synth 8-256] done synthesizing module 'GPIO_Core' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ipshared/6fbe/hdl/axi_gpio_v2_0_vh_rfs.vhd:181]
 INFO: [Synth 8-256] done synthesizing module 'axi_gpio' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ipshared/6fbe/hdl/axi_gpio_v2_0_vh_rfs.vhd:1356]
 INFO: [Synth 8-256] done synthesizing module 'peripherals_inst_0_axi_gpio_0_0' (0#1) [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/peripherals_inst_0/ip/peripherals_inst_0_axi_gpio_0_0_1/synth/peripherals_inst_0_axi_gpio_0_0.vhd:85]
-WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'peripherals_inst_0_xbar_0' is unconnected for instance 'xbar' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/peripherals_inst_0/synth/peripherals_inst_0.v:2357]
-WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'peripherals_inst_0_xbar_0' is unconnected for instance 'xbar' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/peripherals_inst_0/synth/peripherals_inst_0.v:2357]
-WARNING: [Synth 8-7023] instance 'xbar' of module 'peripherals_inst_0_xbar_0' has 40 connections declared, but only 38 given [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/peripherals_inst_0/synth/peripherals_inst_0.v:2357]
+WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'peripherals_inst_0_xbar_0' is unconnected for instance 'xbar' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/peripherals_inst_0/synth/peripherals_inst_0.v:2365]
+WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'peripherals_inst_0_xbar_0' is unconnected for instance 'xbar' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/peripherals_inst_0/synth/peripherals_inst_0.v:2365]
+WARNING: [Synth 8-7023] instance 'xbar' of module 'peripherals_inst_0_xbar_0' has 40 connections declared, but only 38 given [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/peripherals_inst_0/synth/peripherals_inst_0.v:2365]
 INFO: [Synth 8-638] synthesizing module 'peripherals_inst_0_axi_quad_spi_0_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/peripherals_inst_0/ip/peripherals_inst_0_axi_quad_spi_0_0_1/synth/peripherals_inst_0_axi_quad_spi_0_0.vhd:97]
 	Parameter Async_Clk bound to: 1 - type: integer 
 	Parameter C_FAMILY bound to: zynq - type: string 
@@ -1466,7 +1466,7 @@ INFO: [Synth 8-638] synthesizing module 'peripherals_inst_0_axi_uartlite_0_0' [/
 	Parameter C_S_AXI_ACLK_FREQ_HZ bound to: 100000000 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
-	Parameter C_BAUDRATE bound to: 110 - type: integer 
+	Parameter C_BAUDRATE bound to: 115200 - type: integer 
 	Parameter C_DATA_BITS bound to: 8 - type: integer 
 	Parameter C_USE_PARITY bound to: 0 - type: integer 
 	Parameter C_ODD_PARITY bound to: 0 - type: integer 
@@ -1510,7 +1510,7 @@ INFO: [Synth 8-638] synthesizing module 'peripherals_inst_0_axi_uartlite_1_0' [/
 	Parameter C_S_AXI_ACLK_FREQ_HZ bound to: 100000000 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
-	Parameter C_BAUDRATE bound to: 110 - type: integer 
+	Parameter C_BAUDRATE bound to: 115200 - type: integer 
 	Parameter C_DATA_BITS bound to: 8 - type: integer 
 	Parameter C_USE_PARITY bound to: 0 - type: integer 
 	Parameter C_ODD_PARITY bound to: 0 - type: integer 
@@ -1529,6 +1529,11 @@ INFO: [Synth 8-256] done synthesizing module 'peripherals_inst_0_axi_uartlite_1_
 	Parameter COMPENSATION bound to: ZHOLD - type: string 
 	Parameter DIVCLK_DIVIDE bound to: 5 - type: integer 
 	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+WARNING: [Synth 8-7071] port 'S00_AXI_0_arid' of module 'peripherals_inst_0' is unconnected for instance 'peripherals_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:2193]
+WARNING: [Synth 8-7071] port 'S00_AXI_0_awid' of module 'peripherals_inst_0' is unconnected for instance 'peripherals_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:2193]
+WARNING: [Synth 8-7071] port 'S00_AXI_0_bid' of module 'peripherals_inst_0' is unconnected for instance 'peripherals_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:2193]
+WARNING: [Synth 8-7071] port 'S00_AXI_0_rid' of module 'peripherals_inst_0' is unconnected for instance 'peripherals_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:2193]
+WARNING: [Synth 8-7023] instance 'peripherals_0' of module 'peripherals_inst_0' has 76 connections declared, but only 72 given [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:2193]
 WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_processing_system7_0_0/synth/top_processing_system7_0_0.v:477]
 WARNING: [Synth 8-7071] port 'M_AXI_GP1_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_processing_system7_0_0/synth/top_processing_system7_0_0.v:477]
 WARNING: [Synth 8-7071] port 'S_AXI_GP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_processing_system7_0_0/synth/top_processing_system7_0_0.v:477]
@@ -1541,12 +1546,8 @@ WARNING: [Synth 8-7071] port 'S_AXI_HP3_ARESETN' of module 'processing_system7_v
 WARNING: [Synth 8-7071] port 'DMA0_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_processing_system7_0_0/synth/top_processing_system7_0_0.v:477]
 WARNING: [Synth 8-7071] port 'DMA1_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_processing_system7_0_0/synth/top_processing_system7_0_0.v:477]
 WARNING: [Synth 8-7071] port 'DMA2_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_processing_system7_0_0/synth/top_processing_system7_0_0.v:477]
-WARNING: [Synth 8-7071] port 'DMA3_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_processing_system7_0_0/synth/top_processing_system7_0_0.v:477]
-WARNING: [Synth 8-7023] instance 'inst' of module 'processing_system7_v5_5_processing_system7' has 685 connections declared, but only 672 given [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_processing_system7_0_0/synth/top_processing_system7_0_0.v:477]
-WARNING: [Synth 8-7071] port 'TTC0_WAVE0_OUT' of module 'top_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:2266]
-WARNING: [Synth 8-7071] port 'TTC0_WAVE1_OUT' of module 'top_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:2266]
-WARNING: [Synth 8-7071] port 'TTC0_WAVE2_OUT' of module 'top_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:2266]
 INFO: [Common 17-14] Message 'Synth 8-7071' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-7023] instance 'inst' of module 'processing_system7_v5_5_processing_system7' has 685 connections declared, but only 672 given [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_processing_system7_0_0/synth/top_processing_system7_0_0.v:477]
 WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'top_processing_system7_0_0' has 116 connections declared, but only 101 given [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/synth/top.v:2266]
 INFO: [Synth 8-638] synthesizing module 'top_rst_ps7_0_50M_0' [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_rst_ps7_0_50M_0/synth/top_rst_ps7_0_50M_0.vhd:74]
 	Parameter C_FAMILY bound to: zynq - type: string 
@@ -1906,6 +1907,8 @@ WARNING: [Synth 8-3848] Net io3_1_o in module/entity axi_quad_spi__parameterized
 WARNING: [Synth 8-3848] Net io3_1_t in module/entity axi_quad_spi__parameterized1 does not have driver. [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/peripherals_inst_0/ipshared/98d8/hdl/axi_quad_spi_v3_2_rfs.vhd:36536]
 WARNING: [Synth 8-3848] Net ss_1_o in module/entity axi_quad_spi__parameterized1 does not have driver. [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/peripherals_inst_0/ipshared/98d8/hdl/axi_quad_spi_v3_2_rfs.vhd:36551]
 WARNING: [Synth 8-3848] Net ss_1_t in module/entity axi_quad_spi__parameterized1 does not have driver. [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/peripherals_inst_0/ipshared/98d8/hdl/axi_quad_spi_v3_2_rfs.vhd:36552]
+WARNING: [Synth 8-3848] Net S00_AXI_0_bid in module/entity peripherals_inst_0 does not have driver. [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/peripherals_inst_0/synth/peripherals_inst_0.v:785]
+WARNING: [Synth 8-3848] Net S00_AXI_0_rid in module/entity peripherals_inst_0 does not have driver. [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/peripherals_inst_0/synth/peripherals_inst_0.v:791]
 WARNING: [Synth 8-7137] Register sync_done_o_reg in module gmax0505_streamer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/test/Projects/CameraZynq/CameraFPGA/gmax0505_streamer/gmax0505_streamer.v:135]
 WARNING: [Synth 8-3848] Net sl_iport0 in module/entity sensor_inst_0_ila_0_0 does not have driver. [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_ila_0_0/synth/sensor_inst_0_ila_0_0.v:106]
 WARNING: [Synth 8-3848] Net sl_iport0 in module/entity sensor_inst_0_ila_1_0 does not have driver. [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/bd/sensor_inst_0/ip/sensor_inst_0_ila_1_0/synth/sensor_inst_0_ila_1_0.v:106]
@@ -2023,18 +2026,18 @@ WARNING: [Synth 8-7129] Port In103[0] in module xlconcat_v2_1_5_xlconcat__parame
 WARNING: [Synth 8-7129] Port In104[0] in module xlconcat_v2_1_5_xlconcat__parameterized1 is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:01:26 ; elapsed = 00:01:47 . Memory (MB): peak = 2932.457 ; gain = 1234.633 ; free physical = 222 ; free virtual = 5310
+Finished RTL Elaboration : Time (s): cpu = 00:01:27 ; elapsed = 00:01:47 . Memory (MB): peak = 2932.926 ; gain = 1235.102 ; free physical = 241 ; free virtual = 4435
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:28 ; elapsed = 00:01:48 . Memory (MB): peak = 2932.457 ; gain = 1234.633 ; free physical = 222 ; free virtual = 5311
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:28 ; elapsed = 00:01:49 . Memory (MB): peak = 2932.926 ; gain = 1235.102 ; free physical = 241 ; free virtual = 4437
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:28 ; elapsed = 00:01:48 . Memory (MB): peak = 2932.457 ; gain = 1234.633 ; free physical = 222 ; free virtual = 5311
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:28 ; elapsed = 00:01:49 . Memory (MB): peak = 2932.926 ; gain = 1235.102 ; free physical = 241 ; free virtual = 4437
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.88 ; elapsed = 00:00:00.88 . Memory (MB): peak = 2932.457 ; gain = 0.000 ; free physical = 277 ; free virtual = 5364
+Netlist sorting complete. Time (s): cpu = 00:00:00.89 ; elapsed = 00:00:00.88 . Memory (MB): peak = 2932.926 ; gain = 0.000 ; free physical = 293 ; free virtual = 4490
 INFO: [Netlist 29-17] Analyzing 1497 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -2293,7 +2296,7 @@ Resolution: To avoid this warning, move constraints listed in [.Xil/top_wrapper_
 INFO: [Project 1-1714] 78 XPM XDC files have been applied to the design.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2964.473 ; gain = 0.000 ; free physical = 239 ; free virtual = 5327
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2964.941 ; gain = 0.000 ; free physical = 235 ; free virtual = 4449
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1337 instances were transformed.
   CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 260 instances
@@ -2305,18 +2308,18 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS(x2)): 5 instances
   SRL16 => SRL16E: 4 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.86 ; elapsed = 00:00:00.87 . Memory (MB): peak = 2964.508 ; gain = 0.000 ; free physical = 248 ; free virtual = 5338
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.88 ; elapsed = 00:00:00.89 . Memory (MB): peak = 2964.977 ; gain = 0.000 ; free physical = 221 ; free virtual = 4442
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:02:01 ; elapsed = 00:02:20 . Memory (MB): peak = 2964.508 ; gain = 1266.684 ; free physical = 241 ; free virtual = 5330
+Finished Constraint Validation : Time (s): cpu = 00:02:02 ; elapsed = 00:02:20 . Memory (MB): peak = 2964.977 ; gain = 1267.152 ; free physical = 218 ; free virtual = 4422
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:02:01 ; elapsed = 00:02:20 . Memory (MB): peak = 2964.508 ; gain = 1266.684 ; free physical = 241 ; free virtual = 5330
+Finished Loading Part and Timing Information : Time (s): cpu = 00:02:02 ; elapsed = 00:02:20 . Memory (MB): peak = 2964.977 ; gain = 1267.152 ; free physical = 218 ; free virtual = 4422
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -2460,7 +2463,7 @@ Applied set_property KEEP_HIERARCHY = SOFT for top_i/evf_0/mipi_dsi_tx_subsystem
 Applied set_property KEEP_HIERARCHY = SOFT for top_i/evf_0/mipi_dsi_tx_subsystem_0/inst/mipi_dsi_tx_ctrl_0/inst/xpm_fifo_axis_inst. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for top_i/evf_0/axi_vdma_0/U0/\GEN_SPRT_FOR_MM2S.MM2S_LINEBUFFER_I /\GEN_LINEBUF_NO_SOF.GEN_LINEBUFFER.GEN_SYNC_FIFO.I_LINEBUFFER_FIFO /xpm_fifo_sync_inst. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:02:03 ; elapsed = 00:02:21 . Memory (MB): peak = 2964.508 ; gain = 1266.684 ; free physical = 240 ; free virtual = 5330
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:02:03 ; elapsed = 00:02:22 . Memory (MB): peak = 2964.977 ; gain = 1267.152 ; free physical = 219 ; free virtual = 4424
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'gpregsm1.curr_fwft_state_reg' in module 'fifo_generator_v13_2_9_rd_fwft'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'axi_protocol_converter_v2_1_29_b2s_wr_cmd_fsm'
@@ -3111,7 +3114,7 @@ INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in m
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'ltlib_v1_0_1_generic_memrd__parameterized1'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:02:23 ; elapsed = 00:02:42 . Memory (MB): peak = 2964.508 ; gain = 1266.684 ; free physical = 326 ; free virtual = 5397
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:02:24 ; elapsed = 00:02:43 . Memory (MB): peak = 2964.977 ; gain = 1267.152 ; free physical = 309 ; free virtual = 4511
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -3242,7 +3245,7 @@ INFO: [Synth 8-3332] Sequential element (U0/gpio_core_1/Dual.INPUT_DOUBLE_REGS4/
 INFO: [Synth 8-3332] Sequential element (U0/gpio_core_1/Dual.INPUT_DOUBLE_REGS4/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[11].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module sensor_inst_0_axi_gpio_0_0.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:04:12 ; elapsed = 00:04:34 . Memory (MB): peak = 2964.508 ; gain = 1266.684 ; free physical = 266 ; free virtual = 5401
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:04:12 ; elapsed = 00:04:34 . Memory (MB): peak = 2964.977 ; gain = 1267.152 ; free physical = 300 ; free virtual = 4529
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
@@ -3257,13 +3260,13 @@ CRITICAL WARNING: [Synth 8-3321] No instance found in 'current_instance top_i/ev
 INFO: [Synth 8-5578] Moved timing constraint from pin 'mipi_dsi_tx_ctrl_0/inst/HIGHER_LR.xpm_arst_mast/src_arst' to pin 'mipi_dsi_tx_ctrl_0/inst/reg_inf/master_resetn_reg/Q'
 INFO: [Synth 8-5819] Moved 2 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:04:25 ; elapsed = 00:04:47 . Memory (MB): peak = 2964.508 ; gain = 1266.684 ; free physical = 265 ; free virtual = 5400
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:04:25 ; elapsed = 00:04:47 . Memory (MB): peak = 2964.977 ; gain = 1267.152 ; free physical = 297 ; free virtual = 4534
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:04:30 ; elapsed = 00:04:52 . Memory (MB): peak = 2964.508 ; gain = 1266.684 ; free physical = 197 ; free virtual = 5333
+Finished Timing Optimization : Time (s): cpu = 00:04:30 ; elapsed = 00:04:52 . Memory (MB): peak = 2964.977 ; gain = 1267.152 ; free physical = 230 ; free virtual = 4467
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
@@ -3273,7 +3276,7 @@ INFO: [Synth 8-7052] The timing for the instance top_i/evf_0/mipi_dsi_tx_subsyst
 INFO: [Synth 8-7052] The timing for the instance top_i/evf_0/mipi_dsi_tx_subsystem_0/inst/mipi_dsi_tx_ctrl_0/inst/xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance top_i/evf_0/mipi_dsi_tx_subsystem_0/inst/mipi_dsi_tx_ctrl_0/inst/xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:04:48 ; elapsed = 00:05:11 . Memory (MB): peak = 2964.508 ; gain = 1266.684 ; free physical = 264 ; free virtual = 5399
+Finished Technology Mapping : Time (s): cpu = 00:04:48 ; elapsed = 00:05:11 . Memory (MB): peak = 2964.977 ; gain = 1267.152 ; free physical = 299 ; free virtual = 4536
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -3493,37 +3496,37 @@ WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/
 WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/test/Projects/CameraZynq/CameraFPGA/camera.gen/sources_1/bd/top/ipshared/670d/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:1911]
 INFO: [Common 17-14] Message 'Synth 8-5396' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:04:54 ; elapsed = 00:05:17 . Memory (MB): peak = 2964.508 ; gain = 1266.684 ; free physical = 248 ; free virtual = 5384
+Finished IO Insertion : Time (s): cpu = 00:04:54 ; elapsed = 00:05:17 . Memory (MB): peak = 2964.977 ; gain = 1267.152 ; free physical = 288 ; free virtual = 4526
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:04:55 ; elapsed = 00:05:17 . Memory (MB): peak = 2964.508 ; gain = 1266.684 ; free physical = 249 ; free virtual = 5384
+Finished Renaming Generated Instances : Time (s): cpu = 00:04:54 ; elapsed = 00:05:17 . Memory (MB): peak = 2964.977 ; gain = 1267.152 ; free physical = 288 ; free virtual = 4526
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:04:58 ; elapsed = 00:05:21 . Memory (MB): peak = 2964.508 ; gain = 1266.684 ; free physical = 259 ; free virtual = 5394
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:04:58 ; elapsed = 00:05:21 . Memory (MB): peak = 2964.977 ; gain = 1267.152 ; free physical = 297 ; free virtual = 4534
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:04:59 ; elapsed = 00:05:21 . Memory (MB): peak = 2964.508 ; gain = 1266.684 ; free physical = 259 ; free virtual = 5394
+Finished Renaming Generated Ports : Time (s): cpu = 00:04:58 ; elapsed = 00:05:21 . Memory (MB): peak = 2964.977 ; gain = 1267.152 ; free physical = 300 ; free virtual = 4537
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:05:00 ; elapsed = 00:05:22 . Memory (MB): peak = 2964.508 ; gain = 1266.684 ; free physical = 259 ; free virtual = 5394
+Finished Handling Custom Attributes : Time (s): cpu = 00:04:59 ; elapsed = 00:05:22 . Memory (MB): peak = 2964.977 ; gain = 1267.152 ; free physical = 300 ; free virtual = 4537
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:05:00 ; elapsed = 00:05:23 . Memory (MB): peak = 2964.508 ; gain = 1266.684 ; free physical = 259 ; free virtual = 5395
+Finished Renaming Generated Nets : Time (s): cpu = 00:04:59 ; elapsed = 00:05:22 . Memory (MB): peak = 2964.977 ; gain = 1267.152 ; free physical = 299 ; free virtual = 4537
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -3543,16 +3546,16 @@ Report Cell Usage:
 |2     |BUFG       |    17|
 |3     |BUFIO      |     2|
 |4     |BUFR       |     2|
-|5     |CARRY4     |   654|
+|5     |CARRY4     |   646|
 |6     |CFGLUT5    |   291|
 |7     |IDELAYCTRL |     1|
 |8     |IDELAYE2   |    16|
-|9     |LUT1       |  2583|
+|9     |LUT1       |  2553|
 |10    |LUT2       |  1440|
-|11    |LUT3       |  2356|
-|12    |LUT4       |  2152|
-|13    |LUT5       |  3559|
-|14    |LUT6       |  4870|
+|11    |LUT3       |  2358|
+|12    |LUT4       |  2142|
+|13    |LUT5       |  3531|
+|14    |LUT6       |  4878|
 |15    |MMCME2_ADV |     3|
 |16    |MUXF7      |    25|
 |17    |OSERDESE2  |     5|
@@ -3572,7 +3575,7 @@ Report Cell Usage:
 |39    |FDCE       |  1925|
 |40    |FDPE       |    70|
 |41    |FDR        |   392|
-|42    |FDRE       | 16416|
+|42    |FDRE       | 16396|
 |43    |FDSE       |   262|
 |44    |IBUF       |    16|
 |45    |IBUFDS     |    17|
@@ -3581,14 +3584,14 @@ Report Cell Usage:
 |48    |OBUFDS     |     5|
 +------+-----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:05:00 ; elapsed = 00:05:23 . Memory (MB): peak = 2964.508 ; gain = 1266.684 ; free physical = 259 ; free virtual = 5394
+Finished Writing Synthesis Report : Time (s): cpu = 00:04:59 ; elapsed = 00:05:23 . Memory (MB): peak = 2964.977 ; gain = 1267.152 ; free physical = 299 ; free virtual = 4537
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 6 critical warnings and 849 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:04:37 ; elapsed = 00:05:01 . Memory (MB): peak = 2968.383 ; gain = 1238.508 ; free physical = 4932 ; free virtual = 10068
-Synthesis Optimization Complete : Time (s): cpu = 00:05:04 ; elapsed = 00:05:25 . Memory (MB): peak = 2968.383 ; gain = 1270.559 ; free physical = 4933 ; free virtual = 10069
+Synthesis Optimization Runtime : Time (s): cpu = 00:05:03 ; elapsed = 00:05:01 . Memory (MB): peak = 2968.852 ; gain = 1238.977 ; free physical = 4884 ; free virtual = 9147
+Synthesis Optimization Complete : Time (s): cpu = 00:05:29 ; elapsed = 00:05:25 . Memory (MB): peak = 2968.852 ; gain = 1271.027 ; free physical = 4884 ; free virtual = 9146
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.47 ; elapsed = 00:00:00.47 . Memory (MB): peak = 2968.383 ; gain = 0.000 ; free physical = 4986 ; free virtual = 10122
-INFO: [Netlist 29-17] Analyzing 1515 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.46 ; elapsed = 00:00:00.47 . Memory (MB): peak = 2968.852 ; gain = 0.000 ; free physical = 4934 ; free virtual = 9196
+INFO: [Netlist 29-17] Analyzing 1507 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. top_i/clk_wiz_0/inst/clkin1_ibufg 
@@ -3599,7 +3602,7 @@ INFO: [Chipscope 16-324] Core: top_i/sensor_0/ila_0 UUID: 05cfc1e2-87ff-57cf-b10
 INFO: [Chipscope 16-324] Core: top_i/sensor_0/ila_1 UUID: 271a5ec0-a8a3-5f99-9606-9d62976df76f 
 INFO: [Chipscope 16-324] Core: top_i/sensor_0/ila_2 UUID: cd8f4140-cdf8-5722-b91e-5e956da19635 
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2968.383 ; gain = 0.000 ; free physical = 4999 ; free virtual = 10134
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2968.852 ; gain = 0.000 ; free physical = 4941 ; free virtual = 9204
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 757 instances were transformed.
   CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 260 instances
@@ -3614,15 +3617,15 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM64X1D => RAM64X1D (RAMD64E(x2)): 2 instances
   SRL16 => SRL16E: 4 instances
 
-Synth Design complete | Checksum: 611aa004
+Synth Design complete | Checksum: c5cd0f03
 INFO: [Common 17-83] Releasing license: Synthesis
-1070 Infos, 652 Warnings, 22 Critical Warnings and 0 Errors encountered.
+1070 Infos, 655 Warnings, 22 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:05:22 ; elapsed = 00:05:43 . Memory (MB): peak = 2968.383 ; gain = 1626.000 ; free physical = 4932 ; free virtual = 10068
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 7155.208; main = 2266.160; forked = 5033.441
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 12139.664; main = 2964.477; forked = 9175.188
+synth_design: Time (s): cpu = 00:05:47 ; elapsed = 00:05:43 . Memory (MB): peak = 2968.852 ; gain = 1626.469 ; free physical = 4875 ; free virtual = 9139
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 7082.448; main = 2264.085; forked = 4969.198
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 12095.305; main = 2964.945; forked = 9130.359
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-Write ShapeDB Complete: Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2980.480 ; gain = 0.000 ; free physical = 4929 ; free virtual = 10068
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2980.949 ; gain = 0.000 ; free physical = 4870 ; free virtual = 9137
 INFO: [Common 17-1381] The checkpoint '/home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/top_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_wrapper_utilization_synth.rpt -pb top_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun May 19 10:38:55 2024...
+INFO: [Common 17-206] Exiting Vivado at Mon May 20 17:39:34 2024...
