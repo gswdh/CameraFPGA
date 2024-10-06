@@ -50,11 +50,11 @@
 #ifndef _sensor_inst_0_xlconstant_0_0_H_
 #define _sensor_inst_0_xlconstant_0_0_H_
 
-#include "xlconstant_v1_1_8.h"
+#include "xlconstant_v1_1_9.h"
 #include "systemc.h"
 class sensor_inst_0_xlconstant_0_0 : public sc_module {
   public:
-xlconstant_v1_1_8<1,0> mod;
+xlconstant_v1_1_9<1,0> mod;
   sc_out< sc_bv<1> > dout;
 sensor_inst_0_xlconstant_0_0 (sc_core::sc_module_name name);
   };

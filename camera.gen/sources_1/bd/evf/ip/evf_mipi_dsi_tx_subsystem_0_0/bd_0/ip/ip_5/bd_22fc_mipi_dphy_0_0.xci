@@ -4,7 +4,7 @@
     "xci_name": "bd_22fc_mipi_dphy_0_0",
     "cell_name": "mipi_dphy_0",
     "component_reference": "xilinx.com:ip:mipi_dphy:4.3",
-    "ip_revision": "8",
+    "ip_revision": "11",
     "gen_directory": ".",
     "parameters": {
       "component_parameters": {
@@ -185,6 +185,7 @@
         "C_RCVE_ALT_DESKEW_SEQ": [ { "value": "false", "resolve_type": "user", "format": "bool", "usage": "all" } ],
         "C_VERSAL": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "C_EN_CNTS_BYTE_CLK": [ { "value": "false", "resolve_type": "user", "format": "bool", "usage": "all" } ],
+        "C_EN_DSI_CNTS_BYTE_CLK": [ { "value": "false", "resolve_type": "user", "format": "bool", "usage": "all" } ],
         "C_EXT_MMCM": [ { "value": "0", "resolve_type": "user", "enabled": false, "usage": "all" } ]
       },
       "model_parameters": {
@@ -298,6 +299,7 @@
         "BASE_BOARD_PART": [ { "value": "" } ],
         "BOARD_CONNECTIONS": [ { "value": "" } ],
         "DEVICE": [ { "value": "xc7z020" } ],
+        "NEXTGEN_VERSAL": [ { "value": "0" } ],
         "PACKAGE": [ { "value": "clg484" } ],
         "PREFHDL": [ { "value": "VERILOG" } ],
         "SILICON_REVISION": [ { "value": "" } ],
@@ -308,12 +310,12 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "8" } ],
+        "IPREVISION": [ { "value": "11" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "." } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "../../../../../ipshared" } ],
-        "SWVERSION": [ { "value": "2023.2" } ],
+        "SWVERSION": [ { "value": "2024.1" } ],
         "SYNTHESISFLOW": [ { "value": "OUT_OF_CONTEXT" } ]
       }
     },
@@ -457,7 +459,7 @@
         "oserdes_clkdiv_out": {
           "vlnv": "xilinx.com:signal:clock:1.0",
           "abstraction_type": "xilinx.com:signal:clock_rtl:1.0",
-          "mode": "slave",
+          "mode": "master",
           "parameters": {
             "FREQ_HZ": [ { "value": "100000000", "value_permission": "bd", "resolve_type": "user", "format": "long", "usage": "all" } ],
             "FREQ_TOLERANCE_HZ": [ { "value": "0", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
@@ -475,7 +477,7 @@
         "oserdes_clk_out": {
           "vlnv": "xilinx.com:signal:clock:1.0",
           "abstraction_type": "xilinx.com:signal:clock_rtl:1.0",
-          "mode": "slave",
+          "mode": "master",
           "parameters": {
             "FREQ_HZ": [ { "value": "400000000", "value_permission": "bd", "resolve_type": "user", "format": "long", "usage": "all" } ],
             "FREQ_TOLERANCE_HZ": [ { "value": "0", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
@@ -493,7 +495,7 @@
         "oserdes_clk90_out": {
           "vlnv": "xilinx.com:signal:clock:1.0",
           "abstraction_type": "xilinx.com:signal:clock_rtl:1.0",
-          "mode": "slave",
+          "mode": "master",
           "parameters": {
             "FREQ_HZ": [ { "value": "400000000", "value_permission": "bd", "resolve_type": "user", "format": "long", "usage": "all" } ],
             "FREQ_TOLERANCE_HZ": [ { "value": "0", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
@@ -547,7 +549,7 @@
         "tx_mipi_ppi_if": {
           "vlnv": "xilinx.com:interface:tx_mipi_ppi_if:1.0",
           "abstraction_type": "xilinx.com:interface:tx_mipi_ppi_if_rtl:1.0",
-          "mode": "slave",
+          "mode": "master",
           "port_maps": {
             "CL_ENABLE": [ { "physical_name": "cl_enable" } ],
             "CL_STOPSTATE": [ { "physical_name": "cl_stopstate" } ],

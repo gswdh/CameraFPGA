@@ -4,7 +4,7 @@
     "xci_name": "sensor_inst_0_xlslice_2_0",
     "cell_name": "xlslice_2",
     "component_reference": "xilinx.com:ip:xlslice:1.0",
-    "ip_revision": "3",
+    "ip_revision": "4",
     "gen_directory": ".",
     "parameters": {
       "component_parameters": {
@@ -12,7 +12,7 @@
         "DIN_TO": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "DIN_FROM": [ { "value": "11", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "DIN_WIDTH": [ { "value": "192", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
-        "DOUT_WIDTH": [ { "value": "12", "resolve_type": "user", "format": "long", "usage": "all" } ]
+        "DOUT_WIDTH": [ { "value": "12", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ]
       },
       "model_parameters": {
         "DIN_WIDTH": [ { "value": "192", "resolve_type": "generated", "format": "long", "usage": "all" } ],
@@ -24,6 +24,7 @@
         "BASE_BOARD_PART": [ { "value": "" } ],
         "BOARD_CONNECTIONS": [ { "value": "" } ],
         "DEVICE": [ { "value": "xc7z020" } ],
+        "NEXTGEN_VERSAL": [ { "value": "0" } ],
         "PACKAGE": [ { "value": "clg484" } ],
         "PREFHDL": [ { "value": "VERILOG" } ],
         "SILICON_REVISION": [ { "value": "" } ],
@@ -34,12 +35,12 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "3" } ],
+        "IPREVISION": [ { "value": "4" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "." } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "../../ipshared" } ],
-        "SWVERSION": [ { "value": "2023.2" } ],
+        "SWVERSION": [ { "value": "2024.1" } ],
         "SYNTHESISFLOW": [ { "value": "GLOBAL" } ]
       }
     },

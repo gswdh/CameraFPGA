@@ -50,15 +50,13 @@
 // IP VLNV: xilinx.com:module_ref:gmax0505_streamer:1.0
 // IP Revision: 1
 
-(* X_CORE_INFO = "gmax0505_streamer,Vivado 2023.2" *)
+(* X_CORE_INFO = "gmax0505_streamer,Vivado 2024.1" *)
 (* CHECK_LICENSE_TYPE = "sensor_inst_0_gmax0505_streamer_0_0,gmax0505_streamer,{}" *)
-(* CORE_GENERATION_INFO = "sensor_inst_0_gmax0505_streamer_0_0,gmax0505_streamer,{x_ipProduct=Vivado 2023.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=gmax0505_streamer,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,N_CHANNELS=16,N_BITS_PIXEL=12}" *)
+(* CORE_GENERATION_INFO = "sensor_inst_0_gmax0505_streamer_0_0,gmax0505_streamer,{x_ipProduct=Vivado 2024.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=gmax0505_streamer,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,N_CHANNELS=16,N_BITS_PIXEL=12}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module sensor_inst_0_gmax0505_streamer_0_0 (
-  ddr_clk_p_i,
-  ddr_clk_n_i,
-  ddr_clk_debug,
+  ddr_clk_i,
   nrst_i,
   delay_clk,
   ddr_data_p_i,
@@ -66,13 +64,11 @@ module sensor_inst_0_gmax0505_streamer_0_0 (
   sync_word_i,
   sync_en_i,
   sync_done_o,
-  par_clk_o,
+  par_clk_i,
   par_data_o
 );
 
-input wire ddr_clk_p_i;
-input wire ddr_clk_n_i;
-output wire ddr_clk_debug;
+input wire ddr_clk_i;
 input wire nrst_i;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME delay_clk, FREQ_HZ 200000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 delay_clk CLK" *)
@@ -82,16 +78,14 @@ input wire [15 : 0] ddr_data_n_i;
 input wire [11 : 0] sync_word_i;
 input wire sync_en_i;
 output wire sync_done_o;
-output wire par_clk_o;
+input wire par_clk_i;
 output wire [191 : 0] par_data_o;
 
   gmax0505_streamer #(
     .N_CHANNELS(16),
     .N_BITS_PIXEL(12)
   ) inst (
-    .ddr_clk_p_i(ddr_clk_p_i),
-    .ddr_clk_n_i(ddr_clk_n_i),
-    .ddr_clk_debug(ddr_clk_debug),
+    .ddr_clk_i(ddr_clk_i),
     .nrst_i(nrst_i),
     .delay_clk(delay_clk),
     .ddr_data_p_i(ddr_data_p_i),
@@ -99,7 +93,7 @@ output wire [191 : 0] par_data_o;
     .sync_word_i(sync_word_i),
     .sync_en_i(sync_en_i),
     .sync_done_o(sync_done_o),
-    .par_clk_o(par_clk_o),
+    .par_clk_i(par_clk_i),
     .par_data_o(par_data_o)
   );
 endmodule

@@ -16,5 +16,5 @@ proc compile {} {
 
     # Second command with parameters
     puts "Executing 'write_hw_platform -fixed -include_bit -force -file /home/test/Projects/CameraZynq/CameraFPGA/top_wrapper.xsa'"
-    write_hw_platform -fixed -include_bit -force -file /home/test/Projects/CameraZynq/CameraFPGA/top_wrapper.xsa
+    write_hw_platform -fixed -include_bit -force -file top_wrapper.xsa
 }

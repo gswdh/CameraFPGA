@@ -4,7 +4,7 @@
     "xci_name": "top_clk_wiz_0_1",
     "cell_name": "clk_wiz_0",
     "component_reference": "xilinx.com:ip:clk_wiz:6.0",
-    "ip_revision": "13",
+    "ip_revision": "14",
     "gen_directory": "../../../../../../camera.gen/sources_1/bd/top/ip/top_clk_wiz_0_1",
     "parameters": {
       "component_parameters": {
@@ -68,7 +68,7 @@
         "CLK_OUT7_USE_FINE_PS_GUI": [ { "value": "false", "resolve_type": "user", "format": "bool", "usage": "all" } ],
         "PRIMARY_PORT": [ { "value": "clk_in1", "resolve_type": "user", "usage": "all" } ],
         "CLK_OUT1_PORT": [ { "value": "delay_clk", "value_src": "user", "resolve_type": "user", "usage": "all" } ],
-        "CLK_OUT2_PORT": [ { "value": "sensor_clk", "resolve_type": "user", "usage": "all" } ],
+        "CLK_OUT2_PORT": [ { "value": "sensor_clk", "value_src": "user", "resolve_type": "user", "usage": "all" } ],
         "CLK_OUT3_PORT": [ { "value": "usb_clk", "value_src": "user", "resolve_type": "user", "usage": "all" } ],
         "CLK_OUT4_PORT": [ { "value": "eth_clk", "value_src": "user", "resolve_type": "user", "usage": "all" } ],
         "CLK_OUT5_PORT": [ { "value": "clk_out5", "resolve_type": "user", "usage": "all" } ],
@@ -88,7 +88,7 @@
         "CLKOUT1_REQUESTED_OUT_FREQ": [ { "value": "200.000", "value_src": "user", "resolve_type": "user", "format": "float", "usage": "all" } ],
         "CLKOUT1_REQUESTED_PHASE": [ { "value": "0.000", "resolve_type": "user", "format": "float", "usage": "all" } ],
         "CLKOUT1_REQUESTED_DUTY_CYCLE": [ { "value": "50.000", "resolve_type": "user", "format": "float", "usage": "all" } ],
-        "CLKOUT2_REQUESTED_OUT_FREQ": [ { "value": "50", "resolve_type": "user", "format": "float", "usage": "all" } ],
+        "CLKOUT2_REQUESTED_OUT_FREQ": [ { "value": "50", "value_src": "user", "resolve_type": "user", "format": "float", "usage": "all" } ],
         "CLKOUT2_REQUESTED_PHASE": [ { "value": "0.000", "resolve_type": "user", "format": "float", "usage": "all" } ],
         "CLKOUT2_REQUESTED_DUTY_CYCLE": [ { "value": "50.000", "resolve_type": "user", "format": "float", "usage": "all" } ],
         "CLKOUT3_REQUESTED_OUT_FREQ": [ { "value": "12", "value_src": "user", "resolve_type": "user", "format": "float", "usage": "all" } ],
@@ -588,6 +588,7 @@
         "BASE_BOARD_PART": [ { "value": "" } ],
         "BOARD_CONNECTIONS": [ { "value": "" } ],
         "DEVICE": [ { "value": "xc7z020" } ],
+        "NEXTGEN_VERSAL": [ { "value": "0" } ],
         "PACKAGE": [ { "value": "clg484" } ],
         "PREFHDL": [ { "value": "VERILOG" } ],
         "SILICON_REVISION": [ { "value": "" } ],
@@ -598,12 +599,12 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "13" } ],
+        "IPREVISION": [ { "value": "14" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "../../../../../../camera.gen/sources_1/bd/top/ip/top_clk_wiz_0_1" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "../../ipshared" } ],
-        "SWVERSION": [ { "value": "2023.2" } ],
+        "SWVERSION": [ { "value": "2024.1" } ],
         "SYNTHESISFLOW": [ { "value": "GLOBAL" } ]
       }
     },
@@ -635,10 +636,10 @@
           "abstraction_type": "xilinx.com:signal:clock_rtl:1.0",
           "mode": "slave",
           "parameters": {
-            "FREQ_HZ": [ { "value": "1e+08", "value_src": "user_prop", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "FREQ_HZ": [ { "value": "100000000", "value_src": "user_prop", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
             "FREQ_TOLERANCE_HZ": [ { "value": "0", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
             "PHASE": [ { "value": "0.0", "value_permission": "bd", "resolve_type": "generated", "format": "float", "is_ips_inferred": true, "is_static_object": false } ],
-            "CLK_DOMAIN": [ { "value": "top_processing_system7_0_0_FCLK_CLK0", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "CLK_DOMAIN": [ { "value": "top_processing_system7_0_0_FCLK_CLK0", "value_src": "default_prop", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
             "ASSOCIATED_BUSIF": [ { "value": "", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
             "ASSOCIATED_PORT": [ { "value": "", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
             "ASSOCIATED_RESET": [ { "value": "", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],

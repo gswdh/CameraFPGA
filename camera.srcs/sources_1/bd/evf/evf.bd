@@ -7,7 +7,7 @@
       "name": "evf",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2023.2",
+      "tool_version": "2024.1",
       "validated": "true"
     },
     "design_tree": {
@@ -640,11 +640,17 @@
     "components": {
       "mipi_dsi_tx_subsystem_0": {
         "vlnv": "xilinx.com:ip:mipi_dsi_tx_subsystem:2.3",
-        "ip_revision": "3",
+        "ip_revision": "6",
         "xci_name": "evf_mipi_dsi_tx_subsystem_0_0",
         "xci_path": "ip/evf_mipi_dsi_tx_subsystem_0_0/evf_mipi_dsi_tx_subsystem_0_0.xci",
         "inst_hier_path": "mipi_dsi_tx_subsystem_0",
         "parameters": {
+          "AXIS_TDATA_WIDTH": {
+            "value": "96"
+          },
+          "C_DPHY_LANES": {
+            "value": "4"
+          },
           "C_EN_7S_LINERATE_CHECK": {
             "value": "false"
           },
@@ -721,7 +727,7 @@
       },
       "axi_vdma_0": {
         "vlnv": "xilinx.com:ip:axi_vdma:6.3",
-        "ip_revision": "17",
+        "ip_revision": "19",
         "xci_name": "evf_axi_vdma_0_0",
         "xci_path": "ip/evf_axi_vdma_0_0/evf_axi_vdma_0_0.xci",
         "inst_hier_path": "axi_vdma_0",
@@ -857,7 +863,7 @@
         "components": {
           "xbar": {
             "vlnv": "xilinx.com:ip:axi_crossbar:2.1",
-            "ip_revision": "30",
+            "ip_revision": "32",
             "xci_name": "evf_xbar_0",
             "xci_path": "ip/evf_xbar_0/evf_xbar_0.xci",
             "inst_hier_path": "axi_interconnect_0/xbar",
@@ -933,7 +939,7 @@
             "components": {
               "auto_pc": {
                 "vlnv": "xilinx.com:ip:axi_protocol_converter:2.1",
-                "ip_revision": "29",
+                "ip_revision": "31",
                 "xci_name": "evf_auto_pc_0",
                 "xci_path": "ip/evf_auto_pc_0/evf_auto_pc_0.xci",
                 "inst_hier_path": "axi_interconnect_0/s00_couplers/auto_pc",
@@ -1165,7 +1171,7 @@
       },
       "clk_wiz_0": {
         "vlnv": "xilinx.com:ip:clk_wiz:6.0",
-        "ip_revision": "13",
+        "ip_revision": "14",
         "xci_name": "evf_clk_wiz_0_0",
         "xci_path": "ip/evf_clk_wiz_0_0/evf_clk_wiz_0_0.xci",
         "inst_hier_path": "clk_wiz_0",
@@ -1195,14 +1201,14 @@
       },
       "proc_sys_reset_0": {
         "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
-        "ip_revision": "14",
+        "ip_revision": "15",
         "xci_name": "evf_proc_sys_reset_0_0",
         "xci_path": "ip/evf_proc_sys_reset_0_0/evf_proc_sys_reset_0_0.xci",
         "inst_hier_path": "proc_sys_reset_0"
       },
       "axi_clock_converter_0": {
         "vlnv": "xilinx.com:ip:axi_clock_converter:2.1",
-        "ip_revision": "28",
+        "ip_revision": "30",
         "xci_name": "evf_axi_clock_converter_0_0",
         "xci_path": "ip/evf_axi_clock_converter_0_0/evf_axi_clock_converter_0_0.xci",
         "inst_hier_path": "axi_clock_converter_0",
@@ -1218,7 +1224,7 @@
       },
       "axi_register_slice_0": {
         "vlnv": "xilinx.com:ip:axi_register_slice:2.1",
-        "ip_revision": "29",
+        "ip_revision": "31",
         "xci_name": "evf_axi_register_slice_0_0",
         "xci_path": "ip/evf_axi_register_slice_0_0/evf_axi_register_slice_0_0.xci",
         "inst_hier_path": "axi_register_slice_0",
@@ -1287,32 +1293,32 @@
       "ACLK_0_1": {
         "ports": [
           "ACLK_0",
-          "axi_interconnect_0/ACLK",
-          "axi_vdma_0/m_axis_mm2s_aclk",
-          "mipi_dsi_tx_subsystem_0/s_axis_aclk",
-          "axi_vdma_0/m_axi_mm2s_aclk",
-          "axi_vdma_0/s_axi_lite_aclk",
-          "axi_interconnect_0/M01_ACLK",
-          "axi_interconnect_0/S00_ACLK",
-          "clk_wiz_0/clk_in1",
-          "axi_interconnect_0/M00_ACLK",
           "axi_clock_converter_0/s_axi_aclk",
-          "axi_register_slice_0/aclk"
+          "axi_interconnect_0/ACLK",
+          "axi_interconnect_0/S00_ACLK",
+          "axi_interconnect_0/M00_ACLK",
+          "axi_interconnect_0/M01_ACLK",
+          "axi_register_slice_0/aclk",
+          "axi_vdma_0/s_axi_lite_aclk",
+          "axi_vdma_0/m_axi_mm2s_aclk",
+          "axi_vdma_0/m_axis_mm2s_aclk",
+          "clk_wiz_0/clk_in1",
+          "mipi_dsi_tx_subsystem_0/s_axis_aclk"
         ]
       },
       "ARESETN_0_1": {
         "ports": [
           "ARESETN_0",
-          "axi_interconnect_0/ARESETN",
-          "axi_interconnect_0/M01_ARESETN",
-          "axi_vdma_0/axi_resetn",
-          "axi_interconnect_0/S00_ARESETN",
-          "mipi_dsi_tx_subsystem_0/s_axis_aresetn",
-          "clk_wiz_0/resetn",
-          "proc_sys_reset_0/ext_reset_in",
-          "axi_interconnect_0/M00_ARESETN",
           "axi_clock_converter_0/s_axi_aresetn",
-          "axi_register_slice_0/aresetn"
+          "axi_interconnect_0/ARESETN",
+          "axi_interconnect_0/S00_ARESETN",
+          "axi_interconnect_0/M00_ARESETN",
+          "axi_interconnect_0/M01_ARESETN",
+          "axi_register_slice_0/aresetn",
+          "axi_vdma_0/axi_resetn",
+          "clk_wiz_0/resetn",
+          "mipi_dsi_tx_subsystem_0/s_axis_aresetn",
+          "proc_sys_reset_0/ext_reset_in"
         ]
       },
       "axi_vdma_0_mm2s_introut": {
@@ -1324,9 +1330,9 @@
       "clk_wiz_0_clk_ref": {
         "ports": [
           "clk_wiz_0/clk_ref",
+          "axi_clock_converter_0/m_axi_aclk",
           "mipi_dsi_tx_subsystem_0/dphy_clk_200M",
-          "proc_sys_reset_0/slowest_sync_clk",
-          "axi_clock_converter_0/m_axi_aclk"
+          "proc_sys_reset_0/slowest_sync_clk"
         ]
       },
       "mipi_dsi_tx_subsystem_0_interrupt": {

@@ -4,7 +4,7 @@
     "xci_name": "evf_axi_register_slice_0_0",
     "cell_name": "axi_register_slice_0",
     "component_reference": "xilinx.com:ip:axi_register_slice:2.1",
-    "ip_revision": "29",
+    "ip_revision": "31",
     "gen_directory": "../../../../../../camera.gen/sources_1/bd/evf/ip/evf_axi_register_slice_0_0",
     "parameters": {
       "component_parameters": {
@@ -100,6 +100,7 @@
         "BASE_BOARD_PART": [ { "value": "" } ],
         "BOARD_CONNECTIONS": [ { "value": "" } ],
         "DEVICE": [ { "value": "xc7z020" } ],
+        "NEXTGEN_VERSAL": [ { "value": "0" } ],
         "PACKAGE": [ { "value": "clg484" } ],
         "PREFHDL": [ { "value": "VERILOG" } ],
         "SILICON_REVISION": [ { "value": "" } ],
@@ -110,12 +111,12 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "29" } ],
+        "IPREVISION": [ { "value": "31" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "../../../../../../camera.gen/sources_1/bd/evf/ip/evf_axi_register_slice_0_0" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "../../ipshared" } ],
-        "SWVERSION": [ { "value": "2023.2" } ],
+        "SWVERSION": [ { "value": "2024.1" } ],
         "SYNTHESISFLOW": [ { "value": "OUT_OF_CONTEXT" } ]
       }
     },

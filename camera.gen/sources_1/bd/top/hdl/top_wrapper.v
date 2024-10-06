@@ -1,9 +1,9 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-//Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+//Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
-//Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-//Date        : Mon May 20 17:33:03 2024
-//Host        : testserver running 64-bit Ubuntu 20.04.6 LTS
+//Tool Version: Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
+//Date        : Sat Oct  5 10:05:10 2024
+//Host        : george-MacBookPro running 64-bit Ubuntu 22.04.5 LTS
 //Command     : generate_target top_wrapper.bd
 //Design      : top_wrapper
 //Purpose     : IP block netlist
@@ -57,14 +57,6 @@ module top_wrapper
     disp_spi_0_io1_io,
     disp_spi_0_sck_io,
     disp_spi_0_ss_io,
-    mipi_evf_out_0_clk_hs_n,
-    mipi_evf_out_0_clk_hs_p,
-    mipi_evf_out_0_clk_lp_n,
-    mipi_evf_out_0_clk_lp_p,
-    mipi_evf_out_0_data_hs_n,
-    mipi_evf_out_0_data_hs_p,
-    mipi_evf_out_0_data_lp_n,
-    mipi_evf_out_0_data_lp_p,
     tdig0_0,
     tdig1_0,
     texp0_0,
@@ -115,14 +107,6 @@ module top_wrapper
   inout disp_spi_0_io1_io;
   inout disp_spi_0_sck_io;
   inout [0:0]disp_spi_0_ss_io;
-  output mipi_evf_out_0_clk_hs_n;
-  output mipi_evf_out_0_clk_hs_p;
-  output mipi_evf_out_0_clk_lp_n;
-  output mipi_evf_out_0_clk_lp_p;
-  output [3:0]mipi_evf_out_0_data_hs_n;
-  output [3:0]mipi_evf_out_0_data_hs_p;
-  output [3:0]mipi_evf_out_0_data_lp_n;
-  output [3:0]mipi_evf_out_0_data_lp_p;
   input tdig0_0;
   input tdig1_0;
   output texp0_0;
@@ -198,14 +182,6 @@ module top_wrapper
   wire [0:0]disp_spi_0_ss_io_0;
   wire [0:0]disp_spi_0_ss_o_0;
   wire disp_spi_0_ss_t;
-  wire mipi_evf_out_0_clk_hs_n;
-  wire mipi_evf_out_0_clk_hs_p;
-  wire mipi_evf_out_0_clk_lp_n;
-  wire mipi_evf_out_0_clk_lp_p;
-  wire [3:0]mipi_evf_out_0_data_hs_n;
-  wire [3:0]mipi_evf_out_0_data_hs_p;
-  wire [3:0]mipi_evf_out_0_data_lp_n;
-  wire [3:0]mipi_evf_out_0_data_lp_p;
   wire tdig0_0;
   wire tdig1_0;
   wire texp0_0;
@@ -314,14 +290,6 @@ module top_wrapper
         .disp_spi_0_ss_i(disp_spi_0_ss_i_0),
         .disp_spi_0_ss_o(disp_spi_0_ss_o_0),
         .disp_spi_0_ss_t(disp_spi_0_ss_t),
-        .mipi_evf_out_0_clk_hs_n(mipi_evf_out_0_clk_hs_n),
-        .mipi_evf_out_0_clk_hs_p(mipi_evf_out_0_clk_hs_p),
-        .mipi_evf_out_0_clk_lp_n(mipi_evf_out_0_clk_lp_n),
-        .mipi_evf_out_0_clk_lp_p(mipi_evf_out_0_clk_lp_p),
-        .mipi_evf_out_0_data_hs_n(mipi_evf_out_0_data_hs_n),
-        .mipi_evf_out_0_data_hs_p(mipi_evf_out_0_data_hs_p),
-        .mipi_evf_out_0_data_lp_n(mipi_evf_out_0_data_lp_n),
-        .mipi_evf_out_0_data_lp_p(mipi_evf_out_0_data_lp_p),
         .tdig0_0(tdig0_0),
         .tdig1_0(tdig1_0),
         .texp0_0(texp0_0),

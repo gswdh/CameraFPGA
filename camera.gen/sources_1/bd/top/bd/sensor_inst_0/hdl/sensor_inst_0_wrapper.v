@@ -1,9 +1,9 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-//Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+//Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
-//Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-//Date        : Mon May 20 17:33:10 2024
-//Host        : testserver running 64-bit Ubuntu 20.04.6 LTS
+//Tool Version: Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
+//Date        : Sat Oct  5 10:05:46 2024
+//Host        : george-MacBookPro running 64-bit Ubuntu 22.04.5 LTS
 //Command     : generate_target sensor_inst_0_wrapper.bd
 //Design      : sensor_inst_0_wrapper
 //Purpose     : IP block netlist

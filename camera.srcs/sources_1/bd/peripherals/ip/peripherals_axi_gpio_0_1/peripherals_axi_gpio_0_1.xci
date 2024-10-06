@@ -4,7 +4,7 @@
     "xci_name": "peripherals_axi_gpio_0_1",
     "cell_name": "axi_gpio_0",
     "component_reference": "xilinx.com:ip:axi_gpio:2.0",
-    "ip_revision": "31",
+    "ip_revision": "33",
     "gen_directory": "../../../../../../camera.gen/sources_1/bd/peripherals/ip/peripherals_axi_gpio_0_1",
     "parameters": {
       "component_parameters": {
@@ -17,7 +17,7 @@
         "C_DOUT_DEFAULT_2": [ { "value": "0x00000000", "resolve_type": "user", "format": "bitString", "enabled": false, "usage": "all" } ],
         "C_DOUT_DEFAULT": [ { "value": "0x00000000", "resolve_type": "user", "format": "bitString", "usage": "all" } ],
         "C_ALL_INPUTS_2": [ { "value": "1", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
-        "C_INTERRUPT_PRESENT": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_INTERRUPT_PRESENT": [ { "value": "1", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "Component_Name": [ { "value": "peripherals_axi_gpio_0_1", "resolve_type": "user", "usage": "all" } ],
         "USE_BOARD_FLOW": [ { "value": "false", "resolve_type": "user", "format": "bool", "usage": "all" } ],
         "GPIO_BOARD_INTERFACE": [ { "value": "Custom", "resolve_type": "user", "usage": "all" } ],
@@ -35,7 +35,7 @@
         "C_ALL_INPUTS_2": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_ALL_OUTPUTS": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_ALL_OUTPUTS_2": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
-        "C_INTERRUPT_PRESENT": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_INTERRUPT_PRESENT": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_DOUT_DEFAULT": [ { "value": "0x00000000", "resolve_type": "generated", "format": "bitString", "usage": "all" } ],
         "C_TRI_DEFAULT": [ { "value": "0xFFFFFFFF", "resolve_type": "generated", "format": "bitString", "usage": "all" } ],
         "C_IS_DUAL": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
@@ -47,6 +47,7 @@
         "BASE_BOARD_PART": [ { "value": "" } ],
         "BOARD_CONNECTIONS": [ { "value": "" } ],
         "DEVICE": [ { "value": "xc7z020" } ],
+        "NEXTGEN_VERSAL": [ { "value": "0" } ],
         "PACKAGE": [ { "value": "clg484" } ],
         "PREFHDL": [ { "value": "VERILOG" } ],
         "SILICON_REVISION": [ { "value": "" } ],
@@ -57,12 +58,12 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "31" } ],
+        "IPREVISION": [ { "value": "33" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "../../../../../../camera.gen/sources_1/bd/peripherals/ip/peripherals_axi_gpio_0_1" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "../../ipshared" } ],
-        "SWVERSION": [ { "value": "2023.2" } ],
+        "SWVERSION": [ { "value": "2024.1" } ],
         "SYNTHESISFLOW": [ { "value": "OUT_OF_CONTEXT" } ]
       }
     },
@@ -87,6 +88,7 @@
         "s_axi_rresp": [ { "direction": "out", "size_left": "1", "size_right": "0" } ],
         "s_axi_rvalid": [ { "direction": "out" } ],
         "s_axi_rready": [ { "direction": "in", "driver_value": "0" } ],
+        "ip2intc_irpt": [ { "direction": "out" } ],
         "gpio_io_o": [ { "direction": "out", "size_left": "22", "size_right": "0" } ],
         "gpio2_io_i": [ { "direction": "in", "size_left": "7", "size_right": "0", "driver_value": "0" } ]
       },
@@ -179,6 +181,18 @@
             "RST": [ { "physical_name": "s_axi_aresetn" } ]
           }
         },
+        "IP2INTC_IRQ": {
+          "vlnv": "xilinx.com:signal:interrupt:1.0",
+          "abstraction_type": "xilinx.com:signal:interrupt_rtl:1.0",
+          "mode": "master",
+          "parameters": {
+            "SENSITIVITY": [ { "value": "LEVEL_HIGH", "value_src": "constant", "value_permission": "bd", "usage": "all" } ],
+            "PortWidth": [ { "value": "1", "value_src": "default_prop", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_static_object": false } ]
+          },
+          "port_maps": {
+            "INTERRUPT": [ { "physical_name": "ip2intc_irpt" } ]
+          }
+        },
         "GPIO": {
           "vlnv": "xilinx.com:interface:gpio:1.0",
           "abstraction_type": "xilinx.com:interface:gpio_rtl:1.0",
@@ -224,7 +238,7 @@
                   "access": "read-write",
                   "reset_value": "0x0",
                   "fields": {
-                    "Channel_1_GPIO_DATA": {
+                    "CH1_DATA": {
                       "bit_offset": 0,
                       "bit_width": 23,
                       "display_name": "Channel_1_GPIO_DATA",
@@ -243,7 +257,7 @@
                   "access": "read-write",
                   "reset_value": "0x0",
                   "fields": {
-                    "Channel_1_GPIO_TRI": {
+                    "CH1_TRI": {
                       "bit_offset": 0,
                       "bit_width": 23,
                       "display_name": "Channel_1_GPIO_DATA",
@@ -262,7 +276,7 @@
                   "access": "read-write",
                   "reset_value": "0x0",
                   "fields": {
-                    "Channel_2_GPIO_DATA": {
+                    "CH2_DATA": {
                       "bit_offset": 0,
                       "bit_width": 8,
                       "display_name": "Channel_2_GPIO_DATA",
@@ -281,7 +295,7 @@
                   "access": "read-write",
                   "reset_value": "0x0",
                   "fields": {
-                    "Channel_2_GPIO_TRI": {
+                    "CH2_TRI": {
                       "bit_offset": 0,
                       "bit_width": 8,
                       "display_name": "Channel_2_GPIO_DATA",
@@ -300,7 +314,7 @@
                   "access": "read-write",
                   "reset_value": "0x0",
                   "fields": {
-                    "Global_Interrupt_Enable": {
+                    "INT_EN": {
                       "bit_offset": 31,
                       "bit_width": 1,
                       "display_name": "Global_Interrupt_Enable",
@@ -319,7 +333,7 @@
                   "access": "read-write",
                   "reset_value": "0x0",
                   "fields": {
-                    "Channel_1_Interrupt_Enable": {
+                    "CH1_INT_EN": {
                       "bit_offset": 0,
                       "bit_width": 1,
                       "display_name": "Channel_1_Interrupt_Enable",
@@ -327,7 +341,7 @@
                       "is_volatile": true,
                       "access": "read-write"
                     },
-                    "Channel_2_Interrupt_Enable": {
+                    "CH2_INT_EN": {
                       "bit_offset": 1,
                       "bit_width": 1,
                       "display_name": "Channel_2_Interrupt_Enable",
@@ -346,7 +360,7 @@
                   "access": "read-write",
                   "reset_value": "0x0",
                   "fields": {
-                    "Channel_1_Interrupt_Status": {
+                    "CH1_INT_S": {
                       "bit_offset": 0,
                       "bit_width": 1,
                       "display_name": "Channel_1_Interrupt_Status",
@@ -354,7 +368,7 @@
                       "is_volatile": true,
                       "access": "read-write"
                     },
-                    "Channel_2_Interrupt_Status": {
+                    "CH2_INT_S": {
                       "bit_offset": 1,
                       "bit_width": 1,
                       "display_name": "Channel_2_Interrupt_Status",

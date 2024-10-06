@@ -50,9 +50,9 @@
 // IP VLNV: xilinx.com:module_ref:frame_detector:1.0
 // IP Revision: 1
 
-(* X_CORE_INFO = "frame_detector,Vivado 2023.2" *)
+(* X_CORE_INFO = "frame_detector,Vivado 2024.1" *)
 (* CHECK_LICENSE_TYPE = "sensor_inst_0_frame_detector_0_0,frame_detector,{}" *)
-(* CORE_GENERATION_INFO = "sensor_inst_0_frame_detector_0_0,frame_detector,{x_ipProduct=Vivado 2023.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=frame_detector,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,N_BITS_PIXEL=12}" *)
+(* CORE_GENERATION_INFO = "sensor_inst_0_frame_detector_0_0,frame_detector,{x_ipProduct=Vivado 2024.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=frame_detector,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,N_BITS_PIXEL=12}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module sensor_inst_0_frame_detector_0_0 (

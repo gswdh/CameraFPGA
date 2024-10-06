@@ -8,7 +8,7 @@
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "scoped": "true",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2023.2",
+      "tool_version": "2024.1",
       "validated": "true"
     },
     "design_tree": {
@@ -452,21 +452,21 @@
     "components": {
       "proc_sys_reset_0": {
         "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
-        "ip_revision": "14",
+        "ip_revision": "15",
         "xci_name": "bd_22fc_proc_sys_reset_0_0",
         "xci_path": "ip/ip_0/bd_22fc_proc_sys_reset_0_0.xci",
         "inst_hier_path": "proc_sys_reset_0"
       },
       "proc_sys_reset_1": {
         "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
-        "ip_revision": "14",
+        "ip_revision": "15",
         "xci_name": "bd_22fc_proc_sys_reset_1_0",
         "xci_path": "ip/ip_1/bd_22fc_proc_sys_reset_1_0.xci",
         "inst_hier_path": "proc_sys_reset_1"
       },
       "util_vector_logic_0": {
         "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
-        "ip_revision": "3",
+        "ip_revision": "4",
         "xci_name": "bd_22fc_util_vector_logic_0_0",
         "xci_path": "ip/ip_2/bd_22fc_util_vector_logic_0_0.xci",
         "inst_hier_path": "util_vector_logic_0",
@@ -481,7 +481,7 @@
       },
       "axis_data_fifo_0": {
         "vlnv": "xilinx.com:ip:axis_data_fifo:2.0",
-        "ip_revision": "11",
+        "ip_revision": "13",
         "xci_name": "bd_22fc_axis_data_fifo_0_0",
         "xci_path": "ip/ip_3/bd_22fc_axis_data_fifo_0_0.xci",
         "inst_hier_path": "axis_data_fifo_0",
@@ -513,11 +513,20 @@
           "TUSER_WIDTH": {
             "value": "1"
           }
+        },
+        "interface_ports": {
+          "S_AXIS": {
+            "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+            "mode": "Slave",
+            "bridges": [
+              "M_AXIS"
+            ]
+          }
         }
       },
       "mipi_dsi_tx_ctrl_0": {
         "vlnv": "xilinx.com:ip:mipi_dsi_tx_ctrl:1.0",
-        "ip_revision": "8",
+        "ip_revision": "9",
         "xci_name": "bd_22fc_mipi_dsi_tx_ctrl_0_0",
         "xci_path": "ip/ip_4/bd_22fc_mipi_dsi_tx_ctrl_0_0.xci",
         "inst_hier_path": "mipi_dsi_tx_ctrl_0",
@@ -571,7 +580,7 @@
       },
       "mipi_dphy_0": {
         "vlnv": "xilinx.com:ip:mipi_dphy:4.3",
-        "ip_revision": "8",
+        "ip_revision": "11",
         "xci_name": "bd_22fc_mipi_dphy_0_0",
         "xci_path": "ip/ip_5/bd_22fc_mipi_dphy_0_0.xci",
         "inst_hier_path": "mipi_dphy_0",
@@ -643,7 +652,7 @@
           "mipi_dphy_0/tx_mipi_phy_if"
         ]
       },
-      "mipi_dsi_tx_ctrl_0_tx_mipi_ppi_if": {
+      "mipi_dphy_0_tx_mipi_ppi_if": {
         "interface_ports": [
           "mipi_dsi_tx_ctrl_0/tx_mipi_ppi_if",
           "mipi_dphy_0/tx_mipi_ppi_if"

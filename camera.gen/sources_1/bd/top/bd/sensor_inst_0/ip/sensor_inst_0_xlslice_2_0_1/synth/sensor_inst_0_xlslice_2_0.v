@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:ip:xlslice:1.0
-// IP Revision: 3
+// IP Revision: 4
 
-(* X_CORE_INFO = "xlslice_v1_0_3_xlslice,Vivado 2023.2" *)
-(* CHECK_LICENSE_TYPE = "sensor_inst_0_xlslice_2_0,xlslice_v1_0_3_xlslice,{}" *)
-(* CORE_GENERATION_INFO = "sensor_inst_0_xlslice_2_0,xlslice_v1_0_3_xlslice,{x_ipProduct=Vivado 2023.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=xlslice,x_ipVersion=1.0,x_ipCoreRevision=3,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,DIN_WIDTH=192,DIN_FROM=11,DIN_TO=0}" *)
+(* X_CORE_INFO = "xlslice_v1_0_4_xlslice,Vivado 2024.1" *)
+(* CHECK_LICENSE_TYPE = "sensor_inst_0_xlslice_2_0,xlslice_v1_0_4_xlslice,{}" *)
+(* CORE_GENERATION_INFO = "sensor_inst_0_xlslice_2_0,xlslice_v1_0_4_xlslice,{x_ipProduct=Vivado 2024.1,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=xlslice,x_ipVersion=1.0,x_ipCoreRevision=4,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,DIN_WIDTH=192,DIN_FROM=11,DIN_TO=0}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module sensor_inst_0_xlslice_2_0 (
   Din,
@@ -62,7 +62,7 @@ module sensor_inst_0_xlslice_2_0 (
 input wire [191 : 0] Din;
 output wire [11 : 0] Dout;
 
-  xlslice_v1_0_3_xlslice #(
+  xlslice_v1_0_4_xlslice #(
     .DIN_WIDTH(192),
     .DIN_FROM(11),
     .DIN_TO(0)

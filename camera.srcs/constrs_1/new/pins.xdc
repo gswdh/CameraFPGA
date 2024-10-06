@@ -120,6 +120,7 @@ set_property PACKAGE_PIN F16 [get_ports disp_spi_0_io0_io]
 set_property PACKAGE_PIN H17 [get_ports disp_spi_0_io1_io]
 set_property PACKAGE_PIN E16 [get_ports disp_spi_0_sck_io]
 
+
 # Sensor LVDS inputs
 # Clock
 set_property IOSTANDARD DIFF_HSTL_II_18 [get_ports ddr_clk_p_i_0_0]

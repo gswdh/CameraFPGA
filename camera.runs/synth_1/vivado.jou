@@ -1,14 +1,24 @@
 #-----------------------------------------------------------
-# Vivado v2023.2 (64-bit)
-# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
-# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
-# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Mon May 20 17:33:28 2024
-# Process ID: 287727
-# Current directory: /home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Sat Oct  5 10:06:08 2024
+# Process ID: 1956385
+# Current directory: /home/george/Projects/CameraFPGA/camera.runs/synth_1
 # Command line: vivado -log top_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_wrapper.tcl
-# Log file: /home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/top_wrapper.vds
-# Journal file: /home/test/Projects/CameraZynq/CameraFPGA/camera.runs/synth_1/vivado.jou
-# Running On: testserver, OS: Linux, CPU Frequency: 2390.139 MHz, CPU Physical cores: 4, Host memory: 16686 MB
+# Log file: /home/george/Projects/CameraFPGA/camera.runs/synth_1/top_wrapper.vds
+# Journal file: /home/george/Projects/CameraFPGA/camera.runs/synth_1/vivado.jou
+# Running On        :george-MacBookPro
+# Platform          :Ubuntu
+# Operating System  :Ubuntu 22.04.5 LTS
+# Processor Detail  :Intel(R) Core(TM) i9-9980HK CPU @ 2.40GHz
+# CPU Frequency     :2400.084 MHz
+# CPU Physical cores:8
+# CPU Logical cores :16
+# Host memory       :67320 MB
+# Swap memory       :2147 MB
+# Total Virtual     :69468 MB
+# Available Virtual :53559 MB
 #-----------------------------------------------------------
 source top_wrapper.tcl -notrace

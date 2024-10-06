@@ -4,7 +4,7 @@
     "xci_name": "sensor_xlconcat_0_0",
     "cell_name": "xlconcat_0",
     "component_reference": "xilinx.com:ip:xlconcat:2.1",
-    "ip_revision": "5",
+    "ip_revision": "6",
     "gen_directory": "../../../../../../camera.gen/sources_1/bd/sensor/ip/sensor_xlconcat_0_0",
     "parameters": {
       "component_parameters": {
@@ -138,7 +138,7 @@
         "IN125_WIDTH": [ { "value": "1", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "IN126_WIDTH": [ { "value": "1", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "IN127_WIDTH": [ { "value": "1", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
-        "dout_width": [ { "value": "3", "value_permission": "bd", "resolve_type": "user", "format": "long", "usage": "all" } ]
+        "dout_width": [ { "value": "3", "value_src": "user", "value_permission": "bd", "resolve_type": "user", "format": "long", "usage": "all" } ]
       },
       "model_parameters": {
         "IN0_WIDTH": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
@@ -277,6 +277,7 @@
         "BASE_BOARD_PART": [ { "value": "" } ],
         "BOARD_CONNECTIONS": [ { "value": "" } ],
         "DEVICE": [ { "value": "xc7z020" } ],
+        "NEXTGEN_VERSAL": [ { "value": "0" } ],
         "PACKAGE": [ { "value": "clg484" } ],
         "PREFHDL": [ { "value": "VERILOG" } ],
         "SILICON_REVISION": [ { "value": "" } ],
@@ -287,12 +288,12 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "5" } ],
+        "IPREVISION": [ { "value": "6" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "../../../../../../camera.gen/sources_1/bd/sensor/ip/sensor_xlconcat_0_0" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "../../ipshared" } ],
-        "SWVERSION": [ { "value": "2023.2" } ],
+        "SWVERSION": [ { "value": "2024.1" } ],
         "SYNTHESISFLOW": [ { "value": "GLOBAL" } ]
       }
     },
