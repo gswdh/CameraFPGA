@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "sensor_inst_0_clk_wiz_0_0",
-    "cell_name": "clk_wiz_0",
+    "cell_name": "sensor_0/clk_wiz_0",
     "component_reference": "xilinx.com:ip:clk_wiz:6.0",
     "ip_revision": "14",
     "gen_directory": ".",
@@ -624,7 +624,7 @@
           "parameters": {
             "BOARD.ASSOCIATED_PARAM": [ { "value": "CLK_IN1_BOARD_INTERFACE", "value_src": "constant", "value_permission": "bd", "usage": "all" } ],
             "CAN_DEBUG": [ { "value": "false", "value_permission": "bd", "resolve_type": "generated", "format": "bool", "is_ips_inferred": true, "is_static_object": false } ],
-            "FREQ_HZ": [ { "value": "200000000", "value_src": "user", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ]
+            "FREQ_HZ": [ { "value": "200000000", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ]
           },
           "port_maps": {
             "CLK_N": [ { "physical_name": "clk_in1_n" } ],

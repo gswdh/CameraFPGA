@@ -4,7 +4,7 @@
 <!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.                   -->
 <!-- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.   -->
 
-<Project Product="Vivado" Version="7" Minor="67" Path="/home/george/Projects/CameraFPGA/camera.xpr">
+<Project Product="Vivado" Version="7" Minor="67" Path="/home/george/Projects/CameraZynq/submodules/CameraFPGA/camera.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="b430b9c9728b4c2784e201c232aa76cf"/>
@@ -47,7 +47,7 @@
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
-    <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/axis_spi_1_0"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../ip_repo/axis_spi_1_0"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/spi_dma_1_0"/>
     <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
     <Option Name="IPDefaultOutputPath" Val="$PGENDIR/sources_1"/>
@@ -91,70 +91,70 @@
   <FileSets Version="1" Minor="32">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PPRDIR/gmax0505_streamer/bit_aligner.v">
+      <File Path="$PPRDIR/../../../CameraFPGA/gmax0505_streamer/bit_aligner.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/gmax0505_streamer/ddr_deserialiser.v">
+      <File Path="$PPRDIR/../../../CameraFPGA/gmax0505_streamer/ddr_deserialiser.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/gmax0505_streamer/decoder.v">
+      <File Path="$PPRDIR/../../../CameraFPGA/gmax0505_streamer/decoder.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/gmax0505_streamer/edge_capture.v">
+      <File Path="$PPRDIR/../../../CameraFPGA/gmax0505_streamer/edge_capture.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/gmax0505_streamer/gmax0505_channel.v">
+      <File Path="$PPRDIR/../../../CameraFPGA/gmax0505_streamer/gmax0505_channel.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/gmax0505_streamer/word_detector.v">
+      <File Path="$PPRDIR/../../../CameraFPGA/gmax0505_streamer/word_detector.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/gmax0505_streamer/gmax0505_streamer.v">
+      <File Path="$PPRDIR/../../../CameraFPGA/gmax0505_streamer/gmax0505_streamer.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/gmax0505_streamer/frame_detector.v">
+      <File Path="$PPRDIR/../../../CameraFPGA/gmax0505_streamer/frame_detector.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/gmax0505_streamer/pulse_generator.v">
+      <File Path="$PPRDIR/../../../CameraFPGA/gmax0505_streamer/pulse_generator.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/gmax0505_streamer/frame_engine.v">
+      <File Path="$PPRDIR/../../../CameraFPGA/gmax0505_streamer/frame_engine.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -175,7 +175,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/axis-uart/axis_uart_1.0/hdl/uart_fifo.v">
+      <File Path="$PPRDIR/../../../CameraFPGA/axis-uart/axis_uart_1.0/hdl/uart_fifo.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -183,7 +183,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/axis-uart/axis_uart_1.0/hdl/uart_prescaler.v">
+      <File Path="$PPRDIR/../../../CameraFPGA/axis-uart/axis_uart_1.0/hdl/uart_prescaler.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -191,7 +191,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/axis-uart/axis_uart_1.0/hdl/uart_rx.v">
+      <File Path="$PPRDIR/../../../CameraFPGA/axis-uart/axis_uart_1.0/hdl/uart_rx.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -199,7 +199,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/axis-uart/axis_uart_1.0/hdl/uart_tx.v">
+      <File Path="$PPRDIR/../../../CameraFPGA/axis-uart/axis_uart_1.0/hdl/uart_tx.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -207,7 +207,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/axis-uart/axis_uart_1.0/hdl/axis_uart_v1_0.v">
+      <File Path="$PPRDIR/../../../CameraFPGA/axis-uart/axis_uart_1.0/hdl/axis_uart_v1_0.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -223,7 +223,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/gmax0505_streamer/clk_divider.v">
+      <File Path="$PPRDIR/../../../CameraFPGA/gmax0505_streamer/clk_divider.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>

@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "peripherals_inst_1_clk_wiz_0_0",
-    "cell_name": "peripherals_0/clk_wiz_0",
+    "cell_name": "clk_wiz_0",
     "component_reference": "xilinx.com:ip:clk_wiz:6.0",
     "ip_revision": "14",
     "gen_directory": ".",

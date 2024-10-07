@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "peripherals_inst_1_axi_uartlite_pmc_0",
-    "cell_name": "peripherals_0/axi_uartlite_pmc",
+    "cell_name": "axi_uartlite_pmc",
     "component_reference": "xilinx.com:ip:axi_uartlite:2.0",
     "ip_revision": "35",
     "gen_directory": ".",

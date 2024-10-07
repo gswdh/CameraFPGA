@@ -21,7 +21,8 @@
       "xlslice_3": "",
       "xlconcat_0": "",
       "xlconstant_0": "",
-      "clk_wiz_0": ""
+      "clk_wiz_0": "",
+      "ila_0": ""
     },
     "interface_ports": {
       "S_AXI_0": {
@@ -737,6 +738,27 @@
             "value": "false"
           }
         }
+      },
+      "ila_0": {
+        "vlnv": "xilinx.com:ip:ila:6.2",
+        "ip_revision": "15",
+        "xci_name": "sensor_ila_0_0",
+        "xci_path": "ip/sensor_ila_0_0/sensor_ila_0_0.xci",
+        "inst_hier_path": "ila_0",
+        "parameters": {
+          "C_MONITOR_TYPE": {
+            "value": "Native"
+          },
+          "C_NUM_OF_PROBES": {
+            "value": "4"
+          },
+          "C_PROBE0_WIDTH": {
+            "value": "192"
+          },
+          "C_PROBE1_WIDTH": {
+            "value": "12"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -848,13 +870,15 @@
           "clk_wiz_0/par_clk",
           "frame_detector_0/clk_i",
           "frame_engine_0/clk_i",
-          "gmax0505_streamer_0/par_clk_i"
+          "gmax0505_streamer_0/par_clk_i",
+          "ila_0/clk"
         ]
       },
       "gmax0505_streamer_0_par_data_o": {
         "ports": [
           "gmax0505_streamer_0/par_data_o",
-          "xlslice_2/Din"
+          "xlslice_2/Din",
+          "ila_0/probe0"
         ]
       },
       "ref_clk_i_0_1": {
@@ -866,7 +890,8 @@
       "word_detector_0_detected_o1": {
         "ports": [
           "gmax0505_streamer_0/sync_done_o",
-          "xlconcat_0/In0"
+          "xlconcat_0/In0",
+          "ila_0/probe2"
         ]
       },
       "xlconcat_0_dout": {
@@ -884,13 +909,15 @@
       "xlslice_0_Dout": {
         "ports": [
           "xlslice_0/Dout",
-          "gmax0505_streamer_0/sync_word_i"
+          "gmax0505_streamer_0/sync_word_i",
+          "ila_0/probe1"
         ]
       },
       "xlslice_1_Dout": {
         "ports": [
           "xlslice_1/Dout",
-          "gmax0505_streamer_0/sync_en_i"
+          "gmax0505_streamer_0/sync_en_i",
+          "ila_0/probe3"
         ]
       },
       "xlslice_2_Dout": {

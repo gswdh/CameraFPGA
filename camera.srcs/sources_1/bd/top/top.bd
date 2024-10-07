@@ -1426,7 +1426,7 @@
             "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
             "parameters": {
               "ADDR_WIDTH": {
-                "value": "31",
+                "value": "16",
                 "value_src": "strong"
               },
               "ARUSER_WIDTH": {
@@ -1725,25 +1725,7 @@
             "direction": "I"
           },
           "int_ready_o_0": {
-            "direction": "O",
-            "parameters": {
-              "PortType": {
-                "value": "intr",
-                "value_src": "ip_prop"
-              },
-              "PortType.PROP_SRC": {
-                "value": "false",
-                "value_src": "ip_prop"
-              },
-              "PortWidth": {
-                "value": "1",
-                "value_src": "default_prop"
-              },
-              "SENSITIVITY": {
-                "value": "LEVEL_HIGH",
-                "value_src": "const_prop"
-              }
-            }
+            "direction": "O"
           },
           "int_frame_done_o_0": {
             "direction": "O"
@@ -1762,7 +1744,7 @@
         "variant_info": {
           "sensor.bd": {
             "scoped_diagram": "sensor_inst_0.bd",
-            "design_checksum": "0x7953FCC6F41F9244",
+            "design_checksum": "0xEFB590D8F41F9244",
             "ref_name": "sensor",
             "ref_subinst_path": "top_sensor_0",
             "ref_type": "Block Design",

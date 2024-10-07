@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "peripherals_inst_1_axi_quad_spi_badc_0",
-    "cell_name": "peripherals_0/axi_quad_spi_badc",
+    "cell_name": "axi_quad_spi_badc",
     "component_reference": "xilinx.com:ip:axi_quad_spi:3.2",
     "ip_revision": "30",
     "gen_directory": ".",

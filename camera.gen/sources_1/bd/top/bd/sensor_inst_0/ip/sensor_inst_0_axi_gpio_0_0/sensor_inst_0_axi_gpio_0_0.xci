@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "sensor_inst_0_axi_gpio_0_0",
-    "cell_name": "axi_gpio_0",
+    "cell_name": "sensor_0/axi_gpio_0",
     "component_reference": "xilinx.com:ip:axi_gpio:2.0",
     "ip_revision": "33",
     "gen_directory": ".",

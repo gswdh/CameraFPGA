@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "sensor_inst_0_frame_engine_0_0",
-    "cell_name": "frame_engine_0",
+    "cell_name": "sensor_0/frame_engine_0",
     "component_reference": "xilinx.com:module_ref:frame_engine:1.0",
     "ip_revision": "1",
     "gen_directory": ".",

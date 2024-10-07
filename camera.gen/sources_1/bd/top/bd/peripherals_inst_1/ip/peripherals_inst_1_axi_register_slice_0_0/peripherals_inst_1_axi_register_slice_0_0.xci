@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "peripherals_inst_1_axi_register_slice_0_0",
-    "cell_name": "peripherals_0/axi_register_slice_0",
+    "cell_name": "axi_register_slice_0",
     "component_reference": "xilinx.com:ip:axi_register_slice:2.1",
     "ip_revision": "31",
     "gen_directory": ".",
