@@ -156,6 +156,9 @@ class top_xlconcat_0_2_core : public sc_module
               , In4    ( "In4" )
               , In5    ( "In5" )
               , In6    ( "In6" )
+              , In7    ( "In7" )
+              , In8    ( "In8" )
+              , In9    ( "In9" )
               , dout   ( "dout" )
     {
         SC_HAS_PROCESS(top_xlconcat_0_2_core);
@@ -166,7 +169,10 @@ class top_xlconcat_0_2_core : public sc_module
                       << In3 
                       << In4 
                       << In5 
-                      << In6 ;
+                      << In6 
+                      << In7 
+                      << In8 
+                      << In9 ;
         dont_initialize();
     }
 
@@ -174,7 +180,7 @@ class top_xlconcat_0_2_core : public sc_module
    
     void concate_input_port_values()
     {
-        sc_bv <7> portConcateVal;
+        sc_bv <10> portConcateVal;
             portConcateVal.range(0,0) =  In0.read();
             portConcateVal.range(1,1) =  In1.read();
             portConcateVal.range(2,2) =  In2.read();
@@ -182,6 +188,9 @@ class top_xlconcat_0_2_core : public sc_module
             portConcateVal.range(4,4) =  In4.read();
             portConcateVal.range(5,5) =  In5.read();
             portConcateVal.range(6,6) =  In6.read();
+            portConcateVal.range(7,7) =  In7.read();
+            portConcateVal.range(8,8) =  In8.read();
+            portConcateVal.range(9,9) =  In9.read();
         dout.write(portConcateVal);
     }
     public: 
@@ -192,7 +201,10 @@ class top_xlconcat_0_2_core : public sc_module
         sc_in< sc_bv<IN4_WIDTH> >   In4;
         sc_in< sc_bv<IN5_WIDTH> >   In5;
         sc_in< sc_bv<IN6_WIDTH> >   In6;
-        sc_out< sc_bv <7> >  dout;
+        sc_in< sc_bv<IN7_WIDTH> >   In7;
+        sc_in< sc_bv<IN8_WIDTH> >   In8;
+        sc_in< sc_bv<IN9_WIDTH> >   In9;
+        sc_out< sc_bv <10> >  dout;
 
 };
 

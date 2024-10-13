@@ -53,15 +53,15 @@
 //  Output     Output      Phase    Duty Cycle   Pk-to-Pk     Phase
 //   Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)
 //----------------------------------------------------------------------------
-// delay_clk__200.00000______0.000______50.0______120.598____105.461
-// sensor_clk__50.00000______0.000______50.0______159.475____105.461
-// _usb_clk__12.00000______0.000______50.0______211.763____105.461
-// _eth_clk__25.00000______0.000______50.0______183.467____105.461
+// delay_clk__200.00000______0.000______50.0_______96.634_____91.235
+// sensor_clk__50.00000______0.000______50.0______127.364_____91.235
+// _usb_clk__12.00000______0.000______50.0______169.612_____91.235
+// _eth_clk__25.00000______0.000______50.0______146.624_____91.235
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
 //----------------------------------------------------------------------------
-// __primary_________100.000____________0.010
+// __primary_________200.000____________0.010
 
 `timescale 1ps/1ps
 
@@ -99,7 +99,7 @@ wire clk_in2_top_clk_wiz_0_1;
   wire        sensor_clk_top_clk_wiz_0_1;
   wire        usb_clk_top_clk_wiz_0_1;
   wire        eth_clk_top_clk_wiz_0_1;
-  wire        clk_out5_top_clk_wiz_0_1;
+  wire        mipi_clk_top_clk_wiz_0_1;
   wire        clk_out6_top_clk_wiz_0_1;
   wire        clk_out7_top_clk_wiz_0_1;
 
@@ -127,7 +127,7 @@ wire clk_in2_top_clk_wiz_0_1;
     .COMPENSATION         ("ZHOLD"),
     .STARTUP_WAIT         ("FALSE"),
     .DIVCLK_DIVIDE        (1),
-    .CLKFBOUT_MULT_F      (9.000),
+    .CLKFBOUT_MULT_F      (4.500),
     .CLKFBOUT_PHASE       (0.000),
     .CLKFBOUT_USE_FINE_PS ("FALSE"),
     .CLKOUT0_DIVIDE_F     (4.500),
@@ -146,7 +146,7 @@ wire clk_in2_top_clk_wiz_0_1;
     .CLKOUT3_PHASE        (0.000),
     .CLKOUT3_DUTY_CYCLE   (0.500),
     .CLKOUT3_USE_FINE_PS  ("FALSE"),
-    .CLKIN1_PERIOD        (10.000))
+    .CLKIN1_PERIOD        (5.000))
   mmcm_adv_inst
     // Output clocks
    (

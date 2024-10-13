@@ -53,13 +53,13 @@
 //  Output     Output      Phase    Duty Cycle   Pk-to-Pk     Phase
 //   Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)
 //----------------------------------------------------------------------------
-// badc_spi_clk__10.00000______0.000______50.0_____1704.514____313.282
-// disp_spi_clk__10.00000______0.000______50.0_____1704.514____313.282
+// badc_spi_clk__10.00000______0.000______50.0_____1240.491____313.282
+// disp_spi_clk__20.00000______0.000______50.0_____1054.702____313.282
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
 //----------------------------------------------------------------------------
-// __primary_________100.000______________0.1
+// __primary_________200.000______________0.1
 
 `timescale 1ps/1ps
 
@@ -119,16 +119,16 @@ wire clk_in2_peripherals_inst_1_clk_wiz_0_0;
   #(.BANDWIDTH            ("OPTIMIZED"),
     .COMPENSATION         ("ZHOLD"),
     .STARTUP_WAIT         ("FALSE"),
-    .DIVCLK_DIVIDE        (5),
+    .DIVCLK_DIVIDE        (10),
     .CLKFBOUT_MULT        (41),
     .CLKFBOUT_PHASE       (0.000),
     .CLKOUT0_DIVIDE       (82),
     .CLKOUT0_PHASE        (0.000),
     .CLKOUT0_DUTY_CYCLE   (0.500),
-    .CLKOUT1_DIVIDE       (82),
+    .CLKOUT1_DIVIDE       (41),
     .CLKOUT1_PHASE        (0.000),
     .CLKOUT1_DUTY_CYCLE   (0.500),
-    .CLKIN1_PERIOD        (10.000))
+    .CLKIN1_PERIOD        (5.000))
   plle2_adv_inst
     // Output clocks
    (

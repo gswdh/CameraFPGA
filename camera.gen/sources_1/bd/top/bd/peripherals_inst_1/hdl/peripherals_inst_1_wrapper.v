@@ -2,7 +2,7 @@
 //Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
-//Date        : Mon Oct  7 09:24:09 2024
+//Date        : Sun Oct 13 14:19:37 2024
 //Host        : george-MacBookPro running 64-bit Ubuntu 22.04.5 LTS
 //Command     : generate_target peripherals_inst_1_wrapper.bd
 //Design      : peripherals_inst_1_wrapper

@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Mon Oct  7 09:27:51 2024
-# Process ID: 3219468
+# Start of session at: Sun Oct 13 14:24:51 2024
+# Process ID: 574809
 # Current directory: /home/george/Projects/CameraZynq/submodules/CameraFPGA/camera.runs/impl_1
 # Command line: vivado -log top_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source top_wrapper.tcl -notrace
 # Log file: /home/george/Projects/CameraZynq/submodules/CameraFPGA/camera.runs/impl_1/top_wrapper.vdi
@@ -13,12 +13,12 @@
 # Platform          :Ubuntu
 # Operating System  :Ubuntu 22.04.5 LTS
 # Processor Detail  :Intel(R) Core(TM) i9-9980HK CPU @ 2.40GHz
-# CPU Frequency     :2400.001 MHz
+# CPU Frequency     :4501.041 MHz
 # CPU Physical cores:8
 # CPU Logical cores :16
 # Host memory       :67320 MB
 # Swap memory       :2147 MB
 # Total Virtual     :69468 MB
-# Available Virtual :55302 MB
+# Available Virtual :56990 MB
 #-----------------------------------------------------------
 source top_wrapper.tcl -notrace

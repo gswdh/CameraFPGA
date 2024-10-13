@@ -1,0 +1,5 @@
+vhdl xil_defaultlib  \
+"../../../bd/sensor/ip/sensor_axi_gpio_0_0/sim/sensor_axi_gpio_0_0.vhd" \
+
+# Do not sort compile order
+nosort

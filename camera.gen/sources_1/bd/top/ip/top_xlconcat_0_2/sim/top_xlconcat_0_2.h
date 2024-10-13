@@ -87,7 +87,10 @@ public:
   sc_core::sc_in< sc_dt::sc_bv<1> > In4;
   sc_core::sc_in< sc_dt::sc_bv<1> > In5;
   sc_core::sc_in< sc_dt::sc_bv<1> > In6;
-  sc_core::sc_out< sc_dt::sc_bv<7> > dout;
+  sc_core::sc_in< sc_dt::sc_bv<1> > In7;
+  sc_core::sc_in< sc_dt::sc_bv<1> > In8;
+  sc_core::sc_in< sc_dt::sc_bv<1> > In9;
+  sc_core::sc_out< sc_dt::sc_bv<10> > dout;
 
   // Dummy Signals for IP Ports
 
@@ -122,7 +125,10 @@ public:
   sc_core::sc_in< sc_dt::sc_bv<1> > In4;
   sc_core::sc_in< sc_dt::sc_bv<1> > In5;
   sc_core::sc_in< sc_dt::sc_bv<1> > In6;
-  sc_core::sc_out< sc_dt::sc_bv<7> > dout;
+  sc_core::sc_in< sc_dt::sc_bv<1> > In7;
+  sc_core::sc_in< sc_dt::sc_bv<1> > In8;
+  sc_core::sc_in< sc_dt::sc_bv<1> > In9;
+  sc_core::sc_out< sc_dt::sc_bv<10> > dout;
 
   // Dummy Signals for IP Ports
 
@@ -157,7 +163,10 @@ public:
   sc_core::sc_in< sc_dt::sc_bv<1> > In4;
   sc_core::sc_in< sc_dt::sc_bv<1> > In5;
   sc_core::sc_in< sc_dt::sc_bv<1> > In6;
-  sc_core::sc_out< sc_dt::sc_bv<7> > dout;
+  sc_core::sc_in< sc_dt::sc_bv<1> > In7;
+  sc_core::sc_in< sc_dt::sc_bv<1> > In8;
+  sc_core::sc_in< sc_dt::sc_bv<1> > In9;
+  sc_core::sc_out< sc_dt::sc_bv<10> > dout;
 
   // Dummy Signals for IP Ports
 
@@ -192,7 +201,10 @@ public:
   sc_core::sc_in< sc_dt::sc_bv<1> > In4;
   sc_core::sc_in< sc_dt::sc_bv<1> > In5;
   sc_core::sc_in< sc_dt::sc_bv<1> > In6;
-  sc_core::sc_out< sc_dt::sc_bv<7> > dout;
+  sc_core::sc_in< sc_dt::sc_bv<1> > In7;
+  sc_core::sc_in< sc_dt::sc_bv<1> > In8;
+  sc_core::sc_in< sc_dt::sc_bv<1> > In9;
+  sc_core::sc_out< sc_dt::sc_bv<10> > dout;
 
   // Dummy Signals for IP Ports
 
@@ -231,7 +243,10 @@ public:
   sc_core::sc_in< sc_dt::sc_bv<1> > In4;
   sc_core::sc_in< sc_dt::sc_bv<1> > In5;
   sc_core::sc_in< sc_dt::sc_bv<1> > In6;
-  sc_core::sc_out< sc_dt::sc_bv<7> > dout;
+  sc_core::sc_in< sc_dt::sc_bv<1> > In7;
+  sc_core::sc_in< sc_dt::sc_bv<1> > In8;
+  sc_core::sc_in< sc_dt::sc_bv<1> > In9;
+  sc_core::sc_out< sc_dt::sc_bv<10> > dout;
 
   // Dummy Signals for IP Ports
 

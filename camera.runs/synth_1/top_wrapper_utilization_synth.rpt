@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
-| Date         : Mon Oct  7 09:27:38 2024
+| Date         : Sun Oct 13 14:24:46 2024
 | Host         : george-MacBookPro running 64-bit Ubuntu 22.04.5 LTS
 | Command      : report_utilization -file top_wrapper_utilization_synth.rpt -pb top_wrapper_utilization_synth.pb
 | Design       : top_wrapper
@@ -28,20 +28,20 @@ Table of Contents
 1. Slice Logic
 --------------
 
-+----------------------------+------+-------+------------+-----------+-------+
-|          Site Type         | Used | Fixed | Prohibited | Available | Util% |
-+----------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*                | 5471 |     0 |          0 |     53200 | 10.28 |
-|   LUT as Logic             | 4905 |     0 |          0 |     53200 |  9.22 |
-|   LUT as Memory            |  566 |     0 |          0 |     17400 |  3.25 |
-|     LUT as Distributed RAM |   16 |     0 |            |           |       |
-|     LUT as Shift Register  |  550 |     0 |            |           |       |
-| Slice Registers            | 7680 |     2 |          0 |    106400 |  7.22 |
-|   Register as Flip Flop    | 7680 |     2 |          0 |    106400 |  7.22 |
-|   Register as Latch        |    0 |     0 |          0 |    106400 |  0.00 |
-| F7 Muxes                   |    7 |     0 |          0 |     26600 |  0.03 |
-| F8 Muxes                   |    0 |     0 |          0 |     13300 |  0.00 |
-+----------------------------+------+-------+------------+-----------+-------+
++----------------------------+-------+-------+------------+-----------+-------+
+|          Site Type         |  Used | Fixed | Prohibited | Available | Util% |
++----------------------------+-------+-------+------------+-----------+-------+
+| Slice LUTs*                | 24796 |     0 |          0 |     53200 | 46.61 |
+|   LUT as Logic             | 22509 |     0 |          0 |     53200 | 42.31 |
+|   LUT as Memory            |  2287 |     0 |          0 |     17400 | 13.14 |
+|     LUT as Distributed RAM |   394 |     0 |            |           |       |
+|     LUT as Shift Register  |  1893 |     0 |            |           |       |
+| Slice Registers            | 28207 |     2 |          0 |    106400 | 26.51 |
+|   Register as Flip Flop    | 28207 |     2 |          0 |    106400 | 26.51 |
+|   Register as Latch        |     0 |     0 |          0 |    106400 |  0.00 |
+| F7 Muxes                   |   244 |     0 |          0 |     26600 |  0.92 |
+| F8 Muxes                   |     3 |     0 |          0 |     13300 |  0.02 |
++----------------------------+-------+-------+------------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 Warning! LUT value is adjusted to account for LUT combining.
 Warning! For any ECO changes, please run place_design if there are unplaced instances
@@ -59,10 +59,10 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | 0     |            _ |         Set |            - |
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
-| 1     |          Yes |           - |          Set |
-| 1527  |          Yes |           - |        Reset |
-| 175   |          Yes |         Set |            - |
-| 5977  |          Yes |       Reset |            - |
+| 125   |          Yes |           - |          Set |
+| 2199  |          Yes |           - |        Reset |
+| 412   |          Yes |         Set |            - |
+| 25471 |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -72,11 +72,11 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +-------------------+------+-------+------------+-----------+-------+
 |     Site Type     | Used | Fixed | Prohibited | Available | Util% |
 +-------------------+------+-------+------------+-----------+-------+
-| Block RAM Tile    |    7 |     0 |          0 |       140 |  5.00 |
-|   RAMB36/FIFO*    |    6 |     0 |          0 |       140 |  4.29 |
-|     RAMB36E1 only |    6 |       |            |           |       |
-|   RAMB18          |    2 |     0 |          0 |       280 |  0.71 |
-|     RAMB18E1 only |    2 |       |            |           |       |
+| Block RAM Tile    |   65 |     0 |          0 |       140 | 46.43 |
+|   RAMB36/FIFO*    |   61 |     0 |          0 |       140 | 43.57 |
+|     RAMB36E1 only |   61 |       |            |           |       |
+|   RAMB18          |    8 |     0 |          0 |       280 |  2.86 |
+|     RAMB18E1 only |    8 |       |            |           |       |
 +-------------------+------+-------+------------+-----------+-------+
 * Note: Each Block RAM Tile only has one FIFO logic available and therefore can accommodate only one FIFO36E1 or one FIFO18E1. However, if a FIFO18E1 occupies a Block RAM Tile, that tile can still accommodate a RAMB18E1
 
@@ -97,7 +97,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +-----------------------------+------+-------+------------+-----------+--------+
 |          Site Type          | Used | Fixed | Prohibited | Available |  Util% |
 +-----------------------------+------+-------+------------+-----------+--------+
-| Bonded IOB                  |   88 |     0 |          0 |       200 |  44.00 |
+| Bonded IOB                  |  108 |     0 |          0 |       200 |  54.00 |
 | Bonded IPADs                |    0 |     0 |          0 |         2 |   0.00 |
 | Bonded IOPADs               |  130 |     0 |          0 |       130 | 100.00 |
 | PHY_CONTROL                 |    0 |     0 |          0 |         4 |   0.00 |
@@ -111,24 +111,26 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | IDELAYE2/IDELAYE2_FINEDELAY |   16 |     0 |          0 |       200 |   8.00 |
 |   IDELAYE2 only             |   16 |     0 |            |           |        |
 | ILOGIC                      |    0 |     0 |          0 |       200 |   0.00 |
-| OLOGIC                      |    0 |     0 |          0 |       200 |   0.00 |
+| OLOGIC                      |    5 |     0 |          0 |       200 |   2.50 |
+|   OSERDES                   |    5 |       |          0 |       200 |        |
 +-----------------------------+------+-------+------------+-----------+--------+
 
 
 5. Clocking
 -----------
 
-+------------+------+-------+------------+-----------+-------+
-|  Site Type | Used | Fixed | Prohibited | Available | Util% |
-+------------+------+-------+------------+-----------+-------+
-| BUFGCTRL   |   13 |     0 |          0 |        32 | 40.63 |
-| BUFIO      |    0 |     0 |          0 |        16 |  0.00 |
-| MMCME2_ADV |    2 |     0 |          0 |         4 | 50.00 |
-| PLLE2_ADV  |    1 |     0 |          0 |         4 | 25.00 |
-| BUFMRCE    |    0 |     0 |          0 |         8 |  0.00 |
-| BUFHCE     |    0 |     0 |          0 |        72 |  0.00 |
-| BUFR       |    0 |     0 |          0 |        16 |  0.00 |
-+------------+------+-------+------------+-----------+-------+
++--------------+------+-------+------------+-----------+-------+
+|   Site Type  | Used | Fixed | Prohibited | Available | Util% |
++--------------+------+-------+------------+-----------+-------+
+| BUFGCTRL     |   16 |     0 |          0 |        32 | 50.00 |
+| BUFIO        |    2 |     0 |          0 |        16 | 12.50 |
+|   BUFIO only |    2 |     0 |            |           |       |
+| MMCME2_ADV   |    3 |     0 |          0 |         4 | 75.00 |
+| PLLE2_ADV    |    1 |     0 |          0 |         4 | 25.00 |
+| BUFMRCE      |    0 |     0 |          0 |         8 |  0.00 |
+| BUFHCE       |    0 |     0 |          0 |        72 |  0.00 |
+| BUFR         |    2 |     0 |          0 |        16 | 12.50 |
++--------------+------+-------+------------+-----------+-------+
 
 
 6. Specific Feature
@@ -151,40 +153,47 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 7. Primitives
 -------------
 
-+------------+------+----------------------+
-|  Ref Name  | Used |  Functional Category |
-+------------+------+----------------------+
-| FDRE       | 5977 |         Flop & Latch |
-| LUT5       | 1931 |                  LUT |
-| LUT6       | 1828 |                  LUT |
-| FDCE       | 1527 |         Flop & Latch |
-| LUT3       |  892 |                  LUT |
-| LUT4       |  801 |                  LUT |
-| LUT2       |  731 |                  LUT |
-| SRL16E     |  429 |   Distributed Memory |
-| CARRY4     |  285 |           CarryLogic |
-| SRLC32E    |  259 |   Distributed Memory |
-| LUT1       |  199 |                  LUT |
-| FDSE       |  175 |         Flop & Latch |
-| BIBUF      |  130 |                   IO |
-| OBUF       |   32 |                   IO |
-| IBUF       |   22 |                   IO |
-| RAMD32     |   20 |   Distributed Memory |
-| IBUFDS     |   17 |                   IO |
-| IDELAYE2   |   16 |                   IO |
-| BUFG       |   13 |                Clock |
-| OBUFT      |    8 |                   IO |
-| MUXF7      |    7 |                MuxFx |
-| RAMB36E1   |    6 |         Block Memory |
-| RAMS32     |    4 |   Distributed Memory |
-| SRLC16E    |    2 |   Distributed Memory |
-| RAMB18E1   |    2 |         Block Memory |
-| MMCME2_ADV |    2 |                Clock |
-| PS7        |    1 | Specialized Resource |
-| PLLE2_ADV  |    1 |                Clock |
-| IDELAYCTRL |    1 |                   IO |
-| FDPE       |    1 |         Flop & Latch |
-+------------+------+----------------------+
++------------+-------+----------------------+
+|  Ref Name  |  Used |  Functional Category |
++------------+-------+----------------------+
+| FDRE       | 25471 |         Flop & Latch |
+| LUT6       |  8385 |                  LUT |
+| LUT3       |  4991 |                  LUT |
+| LUT5       |  4593 |                  LUT |
+| LUT4       |  3461 |                  LUT |
+| LUT1       |  2644 |                  LUT |
+| LUT2       |  2228 |                  LUT |
+| FDCE       |  2199 |         Flop & Latch |
+| SRL16E     |  1522 |   Distributed Memory |
+| SRLC32E    |  1233 |   Distributed Memory |
+| CARRY4     |  1017 |           CarryLogic |
+| FDSE       |   412 |         Flop & Latch |
+| MUXF7      |   244 |                MuxFx |
+| RAMD64E    |   236 |   Distributed Memory |
+| RAMD32     |   228 |   Distributed Memory |
+| BIBUF      |   130 |                   IO |
+| FDPE       |   125 |         Flop & Latch |
+| RAMS32     |    70 |   Distributed Memory |
+| RAMB36E1   |    61 |         Block Memory |
+| OBUF       |    42 |                   IO |
+| IBUF       |    22 |                   IO |
+| IBUFDS     |    17 |                   IO |
+| IDELAYE2   |    16 |                   IO |
+| BUFG       |    16 |                Clock |
+| OBUFDS     |    10 |                   IO |
+| RAMB18E1   |     8 |         Block Memory |
+| OBUFT      |     8 |                   IO |
+| OSERDESE2  |     5 |                   IO |
+| INV        |     5 |                  LUT |
+| MUXF8      |     3 |                MuxFx |
+| MMCME2_ADV |     3 |                Clock |
+| SRLC16E    |     2 |   Distributed Memory |
+| BUFR       |     2 |                Clock |
+| BUFIO      |     2 |                Clock |
+| PS7        |     1 | Specialized Resource |
+| PLLE2_ADV  |     1 |                Clock |
+| IDELAYCTRL |     1 |                   IO |
++------------+-------+----------------------+
 
 
 8. Black Boxes

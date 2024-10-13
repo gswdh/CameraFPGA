@@ -1,6 +1,6 @@
 -------------------------------------
 | Tool Version : Vivado v.2024.1
-| Date         : Mon Oct  7 09:31:11 2024
+| Date         : Sun Oct 13 14:27:07 2024
 | Host         : george-MacBookPro
 | Design       : design_1
 | Device       : xc7z020-clg484-2--

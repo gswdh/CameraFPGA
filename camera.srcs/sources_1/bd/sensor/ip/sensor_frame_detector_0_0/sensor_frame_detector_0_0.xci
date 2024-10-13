@@ -35,7 +35,7 @@
         "OUTPUTDIR": [ { "value": "../../../../../../camera.gen/sources_1/bd/sensor/ip/sensor_frame_detector_0_0" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "../../ipshared" } ],
-        "SWVERSION": [ { "value": "2023.2" } ],
+        "SWVERSION": [ { "value": "2024.1" } ],
         "SYNTHESISFLOW": [ { "value": "OOC_HIERARCHICAL" } ]
       }
     },

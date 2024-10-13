@@ -1,13 +1,13 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xBD8C0DE13546DF52",
+      "boundary_crc": "0xBD8C0DE100F24EDB",
       "design_src": "SBD",
       "device": "xc7z020clg484-2",
       "name": "bd_22fc",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "scoped": "true",
-      "synth_flow_mode": "Hierarchical",
+      "synth_flow_mode": "None",
       "tool_version": "2024.1",
       "validated": "true"
     },
@@ -46,15 +46,15 @@
             "value_src": "constant"
           },
           "CLK_DOMAIN": {
-            "value": "/clk_wiz_0_clk_out1",
-            "value_src": "ip_prop"
+            "value": "evf_ACLK_0",
+            "value_src": "default_prop"
           },
           "DATA_WIDTH": {
             "value": "32"
           },
           "FREQ_HZ": {
             "value": "200000000",
-            "value_src": "ip_prop"
+            "value_src": "user_prop"
           },
           "HAS_BRESP": {
             "value": "1",
@@ -110,7 +110,7 @@
           },
           "NUM_READ_THREADS": {
             "value": "1",
-            "value_src": "default"
+            "value_src": "user_prop"
           },
           "NUM_WRITE_OUTSTANDING": {
             "value": "1",
@@ -118,11 +118,11 @@
           },
           "NUM_WRITE_THREADS": {
             "value": "1",
-            "value_src": "default"
+            "value_src": "user_prop"
           },
           "PHASE": {
             "value": "0.0",
-            "value_src": "ip_prop"
+            "value_src": "default"
           },
           "PROTOCOL": {
             "value": "AXI4LITE"
@@ -133,7 +133,7 @@
           },
           "RUSER_BITS_PER_BYTE": {
             "value": "0",
-            "value_src": "default"
+            "value_src": "user_prop"
           },
           "RUSER_WIDTH": {
             "value": "0",
@@ -145,7 +145,7 @@
           },
           "WUSER_BITS_PER_BYTE": {
             "value": "0",
-            "value_src": "default"
+            "value_src": "user_prop"
           },
           "WUSER_WIDTH": {
             "value": "0",
@@ -169,7 +169,7 @@
             "value_src": "default_prop"
           },
           "FREQ_HZ": {
-            "value": "100000000",
+            "value": "200000000",
             "value_src": "user_prop"
           },
           "HAS_TKEEP": {
@@ -239,7 +239,7 @@
             "value_src": "default_prop"
           },
           "FREQ_HZ": {
-            "value": "100000000",
+            "value": "200000000",
             "value_src": "user_prop"
           },
           "FREQ_TOLERANCE_HZ": {
@@ -277,12 +277,12 @@
             "value": "s_axi"
           },
           "CLK_DOMAIN": {
-            "value": "/clk_wiz_0_clk_out1",
-            "value_src": "ip_prop"
+            "value": "evf_ACLK_0",
+            "value_src": "default_prop"
           },
           "FREQ_HZ": {
             "value": "200000000",
-            "value_src": "ip_prop"
+            "value_src": "user_prop"
           },
           "FREQ_TOLERANCE_HZ": {
             "value": "0",
@@ -294,7 +294,7 @@
           },
           "PHASE": {
             "value": "0.0",
-            "value_src": "ip_prop"
+            "value_src": "default"
           }
         }
       },

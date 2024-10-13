@@ -24,14 +24,77 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_axi_int
 # IP: bd/top/ip/top_xlconcat_0_2/top_xlconcat_0_2.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_xlconcat_0_2 || ORIG_REF_NAME==top_xlconcat_0_2} -quiet] -quiet
 
-# IP: bd/top/ip/top_auto_pc_2/top_auto_pc_2.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_auto_pc_2 || ORIG_REF_NAME==top_auto_pc_2} -quiet] -quiet
+# IP: bd/top/ip/top_axi_interconnect_0_0/top_axi_interconnect_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_axi_interconnect_0_0 || ORIG_REF_NAME==top_axi_interconnect_0_0} -quiet] -quiet
+
+# IP: bd/top/ip/top_axi_vdma_0_0/top_axi_vdma_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_axi_vdma_0_0 || ORIG_REF_NAME==top_axi_vdma_0_0} -quiet] -quiet
+
+# IP: bd/top/ip/top_mipi_dsi_tx_subsystem_0_0/top_mipi_dsi_tx_subsystem_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_mipi_dsi_tx_subsystem_0_0 || ORIG_REF_NAME==top_mipi_dsi_tx_subsystem_0_0} -quiet] -quiet
+
+# Block Designs: /home/george/Projects/CameraZynq/submodules/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_mipi_dsi_tx_subsystem_0_0/bd_0/bd_1ef9.bd
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==bd_1ef9 || ORIG_REF_NAME==bd_1ef9} -quiet] -quiet
+
+# IP: /home/george/Projects/CameraZynq/submodules/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_mipi_dsi_tx_subsystem_0_0/bd_0/ip/ip_0/bd_1ef9_proc_sys_reset_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==bd_1ef9_proc_sys_reset_0_0 || ORIG_REF_NAME==bd_1ef9_proc_sys_reset_0_0} -quiet] -quiet
+
+# IP: /home/george/Projects/CameraZynq/submodules/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_mipi_dsi_tx_subsystem_0_0/bd_0/ip/ip_1/bd_1ef9_proc_sys_reset_1_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==bd_1ef9_proc_sys_reset_1_0 || ORIG_REF_NAME==bd_1ef9_proc_sys_reset_1_0} -quiet] -quiet
+
+# IP: /home/george/Projects/CameraZynq/submodules/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_mipi_dsi_tx_subsystem_0_0/bd_0/ip/ip_2/bd_1ef9_util_vector_logic_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==bd_1ef9_util_vector_logic_0_0 || ORIG_REF_NAME==bd_1ef9_util_vector_logic_0_0} -quiet] -quiet
+
+# IP: /home/george/Projects/CameraZynq/submodules/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_mipi_dsi_tx_subsystem_0_0/bd_0/ip/ip_3/bd_1ef9_axis_data_fifo_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==bd_1ef9_axis_data_fifo_0_0 || ORIG_REF_NAME==bd_1ef9_axis_data_fifo_0_0} -quiet] -quiet
+
+# IP: /home/george/Projects/CameraZynq/submodules/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_mipi_dsi_tx_subsystem_0_0/bd_0/ip/ip_4/bd_1ef9_mipi_dsi_tx_ctrl_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==bd_1ef9_mipi_dsi_tx_ctrl_0_0 || ORIG_REF_NAME==bd_1ef9_mipi_dsi_tx_ctrl_0_0} -quiet] -quiet
+
+# IP: /home/george/Projects/CameraZynq/submodules/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_mipi_dsi_tx_subsystem_0_0/bd_0/ip/ip_5/bd_1ef9_mipi_dphy_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==bd_1ef9_mipi_dphy_0_0 || ORIG_REF_NAME==bd_1ef9_mipi_dphy_0_0} -quiet] -quiet
+
+# IP: /home/george/Projects/CameraZynq/submodules/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_mipi_dsi_tx_subsystem_0_0/bd_0/ip/ip_5/ip_0/bd_1ef9_mipi_dphy_0_0_clock_module_tx.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==bd_1ef9_mipi_dphy_0_0_clock_module_tx || ORIG_REF_NAME==bd_1ef9_mipi_dphy_0_0_clock_module_tx} -quiet] -quiet
+
+# IP: bd/top/ip/top_axi_interconnect_2_0/top_axi_interconnect_2_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_axi_interconnect_2_0 || ORIG_REF_NAME==top_axi_interconnect_2_0} -quiet] -quiet
+
+# IP: bd/top/ip/top_axi_timer_0_0/top_axi_timer_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_axi_timer_0_0 || ORIG_REF_NAME==top_axi_timer_0_0} -quiet] -quiet
+
+# IP: bd/top/ip/top_auto_pc_6/top_auto_pc_6.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_auto_pc_6 || ORIG_REF_NAME==top_auto_pc_6} -quiet] -quiet
 
 # IP: bd/top/ip/top_auto_pc_0/top_auto_pc_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_auto_pc_0 || ORIG_REF_NAME==top_auto_pc_0} -quiet] -quiet
 
 # IP: bd/top/ip/top_auto_pc_1/top_auto_pc_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_auto_pc_1 || ORIG_REF_NAME==top_auto_pc_1} -quiet] -quiet
+
+# IP: bd/top/ip/top_auto_pc_2/top_auto_pc_2.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_auto_pc_2 || ORIG_REF_NAME==top_auto_pc_2} -quiet] -quiet
+
+# IP: bd/top/ip/top_auto_pc_3/top_auto_pc_3.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_auto_pc_3 || ORIG_REF_NAME==top_auto_pc_3} -quiet] -quiet
+
+# IP: bd/top/ip/top_auto_pc_4/top_auto_pc_4.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_auto_pc_4 || ORIG_REF_NAME==top_auto_pc_4} -quiet] -quiet
+
+# IP: bd/top/ip/top_auto_pc_5/top_auto_pc_5.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_auto_pc_5 || ORIG_REF_NAME==top_auto_pc_5} -quiet] -quiet
+
+# IP: bd/top/ip/top_auto_ds_0/top_auto_ds_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_auto_ds_0 || ORIG_REF_NAME==top_auto_ds_0} -quiet] -quiet
+
+# IP: bd/top/ip/top_auto_pc_7/top_auto_pc_7.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_auto_pc_7 || ORIG_REF_NAME==top_auto_pc_7} -quiet] -quiet
+
+# IP: bd/top/ip/top_auto_ds_1/top_auto_ds_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_auto_ds_1 || ORIG_REF_NAME==top_auto_ds_1} -quiet] -quiet
+
+# IP: bd/top/ip/top_auto_pc_8/top_auto_pc_8.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_auto_pc_8 || ORIG_REF_NAME==top_auto_pc_8} -quiet] -quiet
 
 # XDC: /home/george/Projects/CameraZynq/submodules/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_processing_system7_0_0/top_processing_system7_0_0.xdc
 set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==top_processing_system7_0_0 || ORIG_REF_NAME==top_processing_system7_0_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
@@ -50,10 +113,81 @@ set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filte
 
 # XDC: /home/george/Projects/CameraZynq/submodules/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_clk_wiz_0_1/top_clk_wiz_0_1_ooc.xdc
 
-# XDC: /home/george/Projects/CameraZynq/submodules/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_auto_pc_2/top_auto_pc_2_ooc.xdc
+# XDC: /home/george/Projects/CameraZynq/submodules/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_axi_vdma_0_0/top_axi_vdma_0_0.xdc
+set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==top_axi_vdma_0_0 || ORIG_REF_NAME==top_axi_vdma_0_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
+
+# XDC: /home/george/Projects/CameraZynq/submodules/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_axi_vdma_0_0/top_axi_vdma_0_0_clocks.xdc
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==top_axi_vdma_0_0 || ORIG_REF_NAME==top_axi_vdma_0_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
+
+# XDC: /home/george/Projects/CameraZynq/submodules/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_axi_vdma_0_0/top_axi_vdma_0_0_ooc.xdc
+
+# XDC: /home/george/Projects/CameraZynq/submodules/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_mipi_dsi_tx_subsystem_0_0/bd_0/ip/ip_0/bd_1ef9_proc_sys_reset_0_0_board.xdc
+set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==bd_1ef9_proc_sys_reset_0_0 || ORIG_REF_NAME==bd_1ef9_proc_sys_reset_0_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
+
+# XDC: /home/george/Projects/CameraZynq/submodules/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_mipi_dsi_tx_subsystem_0_0/bd_0/ip/ip_0/bd_1ef9_proc_sys_reset_0_0.xdc
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==bd_1ef9_proc_sys_reset_0_0 || ORIG_REF_NAME==bd_1ef9_proc_sys_reset_0_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
+
+# XDC: /home/george/Projects/CameraZynq/submodules/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_mipi_dsi_tx_subsystem_0_0/bd_0/ip/ip_1/bd_1ef9_proc_sys_reset_1_0_board.xdc
+set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==bd_1ef9_proc_sys_reset_1_0 || ORIG_REF_NAME==bd_1ef9_proc_sys_reset_1_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
+
+# XDC: /home/george/Projects/CameraZynq/submodules/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_mipi_dsi_tx_subsystem_0_0/bd_0/ip/ip_1/bd_1ef9_proc_sys_reset_1_0.xdc
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==bd_1ef9_proc_sys_reset_1_0 || ORIG_REF_NAME==bd_1ef9_proc_sys_reset_1_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
+
+# XDC: /home/george/Projects/CameraZynq/submodules/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_mipi_dsi_tx_subsystem_0_0/bd_0/ip/ip_4/bd_1ef9_mipi_dsi_tx_ctrl_0_0.xdc
+set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==bd_1ef9_mipi_dsi_tx_ctrl_0_0 || ORIG_REF_NAME==bd_1ef9_mipi_dsi_tx_ctrl_0_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
+
+# XDC: /home/george/Projects/CameraZynq/submodules/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_mipi_dsi_tx_subsystem_0_0/bd_0/ip/ip_5/ip_0/bd_1ef9_mipi_dphy_0_0_clock_module_tx.xdc
+set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==bd_1ef9_mipi_dphy_0_0_clock_module_tx || ORIG_REF_NAME==bd_1ef9_mipi_dphy_0_0_clock_module_tx} -quiet] {/inst } ]/inst ] -quiet] -quiet
+
+# XDC: /home/george/Projects/CameraZynq/submodules/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_mipi_dsi_tx_subsystem_0_0/bd_0/ip/ip_5/ip_0/bd_1ef9_mipi_dphy_0_0_clock_module_tx_ooc.xdc
+
+# XDC: /home/george/Projects/CameraZynq/submodules/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_mipi_dsi_tx_subsystem_0_0/bd_0/ip/ip_5/bd_1ef9_mipi_dphy_0_0.xdc
+set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==bd_1ef9_mipi_dphy_0_0 || ORIG_REF_NAME==bd_1ef9_mipi_dphy_0_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
+
+# XDC: /home/george/Projects/CameraZynq/submodules/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_mipi_dsi_tx_subsystem_0_0/bd_0/ip/ip_5/bd_1ef9_mipi_dphy_0_0_clocks.xdc
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==bd_1ef9_mipi_dphy_0_0 || ORIG_REF_NAME==bd_1ef9_mipi_dphy_0_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
+
+# XDC: /home/george/Projects/CameraZynq/submodules/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_mipi_dsi_tx_subsystem_0_0/bd_0/bd_1ef9_ooc.xdc
+
+# XDC: /home/george/Projects/CameraZynq/submodules/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_mipi_dsi_tx_subsystem_0_0/top_mipi_dsi_tx_subsystem_0_0_board.xdc
+set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==top_mipi_dsi_tx_subsystem_0_0 || ORIG_REF_NAME==top_mipi_dsi_tx_subsystem_0_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
+
+# XDC: /home/george/Projects/CameraZynq/submodules/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_mipi_dsi_tx_subsystem_0_0/top_mipi_dsi_tx_subsystem_0_0_impl.xdc
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==top_mipi_dsi_tx_subsystem_0_0 || ORIG_REF_NAME==top_mipi_dsi_tx_subsystem_0_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
+
+# XDC: /home/george/Projects/CameraZynq/submodules/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_mipi_dsi_tx_subsystem_0_0/top_mipi_dsi_tx_subsystem_0_0_fixed_ooc.xdc
+
+# XDC: /home/george/Projects/CameraZynq/submodules/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_axi_timer_0_0/top_axi_timer_0_0.xdc
+set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==top_axi_timer_0_0 || ORIG_REF_NAME==top_axi_timer_0_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
+
+# XDC: /home/george/Projects/CameraZynq/submodules/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_axi_timer_0_0/top_axi_timer_0_0_ooc.xdc
+
+# XDC: /home/george/Projects/CameraZynq/submodules/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_auto_pc_6/top_auto_pc_6_ooc.xdc
 
 # XDC: /home/george/Projects/CameraZynq/submodules/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_auto_pc_0/top_auto_pc_0_ooc.xdc
 
 # XDC: /home/george/Projects/CameraZynq/submodules/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_auto_pc_1/top_auto_pc_1_ooc.xdc
+
+# XDC: /home/george/Projects/CameraZynq/submodules/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_auto_pc_2/top_auto_pc_2_ooc.xdc
+
+# XDC: /home/george/Projects/CameraZynq/submodules/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_auto_pc_3/top_auto_pc_3_ooc.xdc
+
+# XDC: /home/george/Projects/CameraZynq/submodules/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_auto_pc_4/top_auto_pc_4_ooc.xdc
+
+# XDC: /home/george/Projects/CameraZynq/submodules/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_auto_pc_5/top_auto_pc_5_ooc.xdc
+
+# XDC: /home/george/Projects/CameraZynq/submodules/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_auto_ds_0/top_auto_ds_0_clocks.xdc
+set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==top_auto_ds_0 || ORIG_REF_NAME==top_auto_ds_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
+
+# XDC: /home/george/Projects/CameraZynq/submodules/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_auto_ds_0/top_auto_ds_0_ooc.xdc
+
+# XDC: /home/george/Projects/CameraZynq/submodules/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_auto_pc_7/top_auto_pc_7_ooc.xdc
+
+# XDC: /home/george/Projects/CameraZynq/submodules/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_auto_ds_1/top_auto_ds_1_clocks.xdc
+set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==top_auto_ds_1 || ORIG_REF_NAME==top_auto_ds_1} -quiet] {/inst } ]/inst ] -quiet] -quiet
+
+# XDC: /home/george/Projects/CameraZynq/submodules/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_auto_ds_1/top_auto_ds_1_ooc.xdc
+
+# XDC: /home/george/Projects/CameraZynq/submodules/CameraFPGA/camera.gen/sources_1/bd/top/ip/top_auto_pc_8/top_auto_pc_8_ooc.xdc
 
 # XDC: /home/george/Projects/CameraZynq/submodules/CameraFPGA/camera.gen/sources_1/bd/top/top_ooc.xdc

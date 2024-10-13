@@ -143,7 +143,21 @@ class processing_system7_v5_5_tlm : public sc_core::sc_module   {
     sc_core::sc_out<bool> USB1_VBUS_PWRSELECT;
     sc_core::sc_in<bool> USB1_VBUS_PWRFAULT;
     sc_core::sc_in<bool> M_AXI_GP0_ACLK;
-    sc_core::sc_in<sc_dt::sc_bv<7> >  IRQ_F2P;
+    sc_core::sc_out<sc_dt::sc_bv<8> >  S_AXI_HP0_RCOUNT;
+    sc_core::sc_out<sc_dt::sc_bv<8> >  S_AXI_HP0_WCOUNT;
+    sc_core::sc_out<sc_dt::sc_bv<3> >  S_AXI_HP0_RACOUNT;
+    sc_core::sc_out<sc_dt::sc_bv<6> >  S_AXI_HP0_WACOUNT;
+    sc_core::sc_in<bool> S_AXI_HP0_ACLK;
+    sc_core::sc_in<bool> S_AXI_HP0_RDISSUECAP1_EN;
+    sc_core::sc_in<bool> S_AXI_HP0_WRISSUECAP1_EN;
+    sc_core::sc_out<sc_dt::sc_bv<8> >  S_AXI_HP1_RCOUNT;
+    sc_core::sc_out<sc_dt::sc_bv<8> >  S_AXI_HP1_WCOUNT;
+    sc_core::sc_out<sc_dt::sc_bv<3> >  S_AXI_HP1_RACOUNT;
+    sc_core::sc_out<sc_dt::sc_bv<6> >  S_AXI_HP1_WACOUNT;
+    sc_core::sc_in<bool> S_AXI_HP1_ACLK;
+    sc_core::sc_in<bool> S_AXI_HP1_RDISSUECAP1_EN;
+    sc_core::sc_in<bool> S_AXI_HP1_WRISSUECAP1_EN;
+    sc_core::sc_in<sc_dt::sc_bv<10> >  IRQ_F2P;
     sc_core::sc_out<bool> FCLK_CLK0;
     sc_core::sc_out<bool> FCLK_RESET0_N;
     sc_core::sc_inout<sc_dt::sc_bv<54> >  MIO;
@@ -170,6 +184,10 @@ class processing_system7_v5_5_tlm : public sc_core::sc_module   {
 
     xtlm::xtlm_aximm_initiator_socket*      M_AXI_GP0_wr_socket;
     xtlm::xtlm_aximm_initiator_socket*      M_AXI_GP0_rd_socket;
+    xtlm::xtlm_aximm_target_socket*         S_AXI_HP0_wr_socket;
+    xtlm::xtlm_aximm_target_socket*         S_AXI_HP0_rd_socket;
+    xtlm::xtlm_aximm_target_socket*         S_AXI_HP1_wr_socket;
+    xtlm::xtlm_aximm_target_socket*         S_AXI_HP1_rd_socket;
 
     //constructor having three paramters
     // 1. module name in sc_module_name objec, 
@@ -195,6 +213,10 @@ processing_system7_v5_5_tlm(sc_core::sc_module_name name,
     // Bridge's Xtlm wr/rd target sockets binds with 
     // xtlm initiator sockets of processing_system7_tlm and tlm simple initiator 
     // socket with xilinx_zynq's target socket
+    xtlm::xaximm_xtlm2tlm_t<64,32> S_AXI_HP0_xtlm_brdg;
+    xtlm::xtlm_aximm_fifo *S_AXI_HP0_buff;
+    xtlm::xaximm_xtlm2tlm_t<64,32> S_AXI_HP1_xtlm_brdg;
+    xtlm::xtlm_aximm_fifo *S_AXI_HP1_buff;
 
     // This Bridges converts b_transport to nb_transports and also
     // Converts tlm transactions to xtlm transactions.

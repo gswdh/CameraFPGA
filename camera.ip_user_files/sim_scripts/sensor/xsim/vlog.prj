@@ -1,0 +1,19 @@
+verilog xil_defaultlib --include "/home/george/Xilinx/Vivado/2024.1/data/xilinx_vip/include" --include "../../../../camera.gen/sources_1/bd/sensor/ipshared/3242" --include "../../../../camera.gen/sources_1/bd/sensor/ipshared/814a/hdl/verilog" --include "../../../../camera.gen/sources_1/bd/sensor/ipshared/1017/hdl/verilog" --include "../../../../camera.gen/sources_1/bd/sensor/ipshared/8745/hdl/verilog" --include "../../../../camera.gen/sources_1/bd/sensor/ipshared/2340/hdl/verilog" \
+"../../../bd/sensor/ip/sensor_xlslice_0_0/sim/sensor_xlslice_0_0.v" \
+"../../../bd/sensor/ip/sensor_xlslice_1_0/sim/sensor_xlslice_1_0.v" \
+"../../../bd/sensor/ip/sensor_gmax0505_streamer_0_0/sim/sensor_gmax0505_streamer_0_0.v" \
+"../../../bd/sensor/ip/sensor_frame_detector_0_0/sim/sensor_frame_detector_0_0.v" \
+"../../../bd/sensor/ip/sensor_xlslice_2_0/sim/sensor_xlslice_2_0.v" \
+"../../../bd/sensor/ip/sensor_frame_engine_0_0/sim/sensor_frame_engine_0_0.v" \
+"../../../bd/sensor/ip/sensor_xlslice_1_1_1/sim/sensor_xlslice_1_1.v" \
+"../../../bd/sensor/ip/sensor_xlconcat_0_0/sim/sensor_xlconcat_0_0.v" \
+"../../../bd/sensor/ip/sensor_xlconstant_0_0/sim/sensor_xlconstant_0_0.v" \
+"../../../bd/sensor/ip/sensor_clk_wiz_0_0/sensor_clk_wiz_0_0_clk_wiz.v" \
+"../../../bd/sensor/ip/sensor_clk_wiz_0_0/sensor_clk_wiz_0_0.v" \
+"../../../bd/sensor/ip/sensor_ila_0_0/sim/sensor_ila_0_0.v" \
+"../../../bd/sensor/sim/sensor.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

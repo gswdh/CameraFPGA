@@ -97,6 +97,7 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
+set_msg_config -id {HDL-1065} -limit 10000
 set_msg_config  -id {PS7-6}  -suppress 
 set_msg_config  -id {xilinx.com:ip:processing_system7:5.5-1}  -suppress 
 
@@ -106,8 +107,10 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param bd.open.in_stealth_mode 2
+  set_param bd.open.in_stealth_mode 3
+  set_param tcl.collectionResultDisplayLimit 0
   set_param chipscope.maxJobs 4
+  set_param xicom.use_bs_reader 1
   set_param runs.launchOptions { -jobs 16  }
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7z020clg484-2
